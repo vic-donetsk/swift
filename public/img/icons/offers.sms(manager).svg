@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="78.732" height="83.301" viewBox="0 0 78.732 83.301">
+  <g id="sms_manager_" data-name="sms (manager)" transform="translate(-0.001)">
+    <rect id="Rectangle_54" data-name="Rectangle 54" width="2.441" height="2.441" transform="translate(57.985 4.882)" fill="#608ed3"/>
+    <rect id="Rectangle_55" data-name="Rectangle 55" width="2.441" height="2.441" transform="translate(53.103 4.882)" fill="#608ed3"/>
+    <rect id="Rectangle_56" data-name="Rectangle 56" width="2.441" height="2.441" transform="translate(48.221 4.882)" fill="#608ed3"/>
+    <rect id="Rectangle_57" data-name="Rectangle 57" width="2.441" height="2.441" transform="translate(70.75 75.978)" fill="#608ed3"/>
+    <rect id="Rectangle_58" data-name="Rectangle 58" width="2.441" height="2.441" transform="translate(36.575 75.673)" fill="#608ed3"/>
+    <path id="Path_355" data-name="Path 355" d="M199.844,0V16.608h2.44v-4.4h43.939V70.791H230.588a7.31,7.31,0,0,0-10.328,0H202.27l.015-17.941v.863h-2.441V83.3h48.82V0Zm2.441,9.764V2.441h43.939V9.764ZM225.424,71.1a4.882,4.882,0,1,1-4.882,4.882A4.888,4.888,0,0,1,225.424,71.1Zm-23.151,2.136h16.364a7.3,7.3,0,0,0,1.334,7.628H202.283Zm28.6,7.628a7.3,7.3,0,0,0,1.334-7.628h14.013V80.86Z" transform="translate(-169.931)" fill="#608ed3"/>
+    <g id="_004-message-on-phone" data-name="004-message-on-phone" transform="translate(0 15.948)">
+      <path id="Path_375" data-name="Path 375" d="M213.113,122.6H205.3a1.3,1.3,0,1,1,0-2.6h7.811a1.3,1.3,0,1,1,0,2.6Z" transform="translate(-170.151 -105.679)" fill="#608ed3"/>
+      <path id="Path_376" data-name="Path 376" d="M285.3,120h20.83a1.3,1.3,0,0,1,0,2.6H285.3a1.3,1.3,0,1,1,0-2.6Z" transform="translate(-276.189 -105.679)" fill="#608ed3"/>
+      <path id="Path_377" data-name="Path 377" d="M365.3,160h7.811a1.3,1.3,0,1,1,0,2.6H365.3a1.3,1.3,0,1,1,0-2.6Z" transform="translate(-356.189 -139.17)" fill="#608ed3"/>
+      <path id="Path_378" data-name="Path 378" d="M226.132,162.6H205.3a1.3,1.3,0,1,1,0-2.6h20.83a1.3,1.3,0,1,1,0,2.6Z" transform="translate(-183.17 -139.17)" fill="#608ed3"/>
+      <path id="Path_379" data-name="Path 379" d="M205.3,80h33.849a1.3,1.3,0,1,1,0,2.6H205.3a1.3,1.3,0,1,1,0-2.6Z" transform="translate(-196.189 -72.189)" fill="#608ed3"/>
+      <path id="Path_380" data-name="Path 380" d="M205.3,200h33.849a1.3,1.3,0,1,1,0,2.6H205.3a1.3,1.3,0,1,1,0-2.6Z" transform="translate(-196.189 -172.66)" fill="#608ed3"/>
+      <path id="Path_381" data-name="Path 381" d="M165.113,32h33.849a9.124,9.124,0,0,1,9.113,9.113V60.642a9.127,9.127,0,0,1-7.811,9.02v4.761a2.6,2.6,0,0,1-4.445,1.841l-6.509-6.509h-24.2A9.124,9.124,0,0,1,156,60.642V41.113A9.124,9.124,0,0,1,165.113,32ZM158.6,60.642a6.517,6.517,0,0,0,6.509,6.509h24.736a1.3,1.3,0,0,1,.921.381l6.891,6.89V68.453a1.3,1.3,0,0,1,1.3-1.3,6.517,6.517,0,0,0,6.509-6.509V41.113a6.517,6.517,0,0,0-6.509-6.509H165.113a6.517,6.517,0,0,0-6.509,6.509Z" transform="translate(-156 -32)" fill="#608ed3"/>
+    </g>
+  </g>
+</svg>

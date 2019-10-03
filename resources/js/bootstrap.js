@@ -1,3 +1,9 @@
+import routes from './routes';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Header from './components/header/header.vue';
+import localization from './mixins/localization.js';
+
 window._ = require('lodash');
 
 /**
@@ -9,3 +15,19 @@ window._ = require('lodash');
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+
+const router = new VueRouter({
+    routes,
+    mode: 'history'
+});
+
+window.EventBus = new Vue();
+
+Vue.use(VueRouter);
+Vue.mixin(localization);
+Vue.component('header-component', Header);
+
+const app = new Vue({
+    router
+}).$mount('#app');

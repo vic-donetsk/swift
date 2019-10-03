@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "Controller@index");
+Route::get('/{level1}', "Controller@index");
+Route::get('/{level1}/{level2}', "Controller@index");
+Route::get('/{level1}/{level2}/{level3}', "Controller@index");

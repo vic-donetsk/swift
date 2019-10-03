@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Swift Callback</title>
+    <link href="{{ mix('css/app.css') }}">
 </head>
 <body>
-<div class="flex-center position-ref full-height">
-    <div id="app"></div>
+<div>
+    <div id="app">
+        {{--<header>Шапка</header>--}}
+        {{--<nav>Боковое меню</nav>--}}
+
+        <header-component></header-component>
+
+        <main>
+            <router-view></router-view>
+        </main>
+    </div>
 </div>
+
+<script>
+    window.translations = {!! $translations !!};
+</script>
+
+<script src="{{ mix('js/app.js') }}"></script>
+
 </body>
 </html>
