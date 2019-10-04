@@ -7,7 +7,7 @@
     <title>Swift Callback</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
 </head>
-<body>
+<body class="mod-landing">
 <div>
     <div id="app">
         {{--<header>Шапка</header>--}}

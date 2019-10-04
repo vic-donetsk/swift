@@ -1,3 +1,29 @@
-.landing-header{
+@import '@/app';
 
+.landing-header {
+    background-color: $landing-headerbackground;
+
+    .landing-header_content {
+        height: 53px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 184px;
+
+
+        .landing-header_item {
+            display: flex;
+            color: $widgetActiveBlue;
+            cursor: pointer;
+
+            &:not(:last-of-type) {
+                margin-right: 60px;
+            }
+
+            &.mod_position{
+                margin-right: 72px;
+            }
+        }
+    }
 }
+
