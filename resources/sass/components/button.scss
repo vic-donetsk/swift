@@ -4,4 +4,12 @@
     &.mod-blue {
         @extend %blueGradient;
     }
+
+    &.mod-green {
+         @extend %greenGradient;
+     }
+
+    &.mod-brown {
+        @extend %brownGradient;
+    }
 }
