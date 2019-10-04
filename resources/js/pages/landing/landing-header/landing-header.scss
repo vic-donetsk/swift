@@ -1,7 +1,8 @@
 @import '@/app';
 
 .landing-header {
-    background-color: $landing-headerbackground;
+    background-color: $landingHeaderbackground;
+    margin-bottom: 37px;
 
     .landing-header_content {
         height: 53px;
@@ -10,11 +11,12 @@
         align-items: center;
         margin-right: 184px;
 
-
         .landing-header_item {
             display: flex;
             color: $widgetActiveBlue;
             cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
 
             &:not(:last-of-type) {
                 margin-right: 60px;
