@@ -14,5 +14,5 @@
 <script src="./landing.js"></script>
 
 <style lang='scss'>
-    @import 'landing';
+    @import 'landing.scss';
 </style>
