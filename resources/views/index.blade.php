@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Swift Callback</title>
-    <link href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
 </head>
 <body>
 <div>
@@ -13,7 +13,7 @@
         {{--<header>Шапка</header>--}}
         {{--<nav>Боковое меню</nav>--}}
 
-        <header-component></header-component>
+{{--        <header-component></header-component>--}}
 
         <main>
             <router-view></router-view>
