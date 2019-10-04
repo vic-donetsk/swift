@@ -1,0 +1,18 @@
+%blueGradient {
+    background-image: linear-gradient(to right bottom, $blueGradientFrom, $blueGradientTo);
+}
+%brownGradient {
+    background-image: linear-gradient(to right bottom, $brownGradientFrom, $brownGradientTo);
+}
+%greenGradient {
+    background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+}
+
+
+%button {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 8px;
+    text-align: center;
+}
