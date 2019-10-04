@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'mdhtfont';
+  src: url('../font/mdhtfont.eot?68544590');
+  src: url('../font/mdhtfont.eot?68544590#iefix') format('embedded-opentype'),
+       url('../font/mdhtfont.woff2?68544590') format('woff2'),
+       url('../font/mdhtfont.woff?68544590') format('woff'),
+       url('../font/mdhtfont.ttf?68544590') format('truetype'),
+       url('../font/mdhtfont.svg?68544590#mdhtfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mdhtfont';
+    src: url('../font/mdhtfont.svg?68544590#mdhtfont') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "mdhtfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-api_gear:before { content: '\e800'; } /* '' */
+.icon-arrow:before { content: '\e801'; } /* '' */
+.icon-arrow(left-back):before { content: '\e802'; } /* '' */
+.icon-audio_tool:before { content: '\e803'; } /* '' */
+.icon-bell_notification:before { content: '\e804'; } /* '' */
+.icon-block(disable):before { content: '\e805'; } /* '' */
+.icon-calendar:before { content: '\e806'; } /* '' */
+.icon-call:before { content: '\e807'; } /* '' */
+.icon-cellphone_sms:before { content: '\e808'; } /* '' */
+.icon-chat_bubbles:before { content: '\e809'; } /* '' */
+.icon-chat_settings:before { content: '\e80a'; } /* '' */
+.icon-chat(circle):before { content: '\e80b'; } /* '' */
+.icon-clock:before { content: '\e80c'; } /* '' */
+.icon-copy:before { content: '\e80d'; } /* '' */
+.icon-cross:before { content: '\e80e'; } /* '' */
+.icon-download_:before { content: '\e80f'; } /* '' */
+.icon-email(circle):before { content: '\e810'; } /* '' */
+.icon-euro:before { content: '\e811'; } /* '' */
+.icon-facebook:before { content: '\e812'; } /* '' */
+.icon-global:before { content: '\e813'; } /* '' */
+.icon-invoice:before { content: '\e814'; } /* '' */
+.icon-link_symbol:before { content: '\e815'; } /* '' */
+.icon-logout:before { content: '\e816'; } /* '' */
+.icon-logout(man_running):before { content: '\e817'; } /* '' */
+.icon-mail_envelope_open:before { content: '\e818'; } /* '' */
+.icon-mail_envelope:before { content: '\e819'; } /* '' */
+.icon-menu.billing:before { content: '\e81a'; } /* '' */
+.icon-menu.chat:before { content: '\e81b'; } /* '' */
+.icon-menu.settings:before { content: '\e81c'; } /* '' */
+.icon-menu.statistics:before { content: '\e81d'; } /* '' */
+.icon-menu.support:before { content: '\e81e'; } /* '' */
+.icon-menu.widget:before { content: '\e81f'; } /* '' */
+.icon-messenger:before { content: '\e820'; } /* '' */
+.icon-minus:before { content: '\e821'; } /* '' */
+.icon-mobile_phone:before { content: '\e822'; } /* '' */
+.icon-move_arrow:before { content: '\e823'; } /* '' */
+.icon-notes_paper:before { content: '\e824'; } /* '' */
+.icon-offers.api:before { content: '\e825'; } /* '' */
+.icon-offers.call_recorder:before { content: '\e826'; } /* '' */
+.icon-offers.call_schedulling:before { content: '\e827'; } /* '' */
+.icon-offers.dashnoard:before { content: '\e828'; } /* '' */
+.icon-offers.phone_book:before { content: '\e829'; } /* '' */
+.icon-offers.safe:before { content: '\e82a'; } /* '' */
+.icon-offers.sms(manager):before { content: '\e82b'; } /* '' */
+.icon-offers.social_media:before { content: '\e82c'; } /* '' */
+.icon-pc:before { content: '\e82d'; } /* '' */
+.icon-phone:before { content: '\e82e'; } /* '' */
+.icon-plus(add):before { content: '\e82f'; } /* '' */
+.icon-puzzle(plugin):before { content: '\e830'; } /* '' */
+.icon-recorder:before { content: '\e831'; } /* '' */
+.icon-search:before { content: '\e832'; } /* '' */
+.icon-send_button:before { content: '\e833'; } /* '' */
+.icon-settings:before { content: '\e834'; } /* '' */
+.icon-subscribe:before { content: '\e835'; } /* '' */
+.icon-telegram:before { content: '\e836'; } /* '' */
+.icon-upload:before { content: '\e837'; } /* '' */
+.icon-user:before { content: '\e838'; } /* '' */
+.icon-viber:before { content: '\e839'; } /* '' */
+.icon-vk:before { content: '\e83a'; } /* '' */
+.icon-whatsapp:before { content: '\e83b'; } /* '' */
+.icon-pause-solid:before { content: '\e83c'; } /* '' */
+.icon-play-solid:before { content: '\e83d'; } /* '' */
+.icon-stop-solid:before { content: '\e83e'; } /* '' */
+.icon-volume-down-solid:before { content: '\e83f'; } /* '' */
+.icon-volume-mute-solid:before { content: '\e840'; } /* '' */
+.icon-volume-off-solid:before { content: '\e841'; } /* '' */
+.icon-volume-up-solid:before { content: '\e842'; } /* '' */
+.icon-info:before { content: '\e843'; } /* '' */
