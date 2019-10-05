@@ -1,3 +1,13 @@
 {
-  "Contact Phone": "0 (22) 01-10-20"
+  "Contact Phone": "0 (22) 01-10-20",
+
+  "Swift": "SWIFT",
+  "Callback": "callback",
+  "TARIF": "TARIF",
+  "PRODUS": "PRODUS",
+  "DEZVOLTATORI": "DEZVOLTATORI",
+  "SUPPORT": "SUPPORT",
+  "CONTACTE": "CONTACTE",
+  "button-text": "Autentificare"
 }
+
