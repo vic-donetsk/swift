@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Swift Callback</title>
+    <link href="/fonts.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
 </head>
 <body class="mod-landing">

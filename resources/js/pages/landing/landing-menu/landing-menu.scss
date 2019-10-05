@@ -2,7 +2,7 @@
 
 .landing-menu {
     max-width: 1586px;
-    margin: 0 auto 177px;
+    margin: 0 auto;
 
     .landing-menu_container {
         display: flex;
@@ -11,24 +11,26 @@
 
         .landing-menu_logo {
             color: $mainDarkBlue;
-
-            .landing-menu_logoSwift {
-                display: block;
-                font-size: 35px;
-                font-weight: 700;
-                line-height: 40px;
-            }
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 40px;
 
             .landing-menu_logoCallback {
+                display: block;
                 font-size: 25px;
                 font-weight: 300;
                 line-height: 0;
-
             }
         }
 
-        .landing-menu_block {
+        .landing-menu_nav {
+            display: flex;
 
+            .landing-menu_item {
+                list-style-type: none;
+                margin-right: 40px;
+                text-transform: uppercase;
+            }
         }
 
         .button {

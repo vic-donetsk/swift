@@ -1,13 +1,13 @@
 {
   "Contact Phone": "0 (22) 01-10-20",
 
-  "Swift": "SWIFT",
+  "Swift": "SWIFT <span class='landing-menu_logoCallback'>callback</span>",
   "Callback": "callback",
-  "TARIF": "TARIF",
-  "PRODUS": "PRODUS",
-  "DEZVOLTATORI": "DEZVOLTATORI",
-  "SUPPORT": "SUPPORT",
-  "CONTACTE": "CONTACTE",
-  "button-text": "Autentificare"
+  "Tarif": "Tarif",
+  "Produs": "Produs",
+  "Dezvolatori": "Dezvolatori",
+  "Support": "Support",
+  "Contacte": "Support",
+  "Menu button": "Autentificare"
 }
 
