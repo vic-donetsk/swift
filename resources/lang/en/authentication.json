@@ -12,11 +12,16 @@
     "Last name" : "Prenume",
     "Your site" : "Site-ul tău",
     "Log In": "Intră în cont",
-
     "By submitting this form, you accept" : "Prin trimiterea acestui formular, dvs acceptați",
     "Terms of use" : "Termeni de utilizare",
     "and" : "și",
-    "Privacy policy" : "Politica de confidențialitate"
+    "Privacy policy" : "Politica de confidențialitate",
+    "Password recovery" : "RECUPERAREA PAROLEI",
+    "Enter your email for recover your password." : "Introduceți\u00a0email-ul\u00a0dvs.\u00a0pentru a\u00a0vă\u00a0recupera\u00a0parola.",
+    "Continue" : "Continuă",
+    "Back" : "Înapoi"
+
+
 
 
 }
