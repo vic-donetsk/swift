@@ -1,34 +1,103 @@
 //@import './../../../../sass/variables';
 @import '@/app';
 
-.auth {
-    background-color: $landingBackground;
-    padding: 0 33px;
-    text-align: center;
+.auth-input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #e3ecf5;
+    border-radius: 8px;
+    padding-left: 5vw;
+    font-size-adjust: none;
 
-    .authHeader {
-        margin-top: 88px;
+    &::-moz-placeholder {
+        color: $mainLightBlue;
+        font-weight: 300;
     }
-    .regHeader {
-        margin-top: 46px;
+    &::-webkit-input-placeholder {
+        color: $mainLightBlue;
+        font-weight: 300;
     }
-    .restoreHeader {
-        margin-top: 104px;
-    }
-    .auth_logo {
-        color: $mainDarkBlue;
-        .logo_title {
-            font-size: 32px;
-            font-weight: bold;
-        }
-        .logo_function {
-            font-size: 22px;
-            font-weight: 200;
-        }
+    &:focus::-webkit-input-placeholder {color: transparent}
+    &:focus::-moz-placeholder          {color: transparent}
 
-    }
+
 
 
 }
+
+.auth {
+    background-color: $landingBackground;
+    text-align: center;
+
+    .auth_wrapper {
+        max-width: 520px;
+
+        .authHeader {
+            margin: 88px auto 30px;
+        }
+
+        .regHeader {
+            margin: 46px auto 30px;
+        }
+
+        .restoreHeader {
+            margin: 104px auto 30px;
+        }
+
+        .auth_logo {
+            color: $mainDarkBlue;
+            cursor: pointer;
+
+            .logo_title {
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            .logo_function {
+                font-size: 22px;
+                font-weight: 200;
+                line-height: 0.9;
+            }
+        }
+
+
+    }
+
+    .auth_method {
+        height: 58px;
+        margin: 0 18px;
+        padding-top: 19px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
+        color: $mainDarkBlue;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px;
+        text-transform: uppercase;
+
+        & span {
+            cursor: pointer;
+        }
+
+        .mod_passive {
+            color: $mainLightBlue;
+            font-weight: 100;
+        }
+    }
+
+    .auth_authMode, .auth_regMode, .auth_restoreMode {
+        background: #fff;
+        margin-top: -7px;
+        padding: 29px 33px 0;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
+
+    }
+}
+
+
+
 
 
