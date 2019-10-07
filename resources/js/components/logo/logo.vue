@@ -1,7 +1,7 @@
 <template>
     <div class="logo" :class="sizeClass" @click="gotoMain()">
-        <div class="logo_title">Swift</div>
-        <div class="logo_subtitle">Callback</div>
+        <div class="logo_title">SWIFT</div>
+        <div class="logo_subtitle">callback</div>
     </div>
 </template>
 

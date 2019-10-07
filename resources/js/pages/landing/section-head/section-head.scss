@@ -47,15 +47,15 @@
             color: $mainDarkBlue;
             margin-right: 33px;
 
-            &::placeholder{
+            &::placeholder {
                 font-size: 18px;
-                font-weight:500;
+                font-weight: 500;
                 color: $landingInputPlaceholder;
             }
         }
     }
 
-    .section-head_icon{
+    .section-head_icon {
         width: 50px;
         border: 1px solid #0E3378;
         border-radius: 24px;
@@ -65,9 +65,10 @@
         transform: translate(-50%, 0%);
         display: flex;
         justify-content: center;
+        padding-top: 21px;
 
 
-        .head-icon_elem{
+        .head-icon_elem {
             width: 7px;
             height: 12px;
             border-radius: 6px;
