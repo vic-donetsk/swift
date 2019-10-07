@@ -1,28 +1,24 @@
 <template>
     <div class="section-head">
-            <div class="section-head_content">
-                <div class="section-head_title">
-                    <span v-html='__("landing", "Head-title")'></span>
-                </div>
+        <div class="section-head_content">
+            <h1 class="section-head_title">
+                {{__("landing", "Head title")}}
+            </h1>
 
-                <div class="section-head_subtitle">
-                    <span v-html='__("landing", "Head-subtitle")'></span>
-                    <span v-html='__("landing", "Head-subtitle_text")'></span>
-                </div>
-            </div>
-
+            <p class="section-head_subtitle">
+                {{__("landing", "Head subtitle")}}
+            </p>
+        </div>
         <div class="section-head_control">
-            <input type="text" class="section-head_input" :placeholder='__("landing", "Head_input-placeholder")'>
-
+            <input type="text" class="section-head_input"
+                   :placeholder='__("landing", "Head input placeholder")'>
             <div class="button mod_landing mod-blue">
-                <span class="button_text">{{ __("landing", "Section-head button") }}</span>
+                <span class="button_text">{{ __("landing", "Head button") }}</span>
             </div>
         </div>
-
-        <div class="section-head_icon">
+        <div class="section-head_mouse">
             <div class="head-icon_elem"></div>
         </div>
-
     </div>
 </template>
 

@@ -1,9 +1,11 @@
 %blueGradient {
     background-image: linear-gradient(to right bottom, $blueGradientFrom, $blueGradientTo);
 }
+
 %brownGradient {
     background-image: linear-gradient(to right bottom, $brownGradientFrom, $brownGradientTo);
 }
+
 %greenGradient {
     background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
 }
@@ -17,4 +19,10 @@
     padding: 0 15px;
     color: $white;
     cursor: pointer;
+
+    & > * {
+        &::selection {
+            background: transparent;
+        }
+    }
 }

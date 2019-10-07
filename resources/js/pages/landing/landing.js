@@ -6,7 +6,7 @@ export default {
     components: {
         'landing-header': landingHeader,
         'landing-menu': landingMenu,
-        'section-head':sectionHead
+        'section-head': sectionHead
     },
     data: function () {
         return {
@@ -20,7 +20,6 @@ export default {
         EventBus.$on('renameText', () => {
             this.title = "Лендинг 3";
         })
-
     },
     mounted() {
         setTimeout(() => {

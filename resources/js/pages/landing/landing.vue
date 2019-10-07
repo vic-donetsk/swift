@@ -3,11 +3,8 @@
         <header>
             <landing-header></landing-header>
             <landing-menu></landing-menu>
-            <section-head></section-head>
         </header>
-
-
-
+        <section-head></section-head>
 
         <!--{{ getTitle }}-->
 
