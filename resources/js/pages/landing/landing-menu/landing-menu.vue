@@ -2,6 +2,7 @@
     <div class="landing-menu">
         <div class="landing-menu_container">
             <logo size="landing"></logo>
+
             <nav class="landing-menu_nav">
                     <span class="landing-menu_item">{{ __("landing", "Tarif") }}</span>
                     <span class="landing-menu_item">{{ __("landing", "PRODUS") }}</span>
@@ -10,7 +11,7 @@
                     <span class="landing-menu_item">{{ __("landing", "CONTACTE") }}</span>
             </nav>
 
-            <div class="button mod-blue">
+            <div class="button mod_landing mod-blue">
                 <span class="button_text">{{ __("landing", "Menu button") }}</span>
             </div>
         </div>
