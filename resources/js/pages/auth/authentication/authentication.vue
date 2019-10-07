@@ -15,17 +15,12 @@
                     }}
                 </div>
             </div>
-
-
         </div>
-
-
     </section>
 </template>
 
 <style lang='scss' scoped>
     @import '../authentication';
 </style>
-
 
 <script src="./authentication.js"></script>

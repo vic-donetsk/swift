@@ -153,8 +153,16 @@
         }
     }
 
+    .restoreMode_text {
+        margin-bottom: 23px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $mainDarkBlue;
+    }
+
     .restoreMode_back {
         margin-top: 26px;
+
 
         .leftArrow {
             font-family: "Mdht";
@@ -165,6 +173,7 @@
             font-size: 12px;
             font-weight: 600;
             color: $widgetActiveBlue;
+            cursor: pointer;
         }
     }
 
