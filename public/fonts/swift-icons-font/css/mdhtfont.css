@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'mdhtfont';
-  src: url('../font/mdhtfont.eot?68544590');
-  src: url('../font/mdhtfont.eot?68544590#iefix') format('embedded-opentype'),
-       url('../font/mdhtfont.woff2?68544590') format('woff2'),
-       url('../font/mdhtfont.woff?68544590') format('woff'),
-       url('../font/mdhtfont.ttf?68544590') format('truetype'),
-       url('../font/mdhtfont.svg?68544590#mdhtfont') format('svg');
+  src: url('./../font/mdhtfont.eot?68544590');
+  src: url('./../font/mdhtfont.eot?68544590#iefix') format('embedded-opentype'),
+       url('./../font/mdhtfont.woff2?68544590') format('woff2'),
+       url('./../font/mdhtfont.woff?68544590') format('woff'),
+       url('./../font/mdhtfont.ttf?68544590') format('truetype'),
+       url('./../font/mdhtfont.svg?68544590#mdhtfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }

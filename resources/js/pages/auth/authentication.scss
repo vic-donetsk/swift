@@ -41,6 +41,7 @@
 
     .auth_wrapper {
         max-width: 520px;
+        margin: 0 auto;
 
         .authHeader {
             margin: 88px auto 30px;
@@ -154,6 +155,11 @@
 
     .restoreMode_back {
         margin-top: 26px;
+
+        .leftArrow {
+            font-family: "Mdht";
+
+        }
 
         .restoreMode_backButton {
             font-size: 12px;
