@@ -1,5 +1,5 @@
 <template>
-    <div class="logo" @click="gotoMain()">
+    <div class="logo" :class="sizeClass" @click="gotoMain()">
         <div class="logo_title">Swift</div>
         <div class="logo_subtitle">Callback</div>
     </div>

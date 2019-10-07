@@ -19,19 +19,16 @@
     }
     &:focus::-webkit-input-placeholder {color: transparent}
     &:focus::-moz-placeholder          {color: transparent}
-
-
-
-
 }
-
-
-
 
 .auth {
     background-color: $landingBackground;
     text-align: center;
 
+    .test {
+        background-color: #fff;
+    }
+    
     .auth_wrapper {
         max-width: 520px;
 
@@ -46,16 +43,6 @@
         .restoreHeader {
             margin: 104px auto 30px;
         }
-        .logo.auth_logo {
-            .logo_title {
-                font-size: 32px !important;
-            }
-            .logo_subtitle {
-                font-size: 22px !important;
-            }
-        }
-
-
 
     }
 

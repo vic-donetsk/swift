@@ -1,7 +1,7 @@
 <template>
     <section class="auth">
         <div class="auth_wrapper">
-            <logo class="auth_logo"></logo>
+            <logo :class="headerClass" size="auth"></logo>
             <div class="auth_method" v-if="authMode !== 3">
                 <span :class="{mod_passive: (authMode === 1 || authMode === 2)}" @click="gotoAuth()">{{ __("authentication", "Login") }}</span>
                 /
