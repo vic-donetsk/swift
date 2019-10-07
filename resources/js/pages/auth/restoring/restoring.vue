@@ -14,7 +14,7 @@
                 <input class="auth-input" placeholder="Email" id="restoreEmail">
                 <div class="button mod-blue">{{ __("authentication", "Continue") }}</div>
                 <div class="restoreMode_back">
-                    <span class="restoreMode_backButton icon-arrow(left-back)" @click="gotoAuth()">{{ __("authentication", "Back") }}</span>
+                    <span class="restoreMode_backButton icon-arrow_left" @click="gotoAuth()">{{ __("authentication", "Back") }}</span>
                 </div>
             </div>
         </div>

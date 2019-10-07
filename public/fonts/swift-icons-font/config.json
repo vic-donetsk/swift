@@ -36,7 +36,7 @@
     },
     {
       "uid": "d17b56b1e64528f852e2ed85a7f49d7f",
-      "css": "arrow(left-back)",
+      "css": "arrow_left",
       "code": 59394,
       "src": "custom_icons",
       "selected": true,
@@ -45,7 +45,7 @@
         "width": 1204
       },
       "search": [
-        "arrow(left-back)"
+        "arrow_left"
       ]
     },
     {

@@ -54,7 +54,6 @@
         .restoreHeader {
             margin: 104px auto 30px;
         }
-
     }
 
     .auth_method {
@@ -128,7 +127,6 @@
             &.mod_active {
                 background: $mainDarkBlue;
             }
-
         }
 
         &::after {
@@ -163,20 +161,22 @@
     .restoreMode_back {
         margin-top: 26px;
 
-
         .leftArrow {
             font-family: "Mdht";
-
         }
 
         .restoreMode_backButton {
+            margin-left: -5px;
             font-size: 12px;
             font-weight: 600;
             color: $widgetActiveBlue;
             cursor: pointer;
+
+            &::before {
+                margin-right: 10px;
+            }
         }
     }
-
 }
 
 
