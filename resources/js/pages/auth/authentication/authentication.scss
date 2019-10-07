@@ -6,19 +6,29 @@
     height: 45px;
     border: 1px solid #e3ecf5;
     border-radius: 8px;
-    padding-left: 5vw;
-    font-size-adjust: none;
+    margin-bottom: 15px;
+    padding-left: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $mainDarkBlue;
 
     &::-moz-placeholder {
         color: $mainLightBlue;
         font-weight: 300;
     }
+
     &::-webkit-input-placeholder {
         color: $mainLightBlue;
         font-weight: 300;
     }
-    &:focus::-webkit-input-placeholder {color: transparent}
-    &:focus::-moz-placeholder          {color: transparent}
+
+    &:focus::-webkit-input-placeholder {
+        color: transparent
+    }
+
+    &:focus::-moz-placeholder {
+        color: transparent
+    }
 }
 
 .auth {
@@ -26,9 +36,9 @@
     text-align: center;
 
     .test {
-        background-color: #fff;
+        background-color: $white;
     }
-    
+
     .auth_wrapper {
         max-width: 520px;
 
@@ -50,7 +60,7 @@
         height: 58px;
         margin: 0 18px;
         padding-top: 19px;
-        background: #fff;
+        background: $white;
         border-radius: 8px;
         box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
         color: $mainDarkBlue;
@@ -70,13 +80,69 @@
     }
 
     .auth_authMode, .auth_regMode, .auth_restoreMode {
-        background: #fff;
+        background: $white;
         margin-top: -7px;
         padding: 29px 33px 0;
         border-radius: 8px;
         box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
 
+        & .button {
+            height: 45px;
+            font-size: 14px;
+            font-weight: 600;
+            color: $white;
+            cursor: pointer;
+        }
     }
+    .auth_authMode {
+        padding-bottom: 29px;
+    }
+
+    .auth-passwordForgot {
+        margin-top: 29px;
+        font-size: 12px;
+        font-weight: 600;
+        color: $widgetActiveBlue;
+        cursor: pointer;
+    }
+
+    .regMode_steps {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 22px;
+
+        .regMode_step {
+            width: 38px;
+            height: 38px;
+            line-height: 41px;
+            border-radius: 50%;
+            background: $mainLightBlue;
+            font-size: 15px;
+            font-weight: 400;
+            color: $white;
+
+            &.mod_active {
+                background: $mainDarkBlue;
+            }
+
+            &::before {
+                
+            }
+        }
+    }
+
+    .regMode-agree {
+        margin-top: 18px;
+        font-size: 9px;
+        color: $mainLightBlue;
+
+        & .regMode-link {
+            text-decoration: none;
+            color: $widgetActiveBlue;
+            cursor: pointer;
+        }
+    }
+
 }
 
 
