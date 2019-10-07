@@ -12,4 +12,8 @@
     &.mod-brown {
         @extend %brownGradient;
     }
+
+    &.mod-small {
+        width: 99px;
+    }
 }
