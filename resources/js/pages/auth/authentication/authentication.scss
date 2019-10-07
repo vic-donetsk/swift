@@ -4,7 +4,7 @@
 .auth-input {
     width: 100%;
     height: 45px;
-    border: 1px solid #e3ecf5;
+    border: 1px solid $inputBorder;
     border-radius: 8px;
     margin-bottom: 15px;
     padding-left: 16px;
@@ -82,7 +82,7 @@
     .auth_authMode, .auth_regMode, .auth_restoreMode {
         background: $white;
         margin-top: -7px;
-        padding: 29px 33px 0;
+        padding: 29px 33px;
         border-radius: 8px;
         box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
 
@@ -95,8 +95,8 @@
         }
     }
 
-    .auth_authMode {
-        padding-bottom: 29px;
+    .auth_restoreMode {
+        padding-bottom: 20px;
     }
 
     .auth-passwordForgot {
@@ -149,6 +149,16 @@
             text-decoration: none;
             color: $widgetActiveBlue;
             cursor: pointer;
+        }
+    }
+
+    .restoreMode_back {
+        margin-top: 26px;
+
+        .restoreMode_backButton {
+            font-size: 12px;
+            font-weight: 600;
+            color: $widgetActiveBlue;
         }
     }
 

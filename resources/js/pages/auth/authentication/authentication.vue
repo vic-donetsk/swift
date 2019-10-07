@@ -21,9 +21,9 @@
                     <div class="regMode_step mod_active">1</div>
                     <div class="regMode_step">2</div>
                 </div>
-                <input class="auth-input" placeholder="Email" id="email">
-                <input class="auth-input" :placeholder="__('authentication', 'Password')" name="newPassword">
-                <input class="auth-input" :placeholder="__('authentication', 'Phone number')" name="newPhone">
+                <input class="auth-input" placeholder="Email" id="newEmail">
+                <input class="auth-input" :placeholder="__('authentication', 'Password')" id="newPassword">
+                <input class="auth-input" :placeholder="__('authentication', 'Phone number')" id="newPhone">
                 <div class="button mod-blue" @click="continueReg()">{{ __("authentication", "Create an account") }}
                 </div>
 
@@ -39,9 +39,9 @@
                     <div class="regMode_step">1</div>
                     <div class="regMode_step mod_active">2</div>
                 </div>
-                <input class="auth-input" :placeholder="__('authentication', 'First name')" id="firstNme">
-                <input class="auth-input" :placeholder="__('authentication', 'Last name')" name="lastName">
-                <input class="auth-input" :placeholder="__('authentication', 'Your site')" name="site">
+                <input class="auth-input" :placeholder="__('authentication', 'First name')" id="firstName">
+                <input class="auth-input" :placeholder="__('authentication', 'Last name')" id="lastName">
+                <input class="auth-input" :placeholder="__('authentication', 'Your site')" id="site">
                 <div class="button mod-blue">{{ __("authentication", "Log In") }}</div>
 
                 <div class="regMode-agree">{{ __("authentication", "By submitting this form, you accept") }}
@@ -63,7 +63,7 @@
                 <div class="button mod-blue">{{ __("authentication", "Continue") }}</div>
                 <div class="restoreMode_back">
                     <span class="leftArrow"></span>
-                    <span class="restoreMode_back-button" @click="gotoAuth()">{{ __("authentication", "Back") }}</span>
+                    <span class="restoreMode_backButton" @click="gotoAuth()">{{ __("authentication", "Back") }}</span>
                 </div>
             </div>
         </div>
