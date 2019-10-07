@@ -1,0 +1,16 @@
+@import '@/app';
+
+.logo {
+    color: $mainDarkBlue;
+    cursor: pointer;
+
+    .logo_title {
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .logo_subtitle {
+        font-weight: 200;
+        line-height: 0.9;
+    }
+}

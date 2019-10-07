@@ -25,6 +25,9 @@
 
 }
 
+
+
+
 .auth {
     background-color: $landingBackground;
     text-align: center;
@@ -43,23 +46,15 @@
         .restoreHeader {
             margin: 104px auto 30px;
         }
-
-        .auth_logo {
-            color: $mainDarkBlue;
-            cursor: pointer;
-
+        .logo.auth_logo {
             .logo_title {
-                font-size: 32px;
-                font-weight: bold;
-                line-height: 1;
+                font-size: 32px !important;
             }
-
-            .logo_function {
-                font-size: 22px;
-                font-weight: 200;
-                line-height: 0.9;
+            .logo_subtitle {
+                font-size: 22px !important;
             }
         }
+
 
 
     }
