@@ -1,11 +1,7 @@
 <template>
     <div class="landing-menu">
         <div class="landing-menu_container">
-            <div class="landing-menu_logo">
-                <span class="landing-menu_logo" v-html='__("landing", "Swift")'></span>
-<!--                <span class="landing-menu_logoCallback">{{ __("landing", "Callback") }}</span>-->
-            </div>
-
+            <logo size="landing"></logo>
             <nav class="landing-menu_nav">
                     <span class="landing-menu_item">{{ __("landing", "Tarif") }}</span>
                     <span class="landing-menu_item">{{ __("landing", "PRODUS") }}</span>
