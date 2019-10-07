@@ -19,6 +19,10 @@
             </div>
         </div>
 
+        <div class="section-head_icon">
+            <div class="head-icon_elem"></div>
+        </div>
+
     </div>
 </template>
 

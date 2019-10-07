@@ -2,6 +2,7 @@
 
 .section-head {
     padding-top: 177px;
+    position: relative;
 
     .section-head_content {
         text-align: center;
@@ -28,19 +29,49 @@
         }
     }
 
-    .section-head_control{
+    .section-head_control {
         display: flex;
+        justify-content: center;
+        margin-bottom: 322px;
 
-        .section-head_input{
+        .section-head_input {
             min-width: 360px;
             height: 65px;
             border: 1px solid $inputBorder;
             border-radius: 8px;
             outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            padding: 0 25px;
+            color: $mainDarkBlue;
+            margin-right: 33px;
+
+            &::placeholder{
+                font-size: 18px;
+                font-weight:500;
+                color: $landingInputPlaceholder;
+            }
         }
+    }
 
-        .button {
+    .section-head_icon{
+        width: 50px;
+        border: 1px solid #0E3378;
+        border-radius: 24px;
+        height: 74px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        display: flex;
+        justify-content: center;
 
+
+        .head-icon_elem{
+            width: 7px;
+            height: 12px;
+            border-radius: 6px;
+            background-color: #0E3378;
         }
     }
 }
