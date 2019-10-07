@@ -9,27 +9,16 @@
         justify-content: space-between;
         align-items: center;
 
-        .landing-menu_logo {
-            color: $mainDarkBlue;
-            font-size: 35px;
-            font-weight: 700;
-            line-height: 40px;
-
-            .landing-menu_logoCallback {
-                display: block;
-                font-size: 25px;
-                font-weight: 300;
-                line-height: 0;
-            }
-        }
 
         .landing-menu_nav {
             display: flex;
 
             .landing-menu_item {
                 list-style-type: none;
-                margin-right: 40px;
                 text-transform: uppercase;
+                margin: 0 20px;
+                padding: 5px 0;
+                cursor: pointer;
             }
         }
 

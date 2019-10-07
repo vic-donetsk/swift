@@ -11,7 +11,7 @@
 
     .logo_subtitle {
         font-weight: 200;
-        line-height: 0.9;
+        line-height: 1;
     }
 
     &.authClass {
@@ -24,6 +24,8 @@
     }
 
     &.landingClass {
+        margin-right: 110px;
+
         .logo_title {
             font-size: 35px;
         }
