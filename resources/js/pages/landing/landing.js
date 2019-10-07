@@ -1,10 +1,12 @@
 import landingHeader from './landing-header/landing-header.vue';
 import landingMenu from './landing-menu/landing-menu.vue';
+import sectionHead from './section-head/section-head.vue';
 
 export default {
     components: {
         'landing-header': landingHeader,
         'landing-menu': landingMenu,
+        'section-head':sectionHead
     },
     data: function () {
         return {

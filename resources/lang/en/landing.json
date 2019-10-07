@@ -1,13 +1,17 @@
 {
   "Contact Phone": "0 (22) 01-10-20",
 
-  "Swift": "SWIFT <span class='landing-menu_logoCallback'>callback</span>",
-  "Callback": "callback",
   "Tarif": "Tarif",
   "Produs": "Produs",
   "Dezvolatori": "Dezvolatori",
   "Support": "Support",
   "Contacte": "Support",
-  "Menu button": "Autentificare"
+  "Menu button": "Autentificare",
+
+  "Head-title": "SwiftCallBack - convertăm vizitatorii în clienți.",
+  "Head-subtitle": "Instalează widgetul pe website-ul tău, și îți mărim vânzările cu 30 %.",
+  "Head-subtitle_text":"Începe azi și vezi rezultatul în 7 zile.",
+  "Section-head button": "Testează",
+  "Head-input_placeholder": "Lasă numărul de telefon"
 }
 

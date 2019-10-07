@@ -1,7 +1,13 @@
 <template>
     <div class="landing">
-        <landing-header></landing-header>
-        <landing-menu></landing-menu>
+        <header>
+            <landing-header></landing-header>
+            <landing-menu></landing-menu>
+            <section-head></section-head>
+        </header>
+
+
+
 
         <!--{{ getTitle }}-->
 
