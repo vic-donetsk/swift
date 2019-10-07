@@ -29,9 +29,18 @@
     }
 
     .section-head_control{
+        display: flex;
+
+        .section-head_input{
+            min-width: 360px;
+            height: 65px;
+            border: 1px solid $inputBorder;
+            border-radius: 8px;
+            outline: none;
+        }
 
         .button {
-            width: 225px;
+
         }
     }
 }

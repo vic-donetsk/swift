@@ -12,7 +12,7 @@
             </div>
 
         <div class="section-head_control">
-            <input type="text" class="section-head_input" :placeholder='__("landing", "Head-input_placeholder")'>
+            <input type="text" class="section-head_input" :placeholder='__("landing", "Head_input-placeholder")'>
 
             <div class="button mod_landing mod-blue">
                 <span class="button_text">{{ __("landing", "Section-head button") }}</span>
