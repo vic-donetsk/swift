@@ -4,7 +4,7 @@
             <landing-header></landing-header>
             <landing-menu></landing-menu>
         </header>
-        <section-head></section-head>
+        <landing-head></landing-head>
 
         <!--{{ getTitle }}-->
 
@@ -17,5 +17,5 @@
 <script src="./landing.js"></script>
 
 <style lang='scss'>
-    @import 'landing.scss';
+    @import './landing.scss';
 </style>
