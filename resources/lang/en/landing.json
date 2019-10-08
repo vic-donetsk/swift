@@ -7,10 +7,11 @@
   "Contacte": "Support",
   "Menu button": "Autentificare",
   "Head title": "SwiftCallBack - convertăm vizitatorii în clienți.",
-  "Head subtitle":"Instalează widgetul pe website-ul tău, și îți mărim vânzările cu 30 %. Începe azi și vezi rezultatul în 7 zile.",
+  "Head subtitle": "Instalează widgetul pe website-ul tău, și îți mărim vânzările cu 30 %. Începe azi și vezi rezultatul în 7 zile.",
   "Head button": "Testează",
   "Head input placeholder": "Lasă numărul de telefon",
   "Browser search placeholder": "Adresa ta de website <3",
-  "Landing main message one": "Utilizatorul intră pe site-ul dvs. web și vede posibilitatea unui contact rapid."
+  "Message 1": "Utilizatorul intră pe site-ul dvs. web și vede posibilitatea unui contact rapid.",
+  "Message 2": "<p>Lăsând numărul, utilizatorul poate fi sunat în scurt timp.</p><p>Sau poate fi contactat prin 7 canale de mesagerie</p>"
 }
 
