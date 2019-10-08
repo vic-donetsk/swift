@@ -15,11 +15,17 @@
     &::-moz-placeholder {
         color: $mainLightBlue;
         font-weight: 300;
+        @include media('d') {
+            font-weight: 400;
+        }
     }
 
     &::-webkit-input-placeholder {
         color: $mainLightBlue;
         font-weight: 300;
+        @include media('d') {
+            font-weight: 400;
+        }
     }
 
     &:focus::-webkit-input-placeholder {
@@ -29,155 +35,183 @@
     &:focus::-moz-placeholder {
         color: transparent
     }
+
+    @include media('d') {
+        height: 60px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
 }
 
-.auth {
-    background-color: $landingBackground;
-    text-align: center;
+    .auth {
+        background-color: $landingBackground;
+        text-align: center;
 
-    .test {
-        background-color: $white;
-    }
-
-    .auth_wrapper {
-        max-width: 520px;
-        margin: 0 auto;
-
-        .authHeader {
-            margin: 88px auto 30px;
+        .test {
+            background-color: $white;
         }
 
-        .regHeader {
-            margin: 46px auto 30px;
-        }
+        .auth_wrapper {
+            max-width: 520px;
+            margin: 0 auto;
 
-        .restoreHeader {
-            margin: 104px auto 30px;
-        }
-    }
+            .authHeader {
+                margin: 9vh auto 30px;
+                @include media('d') {
+                    margin: 23vh auto 50px;
+                }
+            }
 
-    .auth_method {
-        height: 58px;
-        margin: 0 18px;
-        padding-top: 19px;
-        background: $white;
-        border-radius: 8px;
-        box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
-        color: $mainDarkBlue;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 14px;
-        text-transform: uppercase;
+            .regHeader {
+                margin: 46px auto 30px;
+            }
 
-        & span {
-            cursor: pointer;
-        }
-
-        .mod_passive {
-            color: $mainLightBlue;
-            font-weight: 100;
-        }
-    }
-
-    .auth_authMode, .auth_regMode, .auth_restoreMode {
-        background: $white;
-        margin-top: -7px;
-        padding: 29px 33px;
-        border-radius: 8px;
-        box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
-
-        & .button {
-            height: 45px;
-            font-size: 14px;
-            font-weight: 600;
-            color: $white;
-            cursor: pointer;
-        }
-    }
-
-    .auth_restoreMode {
-        padding-bottom: 20px;
-    }
-
-    .auth-passwordForgot {
-        margin-top: 29px;
-        font-size: 12px;
-        font-weight: 600;
-        color: $widgetActiveBlue;
-        cursor: pointer;
-    }
-
-    .regMode_steps {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 22px;
-
-        .regMode_step {
-            width: 38px;
-            height: 38px;
-            line-height: 41px;
-            border-radius: 50%;
-            background: $mainLightBlue;
-            font-size: 15px;
-            font-weight: 400;
-            color: $white;
-            z-index: 1;
-
-            &.mod_active {
-                background: $mainDarkBlue;
+            .restoreHeader {
+                margin: 104px auto 30px;
             }
         }
 
-        &::after {
-            position: absolute;
-            content: "";
-            width: 90%;
-            top: 50%;
-            left: 5%;
-            border-top: 1px solid #CDE4F0;
-        }
-    }
+        .auth_method {
+            height: 58px;
+            margin: 0 18px;
+            padding-top: 19px;
+            background: $white;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
+            color: $mainDarkBlue;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
 
-    .regMode-agree {
-        margin-top: 18px;
-        font-size: 9px;
-        color: $mainLightBlue;
+            @include media('d') {
+                height: 95px;
+                margin: 0 52px;
+                padding-top: 33px;
+                font-size: 18px;
+            }
 
-        & .regMode-link {
-            text-decoration: none;
-            color: $widgetActiveBlue;
-            cursor: pointer;
-        }
-    }
+            & span {
+                cursor: pointer;
+            }
 
-    .restoreMode_text {
-        margin-bottom: 23px;
-        font-size: 14px;
-        font-weight: 400;
-        color: $mainDarkBlue;
-    }
-
-    .restoreMode_back {
-        margin-top: 26px;
-
-        .leftArrow {
-            font-family: "Mdht";
+            .mod_passive {
+                color: $mainLightBlue;
+                font-weight: 100;
+            }
         }
 
-        .restoreMode_backButton {
-            margin-left: -5px;
+        .auth_authMode, .auth_regMode, .auth_restoreMode {
+            background: $white;
+            margin-top: -16px;
+            padding: 29px 33px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0, 33, 95, 0.04);
+
+            & .button {
+                height: 45px;
+                font-size: 14px;
+                font-weight: 600;
+                color: $white;
+                cursor: pointer;
+                @include media('d') {
+                    height: 60px;
+                    font-size: 16px;
+                }
+            }
+
+            @include media('d') {
+                padding: 48px 60px 28px;
+            }
+        }
+
+        .auth_restoreMode {
+            padding-bottom: 20px;
+        }
+
+        .auth-passwordForgot {
+            margin-top: 29px;
             font-size: 12px;
             font-weight: 600;
             color: $widgetActiveBlue;
             cursor: pointer;
 
-            &::before {
-                margin-right: 10px;
+            @include media('d') {
+                font-size: 16px;
+            }
+        }
+
+        .regMode_steps {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 22px;
+
+            .regMode_step {
+                width: 38px;
+                height: 38px;
+                line-height: 41px;
+                border-radius: 50%;
+                background: $mainLightBlue;
+                font-size: 15px;
+                font-weight: 400;
+                color: $white;
+                z-index: 1;
+
+                &.mod_active {
+                    background: $mainDarkBlue;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 90%;
+                top: 50%;
+                left: 5%;
+                border-top: 1px solid #CDE4F0;
+            }
+        }
+
+        .regMode-agree {
+            margin-top: 18px;
+            font-size: 9px;
+            color: $mainLightBlue;
+
+            & .regMode-link {
+                text-decoration: none;
+                color: $widgetActiveBlue;
+                cursor: pointer;
+            }
+        }
+
+        .restoreMode_text {
+            margin-bottom: 23px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $mainDarkBlue;
+        }
+
+        .restoreMode_back {
+            margin-top: 26px;
+
+            .leftArrow {
+                font-family: "Mdht";
+            }
+
+            .restoreMode_backButton {
+                margin-left: -5px;
+                font-size: 12px;
+                font-weight: 600;
+                color: $widgetActiveBlue;
+                cursor: pointer;
+
+                &::before {
+                    margin-right: 10px;
+                }
             }
         }
     }
-}
 
 
 

@@ -18,9 +18,15 @@
     &.authClass {
         .logo_title {
             font-size: 32px;
+            @include media('t') {
+                font-size: 53px;
+            }
         }
         .logo_subtitle {
             font-size: 22px;
+            @include media('t') {
+                font-size: 38px;
+            }
         }
     }
 
