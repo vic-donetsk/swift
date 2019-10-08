@@ -1,0 +1,85 @@
+@import '@/app';
+
+.landing-main {
+    padding: 0 32px;
+
+    .browser-head_buttons {
+        display: flex;
+
+        .browser-head-item {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            margin-right: 5px;
+
+            &.red {
+                background-color: $landingButtonRed;
+                border: 1px solid $landingButtonBorderRed;
+            }
+
+            &.yellow {
+                background-color: $landingButtonYellow;
+                border: 1px solid $landingButtonBorderYellow;
+            }
+
+            &.green {
+                background-color: $landingButtonGreen;
+                border: 1px solid $landingButtonBorderGreen;
+            }
+        }
+
+        .browser-head-elem {
+            width: 11px;
+            height: 13px;
+            background-color: $landingButtonGrey;
+            margin-right: 14px;
+        }
+    }
+
+    .landing-main_container {
+
+        .landing-main_numbering {
+            width: 90px;
+            height: 91px;
+            border-radius: 50%;
+            background-color: $mainDarkBlue;
+            margin-bottom: 111px;
+        }
+
+        .landing-main_browser {
+            width: 700px;
+            height: 441px;
+            border: 1px solid $landingMainBrowser;
+            background-color: $white;
+
+            .landing-browser_head {
+                height: 37px;
+                border-bottom: 1px solid $landingMainBrowser;
+                background-color: $landingBrowserHead;
+                padding: 7px 51px 7px 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .browser-head_search {
+                    width: 385px;
+                    height: 23px;
+                    border: 1px solid $landingMainBrowser;
+                    background-color: $white;
+                    padding: 0 30px;
+                    font-size: 10px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    display: flex;
+                    align-items: center;
+                    color: $andibgBrowserSearch;
+                }
+            }
+
+            .landing-browser_content{
+
+            }
+        }
+    }
+}
+

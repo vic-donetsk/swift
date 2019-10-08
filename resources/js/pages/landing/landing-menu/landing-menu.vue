@@ -5,10 +5,10 @@
 
             <nav class="landing-menu_nav">
                     <span class="landing-menu_item">{{ __("landing", "Tarif") }}</span>
-                    <span class="landing-menu_item">{{ __("landing", "PRODUS") }}</span>
-                    <span class="landing-menu_item">{{ __("landing", "DEZVOLTATORI") }}</span>
-                    <span class="landing-menu_item">{{ __("landing", "SUPPORT") }}</span>
-                    <span class="landing-menu_item">{{ __("landing", "CONTACTE") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Produs") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Dezvolatori") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Support") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Contacte") }}</span>
             </nav>
 
             <div class="button mod_landing mod-blue">

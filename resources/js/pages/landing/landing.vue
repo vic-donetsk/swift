@@ -5,6 +5,7 @@
             <landing-menu></landing-menu>
         </header>
         <landing-head></landing-head>
+        <landing-main></landing-main>
 
         <!--{{ getTitle }}-->
 
