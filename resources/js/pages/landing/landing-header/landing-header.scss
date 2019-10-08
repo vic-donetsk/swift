@@ -3,7 +3,6 @@
 .landing-header {
     background-color: $landingHeaderbackground;
     margin-bottom: 37px;
-    padding: 0 32px;
 
     .landing-header_content {
         height: 53px;
@@ -12,6 +11,7 @@
         align-items: center;
         max-width: 1586px;
         margin: 0 auto;
+        padding: 0 32px;
 
         .landing-header_item {
             display: flex;

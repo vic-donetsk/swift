@@ -6,7 +6,7 @@
     .browser-head_buttons {
         display: flex;
 
-        .browser-head-item {
+        .browser-buttons-item {
             width: 9px;
             height: 9px;
             border-radius: 50%;
@@ -28,11 +28,14 @@
             }
         }
 
-        .browser-head-elem {
+        .browser-buttons-elem {
             width: 11px;
             height: 13px;
             background-color: $landingButtonGrey;
-            margin-right: 14px;
+
+            &:not(:last-of-type) {
+                margin-right: 14px;
+            }
         }
     }
 
@@ -65,15 +68,32 @@
         }
     }
 
-    .landing-main_container {
+    .landing-main_numbering {
+        width: 90px;
+        height: 91px;
+        border-radius: 50%;
+        background-color: $mainDarkBlue;
+        margin: 0 auto 111px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .landing-main_numbering {
-            width: 90px;
-            height: 91px;
-            border-radius: 50%;
-            background-color: $mainDarkBlue;
-            margin-bottom: 111px;
+        &.mod_margin{
+            margin-bottom: 123px;
         }
+
+        .landing-main_number {
+            font-size: 40px;
+            font-weight: 700;
+            color: $white;
+        }
+    }
+
+    .landing-main_content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 153px;
 
         .landing-main_browser {
             width: 700px;
@@ -85,7 +105,7 @@
                 height: 37px;
                 border-bottom: 1px solid $landingMainBrowser;
                 background-color: $landingBrowserHead;
-                padding: 7px 51px 7px 25px;
+                padding: 0 51px 0 25px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -111,6 +131,30 @@
                 justify-content: space-between;
             }
         }
+
+        .landing-main_message {
+            width: 695px;
+            height: 283px;
+            border-radius: 24px;
+            border: 3px solid $landingMainMessage;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.mod-message_size{
+                height: 366px;
+            }
+
+            .main-message_text {
+                width: 610px;
+                font-size: 28px;
+                line-height: 38px;
+                font-weight: 600;
+                color: $widgetActiveBlue;
+
+            }
+        }
     }
+
 }
 
