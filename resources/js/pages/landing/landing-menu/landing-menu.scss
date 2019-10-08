@@ -1,28 +1,26 @@
 @import '@/app';
 
 .landing-menu {
-    max-width: 1586px;
+    max-width: 1650px;
     margin: 0 auto;
     padding: 0 32px;
 
-    .landing-menu_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .landing-menu_nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+    }
 
-
-        .landing-menu_nav {
-            display: flex;
-
-            .landing-menu_item {
-                list-style-type: none;
-                text-transform: uppercase;
-                margin: 0 20px;
-                padding: 5px 0;
-                color: $landingMenuNav;
-                cursor: pointer;
-            }
-        }
+    .landing-menu_item {
+        list-style-type: none;
+        text-transform: uppercase;
+        margin: 0 20px;
+        padding: 5px 0;
+        color: $landingMenuNav;
+        cursor: pointer;
     }
 }
 

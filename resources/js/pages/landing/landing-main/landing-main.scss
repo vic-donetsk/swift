@@ -1,160 +1,148 @@
 @import '@/app';
 
 .landing-main {
+    position: relative;
+
     padding: 0 32px;
+    max-width: 1690px;
+    margin: 0 auto;
 
-    .browser-head_buttons {
-        display: flex;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
 
-        .browser-buttons-item {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            margin-right: 5px;
-
-            &.red {
-                background-color: $landingButtonRed;
-                border: 1px solid $landingButtonBorderRed;
-            }
-
-            &.yellow {
-                background-color: $landingButtonYellow;
-                border: 1px solid $landingButtonBorderYellow;
-            }
-
-            &.green {
-                background-color: $landingButtonGreen;
-                border: 1px solid $landingButtonBorderGreen;
-            }
-        }
-
-        .browser-buttons-elem {
-            width: 11px;
-            height: 13px;
-            background-color: $landingButtonGrey;
-
-            &:not(:last-of-type) {
-                margin-right: 14px;
-            }
-        }
-    }
-
-    .browser-content-item {
-        width: 265px;
-        height: 53px;
-        background-color: $landingBrowserContent;
-
-        &:not(:last-of-type) {
-            margin-bottom: 29px;
-        }
-
-        &.mod-size_left {
-            height: 174px;
-        }
-
-        &.mod-size_right {
-            width: 298px;
-            height: 135px;
-            margin-bottom: 34px;
-        }
-
-        &.mod-size_small {
-            width: 298px;
-            height: 7px;
-
-            &:not(:last-of-type) {
-                margin-bottom: 10px;
-            }
-        }
+        display: block;
+        width: 3px;
+        background: $landingMainMessage;
     }
 
     .landing-main_numbering {
+        position: relative;
+        z-index: 2;
+
         width: 90px;
-        height: 91px;
+        height: 90px;
         border-radius: 50%;
         background-color: $mainDarkBlue;
         margin: 0 auto 111px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
 
-        &.mod_margin{
-            margin-bottom: 123px;
-        }
+    .landing-main_number {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-        .landing-main_number {
-            font-size: 40px;
-            font-weight: 700;
-            color: $white;
-        }
+        font-size: 40px;
+        font-weight: 700;
+        color: $white;
+        line-height: 1;
     }
 
     .landing-main_content {
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        margin-bottom: 153px;
 
-        .landing-main_browser {
-            width: 700px;
-            height: 441px;
-            border: 1px solid $landingMainBrowser;
-            background-color: $white;
+        &.mod_reverse {
+            flex-direction: row-reverse;
 
-            .landing-browser_head {
-                height: 37px;
-                border-bottom: 1px solid $landingMainBrowser;
-                background-color: $landingBrowserHead;
-                padding: 0 51px 0 25px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+            .landing-main_message-wrap {
+                padding-right: 96px;
+                padding-left: 40px;
 
-                .browser-head_search {
-                    width: 385px;
-                    height: 23px;
-                    border: 1px solid $landingMainBrowser;
-                    background-color: $white;
-                    padding: 0 30px;
-                    font-size: 10px;
-                    font-weight: 400;
-                    line-height: 18px;
-                    display: flex;
-                    align-items: center;
-                    color: $andibgBrowserSearch;
+                .landing-main_message {
+                    &:before {
+                        left: auto;
+                        right: -98px;
+                    }
                 }
-            }
-
-            .landing-browser_content {
-                padding: 29px 24px 36px 53px;
-                display: flex;
-                justify-content: space-between;
             }
         }
 
+        & > * {
+            width: 50%;
+        }
+    }
+
+    .landing-main_message-wrap {
+        padding-left: 96px;
+        padding-right: 0;
+
         .landing-main_message {
-            width: 695px;
-            height: 283px;
-            border-radius: 24px;
-            border: 3px solid $landingMainMessage;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &.mod-message_size{
-                height: 366px;
-            }
-
-            .main-message_text {
-                width: 610px;
-                font-size: 28px;
-                line-height: 38px;
-                font-weight: 600;
-                color: $widgetActiveBlue;
-
+            &:before {
+                left: -98px;
             }
         }
     }
 
+    .landing-main_message {
+        position: relative;
+
+        border-radius: 24px;
+        border: 3px solid $landingMainMessage;
+
+        padding-left: 42px;
+        padding-right: 42px;
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: 600;
+        color: $widgetActiveBlue;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            display: block;
+            width: 96px;
+            height: 3px;
+            background: $landingMainMessage;
+        }
+
+        & > * {
+            &:not(:last-of-type) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .landing-main_block {
+        @include media('t-ipad-landscape') {
+            &.mod_1 {
+                margin-bottom: 100px;
+
+                .landing-main_message {
+                    padding-top: 108px;
+                    padding-bottom: 108px;
+                }
+
+                .landing-main_browser {
+                    padding-right: 40px;
+                }
+            }
+
+            &.mod_2 {
+                margin-bottom: 140px;
+
+                .landing-main_numbering {
+                    margin-bottom: 123px;
+                }
+
+                .landing-main_message {
+                    padding-top: 93px;
+                    padding-bottom: 93px;
+                }
+
+                .landing-main_browser {
+                    padding-left: 96px;
+                }
+            }
+        }
+    }
 }
 
