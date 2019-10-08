@@ -36,6 +36,35 @@
         }
     }
 
+    .browser-content-item {
+        width: 265px;
+        height: 53px;
+        background-color: $landingBrowserContent;
+
+        &:not(:last-of-type) {
+            margin-bottom: 29px;
+        }
+
+        &.mod-size_left {
+            height: 174px;
+        }
+
+        &.mod-size_right {
+            width: 298px;
+            height: 135px;
+            margin-bottom: 34px;
+        }
+
+        &.mod-size_small {
+            width: 298px;
+            height: 7px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
     .landing-main_container {
 
         .landing-main_numbering {
@@ -76,8 +105,10 @@
                 }
             }
 
-            .landing-browser_content{
-
+            .landing-browser_content {
+                padding: 29px 24px 36px 53px;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

@@ -28,7 +28,26 @@
                 </div>
 
                 <div class="landing-browser_content">
-
+                    <div class="browser-content_block">
+                        <div class="browser-content-item"></div>
+                        <div class="browser-content-item"></div>
+                        <div class="browser-content-item mod-size_left"></div>
+                    </div>
+                    <div class="browser-content_block">
+                        <div class="browser-content-item mod-size_right"></div>
+                        <div class="browser-content_elems">
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                            <div class="browser-content-item mod-size_small"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
