@@ -27,6 +27,35 @@
                 </div>
             </div>
         </div>
+
+        <div class="landing-main_block mod_3">
+            <div class="landing-main_numbering">
+                <span class="landing-main_number">3</span>
+            </div>
+            <div class="landing-main_content">
+                <img src="/img/illustration/3-step.svg"
+                     class="landing-main_browser">
+                <div class="landing-main_message-wrap">
+                    <div class="landing-main_message"
+                         v-html='__("landing", "Message 3")'></div>
+                </div>
+            </div>
+        </div>
+        <div class="landing-main_block mod_4">
+            <div class="landing-main_numbering">
+                <span class="landing-main_number">4</span>
+            </div>
+            <div class="landing-main_content mod_reverse">
+                <img src="/img/illustration/4-step.svg"
+                     class="landing-main_browser">
+                <div class="landing-main_message-wrap">
+                    <div class="landing-main_message">
+                        <p>{{ __("landing", "Message 4") }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
