@@ -17,6 +17,7 @@
         display: block;
         width: 3px;
         background: $landingMainMessage;
+        //height: 2818px;
     }
 
     .landing-main_numbering {
@@ -131,10 +132,7 @@
                 }
 
                 .landing-main_message {
-                    padding-top: 93px;
-                    padding-bottom: 93px;
-                    padding-left: 63px;
-                    padding-right: 63px;
+                    padding: 96px 63px;
                 }
 
                 .landing-main_browser {
@@ -159,6 +157,23 @@
                 .landing-main_browser {
                     padding-left: 70px;
                     padding-right: 188px;
+                }
+            }
+
+            &.mod_4 {
+                padding-bottom: 30px;
+
+                .landing-main_numbering {
+                    margin-bottom: 49px;
+                }
+
+                .landing-main_message {
+                    padding: 90px 37px;
+                }
+
+                .landing-main_browser {
+                    padding-left: 140px;
+                    padding-right: 70px;
                 }
             }
         }
