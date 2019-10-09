@@ -1,2 +1,8 @@
 @import '@/app';
 
+.landing{
+    @include media('d-only'){
+        background: $landingBackground;
+    }
+
+}

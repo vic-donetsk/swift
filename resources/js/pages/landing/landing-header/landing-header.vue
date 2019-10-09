@@ -1,6 +1,17 @@
 <template>
     <div class="landing-header">
         <div class="landing-header_content">
+            <div class="header-gamburger">
+                <div class="header-gamburger_item top"></div>
+                <div class="header-gamburger_item middle"></div>
+                <div class="header-gamburger_item bottom"></div>
+            </div>
+
+            <logo size="landing"></logo>
+            <div class="landing-header_user">
+                <svg class="header-user_icon"><use xlink:href="#user"></use></svg>
+            </div>
+
             <div class="landing-header_item">
                 <div class="landing-header_item-icon">O</div>
                 <div class="landing-header_item-text">{{ __("landing", "Contact Phone") }}</div>

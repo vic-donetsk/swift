@@ -2,10 +2,13 @@
 
 .landing-main {
     position: relative;
-
-    padding: 0 32px;
+    padding: 0 20px;
     max-width: 1690px;
     margin: 0 auto;
+
+    @include media('d-only'){
+        padding: 0 32px;
+    }
 
     &:before {
         content: "";
@@ -17,7 +20,6 @@
         display: block;
         width: 3px;
         background: $landingMainMessage;
-        //height: 2818px;
     }
 
     .landing-main_numbering {
@@ -27,7 +29,7 @@
         height: 90px;
         border-radius: 50%;
         background-color: $mainDarkBlue;
-        margin: 0 auto 111px;
+        margin: 0 auto 45px;
     }
 
     .landing-main_number {
@@ -110,9 +112,13 @@
     }
 
     .landing-main_block {
-        @include media('t-ipad-landscape') {
+        @include media('d-only') {
             &.mod_1 {
                 margin-bottom: 100px;
+
+                .landing-main_numbering {
+                    margin-bottom: 111px;
+                }
 
                 .landing-main_message {
                     padding-top: 108px;

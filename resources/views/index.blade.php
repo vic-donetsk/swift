@@ -10,6 +10,10 @@
 </head>
 <body class="mod-landing">
 <div>
+    <div style="position:absolute;visibility: hidden;
+        opacity: 0;display: none">
+        @include('sprite')
+    </div>
     <div id="app">
         {{--<header>Шапка</header>--}}
         {{--<nav>Боковое меню</nav>--}}
