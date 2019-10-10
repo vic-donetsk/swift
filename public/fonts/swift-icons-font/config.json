@@ -162,7 +162,7 @@
     },
     {
       "uid": "614a12055ffaa9192a3ac00520cbac8f",
-      "css": "chat(circle)",
+      "css": "chat_circle",
       "code": 59403,
       "src": "custom_icons",
       "selected": true,
@@ -171,7 +171,7 @@
         "width": 992
       },
       "search": [
-        "chat(circle)"
+        "chat_circle"
       ]
     },
     {
@@ -232,7 +232,7 @@
     },
     {
       "uid": "8d37139f293302df62b557b422181ed3",
-      "css": "email(circle)",
+      "css": "email_circle",
       "code": 59408,
       "src": "custom_icons",
       "selected": true,
@@ -241,7 +241,7 @@
         "width": 992
       },
       "search": [
-        "email(circle)"
+        "email_circle"
       ]
     },
     {

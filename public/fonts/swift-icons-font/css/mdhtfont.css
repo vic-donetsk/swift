@@ -66,12 +66,12 @@
 .icon-cellphone_sms:before { content: '\e808'; } /* '' */
 .icon-chat_bubbles:before { content: '\e809'; } /* '' */
 .icon-chat_settings:before { content: '\e80a'; } /* '' */
-.icon-chat(circle):before { content: '\e80b'; } /* '' */
+.icon-chat_circle:before { content: '\e80b'; } /* '' */
 .icon-clock:before { content: '\e80c'; } /* '' */
 .icon-copy:before { content: '\e80d'; } /* '' */
 .icon-cross:before { content: '\e80e'; } /* '' */
 .icon-download_:before { content: '\e80f'; } /* '' */
-.icon-email(circle):before { content: '\e810'; } /* '' */
+.icon-email_circle:before { content: '\e810'; } /* '' */
 .icon-euro:before { content: '\e811'; } /* '' */
 .icon-facebook:before { content: '\e812'; } /* '' */
 .icon-global:before { content: '\e813'; } /* '' */
