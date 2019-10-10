@@ -1,0 +1,16 @@
+@import '@/app';
+
+.conversation {
+    display: flex;
+    justify-content: flex-end;
+    padding: 67px 72px;
+
+}
+.conversation_block {
+    width: 602px;
+    height: calc(100vh - 134px);
+    background: #F8F8FD; //$conversationBackground: #F8F8FD;
+    z-index: 5;
+
+
+}
