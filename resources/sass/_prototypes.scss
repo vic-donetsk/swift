@@ -9,20 +9,3 @@
 %greenGradient {
     background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
 }
-
-
-%button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    padding: 0 15px;
-    color: $white;
-    cursor: pointer;
-
-    & > * {
-        &::selection {
-            background: transparent;
-        }
-    }
-}

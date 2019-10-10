@@ -22,6 +22,7 @@
                 font-size: 4.9vh;
             }
         }
+
         .logo_subtitle {
             font-size: 22px;
             @include media('t') {
@@ -31,13 +32,22 @@
     }
 
     &.landingClass {
-        margin-right: 110px;
 
         .logo_title {
-            font-size: 35px;
-        }
-        .logo_subtitle {
             font-size: 25px;
+
+            @include media('d-only') {
+                font-size: 35px;
+            }
+
+        }
+
+        .logo_subtitle {
+            font-size: 17px;
+
+            @include media('d-only') {
+                font-size: 25px;
+            }
         }
     }
 }

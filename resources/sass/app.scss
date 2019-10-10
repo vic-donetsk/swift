@@ -1,10 +1,10 @@
+// Include Media
+@import '~include-media/dist/_include-media';
+
 @import 'variables';
 @import "global";
 @import 'prototypes';
 @import 'mixins';
-
-// Include Media
-@import '~include-media/dist/_include-media';
 
 // Mdht font (icons)
 @import '/fonts/swift-icons-font/css/mdhtfont.css';

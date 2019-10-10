@@ -1,32 +1,109 @@
 @import '@/app';
 
 .landing-header {
-    background-color: $landingHeaderbackground;
-    margin-bottom: 37px;
+    margin-bottom: 108px;
+
+    @include media('d-only') {
+        background-color: $landingHeaderbackground;
+        margin-bottom: 37px;
+    }
 
     .landing-header_content {
-        height: 53px;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
         max-width: 1650px;
         margin: 0 auto;
-        padding: 0 32px;
+        padding: 24px 16px 0;
+        justify-content: space-between;
+
+        @include media('d-only') {
+            padding: 0 32px;
+            height: 53px;
+            justify-content: flex-end;
+        }
+
+        .header-hamburger {
+            position: relative;
+            width: 26px;
+            height: 14px;
+            cursor: pointer;
+
+            .header-hamburger_item {
+                width: 26px;
+                height: 2px;
+                position: absolute;
+                background-color: $widgetActiveBlue;
+                border-radius: 1px;
+
+                &.top {
+                    top: 0;
+                }
+
+                &.middle {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &.bottom {
+                    bottom: 0;
+                }
+            }
+
+            @include media('d-only') {
+                display: none;
+            }
+        }
+
+        .logo {
+            &.landingClass {
+                @include media('d-only') {
+                    display: none;
+                }
+            }
+        }
+
+        .landing-header_user {
+            border: 2px solid $widgetActiveBlue;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @include media('d-only') {
+                display: none;
+            }
+
+            .header-user_icon {
+                position: relative;
+                top: 2px;
+
+                display: block;
+                width: 24px;
+                height: 22px;
+                fill: $widgetActiveBlue;
+            }
+        }
+
 
         .landing-header_item {
-            display: flex;
-            color: $widgetActiveBlue;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
+            display: none;
 
-            &:not(:last-of-type) {
-                margin-right: 60px;
+            @include media('d-only') {
+                display: flex;
+                color: $widgetActiveBlue;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+
+                &:not(:last-of-type) {
+                    margin-right: 60px;
+                }
+
+                &.mod_position {
+                    margin-right: 72px;
+                }
             }
 
-            &.mod_position{
-                margin-right: 72px;
-            }
         }
     }
 }

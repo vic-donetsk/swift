@@ -1,26 +1,35 @@
 @import '@/app';
 
 .landing-menu {
-    max-width: 1650px;
-    margin: 0 auto;
-    padding: 0 32px;
+    display: none;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .landing-menu_nav {
+    @include media('d-only'){
+        max-width: 1650px;
+        margin: 0 auto;
+        padding: 0 32px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-    }
 
-    .landing-menu_item {
-        list-style-type: none;
-        text-transform: uppercase;
-        margin: 0 20px;
-        padding: 5px 0;
-        color: $landingMenuNav;
-        cursor: pointer;
+        .logo{
+            &.landingClass {
+                margin-right: 110px;
+            }
+        }
+
+        .landing-menu_nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .landing-menu_item {
+            list-style-type: none;
+            text-transform: uppercase;
+            margin: 0 20px;
+            padding: 5px 0;
+            color: $landingMenuNav;
+            cursor: pointer;
+        }
     }
 }
 
