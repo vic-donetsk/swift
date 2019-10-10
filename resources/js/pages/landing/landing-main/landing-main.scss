@@ -2,7 +2,7 @@
 
 .landing-main {
     position: relative;
-    padding: 0 20px;
+    padding: 77px 20px 0;
     max-width: 1690px;
     margin: 0 auto;
 
@@ -14,7 +14,7 @@
         content: "";
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -46px;
         left: 50%;
         transform: translateX(-50%);
         display: block;
@@ -88,7 +88,6 @@
             padding-left: 96px;
             padding-right: 0;
         }
-
 
         .landing-main_message {
             &:before {
@@ -273,8 +272,6 @@
             }
 
             &.mod_4 {
-                padding-bottom: 30px;
-
                 .landing-main_numbering {
                     margin-bottom: 49px;
                 }
