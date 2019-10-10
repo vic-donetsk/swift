@@ -101,8 +101,6 @@
         position: relative;
         border-radius: 24px;
         border: 2px solid $landingMainMessage;
-        padding-left: 42px;
-        padding-right: 42px;
         font-size: 14px;
         line-height: 20px;
         font-weight: 500;
@@ -163,11 +161,27 @@
             }
         }
 
+        &.mod_1 {
+            .landing-main_message {
+                padding: 22px 32px;
+            }
+        }
+
+        &.mod_2 {
+            .landing-main_message {
+                padding: 24px 41px;
+            }
+        }
+
         &.mod_3 {
             .landing-main_image {
                 &.mod_border {
                     padding: 10px 33px;
                 }
+            }
+
+            .landing-main_message {
+                padding: 24px 28px;
             }
         }
 
@@ -176,6 +190,10 @@
                 &.mod_border {
                     padding: 67px 30px 60px 35px;
                 }
+            }
+
+            .landing-main_message {
+                padding: 24px 26px 24px 32px;
             }
         }
 
@@ -192,6 +210,8 @@
                 }
 
                 .landing-main_message {
+                    padding-left: 42px;
+                    padding-right: 42px;
                     padding-top: 108px;
                     padding-bottom: 108px;
                 }
