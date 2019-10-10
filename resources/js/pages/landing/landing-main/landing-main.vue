@@ -7,6 +7,8 @@
             <div class="landing-main_content">
                 <img src="/img/illustration/1-step.svg"
                      class="landing-main_browser">
+                <img src="/img/illustration/1-step-mobi.svg"
+                     class="landing-main_browser mod_mobi">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message">
                         <p>{{ __("landing", "Message 1") }}</p>
@@ -21,6 +23,8 @@
             <div class="landing-main_content mod_reverse">
                 <img src="/img/illustration/2-step.svg"
                      class="landing-main_browser">
+                <img src="/img/illustration/2-step-mobi.svg"
+                     class="landing-main_browser mod_mobi">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message"
                          v-html='__("landing", "Message 2")'></div>

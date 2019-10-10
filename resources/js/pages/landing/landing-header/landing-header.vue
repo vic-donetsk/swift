@@ -7,7 +7,7 @@
                 <div class="header-hamburger_item bottom"></div>
             </div>
 
-            <logo size="landing"></logo>
+            <logo class="landingClass"></logo>
             <div class="landing-header_user">
                 <svg class="header-user_icon">
                     <use xlink:href="#user"></use>
