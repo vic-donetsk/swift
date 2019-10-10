@@ -6,6 +6,7 @@
         </header>
         <landing-head></landing-head>
         <landing-main></landing-main>
+        <landing-offers></landing-offers>
 
         <!--{{ getTitle }}-->
 
