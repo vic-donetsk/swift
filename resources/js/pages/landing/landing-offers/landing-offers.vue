@@ -4,12 +4,15 @@
         <p class="landing-offers_subtitle">
             {{__('landing','Offer subtitle')}}
         </p>
-        <div v-for="item in offers" class="landing-offers_item">
-            <span class="landing-offers_item-title">{{item.title}}</span>
-            <svg class="landing-offers_item-icon">
-                <use :xlink:href="`#${item.icon}`"></use>
-            </svg>
+        <div class="landing-offers_item-wrap">
+            <div v-for="item in offers" class="landing-offers_item">
+                <svg class="landing-offers_item-icon">
+                    <use :xlink:href="`#${item.icon}`"></use>
+                </svg>
+                <span class="landing-offers_item-title">{{item.title}}</span>
+            </div>
         </div>
+
     </div>
 </template>
 
