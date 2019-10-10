@@ -6,9 +6,9 @@
             </div>
             <div class="landing-main_content">
                 <img src="/img/illustration/1-step.svg"
-                     class="landing-main_browser">
+                     class="landing-main_image">
                 <img src="/img/illustration/1-step-mobi.svg"
-                     class="landing-main_browser mod_mobi">
+                     class="landing-main_image mod_image">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message">
                         <p>{{ __("landing", "Message 1") }}</p>
@@ -22,9 +22,9 @@
             </div>
             <div class="landing-main_content mod_reverse">
                 <img src="/img/illustration/2-step.svg"
-                     class="landing-main_browser">
+                     class="landing-main_image">
                 <img src="/img/illustration/2-step-mobi.svg"
-                     class="landing-main_browser mod_mobi">
+                     class="landing-main_image mod_image">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message"
                          v-html='__("landing", "Message 2")'></div>
@@ -38,7 +38,7 @@
             </div>
             <div class="landing-main_content">
                 <img src="/img/illustration/3-step.svg"
-                     class="landing-main_browser">
+                     class="landing-main_image mod_border">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message"
                          v-html='__("landing", "Message 3")'></div>
@@ -50,8 +50,9 @@
                 <span class="landing-main_number">4</span>
             </div>
             <div class="landing-main_content mod_reverse">
-                <img src="/img/illustration/4-step.svg"
-                     class="landing-main_browser">
+                <div class="landing-main_image-wrap">
+                    <img src="/img/illustration/4-step.svg" class="landing-main_image mod_border">
+                </div>
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message">
                         <p>{{ __("landing", "Message 4") }}</p>
