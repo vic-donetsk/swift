@@ -37,8 +37,8 @@
                 <span class="landing-main_number">3</span>
             </div>
             <div class="landing-main_content">
-                <img src="/img/illustration/3-step.svg"
-                     class="landing-main_image mod_border">
+                <img src="/img/illustration/3-step.svg" class="landing-main_image mod_border">
+                <img src="/img/illustration/3-step.svg" class="landing-main_image">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message"
                          v-html='__("landing", "Message 3")'></div>
@@ -50,9 +50,8 @@
                 <span class="landing-main_number">4</span>
             </div>
             <div class="landing-main_content mod_reverse">
-                <div class="landing-main_image-wrap">
-                    <img src="/img/illustration/4-step.svg" class="landing-main_image mod_border">
-                </div>
+                <img src="/img/illustration/4-step.svg" class="landing-main_image">
+                <img src="/img/illustration/4-step.svg" class="landing-main_image mod_border">
                 <div class="landing-main_message-wrap">
                     <div class="landing-main_message">
                         <p>{{ __("landing", "Message 4") }}</p>
