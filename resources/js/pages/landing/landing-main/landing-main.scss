@@ -46,6 +46,7 @@
 
     .landing-main_content {
 
+
         @include media('d-only') {
             display: flex;
             align-items: center;
@@ -55,8 +56,11 @@
             flex-direction: row-reverse;
 
             .landing-main_message-wrap {
-                padding-right: 96px;
-                padding-left: 40px;
+
+                @include media('d-only') {
+                    padding-right: 96px;
+                    padding-left: 40px;
+                }
 
                 .landing-main_message {
                     &:before {
@@ -78,8 +82,10 @@
     }
 
     .landing-main_message-wrap {
-        padding-left: 96px;
-        padding-right: 0;
+        @include media('d-only') {
+            padding-left: 96px;
+            padding-right: 0;
+        }
 
         .landing-main_message {
             &:before {
@@ -92,24 +98,27 @@
         position: relative;
         border-radius: 24px;
         border: 3px solid $landingMainMessage;
-
         padding-left: 42px;
         padding-right: 42px;
         font-size: 28px;
         line-height: 38px;
         font-weight: 600;
         color: $widgetActiveBlue;
+        background: $white;
 
-        &:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+        @include media('d-only') {
+            background: none;
 
-            display: block;
-            width: 96px;
-            height: 3px;
-            background: $landingMainMessage;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 96px;
+                height: 3px;
+                background: $landingMainMessage;
+            }
         }
 
         & > * {
@@ -130,6 +139,8 @@
                 &.mod_mobi {
                     display: block;
                     padding-bottom: 46px;
+                    position: relative;
+                    z-index: 2;
                 }
             }
         }
