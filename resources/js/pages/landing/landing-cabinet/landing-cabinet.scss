@@ -4,12 +4,15 @@
     max-width: 1650px;
     margin: 0 auto 77px;
     padding: 0 20px;
-    text-align: center;
 
     @include media('d-only') {
         margin: 0 auto 199px;
         padding: 0 32px;
+        display: flex;
+        justify-content: space-between;
     }
+
+
 
     .landing-cabinet_title {
         font-size: 30px;
@@ -17,13 +20,68 @@
         line-height: 35px;
         color: $mainDarkBlue;
         padding-bottom: 30px;
-    }
-
-    .landing-cabinet_image{
-        width: 100%;
+        display: none;
 
         @include media('d-only'){
+            font-size: 50px;
+            line-height: 51px;
+            display: inline-block;
+        }
+
+        &.mod_mobil{
+            display: block;
+            text-align: center;
+
+            @include media('d-only') {
+                display: none;
+            }
+        }
+    }
+
+    .landing-cabinet_image {
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include media('d-only') {
             max-width: 1045px;
+            margin-bottom: 0;
+            margin-right: 104px;
+        }
+    }
+
+    .landing-cabinet_list {
+        margin-bottom: 46px;
+    }
+
+    .landing-cabinet_item {
+
+        &:not(:last-of-type) {
+            margin-bottom: 11px;
+        }
+
+        @include media('d-only'){
+
+            &:not(:last-of-type) {
+                margin-bottom: 21px;
+            }
+        }
+
+        .landing-cabinet_item-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $widgetActiveBlue;
+
+            @include media("d-only"){
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .button {
+        &.mod_landing {
+            margin: 0 auto;
         }
     }
 }
