@@ -94,6 +94,7 @@
                 cursor: pointer;
                 font-size: 14px;
                 font-weight: 500;
+                align-items: center;
 
                 &:not(:last-of-type) {
                     margin-right: 60px;
@@ -105,6 +106,14 @@
             }
 
         }
+
+        .landing-header_item-icon{
+            width: 16px;
+            height: 13px;
+            fill: $widgetActiveBlue;
+            margin-right: 9px;
+        }
     }
+
 }
 

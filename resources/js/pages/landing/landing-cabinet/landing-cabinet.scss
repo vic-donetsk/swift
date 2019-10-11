@@ -1,0 +1,29 @@
+@import '@/app';
+
+.landing-cabinet {
+    max-width: 1650px;
+    margin: 0 auto 77px;
+    padding: 0 20px;
+    text-align: center;
+
+    @include media('d-only') {
+        margin: 0 auto 199px;
+        padding: 0 32px;
+    }
+
+    .landing-cabinet_title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35px;
+        color: $mainDarkBlue;
+        padding-bottom: 30px;
+    }
+
+    .landing-cabinet_image{
+        width: 100%;
+
+        @include media('d-only'){
+            max-width: 1045px;
+        }
+    }
+}

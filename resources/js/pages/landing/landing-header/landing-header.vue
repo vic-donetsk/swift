@@ -15,11 +15,15 @@
             </div>
 
             <div class="landing-header_item">
-                <div class="landing-header_item-icon">O</div>
+                <svg class="landing-header_item-icon">
+                    <use xlink:href="#phone"></use>
+                </svg>
                 <div class="landing-header_item-text">{{ __("landing", "Contact Phone") }}</div>
             </div>
             <div class="landing-header_item mod_position">
-                <div class="landing-header_item-icon">O</div>
+                <svg class="landing-header_item-icon">
+                    <use xlink:href="#mail-envelope"></use>
+                </svg>
                 <div class="landing-header_item-text">info@swiftcallback.md</div>
             </div>
             <div class="landing-header_item">
