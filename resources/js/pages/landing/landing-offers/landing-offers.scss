@@ -3,57 +3,93 @@
 .landing-offers {
     padding: 0 25px;
     margin: 0 auto 77px;
+    max-width: 1520px;
 
-    @include media('d-only'){
+    @include media('d-only') {
         padding: 0 32px;
         margin: 0 auto 199px;
     }
 
-    .landing-offers_title{
+    .landing-offers_title {
         font-size: 30px;
         font-weight: 700;
         line-height: 1;
         color: $mainDarkBlue;
         text-align: center;
+
+        @include media('d-only') {
+            margin-bottom: 146px;
+        }
+
+        .mod_mobile {
+            display: none;
+
+            @include media('d-only') {
+                display: inline;
+            }
+        }
     }
 
-    .landing-offers_subtitle{
+    .landing-offers_subtitle {
         font-size: 16px;
         font-weight: 300;
         line-height: 25px;
         color: $mainDarkBlue;
         text-align: center;
         padding-bottom: 35px;
+
+        @include media('d-only') {
+            display: none;
+        }
     }
 
 
-    .landing-offers_item-wrap{
+    .landing-offers_list {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
 
-        .landing-offers_item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 34%;
-            margin-bottom: 53px;
+    .landing-offers_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(50% - 24px);
+        margin: 0 12px 53px 12px;
 
-            .landing-offers_item-title {
-                font-size: 12px;
-                line-height: 16px;
-                font-weight: 500;
-                text-align: center;
-                color: $mainDarkBlue;
-            }
+        @include media('d-only') {
+            width: calc(25% - 24px);
+        }
+    }
 
-            .landing-offers_item-icon {
-                width: 56px;
-                height: 56px;
-                fill: #608ED3;
-                margin-bottom: 15px;
-            }
+    .landing-offers_item-title {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: $mainDarkBlue;
+        max-width: 150px;
+
+        @include media('d-only') {
+            max-width: 188px;
+            line-height: 24px;
+            font-size: 18px;
+        }
+    }
+
+    .landing-offers_item-icon {
+        width: 56px;
+        height: 56px;
+        fill: #608ED3;
+        margin-bottom: 15px;
+
+        @include media('d-only') {
+            width: 84px;
+            height: 84px;
+
+            margin-bottom: 26px;
         }
     }
 }

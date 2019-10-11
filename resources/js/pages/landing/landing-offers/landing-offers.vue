@@ -1,15 +1,21 @@
 <template>
     <div class="landing-offers">
-        <h2 class="landing-offers_title">SwiftCallBack</h2>
+        <h2 class="landing-offers_title">
+            SwiftCallBack
+            <span class="mod_mobile">
+                {{__('landing','Offer subtitle')}}
+            </span>
+        </h2>
         <p class="landing-offers_subtitle">
             {{__('landing','Offer subtitle')}}
         </p>
-        <div class="landing-offers_item-wrap">
+        <div class="landing-offers_list">
             <div v-for="item in offers" class="landing-offers_item">
                 <svg class="landing-offers_item-icon">
                     <use :xlink:href="`#${item.icon}`"></use>
                 </svg>
-                <span class="landing-offers_item-title">{{item.title}}</span>
+                <p class="landing-offers_item-title"
+                   v-html="item.title"></p>
             </div>
         </div>
 
