@@ -5,10 +5,10 @@
         </h2>
         <img src="/img/illustration/dashboard.svg" class="landing-cabinet_image">
         <div class="landing-cabinet_container">
+            <h2 class="landing-cabinet_title">
+                <span>{{__("landing", "Cabinet title")}}</span>
+            </h2>
             <div class="landing-cabinet_list">
-                <h2 class="landing-cabinet_title">
-                    <span>{{__("landing", "Cabinet title")}}</span>
-                </h2>
                 <div v-for="item in cabinet" class="landing-cabinet_item">
                     <p class="landing-cabinet_item-text"
                        v-html="item.text"></p>

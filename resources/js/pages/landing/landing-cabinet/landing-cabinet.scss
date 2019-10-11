@@ -9,26 +9,32 @@
         margin: 0 auto 199px;
         padding: 0 32px;
         display: flex;
-        justify-content: space-between;
     }
 
-
+    .landing-cabinet_container {
+        @include media('d-only') {
+            width: 540px;
+            flex-shrink: 0;
+        }
+    }
 
     .landing-cabinet_title {
         font-size: 30px;
         font-weight: 700;
         line-height: 35px;
         color: $mainDarkBlue;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
         display: none;
 
-        @include media('d-only'){
+        @include media('d-only') {
             font-size: 50px;
             line-height: 51px;
-            display: inline-block;
+            display: block;
+            text-align: right;
+            padding-top: 24px;
         }
 
-        &.mod_mobil{
+        &.mod_mobil {
             display: block;
             text-align: center;
 
@@ -43,24 +49,25 @@
         margin-bottom: 30px;
 
         @include media('d-only') {
-            max-width: 1045px;
             margin-bottom: 0;
-            margin-right: 104px;
+            flex: 1;
         }
     }
 
     .landing-cabinet_list {
         margin-bottom: 46px;
+
+        @include media('d-only') {
+            padding-left: 125px;
+        }
     }
 
     .landing-cabinet_item {
-
         &:not(:last-of-type) {
             margin-bottom: 11px;
         }
 
-        @include media('d-only'){
-
+        @include media('d-only') {
             &:not(:last-of-type) {
                 margin-bottom: 21px;
             }
@@ -72,7 +79,7 @@
             line-height: 30px;
             color: $widgetActiveBlue;
 
-            @include media("d-only"){
+            @include media("d-only") {
                 font-size: 20px;
                 font-weight: 500;
             }
@@ -81,7 +88,9 @@
 
     .button {
         &.mod_landing {
-            margin: 0 auto;
+            @include media('d-only') {
+                margin-left: 209px;
+            }
         }
     }
 }
