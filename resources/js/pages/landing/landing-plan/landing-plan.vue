@@ -7,15 +7,55 @@
             <div class="landing-plan_block left">
                 <img src="/img/illustration/Starter.svg" class="landing-plan_image">
                 <h3 class="landing-plan_name">STARTER</h3>
+                <div class="landing-plan_price">
+                    <div class="landin-plan_sum">
+                        <svg class="landing-plan_sum-icon">
+                            <use xlink:href="#euro"></use>
+                        </svg>
+                        <span class="landing-plan_sum-number">15</span>
+                    </div>
+                    <span class="landing-plan_price-text">{{__("landing", "Price text")}}</span>
+                </div>
+
+                <div class="button mod_landing mod-blue">
+                    <span class="button_text">{{ __("landing", "Plan button") }}</span>
+                </div>
+
             </div>
 
             <div class="landing-plan_block middle">
                 <img src="/img/illustration/Profesional.svg" class="landing-plan_image">
                 <h3 class="landing-plan_name">PROFESIONAL</h3>
+                <div class="landing-plan_price">
+                    <div class="landin-plan_sum">
+                        <svg class="landing-plan_sum-icon">
+                            <use xlink:href="#euro"></use>
+                        </svg>
+                        <span class="landing-plan_sum-number">35</span>
+                    </div>
+                    <span class="landing-plan_price-text">{{__("landing", "Price text")}}</span>
+                </div>
+
+                <div class="button mod_landing mod-green">
+                    <span class="button_text">{{ __("landing", "Plan button") }}</span>
+                </div>
             </div>
             <div class="landing-plan_block right">
                 <img src="/img/illustration/Premium.svg" class="landing-plan_image">
                 <h3 class="landing-plan_name">PREMIUM</h3>
+                <div class="landing-plan_price">
+                    <div class="landin-plan_sum">
+                        <svg class="landing-plan_sum-icon">
+                            <use xlink:href="#euro"></use>
+                        </svg>
+                        <span class="landing-plan_sum-number">55</span>
+                    </div>
+                    <span class="landing-plan_price-text">{{__("landing", "Price text")}}</span>
+                </div>
+
+                <div class="button mod_landing mod-brown">
+                    <span class="button_text">{{ __("landing", "Plan button") }}</span>
+                </div>
             </div>
         </div>
 

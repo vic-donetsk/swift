@@ -11,11 +11,11 @@
         line-height: 1;
         color: $mainDarkBlue;
         text-align: center;
-        padding: 0 44px;
         margin-bottom: 35px;
 
         @include media('d-only') {
             font-size: 50px;
+            padding: 0 44px;
         }
     }
 
@@ -57,47 +57,9 @@
 
         }
 
-
         @include media('d-only') {
             border: 1px solid $landingPlanBorder;
             padding: 60px 70px 0;
-        }
-
-        .landing-plan_name {
-            font-size: 21px;
-            font-weight: 500;
-            text-align: center;
-            color: $mainDarkBlue;
-            line-height: 32px;
-            padding-bottom: 37px;
-            position: relative;
-            margin-bottom: 35px;
-            border-bottom: 1px solid $landingPlanBorderMobi;
-
-            &:before {
-                content: "";
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: block;
-                width: 18px;
-                height: 2px;
-                background: $landingMainMessage;
-            }
-
-            @include media('d-only') {
-                font-size: 30px;
-                line-height: 45px;
-                padding-bottom: 50px;
-                margin-bottom: 50px;
-
-                &:before {
-                    width: 25px;
-                    height: 3px;
-                    background: $landingMainMessage;
-                }
-            }
         }
     }
 
@@ -110,6 +72,104 @@
             height: 230px;
             margin-bottom: 80px;
         }
+
+    }
+
+    .landing-plan_name {
+        font-size: 21px;
+        font-weight: 500;
+        text-align: center;
+        color: $mainDarkBlue;
+        line-height: 32px;
+        padding-bottom: 37px;
+        position: relative;
+        margin-bottom: 35px;
+        border-bottom: 1px solid $landingPlanBorderMobi;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: $landingMainMessage;
+        }
+
+        @include media('d-only') {
+            font-size: 30px;
+            line-height: 45px;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+
+            &:before {
+                width: 25px;
+                height: 3px;
+                background: $landingMainMessage;
+            }
+        }
+    }
+
+    .landing-plan_price {
+        text-align: center;
+        color: $mainDarkBlue;
+        margin-bottom: 36px;
+
+        @include media('d-only'){
+            margin-bottom: 50px;
+        }
+
+        .landin-plan_sum{
+
+            .landing-plan_sum-icon {
+                width: 22px;
+                height: 27px;
+                fill: $mainDarkBlue;
+
+                @include media('d-only'){
+                    width: 30px;
+                    height: 37px;
+                }
+            }
+
+            .landing-plan_sum-number {
+                font-size: 36px;
+                line-height: 32px;
+                font-weight: 600;
+
+                @include media('d-only'){
+                    font-size: 50px;
+                    line-height: 45px;
+                }
+            }
+        }
+
+        .landing-plan_price-text{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 33px;
+
+            @include media('d-only'){
+                font-size: 22px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    .button{
+        margin: 0 auto;
+
+            min-width: 164px;
+            height: 48px;
+
+            //@include media('m-iphone5'){
+            //   max-width: 225px;
+            //    min-width: 225px;
+            //    height: 65px;
+            //}
+
 
     }
 }
