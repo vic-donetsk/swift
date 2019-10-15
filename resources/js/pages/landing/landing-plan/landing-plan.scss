@@ -3,7 +3,7 @@
 .landing-plan {
     max-width: 1379px;
     padding: 0 32px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
 
     .landing-plan_title {
         font-size: 30px;
@@ -26,6 +26,8 @@
         .landing-plan_block {
             background: $landingBackground;
             border-radius: 8px;
+            padding: 60px 70px 0;
+            width: 100%;
 
 
             @include media('d-only') {
@@ -36,8 +38,9 @@
     }
 
     .landing-plan_image {
-        padding: 60px 70px 0;
         margin-bottom: 62px;
+        width: 100%;
+        //height: 230px;
 
         @include media('d-only'){
             margin-bottom: 80px;

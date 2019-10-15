@@ -8,7 +8,7 @@
         <landing-main></landing-main>
         <landing-offers></landing-offers>
         <landing-cabinet></landing-cabinet>
-<!--        <landing-plan></landing-plan>-->
+        <landing-plan></landing-plan>
 
         <!--{{ getTitle }}-->
 
