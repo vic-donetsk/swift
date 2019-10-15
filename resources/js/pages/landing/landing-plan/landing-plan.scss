@@ -27,14 +27,40 @@
     .landing-plan_block {
         background: $landingBackground;
         border-radius: 8px;
-        padding: 60px 70px 0;
+        padding: 50px 57px 0;
         width: 100%;
         border: 1px solid $landingPlanBorderMobi;
+
+        &.left {
+            .landing-plan_name {
+                &:before {
+                    background: $landingPlanLineBlue;
+                }
+            }
+        }
+
+        &.middle {
+            .landing-plan_name {
+                &:before {
+                    background: $landingPlanLineGreen;
+                }
+            }
+
+        }
+
+        &.right {
+            .landing-plan_name {
+                &:before {
+                    background: $landingPlanLineBrown;
+                }
+            }
+
+        }
 
 
         @include media('d-only') {
             border: 1px solid $landingPlanBorder;
-
+            padding: 60px 70px 0;
         }
 
         .landing-plan_name {
@@ -76,11 +102,12 @@
     }
 
     .landing-plan_image {
-        margin-bottom: 62px;
         width: 100%;
-        height: 230px;
+        height: 165px;
+        margin-bottom: 62px;
 
         @include media('d-only') {
+            height: 230px;
             margin-bottom: 80px;
         }
 
