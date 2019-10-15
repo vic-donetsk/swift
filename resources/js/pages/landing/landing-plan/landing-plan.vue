@@ -21,6 +21,12 @@
                     <span class="button_text">{{ __("landing", "Plan button") }}</span>
                 </div>
 
+                <div class="landing-plan_list">
+                    <h4 class="landing-plan_list-title">{{__("landing", "Plan list title")}}</h4>
+                        <span>{{__("landing", "Plan list left 1")}}</span>
+                        <span>{{__("landing", "Plan list left 2")}}</span>
+                        <span>{{__("landing", "Plan list left 3")}}</span>
+                </div>
             </div>
 
             <div class="landing-plan_block middle">
@@ -55,6 +61,10 @@
 
                 <div class="button mod_landing mod-brown">
                     <span class="button_text">{{ __("landing", "Plan button") }}</span>
+                </div>
+
+                <div class="landing-plan_list">
+
                 </div>
             </div>
         </div>

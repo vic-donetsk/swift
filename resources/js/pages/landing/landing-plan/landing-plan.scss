@@ -13,9 +13,13 @@
         text-align: center;
         margin-bottom: 35px;
 
+        @include media('t') {
+            padding: 0 44px;
+        }
+
         @include media('d-only') {
             font-size: 50px;
-            padding: 0 44px;
+
         }
     }
 
@@ -27,9 +31,14 @@
     .landing-plan_block {
         background: $landingBackground;
         border-radius: 8px;
-        padding: 50px 57px 0;
+        padding: 50px 57px 40px;
         width: 100%;
         border: 1px solid $landingPlanBorderMobi;
+
+        @include media('d-only') {
+            border: 1px solid $landingPlanBorder;
+            padding: 60px 70px 55px;
+        }
 
         &.left {
             .landing-plan_name {
@@ -55,11 +64,6 @@
                 }
             }
 
-        }
-
-        @include media('d-only') {
-            border: 1px solid $landingPlanBorder;
-            padding: 60px 70px 0;
         }
     }
 
@@ -117,18 +121,18 @@
         color: $mainDarkBlue;
         margin-bottom: 36px;
 
-        @include media('d-only'){
+        @include media('d-only') {
             margin-bottom: 50px;
         }
 
-        .landin-plan_sum{
+        .landin-plan_sum {
 
             .landing-plan_sum-icon {
                 width: 22px;
                 height: 27px;
                 fill: $mainDarkBlue;
 
-                @include media('d-only'){
+                @include media('d-only') {
                     width: 30px;
                     height: 37px;
                 }
@@ -139,37 +143,61 @@
                 line-height: 32px;
                 font-weight: 600;
 
-                @include media('d-only'){
+                @include media('d-only') {
                     font-size: 50px;
                     line-height: 45px;
                 }
             }
         }
 
-        .landing-plan_price-text{
+        .landing-plan_price-text {
             font-size: 16px;
             font-weight: 300;
             line-height: 33px;
 
-            @include media('d-only'){
+            @include media('d-only') {
                 font-size: 22px;
                 line-height: 45px;
             }
         }
     }
 
-    .button{
-        margin: 0 auto;
+    .button {
+        margin: 0 auto 35px;
+        min-width: 164px;
+        height: 48px;
 
-            min-width: 164px;
-            height: 48px;
+        @include media("d-only") {
+            margin: 0 auto 50px;
+        }
+    }
 
-            //@include media('m-iphone5'){
-            //   max-width: 225px;
-            //    min-width: 225px;
-            //    height: 65px;
-            //}
+    .landing-plan_list {
+        font-size: 14px;
+        line-height: 33px;
+        font-weight: 400;
+        color: $widgetActiveBlue;
+        text-align: left;
+
+        & > * {
+            display: block;
+        }
 
 
+        @include media("d-only") {
+            font-size: 16px;
+        }
+
+        .landing-plan_list-title {
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 600;
+            color: $mainDarkBlue;
+
+            @include media("d-only") {
+                font-size: 20px;
+                line-height: 45px;
+            }
+        }
     }
 }
