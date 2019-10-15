@@ -21,12 +21,12 @@
                     <span class="button_text">{{ __("landing", "Plan button") }}</span>
                 </div>
 
-                <div class="landing-plan_list">
-                    <h4 class="landing-plan_list-title">{{__("landing", "Plan list title")}}</h4>
-                        <span>{{__("landing", "Plan list left 1")}}</span>
-                        <span>{{__("landing", "Plan list left 2")}}</span>
-                        <span>{{__("landing", "Plan list left 3")}}</span>
-                </div>
+                <h4 class="landing-plan_list-title">{{__("landing", "Plan list title")}}</h4>
+                <ul class="landing-plan_list">
+                        <li>{{__("landing", "Plan list left 1")}}</li>
+                        <li>{{__("landing", "Plan list left 2")}}</li>
+                        <li>{{__("landing", "Plan list left 3")}}</li>
+                </ul>
             </div>
 
             <div class="landing-plan_block middle">

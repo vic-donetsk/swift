@@ -172,6 +172,18 @@
         }
     }
 
+    .landing-plan_list-title {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 600;
+        color: $mainDarkBlue;
+
+        @include media("d-only") {
+            font-size: 20px;
+            line-height: 45px;
+        }
+    }
+
     .landing-plan_list {
         font-size: 14px;
         line-height: 33px;
@@ -186,18 +198,6 @@
 
         @include media("d-only") {
             font-size: 16px;
-        }
-
-        .landing-plan_list-title {
-            font-size: 16px;
-            line-height: 32px;
-            font-weight: 600;
-            color: $mainDarkBlue;
-
-            @include media("d-only") {
-                font-size: 20px;
-                line-height: 45px;
-            }
         }
     }
 }
