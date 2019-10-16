@@ -26,6 +26,12 @@
     .landing-plan_container {
         display: flex;
         justify-content: space-between;
+        max-width: 440px;
+        margin: auto;
+
+        @include media('d-only') {
+            max-width: 100%;
+        }
     }
 
     .landing-plan_block {
@@ -196,6 +202,12 @@
 
         @include media("d-only") {
             font-size: 16px;
+        }
+    }
+
+    .swiper-slide {
+        @include media("d-only") {
+            width: 33.33%;
         }
     }
 }

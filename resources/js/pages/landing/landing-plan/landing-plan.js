@@ -26,7 +26,7 @@ export default {
         }
 
         $(window).on('resize load', function () {
-            if ($(window).width() <= 1280) {
+            if ($(window).width() < 1280) {
                 if (!this.initSwiper) {
                     init();
                     this.initSwiper = true;
