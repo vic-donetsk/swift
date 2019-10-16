@@ -50,6 +50,19 @@
                             <div class="button mod_landing mod-green">
                                 <span class="button_text">{{ __("landing", "Plan button") }}</span>
                             </div>
+
+                            <h4 class="landing-plan_list-title">{{__("landing", "Plan list title")}}</h4>
+                            <ul class="landing-plan_list">
+                                <li>{{__("landing", "Plan list middle 1")}}</li>
+                                <li>{{__("landing", "Plan list middle 2")}}</li>
+                                <li>{{__("landing", "Plan list middle 3")}}</li>
+                            </ul>
+
+                            <h4 class="landing-plan_list-title">{{__("landing", "Plan list title 2")}}</h4>
+                            <ul class="landing-plan_list">
+                                <li>{{__("landing", "Plan list character 1")}}</li>
+                                <li>{{__("landing", "Plan list character 2")}}</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -71,9 +84,18 @@
                                 <span class="button_text">{{ __("landing", "Plan button") }}</span>
                             </div>
 
-                            <div class="landing-plan_list">
+                            <h4 class="landing-plan_list-title">{{__("landing", "Plan list title")}}</h4>
+                            <ul class="landing-plan_list">
+                                <li>{{__("landing", "Plan list right 1")}}</li>
+                                <li>{{__("landing", "Plan list right 2")}}</li>
+                                <li>{{__("landing", "Plan list right 3")}}</li>
+                            </ul>
 
-                            </div>
+                            <h4 class="landing-plan_list-title">{{__("landing", "Plan list title 2")}}</h4>
+                            <ul class="landing-plan_list">
+                                <li>{{__("landing", "Plan list character 1")}}</li>
+                                <li>{{__("landing", "Plan list character 2")}}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

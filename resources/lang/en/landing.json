@@ -27,11 +27,11 @@
   "Offer 8": "Protecția datelor personale",
   "Cabinet title": "Cabinet personal",
   "Cabinet text 1": "・Statistica apelurilor / chat-ului",
-  "Cabinet text 2":"・Jurnalul apelurilor",
-  "Cabinet text 3":"・Chat (Web, Messenger, Telegram, Viber, WhatsApp, Vk)",
-  "Cabinet text 4":"・Exportarea datelor ( .xls / .cvs)",
-  "Cabinet text 5":"・Înregistrarea convorbirii",
-  "Cabinet text 6":"・Selectarea zilelor de lucru",
+  "Cabinet text 2": "・Jurnalul apelurilor",
+  "Cabinet text 3": "・Chat (Web, Messenger, Telegram, Viber, WhatsApp, Vk)",
+  "Cabinet text 4": "・Exportarea datelor ( .xls / .cvs)",
+  "Cabinet text 5": "・Înregistrarea convorbirii",
+  "Cabinet text 6": "・Selectarea zilelor de lucru",
   "Cabinet button": "Creează cont",
   "Plan title": "Alegeți planul potrivit pentru afacerea ta !",
   "Price text": "lunar",
@@ -39,6 +39,15 @@
   "Plan list title": "Include",
   "Plan list left 1": "・50 de minute",
   "Plan list left 2": "・20 de sms",
-  "Plan list left 3": "・1 domen"
+  "Plan list left 3": "・1 domen",
+  "Plan list middle 1": "・100 de minute",
+  "Plan list middle 2": "・40 de sms",
+  "Plan list middle 3": "・2 domene",
+  "Plan list right 1": "・∞ minute",
+  "Plan list right 2": "・∞ sms",
+  "Plan list right 3": "・5 domene",
+  "Plan list title 2": "Caracteristici",
+  "Plan list character 1": "・Înregistarea apelului",
+  "Plan list character 2": "・SMS Sender ID"
 }
 
