@@ -10,6 +10,10 @@
         <landing-cabinet></landing-cabinet>
         <landing-plan></landing-plan>
 
+        <footer>
+            <landing-footer-menu></landing-footer-menu>
+        </footer>
+
         <!--{{ getTitle }}-->
 
         <!--<div class="button" @click="goToAuth()">Go to auth</div>-->
