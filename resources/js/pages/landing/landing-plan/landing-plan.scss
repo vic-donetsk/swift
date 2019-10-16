@@ -2,8 +2,12 @@
 
 .landing-plan {
     max-width: 1379px;
-    padding: 0 32px;
-    margin: 0 auto 80px;
+    margin: 0 auto 77px;
+
+    @include media('d-only'){
+        margin: 0 auto 80px;
+        padding: 0 32px;
+    }
 
     .landing-plan_title {
         font-size: 30px;
@@ -37,7 +41,7 @@
     .landing-plan_block {
         background: $landingBackground;
         border-radius: 8px;
-        padding: 50px 57px 40px;
+        padding: 50px 42px 40px;
         width: 100%;
         border: 1px solid $landingPlanBorderMobi;
 
@@ -169,8 +173,9 @@
 
     .button {
         margin: 0 auto 35px;
-        min-width: 164px;
+        max-width: 164px;
         height: 48px;
+
 
         @include media("d-only") {
             margin: 0 auto 50px;
