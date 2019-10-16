@@ -12,6 +12,7 @@
 
         <footer>
             <landing-footer-menu></landing-footer-menu>
+            <landing-footer></landing-footer>
         </footer>
 
         <!--{{ getTitle }}-->

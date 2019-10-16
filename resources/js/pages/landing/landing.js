@@ -6,6 +6,7 @@ import landingOffers from './landing-offers/landing-offers.vue';
 import landingCabinet from './landing-cabinet/landing-cabinet.vue';
 import landingPlan from './landing-plan/landing-plan.vue';
 import landingFooterMenu from './landing-footer-menu/landing-footer-menu.vue';
+import landingFooter from './landing-footer/landing-footer.vue';
 
 // import Landing from "./landing";
 // export default {
@@ -22,6 +23,7 @@ export default {
         'landing-cabinet': landingCabinet,
         'landing-plan': landingPlan,
         'landing-footer-menu': landingFooterMenu,
+        'landing-footer': landingFooter,
     },
     data: function () {
         return {
