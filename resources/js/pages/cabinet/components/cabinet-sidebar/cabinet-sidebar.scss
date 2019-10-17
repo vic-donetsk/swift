@@ -1,12 +1,52 @@
 @import '@/app';
 
-.cabinet-sidebar{
+.cabinet-sidebar {
     width: 295px;
     height: 100vh;
     background-color: $landingHeaderbackground;
     position: relative;
-    .cabinet-sidebar_content {
 
+    .cabinet-sidebar_content {
+        padding-top: 37px;
+        padding-bottom: 35px;
+
+        .logo {
+            &.landingClass {
+                padding-bottom: 36px;
+                border-bottom: 1px solid $widgetSidebarBorder;
+                margin-bottom: 37px;
+            }
+        }
+
+        .cabinet-sidebar_person {
+            text-align: center;
+            color: $mainDarkBlue;
+            font-size: 0;
+
+            .sidebar-person_image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin-bottom: 17px;
+            }
+
+            .sidebar-person_name {
+                font-family: Mont, sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .sidebar-person_icon {
+                width: 12px;
+                height: 8px;
+                fill: $mainDarkBlue;
+                margin-left: 12px;
+            }
+        }
     }
 }
 
