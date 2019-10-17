@@ -1,0 +1,115 @@
+@import '@/app';
+
+.cabinet-header {
+    background-color: $widgetHeaderBackground;
+    height: 64px;
+
+    .button {
+        width: 99px;
+        height: 22px;
+        border-radius: 4px;
+        padding: 0 10px;
+        margin-right: 30px;
+
+        .button_text {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
+    .cabinet-header_btn-wrap {
+        width: 99px;
+        height: 18px;
+        border-radius: 4px;
+        background-color: $widgetHeaderBtnBackground;
+        margin-right: 30px;
+
+
+        .cabinet-header_btn {
+            width: 29px;
+            height: 18px;
+            border-radius: 4px;
+            background-color: $widgetHeaderBtnOrange;
+
+            &.mod-size {
+                background-color: $headerGreen;
+                width: 83px;
+            }
+        }
+    }
+
+    .cabinet-header_item {
+        display: none;
+
+        @include media('d-only'){
+            position: relative;
+            color: $mainDarkBlue;
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 4px;
+            height: 18px;
+            background-color: $widgetHeaderLine;
+        }
+
+        .cabinet-header_title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-right: 14px;
+
+        }
+
+        .cabinet-header_value {
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 11px;
+
+            &.mod_margin {
+                margin-right: 31px;
+            }
+        }
+
+
+    }
+
+    .cabinet-header_elem {
+        display: flex;
+
+        .cabinet-header_icon {
+            width: 18px;
+            height: 23px;
+            fill: $mainDarkBlue;
+        }
+
+        .cabinet-header_icon-item {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            background: $widgerHeaderIconElem;
+            border-radius: 50%;
+            right: 10px;
+            top: 1px;
+        }
+    }
+
+    .cabinet-header_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media("d-only") {
+            justify-content: flex-end;
+            padding: 21px 47px;
+        }
+    }
+}
+

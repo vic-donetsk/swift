@@ -4,6 +4,7 @@ import authentication from './pages/auth/authentication/authentication.vue'
 import registration from './pages/auth/registration/registration.vue'
 import restoring from './pages/auth/restoring/restoring.vue'
 import conversations from './components/conversations/conversations.vue'
+import widget from './pages/cabinet/pages/widget/widget.vue'
 
 export default [
     {
@@ -44,4 +45,10 @@ export default [
         page404
     }
     ,
+
+    {
+        path: '/widget',
+        name: 'widget',
+        component: widget
+    },
 ]

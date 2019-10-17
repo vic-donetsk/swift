@@ -107,7 +107,6 @@
             display: block;
             width: 18px;
             height: 2px;
-            background: $landingMainMessage;
         }
 
         @include media('d-only') {
@@ -119,7 +118,6 @@
             &:before {
                 width: 25px;
                 height: 3px;
-                background: $landingMainMessage;
             }
         }
     }

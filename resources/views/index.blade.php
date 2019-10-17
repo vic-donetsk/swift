@@ -7,7 +7,7 @@
     <link href="/fonts.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" >
 </head>
-<body class="mod-landing">
+<body class="mod-landing mod-widget">
 <div>
     <div style="position:absolute;visibility: hidden;
         opacity: 0;display: none">
