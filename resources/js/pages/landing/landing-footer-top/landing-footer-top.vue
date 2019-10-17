@@ -1,17 +1,17 @@
 <template>
-    <div class="landing-footer-menu">
-        <div class="footer-menu_content">
+    <div class="landing-footer-top">
+        <div class="footer-top_content">
             <logo size="landing"></logo>
 
-            <nav class="landing-menu_nav">
-                <span class="landing-menu_item">{{ __("landing", "Tarif") }}</span>
-                <span class="landing-menu_item">{{ __("landing", "Produs") }}</span>
-                <span class="landing-menu_item">{{ __("landing", "Dezvolatori") }}</span>
-                <span class="landing-menu_item">{{ __("landing", "Support") }}</span>
-                <span class="landing-menu_item">{{ __("landing", "Contacte") }}</span>
+            <nav class="landing-top_nav">
+                <span class="landing-top_item">{{ __("landing", "Tarif") }}</span>
+                <span class="landing-top_item">{{ __("landing", "Produs") }}</span>
+                <span class="landing-top_item">{{ __("landing", "Dezvolatori") }}</span>
+                <span class="landing-top_item">{{ __("landing", "Support") }}</span>
+                <span class="landing-top_item">{{ __("landing", "Contacte") }}</span>
             </nav>
 
-            <div class="landing-menu_socials">
+            <div class="landing-socials">
                 <svg class="landing-footer_soc">
                     <use xlink:href="#facebook"></use>
                 </svg>
@@ -33,12 +33,12 @@
                 </svg>
             </div>
 
-            <div class="landing-menu_icons">
-                <svg class="landing-menu_icon">
+            <div class="landing-top_icons">
+                <svg class="landing-top_icon">
                     <use xlink:href="#mail-envelope"></use>
                 </svg>
 
-                <svg class="landing-menu_icon">
+                <svg class="landing-top_icon">
                     <use xlink:href="#phone"></use>
                 </svg>
 
@@ -55,7 +55,7 @@
 </template>
 
 <style lang="scss">
-    @import "landing-footer-menu.scss";
+    @import "landing-footer-top.scss";
 </style>
 
-<script src="./landing-footer-menu.js"></script>
+<script src="./landing-footer-top.js"></script>

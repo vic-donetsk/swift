@@ -20,8 +20,8 @@
                 {{__('widget','Cabinet header title 2')}}
             </span>
 
-                <div class="cabinet-header_btn-wrap">
-                    <div class="cabinet-header_btn">
+                <div class="cabinet-header_progress-wrap">
+                    <div class="cabinet-header_progress">
 
                     </div>
                 </div>
@@ -34,8 +34,8 @@
                 {{__('widget','Cabinet header title 3')}}
             </span>
 
-                <div class="cabinet-header_btn-wrap">
-                    <div class="cabinet-header_btn mod-size">
+                <div class="cabinet-header_progress-wrap">
+                    <div class="cabinet-header_progress mod-size">
 
                     </div>
                 </div>
@@ -54,7 +54,7 @@
 
             </div>
 
-            <div class="cabinet-header_elem">
+            <div class="cabinet-header_notify">
                 <svg class="cabinet-header_icon">
                     <use xlink:href="#bell"></use>
                 </svg>

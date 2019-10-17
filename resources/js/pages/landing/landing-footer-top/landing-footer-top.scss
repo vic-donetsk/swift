@@ -1,8 +1,8 @@
 @import '@/app';
-.landing-footer-menu{
+.landing-footer-top{
     background-color: $landingFooterMenu;
 
-    .footer-menu_content {
+    .footer-top_content {
         max-width: 1650px;
         margin: 0 auto;
         padding: 36px 0;
@@ -31,7 +31,7 @@
             }
         }
 
-        .landing-menu_nav {
+        .landing-top_nav {
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -43,7 +43,7 @@
             }
         }
 
-        .landing-menu_item {
+        .landing-top_item {
             list-style-type: none;
             text-transform: uppercase;
             padding: 2px 0;
@@ -66,7 +66,7 @@
             }
         }
 
-        .landing-menu_socials {
+        .landing-socials {
             display: none;
 
             @include media('d-only') {
@@ -84,7 +84,7 @@
             }
         }
 
-        .landing-menu_icons {
+        .landing-top_icons {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -94,7 +94,7 @@
                 display: none;
             }
 
-            .landing-menu_icon {
+            .landing-top_icon {
                 width: 21px;
                 height: 16px;
                 fill: $widgetActiveBlue;

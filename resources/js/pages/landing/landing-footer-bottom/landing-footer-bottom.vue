@@ -1,7 +1,7 @@
 <template>
     <div class="landing-footer">
         <div class="landing-footer_content">
-            <div class="landing-menu_socials">
+            <div class="landing-socials">
                 <svg class="landing-footer_soc">
                     <use xlink:href="#facebook"></use>
                 </svg>
@@ -49,7 +49,7 @@
 </template>
 
 <style lang="scss">
-    @import "landing-footer.scss";
+    @import "landing-footer-bottom.scss";
 </style>
 
-<script src="./landing-footer.js"></script>
+<script src="./landing-footer-bottom.js"></script>

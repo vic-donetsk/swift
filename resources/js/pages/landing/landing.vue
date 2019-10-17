@@ -11,8 +11,10 @@
         <landing-plan></landing-plan>
 
         <footer>
-            <landing-footer-menu></landing-footer-menu>
-            <landing-footer></landing-footer>
+            <landing-footer>
+                <landing-footer-top></landing-footer-top>
+                <landing-footer-bottom></landing-footer-bottom>
+            </landing-footer>
         </footer>
 
         <!--{{ getTitle }}-->
