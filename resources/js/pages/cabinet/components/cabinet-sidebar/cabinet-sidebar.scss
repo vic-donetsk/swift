@@ -1,0 +1,13 @@
+@import '@/app';
+
+.cabinet-sidebar{
+    width: 295px;
+    height: 100vh;
+    background-color: $landingHeaderbackground;
+    z-index: 3;
+    .cabinet-sidebar_content {
+
+    }
+}
+
+

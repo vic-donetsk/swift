@@ -1,10 +1,9 @@
 <template>
     <div class="widget">
         <header>
-<cabinet-header></cabinet-header>
+            <cabinet-header></cabinet-header>
+            <cabinet-sidebar></cabinet-sidebar>
         </header>
-
-
 
 
         <!--{{ getTitle }}-->
