@@ -1,15 +1,13 @@
 <template>
     <div class="landing-plan">
-        <h2 class="landing-plan_title">
-            <span>{{__("landing", "Plan title")}}</span>
-        </h2>
+        <h2 class="landing-plan_title">{{__("landing", "Plan title")}}</h2>
         <div class="landing-plan_container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="landing-plan_block left">
                             <img src="/img/illustration/Starter.svg" class="landing-plan_image">
-                            <h3 class="landing-plan_name">STARTER</h3>
+                            <h3 class="landing-plan_name">{{__("landing", "Plan name starter")}}</h3>
                             <div class="landing-plan_price">
                                 <div class="landin-plan_sum">
                                     <svg class="landing-plan_sum-icon">
@@ -36,7 +34,7 @@
                     <div class="swiper-slide">
                         <div class="landing-plan_block middle">
                             <img src="/img/illustration/Profesional.svg" class="landing-plan_image">
-                            <h3 class="landing-plan_name">PROFESIONAL</h3>
+                            <h3 class="landing-plan_name">{{__("landing", "Plan name professional")}}</h3>
                             <div class="landing-plan_price">
                                 <div class="landin-plan_sum">
                                     <svg class="landing-plan_sum-icon">
@@ -69,7 +67,7 @@
                     <div class="swiper-slide">
                         <div class="landing-plan_block right">
                             <img src="/img/illustration/Premium.svg" class="landing-plan_image">
-                            <h3 class="landing-plan_name">PREMIUM</h3>
+                            <h3 class="landing-plan_name">{{__("landing", "Plan name premium")}}</h3>
                             <div class="landing-plan_price">
                                 <div class="landin-plan_sum">
                                     <svg class="landing-plan_sum-icon">

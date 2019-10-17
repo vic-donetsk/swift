@@ -12,7 +12,7 @@
     .landing-plan_title {
         font-size: 30px;
         font-weight: 700;
-        line-height: 1;
+        line-height: 35px;
         color: $mainDarkBlue;
         text-align: center;
         margin-bottom: 35px;
@@ -39,11 +39,10 @@
     }
 
     .landing-plan_block {
-        background: $landingBackground;
+        background: $landingPlanBackground;
         border-radius: 8px;
         padding: 50px 42px 40px;
         width: 100%;
-        border: 1px solid $landingPlanBorderMobi;
 
         @include media('d-only') {
             border: 1px solid $landingPlanBorder;
