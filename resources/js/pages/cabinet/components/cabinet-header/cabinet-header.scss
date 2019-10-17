@@ -3,6 +3,8 @@
 .cabinet-header {
     background-color: $widgetHeaderBackground;
     height: 64px;
+    position: absolute;
+    width: 100%;
 
     .button {
         width: 99px;
