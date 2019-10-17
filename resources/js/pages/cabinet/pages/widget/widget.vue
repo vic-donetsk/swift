@@ -1,16 +1,14 @@
 <template>
-    <div class="widget">
+    <div class="cabinet widget">
         <header>
             <cabinet-header></cabinet-header>
-            <cabinet-sidebar></cabinet-sidebar>
         </header>
+        <cabinet-sidebar></cabinet-sidebar>
+        <div class="cabinet_page">
+            <div class="widget_container">
 
-
-        <!--{{ getTitle }}-->
-
-        <!--<div class="button" @click="goToAuth()">Go to auth</div>-->
-
-        <!--<router-link to="/authentication">Auth</router-link>-->
+            </div>
+        </div>
     </div>
 </template>
 

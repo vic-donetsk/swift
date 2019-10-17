@@ -1,16 +1,13 @@
 // Include Media
 @import '~include-media/dist/_include-media';
-
 @import 'variables';
 @import "global";
 @import 'prototypes';
 @import 'mixins';
-
 // Mdht font (icons)
 @import '/fonts/swift-icons-font/css/mdhtfont.css';
-
 @import 'components/swiper';
-
 @import 'components/button';
+@import "pages/cabinet";
 
 //@import './../js/**/*.scss';

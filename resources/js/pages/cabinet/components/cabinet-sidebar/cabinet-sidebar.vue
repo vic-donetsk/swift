@@ -1,5 +1,5 @@
 <template>
-    <aside class="cabinet-sidebar">
+    <nav class="cabinet-sidebar">
         <div class="cabinet-sidebar_content">
             <logo size="landing"></logo>
 
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </nav>
 </template>
 
 <style lang="scss">

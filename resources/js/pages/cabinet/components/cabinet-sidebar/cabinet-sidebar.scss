@@ -4,7 +4,9 @@
     width: 295px;
     height: 100vh;
     background-color: $landingHeaderbackground;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .cabinet-sidebar_person {
         text-align: center;
