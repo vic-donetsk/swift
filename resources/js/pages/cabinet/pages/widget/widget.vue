@@ -15,21 +15,47 @@
 
                 <div class="widget-block">
                     <div class="widget-block_item">
-                        <div class="widget-block_elem mod_size"></div>
+                        <div class="widget-block_elem-wrap mod_size"></div>
                         <div class="widget-block_btn mod_play"></div>
                     </div>
 
                     <div class="widget-block_item">
-                        <div class="widget-block_elem"></div>
-                        <div class="widget-block_elem"></div>
-                        <div class="widget-block_elem"></div>
+                        <div class="widget-block_elem-wrap">
+                            <div class="widget-block_elem mod_border"></div>
+                            <div class="widget-block_elem"></div>
+                        </div>
+
+                        <div class="widget-block_elem-wrap">
+                            <div class="widget-block_elem mod_border"></div>
+                            <div class="widget-block_elem"></div>
+                        </div>
+
+                        <div class="widget-block_elem-wrap">
+                            <div class="widget-block_elem mod_border"></div>
+                            <div class="widget-block_elem"></div>
+                        </div>
+
                     </div>
 
                     <div class="widget-block_item">
-                        <div class="widget-block_elem"></div>
-                        <div class="widget-block_elem"></div>
-                        <div class="widget-block_elem"></div>
+                        <div class="widget-block_elem-wrap">
+                            <div class="widget-block_elem mod_border"></div>
+                            <div class="widget-block_elem"></div>
+                        </div>
+
+                        <div class="widget-block_elem-wrap">
+                            <div class="widget-block_elem mod_border"></div>
+                            <div class="widget-block_elem"></div>
+                        </div>
+
+                        <div class="widget-block_elem-wrap">
+                            <div class="widget-block_elem mod_border"></div>
+                            <div class="widget-block_elem"></div>
+                        </div>
+
                     </div>
+
+
                 </div>
             </div>
         </div>
