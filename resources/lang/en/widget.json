@@ -1,5 +1,5 @@
 {
-"Cabinet header title 1": "ABONAMENT:",
+  "Cabinet header title 1": "ABONAMENT:",
   "Cabinet header title 2": "MINUTE: ",
   "Cabinet header title 3": "SMS:",
   "Cabinet header title 4": "Valabil până la:",
@@ -10,6 +10,10 @@
   "Sidebar menu name 1": "STATISTICS",
   "Sidebar menu name 2": "WIDGET",
   "Cabinet page title": "LISTA DE SITE-URI",
+  "Widget btn play": "Widgetul este instalat și rulează",
+  "Widget btn not install": "Widgetul nu este instalat",
+  "Widget btn pause": "Widgetul este în stare de pauză",
+  "Widget elem text 0": "<p>dev.pi.md/CMS/?page=home</p>",
   "Widget elem text 1": "Apelurile vor fi disponibile pe",
   "Widget elem text 2": "Oraru de lucru",
   "Widget elem text 3": "Luni - Vineri 08:00 - 17:00",
@@ -20,8 +24,8 @@
   "Widget elem text 8": "Notificările vor veni pe email",
   "Widget elem text 9": "ionascu@pi.md owner@pi.md moldavianheart@info.md",
   "Widget elem text 10": "Manageri pentru chat",
-  "Widget elem text 11": "1. Andrian Ionașcu 2.Victor Cron",
-  "Widget contact phone 1":"+373 (78) 792000",
-  "Widget contact phone 2":"+373 (78) 590000"
-
+  "Widget elem text 11": "1. Andrian Ionașcu",
+  "Widget elem text 12": "2.Victor Cron",
+  "Widget contact phone 1": "+373 (78) 792000",
+  "Widget contact phone 2": "+373 (78) 590000"
 }

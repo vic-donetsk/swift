@@ -15,8 +15,17 @@
 
                 <div class="widget-block">
                     <div class="widget-block_item">
-                        <div class="widget-block_elem-wrap mod_size"></div>
-                        <div class="widget-block_btn mod_play"></div>
+                        <div class="widget-block_elem-wrap mod_size"
+                             v-html='__("widget", "Widget elem text 0")'>
+                        </div>
+                        <div class="widget-block_btn mod_play">
+                            <div class="widget-sub_button">
+
+                            </div>
+                            <p>{{__("widget", "Widget btn play")}}</p>
+                        </div>
+
+
                     </div>
 
                     <div class="widget-block_item">
@@ -25,7 +34,7 @@
                                 <svg class="widget-elem_icon">
                                     <use xlink:href="#phone-widget"></use>
                                 </svg>
-                                <span class="widget_elem_text">{{__('widget','Widget elem text 1')}}</span>
+                                <span>{{__('widget','Widget elem text 1')}}</span>
                             </div>
 
                             <div class="widget-block_elem right">
@@ -39,7 +48,7 @@
                                 <svg class="widget-elem_icon">
                                     <use xlink:href="#wall-clock"></use>
                                 </svg>
-                                <span class="widget_elem_text">{{__('widget','Widget elem text 2')}}</span>
+                                <span>{{__('widget','Widget elem text 2')}}</span>
                             </div>
                             <div class="widget-block_elem right">
                                 <span>{{__('widget','Widget elem text 3')}}</span>
@@ -52,7 +61,7 @@
                                 <svg class="widget-elem_icon">
                                     <use xlink:href="#cellphone-sms"></use>
                                 </svg>
-                                <span class="widget_elem_text">{{__('widget','Widget elem text 5')}}</span>
+                                <span>{{__('widget','Widget elem text 5')}}</span>
                             </div>
                             <div class="widget-block_elem right">
                                 <span>{{__('widget','Widget contact phone 1')}}</span>
@@ -67,7 +76,7 @@
                                 <svg class="widget-elem_icon">
                                     <use xlink:href="#chat-bubbles"></use>
                                 </svg>
-                                <span class="widget_elem_text">{{__('widget','Widget elem text 6')}}</span>
+                                <span>{{__('widget','Widget elem text 6')}}</span>
                             </div>
                             <div class="widget-block_elem right">
                                 <span>{{__('widget','Widget elem text 7')}}</span>
@@ -79,7 +88,7 @@
                                 <svg class="widget-elem_icon">
                                     <use xlink:href="#mail-envelope"></use>
                                 </svg>
-                                <span class="widget_elem_text">{{__('widget','Widget elem text 8')}}</span>
+                                <span>{{__('widget','Widget elem text 8')}}</span>
                             </div>
                             <div class="widget-block_elem right">
                                 <span>{{__('widget','Widget elem text 9')}}</span>
@@ -91,10 +100,11 @@
                                 <svg class="widget-elem_icon">
                                     <use xlink:href="#user"></use>
                                 </svg>
-                                <span class="widget_elem_text">{{__('widget','Widget elem text 10')}}</span>
+                                <span>{{__('widget','Widget elem text 10')}}</span>
                             </div>
                             <div class="widget-block_elem right">
                                 <span>{{__('widget','Widget elem text 11')}}</span>
+                                <span>{{__('widget','Widget elem text 12')}}</span>
                             </div>
                         </div>
 
