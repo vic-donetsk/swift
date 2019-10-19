@@ -1,10 +1,12 @@
 @import '@/app';
 
 .cabinet-header {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+
     background-color: $widgetHeaderBackground;
     height: 64px;
-    position: absolute;
-    width: 100%;
 
     .button {
         width: 99px;
@@ -22,6 +24,7 @@
     .cabinet-header_progress-wrap {
         width: 99px;
         height: 18px;
+
         border-radius: 4px;
         background-color: $widgetHeaderBtnBackground;
         margin-right: 30px;
@@ -29,14 +32,12 @@
         margin-left: 14px;
 
         .cabinet-header_progress {
-            width: 29%;
             height: 18px;
             border-radius: 4px;
             background-color: $widgetHeaderBtnOrange;
 
-            &.mod-size {
+            &.mod-sms {
                 background-color: $headerGreen;
-                width: 83%;
             }
         }
     }

@@ -1,9 +1,5 @@
 <template>
     <div class="cabinet widget">
-        <header>
-            <cabinet-header></cabinet-header>
-        </header>
-        <cabinet-sidebar></cabinet-sidebar>
         <div class="cabinet_page">
             <div class="widget_container">
                 <h2 class="cabinet-page_title">
@@ -15,18 +11,18 @@
 
                 <div class="widget-block">
                     <div class="widget-block_item">
-                        <div class="widget-block_elem-wrap mod_size"
-                             v-html='__("widget", "Widget elem text 0")'>
+                        <div class="widget-block_elem-wrap mod_size">
+                            <p>dev.pi.md/CMS/?page=home</p>
                         </div>
-<!--                        <div class="widget-block_btn mod_play">-->
-<!--                            <div class="widget-sub_button">-->
-<!--                            </div>-->
-<!--                            <p>{{__("widget", "Widget btn play")}}</p>-->
-<!--                        </div>-->
+                        <!--                        <div class="widget-block_btn mod_play">-->
+                        <!--                            <div class="widget-sub_button">-->
+                        <!--                            </div>-->
+                        <!--                            <p>{{__("widget", "Widget btn play")}}</p>-->
+                        <!--                        </div>-->
 
-<!--                        <div class="widget-block_btn mod-not_install">-->
-<!--                            <p>{{__("widget", "Widget btn not install")}}</p>-->
-<!--                        </div>-->
+                        <!--                        <div class="widget-block_btn mod-not_install">-->
+                        <!--                            <p>{{__("widget", "Widget btn not install")}}</p>-->
+                        <!--                        </div>-->
 
                         <div class="widget-block_btn mod_pause">
                             <div class="widget-sub_button">

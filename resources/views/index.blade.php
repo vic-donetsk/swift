@@ -14,11 +14,13 @@
         @include('sprite')
     </div>
     <div id="app">
-        {{--<header>Шапка</header>--}}
-        {{--<nav>Боковое меню</nav>--}}
-
-        {{--        <header-component></header-component>--}}
-
+        <div class="cabinet_menu"
+             v-if="$route.name === 'widget-cabinet'">
+            <header>
+                <cabinet-header></cabinet-header>
+            </header>
+            <cabinet-sidebar></cabinet-sidebar>
+        </div>
         <main>
             <router-view></router-view>
         </main>

@@ -2,6 +2,9 @@ import routes from './routes';
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Header from './components/header/header.vue';
+import cabinetHeader from './pages/cabinet/components/cabinet-header/cabinet-header.vue'
+import cabinetSidebar from './pages/cabinet/components/cabinet-sidebar/cabinet-sidebar.vue'
+
 import localization from './mixins/localization.js';
 
 window._ = require('lodash');
@@ -27,6 +30,8 @@ window.EventBus = new Vue();
 Vue.use(VueRouter);
 Vue.mixin(localization);
 Vue.component('header-component', Header);
+Vue.component('cabinet-header', cabinetHeader);
+Vue.component('cabinet-sidebar', cabinetSidebar);
 
 const app = new Vue({
     router

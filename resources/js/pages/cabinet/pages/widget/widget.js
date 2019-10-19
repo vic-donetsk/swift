@@ -1,17 +1,4 @@
-import cabinetHeader from './../../components/cabinet-header/cabinet-header.vue'
-import cabinetSidebar from './../../components/cabinet-sidebar/cabinet-sidebar.vue'
-
-
-// import Landing from "./landing";
-// export default {
-//     components: {Landing}
-// }
-
 export default {
-    components: {
-        'cabinet-header': cabinetHeader,
-        'cabinet-sidebar': cabinetSidebar,
-    },
     data: function () {
         return {
             home: true,

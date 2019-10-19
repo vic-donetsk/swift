@@ -21,7 +21,7 @@
             </span>
 
                 <div class="cabinet-header_progress-wrap">
-                    <div class="cabinet-header_progress">
+                    <div class="cabinet-header_progress" style="width: 23%">
 
                     </div>
                 </div>
@@ -35,7 +35,7 @@
             </span>
 
                 <div class="cabinet-header_progress-wrap">
-                    <div class="cabinet-header_progress mod-size">
+                    <div class="cabinet-header_progress mod-sms" style="width: 83%">
 
                     </div>
                 </div>

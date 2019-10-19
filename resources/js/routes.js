@@ -39,16 +39,14 @@ export default [
 
     {
         path: '*',
-        name:
-            '404',
+        name: '404',
         component:
         page404
     }
     ,
-
     {
         path: '/widget',
-        name: 'widget',
-        component: widget
+        name: 'widget-cabinet',
+        component: widget,
     },
 ]
