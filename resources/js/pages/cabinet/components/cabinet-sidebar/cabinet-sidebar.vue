@@ -29,22 +29,40 @@
                 </div>
 
                 <div class="cabinet-sidebar_item">
-
+                    <svg class="sidebar-menu_icon">
+                        <use xlink:href="#menu-chat"></use>
+                    </svg>
+                    <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 3')}}</span>
                 </div>
 
                 <div class="cabinet-sidebar_item">
-
+                    <svg class="sidebar-menu_icon">
+                        <use xlink:href="#menu-billing"></use>
+                    </svg>
+                    <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 4')}}</span>
                 </div>
 
                 <div class="cabinet-sidebar_item">
-
+                    <svg class="sidebar-menu_icon">
+                        <use xlink:href="#menu-settings"></use>
+                    </svg>
+                    <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 5')}}</span>
                 </div>
 
                 <div class="cabinet-sidebar_item">
-
+                    <svg class="sidebar-menu_icon">
+                        <use xlink:href="#menu-support"></use>
+                    </svg>
+                    <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 6')}}</span>
                 </div>
             </div>
+
+            <div class="sidebar-copyright">
+                <span>SwiftCallback © 2019</span>
+            </div>
         </div>
+
+
     </nav>
 </template>
 
