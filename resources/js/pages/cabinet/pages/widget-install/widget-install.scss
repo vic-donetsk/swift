@@ -1,0 +1,48 @@
+@import '@/app';
+
+.widget_container {
+    max-width: 1625px;
+    padding: 54px 45px 0 38px;
+
+
+    .widget-menu {
+        display: flex;
+        align-items: center;
+        margin-bottom: 54px;
+
+        .widget-menu_item {
+            width: 100%;
+            max-width: 278px;
+            height: 49px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            background-color: $landingHeaderbackground;
+
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+
+
+            .widget-menu_icon {
+                width: 14px;
+                height: 14px;
+                fill: $mainDarkBlue;
+                margin-right: 7px;
+            }
+
+            .widget-menu_text {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+                color: $mainDarkBlue;
+            }
+        }
+    }
+
+    .widget-install_content{
+
+    }
+}

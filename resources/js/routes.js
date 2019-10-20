@@ -5,6 +5,7 @@ import registration from './pages/auth/registration/registration.vue'
 import restoring from './pages/auth/restoring/restoring.vue'
 import conversations from './components/conversations/conversations.vue'
 import widget from './pages/cabinet/pages/widget/widget.vue'
+import widget_install from './pages/cabinet/pages/widget-install/widget-install.vue'
 
 export default [
     {
@@ -48,5 +49,10 @@ export default [
         path: '/widget',
         name: 'widget-cabinet',
         component: widget,
+    },
+    {
+        path: '/widget_install',
+        name: 'widget-cabinet',
+        component: widget_install,
     },
 ]

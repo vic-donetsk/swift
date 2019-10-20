@@ -6,7 +6,7 @@
                     <svg class="cabinet-page_title-icon">
                         <use xlink:href="#global"></use>
                     </svg>
-                    <span>{{__('widget','Cabinet page title')}}</span>
+                    <span>{{__('widget','Cabinet page title 1')}}</span>
                 </h2>
 
                 <div class="widget-block">
