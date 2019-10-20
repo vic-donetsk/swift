@@ -170,4 +170,36 @@
             }
         }
     }
+
+    .widget-add_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 399px;
+        height: 56px;
+
+        background-color: $widgetAddButton;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        cursor: pointer;
+
+        padding: 0 30px;
+        margin: 0 auto;
+
+        .widget-add_icon{
+            width: 19px;
+            height: 19px;
+            fill: $mainDarkBlue;
+            margin-right: 12px;
+        }
+
+        .widget-add_text{
+            font-size: 17px;
+            font-weight: 600;
+            color: $mainDarkBlue;
+            line-height: 19px;
+        }
+
+    }
 }

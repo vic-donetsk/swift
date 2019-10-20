@@ -116,6 +116,14 @@
 
                     </div>
                 </div>
+
+                <div class="widget-add_button">
+                    <svg class="widget-add_icon">
+                        <use xlink:href="#plus-add"></use>
+                    </svg>
+
+                    <span class="widget-add_text">{{__("widget", "Widget add button text")}}</span>
+                </div>
             </div>
         </div>
     </div>
