@@ -4,12 +4,10 @@
             <div class="widget_container">
                 <div class="widget-menu">
                     <div class="widget-menu_item">
-                        <div>
-                            <svg class="widget-menu_icon">
-                                <use xlink:href="#download"></use>
-                            </svg>
-                            <span class="widget-menu_text">{{__('widget','Widget menu text 1')}}</span>
-                        </div>
+                        <svg class="widget-menu_icon">
+                            <use xlink:href="#download"></use>
+                        </svg>
+                        <span class="widget-menu_text">{{__('widget','Widget menu text 1')}}</span>
                     </div>
 
                     <div class="widget-menu_item">
@@ -23,41 +21,31 @@
                     </div>
 
                     <div class="widget-menu_item">
-                        <div>
                             <svg class="widget-menu_icon">
                                 <use xlink:href="#mail-envelope-open"></use>
                             </svg>
                             <span class="widget-menu_text">{{__('widget','Widget menu text 3')}}</span>
-                        </div>
                     </div>
 
                     <div class="widget-menu_item">
-                        <div>
                             <svg class="widget-menu_icon">
                                 <use xlink:href="#wall-clock"></use>
                             </svg>
                             <span class="widget-menu_text">{{__('widget','Widget menu text 4')}}</span>
-                        </div>
-
                     </div>
 
                     <div class="widget-menu_item">
-                        <div>
                             <svg class="widget-menu_icon">
                                 <use xlink:href="#chat-settings"></use>
                             </svg>
                             <span class="widget-menu_text">{{__('widget','Widget menu text 5')}}</span>
-                        </div>
                     </div>
 
                     <div class="widget-menu_item">
-                        <div>
                             <svg class="widget-menu_icon">
                                 <use xlink:href="#disable"></use>
                             </svg>
                             <span class="widget-menu_text">{{__('widget','Widget menu text 6')}}</span>
-                        </div>
-
                     </div>
                 </div>
 
