@@ -34,6 +34,13 @@
                     </div>
                 </div>
 
+                <div class="widget-install_verification">
+                  <span class="widget-install_input"></span>
+                    <svg class="widget-verification_icon">
+                        <use xlink:href="#copy"></use>
+                    </svg>
+                </div>
+
 
 
             </div>

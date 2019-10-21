@@ -21,6 +21,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
+            margin-bottom: 53px;
 
             .widget-install_site {
                 width: 50%;
@@ -65,6 +66,32 @@
                         cursor: pointer;
                     }
                 }
+            }
+        }
+
+        .widget-install_verification {
+            max-width: 1531px;
+            height: 87px;
+            position: relative;
+
+            border: 1px solid $inputBorder;
+            border-radius: 8px;
+
+            background-color: $white;
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+
+            padding: 0 75px 0 30px;
+
+            .widget-verification_icon{
+                width: 20px;
+                height: 24px;
+
+                position: absolute;
+                right: 33px;
+                top: 31px;
+
+                fill: $widgetActiveBlue;
+
             }
         }
     }
