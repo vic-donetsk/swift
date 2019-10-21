@@ -1,8 +1,10 @@
 @import '@/app';
 
-.widget_container {
-    max-width: 1625px;
-    padding: 60px 45px 0 38px;
+.widget{
+    .widget_container {
+        max-width: 1625px;
+        padding: 60px 45px 0 38px;
+    }
 
     .cabinet-page_title {
         margin-bottom: 64px;

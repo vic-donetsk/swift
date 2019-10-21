@@ -1,8 +1,6 @@
 <template>
     <div class="cabinet">
-        <header>
-            <cabinet-header></cabinet-header>
-        </header>
+        <cabinet-header></cabinet-header>
         <cabinet-sidebar></cabinet-sidebar>
         <router-view></router-view>
     </div>

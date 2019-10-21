@@ -1,4 +1,4 @@
-import Logo from './../../../../components/logo/logo.vue';
+import Logo from './../../components/logo/logo.vue';
 
 
 
