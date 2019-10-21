@@ -61,8 +61,6 @@
                 <span>SwiftCallback © 2019</span>
             </div>
         </div>
-
-
     </nav>
 </template>
 

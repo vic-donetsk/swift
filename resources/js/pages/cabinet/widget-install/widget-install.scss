@@ -1,12 +1,71 @@
 @import '@/app';
 
-.widget-install{
+.widget-install {
+
     .widget_container {
         max-width: 1625px;
         padding: 54px 45px 0 38px;
+
+        .cabinet-page_title {
+            margin-bottom: 30px;
+
+            &.mod_margin {
+                margin-bottom: 52px;
+            }
+        }
     }
 
     .widget-install_content {
 
+        .widget-install_wrap {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .widget-install_site {
+                width: 50%;
+                border-right: 1px solid $widgetInstallBorder;
+                padding-right: 39px;
+
+                .widget-site_script {
+                    max-width: 733px;
+                    height: 100px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    font-size: 25px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    color: $mainDarkBlue;
+
+                    border: 1px solid $inputBorder;
+                    border-radius: 8px;
+
+                    background-color: $white;
+                    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+
+                    padding: 0 28px;
+                }
+            }
+
+            .widget-install_plugins {
+                width: 50%;
+                padding-left: 41px;
+
+                .widget-logo_plugins {
+                    font-size: 0;
+                    margin: 0 -20px;
+
+                    .widget-plugin_image {
+                        width: 52px;
+                        height: 52px;
+                        margin: 0 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
