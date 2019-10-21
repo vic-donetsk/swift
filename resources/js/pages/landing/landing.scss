@@ -1,8 +1,10 @@
 @import '@/app';
 
 .landing {
+    padding-top: 195px;
 
     @include media('d-only') {
         background: #F8FDFF;
+        padding-top: 0;
     }
 }

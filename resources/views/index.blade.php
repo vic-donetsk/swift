@@ -14,13 +14,6 @@
         @include('sprite')
     </div>
     <div id="app">
-        <div class="cabinet_menu"
-             v-if="$route.name === 'widget-cabinet'">
-            <header>
-                <cabinet-header></cabinet-header>
-            </header>
-            <cabinet-sidebar></cabinet-sidebar>
-        </div>
         <main>
             <router-view></router-view>
         </main>

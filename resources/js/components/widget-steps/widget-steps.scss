@@ -1,0 +1,49 @@
+@import '@/app';
+
+.widget-steps {
+    display: flex;
+    align-items: center;
+    margin-bottom: 54px;
+
+    .widget-steps_item {
+        width: 100%;
+        max-width: 278px;
+        height: 49px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @extend %lightBlueGradient;
+
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        padding-left: 30px;
+
+        &:not(:first-of-type) {
+            margin-left: -24px;
+            padding-left: 54px;
+        }
+
+        @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+                z-index: 6 - $i + 1;
+            }
+        }
+
+        .widget-steps_icon {
+            width: 14px;
+            height: 14px;
+            fill: $mainDarkBlue;
+            margin-right: 7px;
+        }
+
+        .widget-steps_text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $mainDarkBlue;
+            height: 14px;
+        }
+    }
+}

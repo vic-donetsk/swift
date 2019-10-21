@@ -1,11 +1,16 @@
 @import '@/app';
 
 .landing-header {
-    margin-bottom: 108px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    z-index: 999;
 
     @include media('d-only') {
         background-color: $landingHeaderbackground;
         margin-bottom: 37px;
+        position: relative;
     }
 
     .landing-header_content {
@@ -13,7 +18,7 @@
         align-items: center;
         max-width: 1650px;
         margin: 0 auto;
-        padding: 24px 16px 0;
+        padding: 24px 16px 21px 16px;
         justify-content: space-between;
 
         @include media('d-only') {
@@ -107,7 +112,7 @@
 
         }
 
-        .landing-header_item-icon{
+        .landing-header_item-icon {
             width: 16px;
             height: 13px;
             fill: $widgetActiveBlue;

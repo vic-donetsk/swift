@@ -1,11 +1,12 @@
-import landing from './pages/landing/landing.vue'
-import page404 from './pages/404/404.vue'
-import authentication from './pages/auth/authentication/authentication.vue'
-import registration from './pages/auth/registration/registration.vue'
-import restoring from './pages/auth/restoring/restoring.vue'
-import conversations from './components/conversations/conversations.vue'
-import widget from './pages/cabinet/pages/widget/widget.vue'
-import widgetInstall from './pages/cabinet/pages/widget-install/widget-install.vue'
+import landing from './pages/landing/landing.vue';
+import page404 from './pages/404/404.vue';
+import authentication from './pages/auth/authentication/authentication.vue';
+import registration from './pages/auth/registration/registration.vue';
+import restoring from './pages/auth/restoring/restoring.vue';
+import conversations from './components/conversations/conversations.vue';
+import widget from './pages/cabinet/widget/widget.vue';
+import widgetInstall from './pages/cabinet/widget-install/widget-install.vue';
+import cabinet from './components/cabinet/cabinet.vue';
 
 export default [
     {
@@ -43,16 +44,23 @@ export default [
         name: '404',
         component:
         page404
-    }
-    ,
-    {
-        path: '/widget',
-        name: 'widget-cabinet',
-        component: widget,
     },
     {
-        path: '/widget-install',
-        name: 'widget-cabinet',
-        component: widgetInstall,
+        path: '/cabinet',
+        name: 'cabinet',
+        component: cabinet,
+        children: [
+            {
+                path: 'widget',
+                name: 'cabinet-widget',
+                component: widget,
+            },
+            {
+                path: 'widget/install',
+                name: 'cabinet-widget-install',
+                component: widgetInstall,
+            }
+        ]
     },
+
 ]
