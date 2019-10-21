@@ -2,6 +2,12 @@
     background-image: linear-gradient(to right bottom, $blueGradientFrom, $blueGradientTo);
 }
 
+
+%lightBlueGradient {
+    background-image: linear-gradient(to right, $lightBlueGradientFrom, $lightBlueGradientTo);
+}
+
+
 %brownGradient {
     background-image: linear-gradient(to right bottom, $brownGradientFrom, $brownGradientTo);
 }

@@ -4,7 +4,6 @@
     max-width: 1625px;
     padding: 54px 45px 0 38px;
 
-
     .widget-menu {
         display: flex;
         align-items: center;
@@ -19,12 +18,10 @@
             align-items: center;
             justify-content: center;
 
-
-            background-color: $landingHeaderbackground;
+            @extend %lightBlueGradient;
 
             border-top-right-radius: 24px;
             border-bottom-right-radius: 24px;
-
 
             .widget-menu_icon {
                 width: 14px;
