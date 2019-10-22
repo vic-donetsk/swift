@@ -74,6 +74,10 @@
             height: 87px;
             position: relative;
 
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
             border: 1px solid $inputBorder;
             border-radius: 8px;
 
@@ -81,8 +85,9 @@
             box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
 
             padding: 0 75px 0 30px;
+            margin-bottom: 31px;
 
-            .widget-verification_icon{
+            .widget-verification_icon {
                 width: 20px;
                 height: 24px;
 
@@ -93,6 +98,36 @@
                 fill: $widgetActiveBlue;
 
             }
+
+            .widget-install_input {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 30px;
+                color: $mainDarkBlue;
+            }
+        }
+
+        .widget-install_btn {
+            max-width: 264px;
+            height: 49px;
+
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+
+            border-radius: 8px;
+            border: 1px solid $widgetInstallBorderBtn;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            background-color: $widgetActiveBlue;
+            color: $white;
+
+            padding: 0 15px;
+            margin: 0 auto;
         }
     }
 }

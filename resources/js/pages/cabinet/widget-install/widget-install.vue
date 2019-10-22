@@ -35,10 +35,14 @@
                 </div>
 
                 <div class="widget-install_verification">
-                  <span class="widget-install_input"></span>
+                  <p class="widget-install_input"><script type=“text/javascript” src=“/ /cdn.swiftcallback.com/scb.js?_code=GOci36arhvKABLgA4i5rj3n8xTnx0DZD8” charset=“UTF-8”></script></p>
                     <svg class="widget-verification_icon">
                         <use xlink:href="#copy"></use>
                     </svg>
+                </div>
+
+                <div class="widget-install_btn">
+                    <span>{{__('widget','Widget install button')}}</span>
                 </div>
 
 
