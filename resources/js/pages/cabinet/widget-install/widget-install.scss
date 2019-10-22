@@ -13,46 +13,46 @@
                 margin-bottom: 52px;
             }
         }
+    }
 
-        .widget-block_script {
-            max-width: 733px;
-            height: 100px;
+    .widget-block_script {
+        max-width: 733px;
+        height: 100px;
 
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
-            font-size: 25px;
-            font-weight: 600;
-            line-height: 27px;
-            color: $mainDarkBlue;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 27px;
+        color: $mainDarkBlue;
 
-            border: 1px solid $inputBorder;
-            border-radius: 8px;
-            background-color: $white;
-            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-            padding: 0 28px;
+        border: 1px solid $inputBorder;
+        border-radius: 8px;
+        background-color: $white;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+        padding: 0 28px;
 
-            &.mod_verify {
-                max-width: 1531px;
-                height: 87px;
-                position: relative;
+        &.mod_verify {
+            max-width: 1531px;
+            height: 87px;
+            position: relative;
 
-                font-size: 18px;
-                line-height: 30px;
+            font-size: 18px;
+            line-height: 30px;
 
-                padding: 0 75px 0 30px;
-                margin-bottom: 31px;
+            padding: 0 75px 0 30px;
+            margin-bottom: 31px;
 
-                .widget-verification_icon {
-                    width: 20px;
-                    height: 24px;
+            .widget-verification_icon {
+                width: 20px;
+                height: 24px;
 
-                    position: absolute;
-                    right: 33px;
-                    top: 31px;
-                    fill: $widgetActiveBlue;
-                }
+                position: absolute;
+                right: 33px;
+                top: 31px;
+                fill: $widgetActiveBlue;
             }
         }
     }
@@ -62,6 +62,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         margin-bottom: 53px;
+    }
 
         .widget-install_site {
             width: 50%;
@@ -86,7 +87,7 @@
                 }
             }
         }
-    }
+
 
     .widget-button {
         width: 264px;

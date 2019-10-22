@@ -58,27 +58,26 @@
         height: 63px;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
 
         .table-block_item {
             font-size: 16px;
             font-weight: 700;
             line-height: 29px;
             color: $mainDarkBlue;
+        }
 
-            &.mod_left {
-                width: 365px;
-                padding-left: 26px;
-            }
+        .mod_left {
+            width: 365px;
+            padding-left: 26px;
+        }
 
-            &.mod_middle {
-                width: 220px;
-                padding-left: 21px;
-            }
+        .mod_middle {
+            width: 220px;
+            padding-left: 21px;
+        }
 
-            &.mod_right {
-                width: 94px;
-            }
+        .mod_right {
+            width: 94px;
         }
 
         &.mod_head {
@@ -98,20 +97,21 @@
                 border-right: 1px solid $inputBorder;
                 height: 76px;
             }
+
+            .table-content_cross {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .table-content_icon {
+                    width: 14px;
+                    height: 14px;
+                    fill: $inputBorder;
+                    cursor: pointer;
+                }
+            }
         }
     }
 
-    .table-content_cross {
-        width: 94px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        .table-content_icon {
-            width: 14px;
-            height: 14px;
-            fill: $inputBorder;
-            cursor: pointer;
-        }
-    }
 }

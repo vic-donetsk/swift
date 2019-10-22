@@ -47,7 +47,7 @@
                             <span>12/08/2019, 12:43</span>
                         </div>
 
-                        <div class="table-content_cross">
+                        <div class="table-content_cross mod_right">
                             <svg class="table-content_icon">
                                 <use xlink:href="#cross"></use>
                             </svg>

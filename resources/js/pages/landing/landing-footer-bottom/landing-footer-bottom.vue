@@ -1,5 +1,5 @@
 <template>
-    <div class="landing-footer">
+    <div class="landing-footer_bottom">
         <div class="landing-footer_content">
             <div class="landing-socials">
                 <svg class="landing-footer_soc">

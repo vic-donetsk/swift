@@ -118,7 +118,103 @@
             fill: $widgetActiveBlue;
             margin-right: 9px;
         }
+
+        .landing-header_icon {
+            width: 12px;
+            height: 7px;
+            fill: $widgetActiveBlue;
+            margin-left: 9px;
+        }
     }
 
+
+    .landing-header-top {
+        background-color: $landingBackground;
+
+        @include media('d-only') {
+            display: none;
+        }
+
+        .landing-menu_head {
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $landingHeaderbackground;
+            position: relative;
+
+            .landing-menu_icon{
+                width: 18px;
+                height: 16px;
+                position: absolute;
+                left: 17px;
+                fill: $widgetActiveBlue;
+                cursor: pointer;
+
+            }
+        }
+
+        .header-top_content {
+            max-width: 1650px;
+            margin: 0 auto;
+            padding: 55px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .landing-top_nav {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 51px;
+            }
+
+            .landing-top_item {
+                list-style-type: none;
+                text-transform: uppercase;
+                padding: 2px 0;
+                color: $mainDarkBlue;
+                cursor: pointer;
+                margin-bottom: 25px;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 42px;
+                }
+            }
+
+            .landing-top_icons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-width: 223px;
+
+                .landing-top_icon {
+                    width: 21px;
+                    height: 16px;
+                    fill: $widgetActiveBlue;
+                    cursor: pointer;
+                }
+
+                .landing-header_block {
+                    font-size: 0;
+                    cursor: pointer;
+                }
+
+                .landing-header_text {
+                    color: $widgetActiveBlue;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-right: 10px;
+                }
+
+                .landing-header_icon {
+                    width: 12px;
+                    height: 7px;
+                    fill: $widgetActiveBlue;
+                }
+            }
+        }
+    }
 }
 
