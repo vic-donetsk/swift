@@ -28,22 +28,22 @@
                 </div>
 
                 <div class="widget-deactivate_table">
-                    <div class="widget_table-head">
-                        <div class="table-head_title mod_left">
+                    <div class="widget_table-block mod_head">
+                        <div class="table-block_item mod_left">
                             <span>{{__('widget','Widget deactivate table title 1')}}</span>
                         </div>
-                        <div class="table-head_title mod_middle">
+                        <div class="table-block_item mod_middle">
                             <span>{{__('widget','Widget deactivate table title 2')}}</span>
                         </div>
 
-                        <div class="table-head_title mod_right"></div>
+                        <div class="table-block_item mod_right"></div>
                     </div>
 
-                    <div class="widget_table-content">
-                        <div class="table-content_text mod_left">
+                    <div class="widget_table-block mod_content">
+                        <div class="table-block_item mod_left">
                             <span>swiftcallback.md/contacts</span>
                         </div>
-                        <div class="table-content_text mod_middle">
+                        <div class="table-block_item mod_middle">
                             <span>12/08/2019, 12:43</span>
                         </div>
 
