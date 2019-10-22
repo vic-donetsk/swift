@@ -51,5 +51,7 @@
   "Widget menu text 4": "ORARU DE LUCRU",
   "Widget menu text 5": "SETĂRI CHAT",
   "Widget menu text 6": "DEZACTIVARE",
-  "Widget install button": "Verifică link-ul"
+  "Widget install button": "Verifică link-ul",
+  "Widget deactivate button": "Salvează",
+  "Widget input placeholder 6": "siteultău.com/subpage"
 }

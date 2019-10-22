@@ -13,7 +13,7 @@
                             <span>{{__('widget','Cabinet page title 2')}}</span>
                         </h2>
 
-                        <div class="widget-site_script">
+                        <div class="widget-block_script">
                             <p>dev.pi.md/CMS/?page=home</p>
                         </div>
                     </div>
@@ -34,14 +34,15 @@
                     </div>
                 </div>
 
-                <div class="widget-install_verification">
-                  <p class="widget-install_input"><script type=“text/javascript” src=“/ /cdn.swiftcallback.com/scb.js?_code=GOci36arhvKABLgA4i5rj3n8xTnx0DZD8” charset=“UTF-8”></script></p>
+                <div class="widget-block_script mod_verify">
+                  <p>{{link}}</p>
+
                     <svg class="widget-verification_icon">
                         <use xlink:href="#copy"></use>
                     </svg>
                 </div>
 
-                <div class="widget-install_btn">
+                <div class="widget-button">
                     <span>{{__('widget','Widget install button')}}</span>
                 </div>
 

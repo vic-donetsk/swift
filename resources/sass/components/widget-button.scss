@@ -1,0 +1,15 @@
+.widget-button {
+    height: 49px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    border: 1px solid $widgetInstallBorderBtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: $widgetActiveBlue;
+    color: $white;
+    padding: 0 15px;
+}

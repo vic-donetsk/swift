@@ -4,12 +4,16 @@
 @import "global";
 @import 'prototypes';
 @import 'mixins';
-@import 'components/cabinet-page_title';
 
 // Mdht font (icons)
 @import '/fonts/swift-icons-font/css/mdhtfont.css';
+
+// Components
 @import 'components/swiper';
 @import 'components/button';
 @import "pages/cabinet";
+@import 'components/cabinet-page_title';
+@import "components/widget-button";
+@import "components/widget-input";
 
 //@import './../js/**/*.scss';

@@ -13,121 +13,83 @@
                 margin-bottom: 52px;
             }
         }
-    }
 
-    .widget-install_content {
-
-        .widget-install_wrap {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            margin-bottom: 53px;
-
-            .widget-install_site {
-                width: 50%;
-                border-right: 1px solid $widgetInstallBorder;
-                padding-right: 39px;
-
-                .widget-site_script {
-                    max-width: 733px;
-                    height: 100px;
-
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-
-                    font-size: 25px;
-                    font-weight: 600;
-                    line-height: 27px;
-                    color: $mainDarkBlue;
-
-                    border: 1px solid $inputBorder;
-                    border-radius: 8px;
-
-                    background-color: $white;
-                    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-
-                    padding: 0 28px;
-                }
-            }
-
-            .widget-install_plugins {
-                width: 50%;
-                padding-left: 41px;
-
-                .widget-logo_plugins {
-                    font-size: 0;
-                    margin: 0 -20px;
-
-                    .widget-plugin_image {
-                        width: 52px;
-                        height: 52px;
-                        margin: 0 20px;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-
-        .widget-install_verification {
-            max-width: 1531px;
-            height: 87px;
-            position: relative;
+        .widget-block_script {
+            max-width: 733px;
+            height: 100px;
 
             display: flex;
             align-items: center;
             justify-content: flex-start;
+
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 27px;
+            color: $mainDarkBlue;
 
             border: 1px solid $inputBorder;
             border-radius: 8px;
-
             background-color: $white;
             box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+            padding: 0 28px;
 
-            padding: 0 75px 0 30px;
-            margin-bottom: 31px;
+            &.mod_verify {
+                max-width: 1531px;
+                height: 87px;
+                position: relative;
 
-            .widget-verification_icon {
-                width: 20px;
-                height: 24px;
-
-                position: absolute;
-                right: 33px;
-                top: 31px;
-
-                fill: $widgetActiveBlue;
-
-            }
-
-            .widget-install_input {
                 font-size: 18px;
-                font-weight: 600;
                 line-height: 30px;
-                color: $mainDarkBlue;
+
+                padding: 0 75px 0 30px;
+                margin-bottom: 31px;
+
+                .widget-verification_icon {
+                    width: 20px;
+                    height: 24px;
+
+                    position: absolute;
+                    right: 33px;
+                    top: 31px;
+                    fill: $widgetActiveBlue;
+                }
             }
         }
+    }
 
-        .widget-install_btn {
-            max-width: 264px;
-            height: 49px;
+    .widget-install_wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 53px;
 
-            font-size: 16px;
-            line-height: 20px;
-            font-weight: 400;
+        .widget-install_site {
+            width: 50%;
+            border-right: 1px solid $widgetInstallBorder;
+            padding-right: 39px;
 
-            border-radius: 8px;
-            border: 1px solid $widgetInstallBorderBtn;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-
-            background-color: $widgetActiveBlue;
-            color: $white;
-
-            padding: 0 15px;
-            margin: 0 auto;
         }
+
+        .widget-install_plugins {
+            width: 50%;
+            padding-left: 41px;
+
+            .widget-logo_plugins {
+                font-size: 0;
+                margin: 0 -20px;
+
+                .widget-plugin_image {
+                    width: 52px;
+                    height: 52px;
+                    margin: 0 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .widget-button {
+        width: 264px;
+        margin: 0 auto;
     }
 }

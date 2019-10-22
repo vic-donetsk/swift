@@ -1,0 +1,13 @@
+.widget-input {
+    height: 49px;
+    border: 1px solid $inputBorder;
+    border-radius: 8px;
+    background-color: $white;
+
+    &::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+        color: $inputBorder;
+    }
+}
+

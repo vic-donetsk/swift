@@ -6,6 +6,7 @@ import restoring from './pages/auth/restoring/restoring.vue';
 import conversations from './components/conversations/conversations.vue';
 import widget from './pages/cabinet/widget/widget.vue';
 import widgetInstall from './pages/cabinet/widget-install/widget-install.vue';
+import widgetDeactivate from './pages/cabinet/widget-deactivate/widget-deactivate.vue';
 import cabinet from './components/cabinet/cabinet.vue';
 
 export default [
@@ -59,6 +60,11 @@ export default [
                 path: 'widget/install',
                 name: 'cabinet-widget-install',
                 component: widgetInstall,
+            },
+            {
+                path: 'widget/deactivate',
+                name: 'cabinet-widget-deactivate',
+                component: widgetDeactivate,
             }
         ]
     },

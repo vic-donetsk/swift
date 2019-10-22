@@ -1,0 +1,34 @@
+@import '@/app';
+
+.widget-deactivate {
+
+    .widget_container {
+        max-width: 1625px;
+        padding: 54px 45px 0 38px;
+
+    }
+
+    .cabinet-page_title {
+        margin-bottom: 30px;
+    }
+
+    .widget-deactivate_content {
+
+
+    }
+
+    .widget-deactivate_site {
+        display: flex;
+        align-items: center;
+
+        .widget-input {
+            width: 264px;
+            padding: 0 21px;
+            margin-right: 12px;
+        }
+
+        .widget-button {
+            width: 141px;
+        }
+    }
+}
