@@ -33,7 +33,7 @@
                 </svg>
             </div>
         </div>
-        <div class="landing-header-top">
+        <div class="landing-mobile_menu">
             <div class="landing-menu_head">
                 <logo size="landing"></logo>
 
@@ -41,22 +41,21 @@
                     <use xlink:href="#cross"></use>
                 </svg>
             </div>
-            <div class="header-top_content">
-
-                <nav class="landing-top_nav">
-                    <span class="landing-top_item">{{ __("landing", "Tarif") }}</span>
-                    <span class="landing-top_item">{{ __("landing", "Produs") }}</span>
-                    <span class="landing-top_item">{{ __("landing", "Dezvolatori") }}</span>
-                    <span class="landing-top_item">{{ __("landing", "Support") }}</span>
-                    <span class="landing-top_item">{{ __("landing", "Contacte") }}</span>
+            <div class="landing-menu_content">
+                <nav class="landing-menu_nav">
+                    <span class="landing-menu_item">{{ __("landing", "Tarif") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Produs") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Dezvolatori") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Support") }}</span>
+                    <span class="landing-menu_item">{{ __("landing", "Contacte") }}</span>
                 </nav>
 
-                <div class="landing-top_icons">
-                    <svg class="landing-top_icon">
+                <div class="landing-menu_icons">
+                    <svg class="landing-menu_icon">
                         <use xlink:href="#mail-envelope"></use>
                     </svg>
 
-                    <svg class="landing-top_icon">
+                    <svg class="landing-menu_icon">
                         <use xlink:href="#phone"></use>
                     </svg>
 

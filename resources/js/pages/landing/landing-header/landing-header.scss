@@ -128,7 +128,7 @@
     }
 
 
-    .landing-header-top {
+    .landing-mobile_menu {
         background-color: $landingBackground;
 
         @include media('d-only') {
@@ -154,7 +154,7 @@
             }
         }
 
-        .header-top_content {
+        .landing-menu_content {
             max-width: 1650px;
             margin: 0 auto;
             padding: 55px 0;
@@ -163,14 +163,14 @@
             align-items: center;
             flex-direction: column;
 
-            .landing-top_nav {
+            .landing-menu_nav {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 margin-bottom: 51px;
             }
 
-            .landing-top_item {
+            .landing-menu_item {
                 list-style-type: none;
                 text-transform: uppercase;
                 padding: 2px 0;
@@ -183,13 +183,13 @@
                 }
             }
 
-            .landing-top_icons {
+            .landing-menu_icons {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 min-width: 223px;
 
-                .landing-top_icon {
+                .landing-menu_icon {
                     width: 21px;
                     height: 16px;
                     fill: $widgetActiveBlue;
