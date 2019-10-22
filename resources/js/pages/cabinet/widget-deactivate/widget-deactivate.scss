@@ -5,30 +5,125 @@
     .widget_container {
         max-width: 1625px;
         padding: 54px 45px 0 38px;
-
     }
 
     .cabinet-page_title {
         margin-bottom: 30px;
     }
 
-    .widget-deactivate_content {
+    .widget-button {
+        width: 211px;
 
-
+        &.mod_size {
+            width: 141px;
+        }
     }
 
     .widget-deactivate_site {
-        display: flex;
-        align-items: center;
+        margin-bottom: 55px;
 
-        .widget-input {
-            width: 264px;
-            padding: 0 21px;
-            margin-right: 12px;
+        .widget-site_control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+
+            .widget-input {
+                width: 264px;
+                padding: 0 21px;
+                margin-right: 12px;
+            }
         }
 
-        .widget-button {
-            width: 141px;
+
+        .widget-site_link {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            color: $widgetDeactivateLink;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    }
+
+    .widget-deactivate_table {
+        max-width: 681px;
+
+        border: 1px solid rgba(0, 33, 95, 0.05);
+        background-color: $white;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+        margin-bottom: 31px;
+    }
+
+    .widget_table-head {
+        height: 63px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        background-color: $lightBlueGradientFrom;
+        border-bottom: 1px solid rgba(0, 33, 95, 0.05);
+
+        .table-head_title {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 29px;
+            color: $mainDarkBlue;
+
+            &.mod_left {
+                width: 365px;
+                padding-left: 26px;
+            }
+
+            &.mod_middle {
+                width: 220px;
+                padding-left: 21px;
+            }
+
+            &.mod_right {
+                width: 96px;
+            }
+        }
+    }
+
+    .widget_table-content {
+        display: flex;
+        background-color: $white;
+
+        .table-content_text {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $mainDarkBlue;
+            border-right: 1px solid $inputBorder;
+            height: 76px;
+
+            &.mod_left {
+                width: 365px;
+                padding-left: 26px;
+            }
+
+            &.mod_middle {
+                width: 220px;
+                padding-left: 21px;
+            }
+        }
+
+        .table-content_cross {
+            width: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .table-content_icon {
+                width: 14px;
+                height: 14px;
+                fill: $inputBorder;
+                cursor: pointer;
+            }
         }
     }
 }

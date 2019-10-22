@@ -12,14 +12,53 @@
                 </h2>
 
                 <div class="widget-deactivate_site">
-                    <input type="text"
-                           class="widget-input"
-                           :placeholder='__("widget", "Widget input placeholder 6")'>
+                    <div class="widget-site_control">
+                        <input type="text"
+                               class="widget-input"
+                               :placeholder='__("widget", "Widget input placeholder 6")'>
 
-                    <div class="widget-button">
-                        <span>{{__('widget','Widget deactivate button')}}</span>
+                        <div class="widget-button">
+                            <span>{{__('widget','Widget deactivate button 1')}}</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="widget-site_link">
+                        <span>(e.x. swiftcallback.md/contacts)</span>
+                    </a>
+                </div>
+
+                <div class="widget-deactivate_table">
+                    <div class="widget_table-head">
+                        <div class="table-head_title mod_left">
+                            <span>{{__('widget','Widget deactivate table title 1')}}</span>
+                        </div>
+                        <div class="table-head_title mod_middle">
+                            <span>{{__('widget','Widget deactivate table title 2')}}</span>
+                        </div>
+
+                        <div class="table-head_title mod_right"></div>
+                    </div>
+
+                    <div class="widget_table-content">
+                        <div class="table-content_text mod_left">
+                            <span>swiftcallback.md/contacts</span>
+                        </div>
+                        <div class="table-content_text mod_middle">
+                            <span>12/08/2019, 12:43</span>
+                        </div>
+
+                        <div class="table-content_cross">
+                            <svg class="table-content_icon">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
+
+                <div class="widget-button mod_size">
+                    <span>{{__('widget','Widget deactivate button 2')}}</span>
+                </div>
+
             </div>
         </div>
     </div>
