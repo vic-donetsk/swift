@@ -4,7 +4,11 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 54px 41px 0 38px;
+        padding: 39px 17px 0 17px;
+
+        @include media('t-ipad'){
+            padding: 54px 41px 0 38px;
+        }
     }
 
     .cabinet-page_title {
@@ -18,9 +22,14 @@
     .widget-chat_block {
 
         &.mod-border {
-            padding-bottom: 54px;
-            margin-bottom: 54px;
+            padding-bottom: 38px;
+            margin-bottom: 38px;
             border-bottom: 1px solid $widgetInstallBorder;
+
+            @include media('t-ipad-landscape') {
+                padding-bottom: 54px;
+                margin-bottom: 54px;
+            }
         }
     }
 
@@ -29,17 +38,58 @@
         display: flex;
         align-items: center;
         margin: 0 -18px -38px;
-        flex-wrap: wrap;
+        flex-direction: column;
 
-        .widget-chat_soc {
-            width: 188px;
-            height: 240px;
+        @include media('t-ipad-landscape') {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
+
+        .widget-soc_wrap {
             margin: 0 18px 38px;
 
-            border: 1px solid rgba(0, 33, 95, 0.05);
-            box-shadow: 0 3px 8px 0 rgba(0, 33, 95, 0.04);
+            .widget-chat_soc {
+                width: 188px;
+                height: 240px;
+
+
+                position: relative;
+
+                border: 1px solid rgba(0, 33, 95, 0.05);
+                box-shadow: 0 3px 8px 0 rgba(0, 33, 95, 0.04);
+
+                @include media('t-ipad-landscape') {
+                    margin-bottom: 98px;
+                }
+
+                &.mod_message {
+                    margin-bottom: 24px;
+
+                    @include media("t-ipad-landscape") {
+                        margin-bottom: 57px;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                        width: 1px;
+                        height: 24px;
+                        background: $widgetElemBorder;
+                    }
+
+                    @include media("t-ipad-landscape") {
+                        &:after {
+                            height: 57px;
+                        }
+                    }
+                }
+            }
         }
+
 
         .widget-soc_head {
             display: flex;
@@ -49,20 +99,19 @@
             height: 104px;
             border-bottom: 1px solid $widgetElemBorder;
 
-            .widget-soc_icon{
+            .widget-soc_icon {
                 width: 36px;
                 height: 36px;
                 fill: $white;
                 margin-bottom: 12px;
             }
 
-            .widget-soc_name{
+            .widget-soc_name {
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 20px;
                 color: $white;
             }
-
 
 
             &.mod-chat {
@@ -92,6 +141,32 @@
             &.mod-email {
                 background: $chatEmailSettings;
             }
+        }
+
+        .widget-soc_content {
+            height: 134px;
+            display: flex;
+            align-items: center;
+
+            padding: 0 15px;
+
+
+            .widget-soc_text {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: center;
+                color: $mainDarkBlue;
+            }
+        }
+
+        .widget-chat_block-message {
+            width: 188px;
+            height: 41px;
+            border-radius: 8px;
+            background-color: red;
+            margin: 0 auto;
+
         }
     }
 }

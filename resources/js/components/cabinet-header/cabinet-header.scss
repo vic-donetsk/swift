@@ -88,7 +88,12 @@
     }
 
     .cabinet-header_notify {
-        display: flex;
+        display: none;
+
+        @include media("d-only") {
+            display: flex;
+        }
+
 
         .cabinet-header_icon {
             width: 18px;

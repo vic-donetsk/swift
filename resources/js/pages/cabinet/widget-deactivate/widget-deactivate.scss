@@ -4,46 +4,98 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 54px 45px 0 38px;
+        padding: 39px 0px 0 0px;
+
+        @include media("d-only") {
+            padding: 54px 45px 0 38px;
+        }
     }
 
     .cabinet-page_title {
-        margin-bottom: 30px;
+        margin-bottom: 38px;
+        padding: 0 17px;
+
+
+        @include media("d-only") {
+            margin-bottom: 30px;
+            padding: 0;
+        }
     }
 
     .widget-button {
-        width: 211px;
+        margin: 0 auto;
+
+        @include media('d-only') {
+            width: 211px;
+            margin: 0;
+        }
 
         &.mod_size {
-            width: 141px;
+            display: none;
+            @include media("d-only") {
+                width: 141px;
+                display: flex;
+            }
         }
     }
 
     .widget-deactivate_site {
-        margin-bottom: 55px;
+        width: 320px;
+        margin: 0 auto 39px;
+        padding: 0 17px;
+
+        @include media("d-only") {
+            width: 100%;
+            margin: 0 0 55px 0;
+            padding: 0;
+        }
 
         .widget-site_control {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 39px;
 
             .widget-input {
-                width: 264px;
-                padding: 0 21px;
-                margin-right: 12px;
+                margin-bottom: 7px;
+
+                @include media("d-only") {
+                    margin-bottom: 0;
+                    margin-right: 12px;
+                }
+            }
+
+            @include media("d-only") {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
             }
         }
 
 
         .widget-site_link {
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
+            display: none;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 15px;
             color: $widgetDeactivateLink;
             text-decoration: none;
             cursor: pointer;
-        }
+            margin-bottom: 39px;
 
+            &.mod-mobile {
+                display: block;
+
+                @include media('d-only'){
+                    display: none;
+                }
+            }
+
+            @include media('d-only') {
+                //display: block;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 0;
+            }
+        }
     }
 
     .widget-deactivate_table {
@@ -51,33 +103,57 @@
 
         border: 1px solid rgba(0, 33, 95, 0.05);
         box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-        margin-bottom: 31px;
+        margin: 0 auto;
+
+        @include media("d-only") {
+            margin: 0 0 31px 0;
+        }
+
     }
 
     .widget_table-block {
-        height: 63px;
+        height: 60px;
         display: flex;
         align-items: center;
 
+        @include media("d-only") {
+            height: 63px;
+        }
+
         .table-block_item {
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 700;
-            line-height: 29px;
+            line-height: 14px;
             color: $mainDarkBlue;
+
+
+            @include media("d-only") {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 29px;
+            }
         }
 
         .mod_left {
             width: 365px;
-            padding-left: 26px;
+            padding-left: 11px;
+            @include media("d-only") {
+                padding-left: 26px;
+            }
+
         }
 
         .mod_middle {
             width: 220px;
-            padding-left: 21px;
+            padding-left: 11px;
+            @include media("d-only") {
+                padding-left: 26px;
+            }
         }
 
         .mod_right {
             width: 94px;
+
         }
 
         &.mod_head {
@@ -87,15 +163,28 @@
 
         &.mod_content {
             background-color: $white;
-            height: 76px;
+            height: 53px;
+
+            @include media("d-only") {
+                height: 76px;
+            }
 
             .table-block_item {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 14px;
                 display: flex;
                 align-items: center;
-                font-weight: 400;
-                line-height: 28px;
                 border-right: 1px solid $inputBorder;
-                height: 76px;
+                height: 53px;
+
+
+                @include media("d-only") {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    height: 76px;
+                }
             }
 
             .table-content_cross {
@@ -112,6 +201,4 @@
             }
         }
     }
-
-
 }

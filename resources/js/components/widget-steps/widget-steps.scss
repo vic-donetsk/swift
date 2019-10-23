@@ -4,31 +4,41 @@
     display: flex;
     margin-bottom: 54px;
 
+    @include media("t-ipad") {
+        flex-wrap: wrap;
+        margin-left: 24px;
+    }
+
     .widget-steps_item {
-        width: 100%;
-        max-width: 278px;
-        height: 49px;
-
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-
+        display: none;
         @extend %lightBlueGradient;
 
-        border-top-right-radius: 24px;
-        border-bottom-right-radius: 24px;
-        padding-left: 30px;
+        @include media("t-ipad") {
+            width: 100%;
+            max-width: 278px;
+            height: 49px;
 
-        &:not(:first-of-type) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+            padding-left: 30px;
             margin-left: -24px;
-            padding-left: 54px;
-        }
 
-        @for $i from 1 through 6 {
-            &:nth-of-type(#{$i}) {
-                z-index: 6 - $i + 1;
+            &:not(:first-of-type) {
+                //margin-left: -24px;
+                padding-left: 54px;
+            }
+
+            @for $i from 1 through 6 {
+                &:nth-of-type(#{$i}) {
+                    z-index: 6 - $i + 1;
+                }
             }
         }
+
 
         .widget-steps_icon {
             width: 14px;

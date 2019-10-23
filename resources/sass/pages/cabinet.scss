@@ -11,10 +11,15 @@
 
 .cabinet_page {
     position: absolute;
-    left: 295px;
-    top: 64px;
+    left: 0;
+    top: 85px;
     bottom: 0;
     right: 0;
+
+    @include media("d-only"){
+        top: 64px;
+        left: 295px;
+    }
 }
 
 
