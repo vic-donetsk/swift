@@ -4,7 +4,7 @@
 
     &_container {
         max-width: 1625px;
-        padding: 60px 2.47% 0;
+        padding: 110px 2.47% 0;
     }
 
     &_header {
@@ -90,10 +90,46 @@
             }
 
 
-            }
-
-
         }
 
 
     }
+
+    &_diagrams {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-big {
+            width: 46.31%;
+            margin-bottom: 42px;
+
+            .diagram_mod-big {
+                position: relative;
+                width: 100%;
+                padding-bottom: 41.5%;
+
+
+            }
+        }
+
+        &-small {
+            width: 21.9%;
+
+            .diagram_mod-small {
+                position: relative;
+                width: 100%;
+                padding-bottom: 87.9%;
+            }
+        }
+
+        .diagram {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: blue;
+        }
+
+
+    }
+}

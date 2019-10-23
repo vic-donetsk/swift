@@ -30,12 +30,56 @@
                         <svg class="calendar_icon">
                             <use xlink:href="#calendar"></use>
                         </svg>
-
-                            05/08/19 - 11/08/19
-
+                        05/08/19 - 11/08/19
                     </div>
 
                 </div>
+            </div>
+
+            <div class="statistics_diagrams">
+                <div class="statistics_diagrams-big">
+                    <div class="diagram_mod-big">
+                        <div class="diagram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics_diagrams-big">
+                    <div class="diagram_mod-big">
+                        <div class="diagram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics_diagrams-small">
+                    <div class="diagram_mod-small">
+                        <div class="diagram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics_diagrams-small">
+                    <div class="diagram_mod-small">
+                        <div class="diagram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics_diagrams-small">
+                    <div class="diagram_mod-small">
+                        <div class="diagram">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics_diagrams-small">
+                    <div class="diagram_mod-small">
+                        <div class="diagram">
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
