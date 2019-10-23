@@ -6,6 +6,7 @@
     height: 45px;
     border: 1px solid $inputBorder;
     border-radius: 8px;
+    box-shadow: none;
     margin-bottom: 15px;
     padding-left: 16px;
     font-size: 13px;
@@ -44,6 +45,7 @@
 }
 
 .auth {
+    min-height: 100vh;
     background-color: $landingBackground;
     text-align: center;
     background: url(/img/ellipse.png) 90% 90% no-repeat fixed,
@@ -73,7 +75,7 @@
 
         .restoreHeader {
             padding-top: 104px;
-            margin: 104px auto 30px;
+            margin: 0 auto 30px;
             @include media('d') {
                 padding-top: 23vh;
                 margin: 0 auto 5vh;
