@@ -3,6 +3,7 @@ import page404 from './pages/404/404.vue';
 import authentication from './pages/auth/authentication/authentication.vue';
 import registration from './pages/auth/registration/registration.vue';
 import restoring from './pages/auth/restoring/restoring.vue';
+import statistics from './pages/cabinet/statistics/statistics.vue';
 import widget from './pages/cabinet/widget/widget.vue';
 import widgetInstall from './pages/cabinet/widget-install/widget-install.vue';
 import widgetDeactivate from './pages/cabinet/widget-deactivate/widget-deactivate.vue';
@@ -44,6 +45,11 @@ export default [
         name: 'cabinet',
         component: cabinet,
         children: [
+            {
+                path: 'statistics',
+                name: 'cabinet-statistics',
+                component: statistics,
+            },
             {
                 path: 'widget',
                 name: 'cabinet-widget',
