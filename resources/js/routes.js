@@ -34,13 +34,6 @@ export default [
         component: restoring
     },
 
-    // Temporary route !!!
-    {
-        path: '/conversations',
-        name: 'conversations',
-        component: conversations
-    },
-
     {
         path: '*',
         name: '404',
