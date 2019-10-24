@@ -13,24 +13,24 @@
                     <div class="widget-block_elem-wrap mod_size">
                         <p>dev.pi.md/CMS/?page=home</p>
                     </div>
-                    <!--                        <div class="widget-block_btn mod_play">-->
-                    <!--                            <div class="widget-sub_button">-->
-                    <!--                            </div>-->
-                    <!--                            <p>{{__("widget", "Widget btn play")}}</p>-->
-                    <!--                        </div>-->
+                    <div class="widget-block_btn mod_play">
+                        <div class="widget-sub_button">
+                        </div>
+                        <p>{{__("widget", "Widget btn play")}}</p>
+                    </div>
 
                     <!--                        <div class="widget-block_btn mod-not_install">-->
                     <!--                            <p>{{__("widget", "Widget btn not install")}}</p>-->
                     <!--                        </div>-->
 
-                    <div class="widget-block_btn mod_pause">
-                        <div class="widget-sub_button">
-                            <svg class="widget-button_icon">
-                                <use xlink:href="#play"></use>
-                            </svg>
-                        </div>
-                        <p>{{__("widget", "Widget btn pause")}}</p>
-                    </div>
+                    <!--                    <div class="widget-block_btn mod_pause">-->
+                    <!--                        <div class="widget-sub_button">-->
+                    <!--                            <svg class="widget-button_icon">-->
+                    <!--                                <use xlink:href="#play"></use>-->
+                    <!--                            </svg>-->
+                    <!--                        </div>-->
+                    <!--                        <p>{{__("widget", "Widget btn pause")}}</p>-->
+                    <!--                    </div>-->
                 </div>
 
                 <div class="widget-block_item">
@@ -114,6 +114,10 @@
                     </div>
 
                 </div>
+            </div>
+
+            <div class="widget-arrow_button">
+
             </div>
 
             <div class="widget-add_button">

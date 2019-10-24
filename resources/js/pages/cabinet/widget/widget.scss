@@ -14,7 +14,12 @@
     .cabinet-page_title {
         margin-bottom: 40px;
 
+        @include media('t'){
+            text-align: center;
+        }
+
         @include media("d-only") {
+            text-align: left;
             margin-bottom: 64px;
         }
 
@@ -22,8 +27,16 @@
 
     .widget-block {
         width: 100%;
+
         background: $landingHeaderbackground;
+
         border: 1px solid $widgetSidebarBorder;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
+
+
 
         @include media('t-ipad') {
             margin: 0 auto;
@@ -37,11 +50,11 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 35px 15px 33px 19px;
+            border-radius: 0;
+            box-shadow: none;
         }
 
-
         .widget-block_item {
-
             @include media('d-only') {
                 display: flex;
             }
@@ -68,7 +81,7 @@
         &.mod_size {
             display: none;
             @include media('d-only') {
-                display: block;
+                display: flex;
                 max-width: 993px;
                 margin-right: 31px;
                 box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
@@ -214,18 +227,36 @@
         }
     }
 
+    .widget-arrow_button{
+        width: 54px;
+        height: 34px;
+
+        background: $landingHeaderbackground;
+        border: 1px solid $widgetSidebarBorder;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top: none;
+
+        box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
+        margin: 0 auto 40px;
+
+        @include media('d-only'){
+            display: none;
+        }
+    }
+
     .widget-add_button {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        max-width: 54px;
-        height: 34px;
+        max-width: 255px;
+        height: 45px;
+        //list-style-type: none;
 
         background-color: $widgetAddButton;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-
+        border: 1px solid $widgetSidebarBorder;
+        border-radius: 8px;
         cursor: pointer;
 
         padding: 0 30px;
@@ -234,23 +265,40 @@
         @include media('d-only') {
             max-width: 399px;
             height: 56px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
         }
 
         .widget-add_icon {
-            width: 19px;
-            height: 19px;
+            width: 16px;
+            height: 16px;
+            margin-right: 9px;
             fill: $mainDarkBlue;
-            margin-right: 12px;
+
+            @include media('d-only') {
+                width: 19px;
+                height: 19px;
+                margin-right: 12px;
+            }
         }
 
         .widget-add_text {
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 600;
-            line-height: 19px;
+            line-height: 20px;
             color: $mainDarkBlue;
-            padding-top: 4px;
+            height: 16px;
+
+
+            @include media('d-only') {
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 19px;
+                height: 15px;
+                text-transform: uppercase;
+            }
         }
     }
 }
