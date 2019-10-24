@@ -13,7 +13,7 @@
                     </h2>
 
                     <div class="widget-chat_socials">
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc">
                                 <div class="widget-soc_head mod-chat">
                                     <svg class="widget-soc_icon">
@@ -27,7 +27,7 @@
                         </div>
 
 
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc mod_message">
                                 <div class="widget-soc_head mod-messenger">
                                     <svg class="widget-soc_icon">
@@ -44,7 +44,7 @@
 
                         </div>
 
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc mod_message">
                                 <div class="widget-soc_head mod-telegram">
                                     <svg class="widget-soc_icon">
@@ -61,7 +61,7 @@
                             <div class="widget-chat_block-message"></div>
                         </div>
 
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc mod_message">
                                 <div class="widget-soc_head mod-vk">
                                     <svg class="widget-soc_icon">
@@ -77,7 +77,7 @@
 
                             <div class="widget-chat_block-message"></div>
                         </div>
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc">
                                 <div class="widget-soc_head mod-viber">
                                     <svg class="widget-soc_icon">
@@ -92,7 +92,7 @@
                             </div>
 
                         </div>
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc mod_message">
                                 <div class="widget-soc_head mod-whatsapp">
                                     <svg class="widget-soc_icon">
@@ -108,7 +108,7 @@
 
                             <div class="widget-chat_block-message"></div>
                         </div>
-                        <div class="widget-soc_wrap">
+                        <div class="widget-soc_item">
                             <div class="widget-chat_soc">
                                 <div class="widget-soc_head mod-email">
                                     <svg class="widget-soc_icon">

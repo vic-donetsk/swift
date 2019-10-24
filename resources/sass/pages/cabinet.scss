@@ -1,10 +1,10 @@
 .cabinet {
     position: relative;
     background-color: $widgetBackgroundMobi;
+    min-height: 100vh;
 
     @include media('d-only') {
         background-color: $white;
-        height: 100vh;
     }
 }
 
