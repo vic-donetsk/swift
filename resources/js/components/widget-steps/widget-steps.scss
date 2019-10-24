@@ -1,41 +1,41 @@
 @import '@/app';
 
 .widget-steps {
-    display: flex;
+    display: none;
+    flex-wrap: wrap;
+    margin-left: 24px;
     margin-bottom: 54px;
 
-    @include media("t-ipad") {
-        flex-wrap: wrap;
-        margin-left: 24px;
+    @include media("d-only") {
+        display: flex;
     }
 
     .widget-steps_item {
-        display: none;
         @extend %lightBlueGradient;
 
-        @include media("t-ipad") {
-            width: 100%;
-            max-width: 278px;
-            height: 49px;
+        width: 100%;
+        min-width: 250px;
+        max-width: 280px;
+        height: 49px;
 
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
-            border-top-right-radius: 24px;
-            border-bottom-right-radius: 24px;
-            padding-left: 30px;
-            margin-left: -24px;
+        flex: 1;
 
-            &:not(:first-of-type) {
-                //margin-left: -24px;
-                padding-left: 54px;
-            }
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        padding-left: 30px;
+        margin-left: -24px;
 
-            @for $i from 1 through 6 {
-                &:nth-of-type(#{$i}) {
-                    z-index: 6 - $i + 1;
-                }
+        &:not(:first-of-type) {
+            padding-left: 54px;
+        }
+
+        @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+                z-index: 6 - $i + 1;
             }
         }
 

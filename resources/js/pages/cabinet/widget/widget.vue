@@ -13,7 +13,7 @@
             </div>
 
             <div class="widget-block">
-                <div class="widget-block_item">
+                <div class="widget-block_top">
                     <div class="widget-block_elem-wrap mod_size">
                         <p>dev.pi.md/CMS/?page=home</p>
                     </div>
@@ -37,7 +37,7 @@
                     <!--                    </div>-->
                 </div>
 
-                <div class="widget-block_item">
+                <div class="widget-block_list">
                     <div class="widget-block_elem-wrap">
                         <div class="widget-block_elem left mod_color">
                             <svg class="widget-elem_icon">
@@ -51,7 +51,6 @@
                             <span>{{__('widget','Widget contact phone 2')}}</span>
                         </div>
                     </div>
-
                     <div class="widget-block_elem-wrap">
                         <div class="widget-block_elem left">
                             <svg class="widget-elem_icon">
@@ -64,7 +63,6 @@
                             <span>{{__('widget','Widget elem text 4')}}</span>
                         </div>
                     </div>
-
                     <div class="widget-block_elem-wrap">
                         <div class="widget-block_elem left">
                             <svg class="widget-elem_icon">
@@ -77,9 +75,6 @@
                             <span>{{__('widget','Widget contact phone 2')}}</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="widget-block_item">
                     <div class="widget-block_elem-wrap">
                         <div class="widget-block_elem left">
                             <svg class="widget-elem_icon">
@@ -91,7 +86,6 @@
                             <span>{{__('widget','Widget elem text 7')}}</span>
                         </div>
                     </div>
-
                     <div class="widget-block_elem-wrap">
                         <div class="widget-block_elem left">
                             <svg class="widget-elem_icon">
@@ -103,7 +97,6 @@
                             <span>{{__('widget','Widget elem text 9')}}</span>
                         </div>
                     </div>
-
                     <div class="widget-block_elem-wrap">
                         <div class="widget-block_elem left">
                             <svg class="widget-elem_icon">
@@ -116,7 +109,6 @@
                             <span>{{__('widget','Widget elem text 12')}}</span>
                         </div>
                     </div>
-
                 </div>
             </div>
 

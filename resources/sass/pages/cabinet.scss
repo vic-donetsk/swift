@@ -1,24 +1,21 @@
 .cabinet {
     position: relative;
-
-    height: 100vh;
     background-color: $widgetBackgroundMobi;
 
     @include media('d-only') {
         background-color: $white;
+        height: 100vh;
     }
 }
 
 .cabinet_page {
-    position: absolute;
-    left: 0;
-    top: 85px;
-    bottom: 0;
-    right: 0;
+    padding-top: 85px;
 
-    @include media("d-only"){
+    @include media("d-only") {
+        position: absolute;
         top: 64px;
         left: 295px;
+        padding-top: 0;
     }
 }
 
