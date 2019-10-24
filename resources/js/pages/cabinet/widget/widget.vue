@@ -8,6 +8,10 @@
                 <span>{{__('widget','Cabinet page title 1')}}</span>
             </h2>
 
+            <div class="widget-top_button">
+                <span>dev.pi.md</span>
+            </div>
+
             <div class="widget-block">
                 <div class="widget-block_item">
                     <div class="widget-block_elem-wrap mod_size">
@@ -117,7 +121,9 @@
             </div>
 
             <div class="widget-arrow_button">
-
+                <svg class="widget-arrow_icon">
+                    <use xlink:href="#arrow"></use>
+                </svg>
             </div>
 
             <div class="widget-add_button">

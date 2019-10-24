@@ -14,7 +14,7 @@
     .cabinet-page_title {
         margin-bottom: 40px;
 
-        @include media('t'){
+        @include media('t') {
             text-align: center;
         }
 
@@ -22,7 +22,30 @@
             text-align: left;
             margin-bottom: 64px;
         }
+    }
 
+    .widget-top_button {
+        max-width: 287px;
+        height: 49px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        color: $widgetBackgroundMobi;
+        background-color: $mainDarkBlue;
+
+        border-radius: 8px;
+        padding: 0 20px;
+        margin: 0 auto 11px;
+
+        @include media('d-only') {
+            display: none;
+        }
     }
 
     .widget-block {
@@ -35,7 +58,6 @@
         border-bottom-right-radius: 8px;
 
         box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
-
 
 
         @include media('t-ipad') {
@@ -64,18 +86,19 @@
     .widget-block_elem-wrap {
         width: 100%;
         height: 80px;
-
-        &:not(:last-of-type) {
-            margin-right: 36px;
-        }
+        margin-bottom: 29px;
 
         @include media('d-only') {
             height: 117px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: $white;
+            margin-bottom: 0;
+
+            &:not(:last-of-type) {
+                margin-right: 36px;
+            }
         }
 
         &.mod_size {
@@ -98,23 +121,43 @@
             height: 80px;
             display: flex;
             align-items: center;
+            text-align: center;
             padding: 10px 15px;
             font-size: 14px;
             font-weight: 600;
-            color: $widgetElemText;
-            text-align: center;
+            color: $widgetActiveBlue;
+            background-color: $widgetBackgroundMobi;
+            border-top: 1px solid $widgetSidebarBorder;
+            border-bottom: 1px solid $widgetSidebarBorder;
+
 
             @include media('d-only') {
                 width: 50%;
                 height: 117px;
+                color: $widgetElemText;
+                border: none;
+                background-color: $white;
+
             }
 
             &.mod_color {
-                color: $white;
-                background-color: $widgetActiveBlue;
+                background-color: $widgetBackgroundMobi;
+                border-top: 1px solid $widgetSidebarBorder;
+                border-bottom: 1px solid $widgetSidebarBorder;
 
                 .widget-elem_icon {
-                    fill: $white;
+                    fill: $widgetActiveBlue;
+                }
+
+                @include media('d-only') {
+                    color: $white;
+                    background-color: $widgetActiveBlue;
+                    border-top: 1px solid $widgetElemBorder;
+                    border-bottom: 1px solid $widgetElemBorder;
+
+                    .widget-elem_icon {
+                        fill: $white;
+                    }
                 }
             }
 
@@ -135,12 +178,17 @@
             }
 
             .widget-elem_icon {
-                fill: $widgetBlockSvg;
                 width: 35px;
                 height: 35px;
                 flex-shrink: 0;
-                margin-left: 12px;
-                margin-right: 15px;
+                fill: $widgetActiveBlue;
+
+
+                @include media('d-only') {
+                    margin-left: 12px;
+                    margin-right: 15px;
+                    fill: $widgetBlockSvg;
+                }
             }
         }
     }
@@ -149,20 +197,23 @@
         height: 80px;
         flex-shrink: 0;
 
-        font-size: 19px;
+        font-size: 16px;
         font-weight: 600;
-        line-height: 15px;
+        line-height: 19px;
         color: $landingHeaderbackground;
+        border: 0.05px solid $landingHeaderbackground;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0 30px;
+        margin-bottom: 29px;
 
         @include media('d-only') {
             width: 478px;
             height: 117px;
-
+            font-size: 19px;
             margin-right: 4px;
+            margin-bottom: 0;
         }
 
         .widget-sub_button {
@@ -227,10 +278,12 @@
         }
     }
 
-    .widget-arrow_button{
+    .widget-arrow_button {
         width: 54px;
         height: 34px;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: $landingHeaderbackground;
         border: 1px solid $widgetSidebarBorder;
         border-bottom-left-radius: 8px;
@@ -240,8 +293,15 @@
         box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
         margin: 0 auto 40px;
 
-        @include media('d-only'){
+        @include media('d-only') {
             display: none;
+        }
+
+        .widget-arrow_icon {
+            width: 14px;
+            height: 8px;
+            fill: $mainDarkBlue;
+            transform: rotate(180deg);
         }
     }
 
