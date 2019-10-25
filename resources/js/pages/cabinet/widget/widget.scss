@@ -50,7 +50,6 @@
 
     .widget-block {
         width: 100%;
-
         background: $landingHeaderbackground;
 
         border: 1px solid $widgetSidebarBorder;
@@ -69,7 +68,6 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             padding: 35px 15px 33px 19px;
             border-radius: 0;
             box-shadow: none;
@@ -96,8 +94,6 @@
                     width: calc(33.33% - 36px);
                 }
             }
-
-
         }
 
         .widget-block_top {
@@ -117,18 +113,18 @@
             height: 117px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
             background: $white;
-            margin-bottom: 0;
         }
 
         &.mod_size {
             display: none;
+
             @include media('d-only') {
                 display: flex;
                 flex: 1;
-                margin-right: 31px;
-                box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+
+                border: 1px solid rgba(0, 33, 95, 0.05);
+                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
                 color: $mainDarkBlue;
 
                 font-size: 29px;
@@ -139,6 +135,7 @@
             }
 
             @include media('d-phd') {
+                margin-right: 31px;
                 margin-bottom: 0;
             }
         }
@@ -168,14 +165,6 @@
             }
 
             &.mod_color {
-                background-color: $widgetBackgroundMobi;
-                border-top: 1px solid $widgetSidebarBorder;
-                border-bottom: 1px solid $widgetSidebarBorder;
-
-                .widget-elem_icon {
-                    fill: $widgetActiveBlue;
-                }
-
                 @include media('d-only') {
                     color: $white;
                     background-color: $widgetActiveBlue;
@@ -307,18 +296,21 @@
     }
 
     .widget-arrow_button {
-        width: 54px;
-        height: 34px;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        width: 54px;
+        height: 34px;
+
         background: $landingHeaderbackground;
+        box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
+
         border: 1px solid $widgetSidebarBorder;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         border-top: none;
 
-        box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
         margin: 0 auto 40px;
 
         @include media('d-only') {
@@ -340,9 +332,8 @@
 
         max-width: 255px;
         height: 45px;
-        //list-style-type: none;
 
-        background-color: $widgetAddButton;
+        background-color: $lightBlueGradientFrom;
         border: 1px solid $widgetSidebarBorder;
         border-radius: 8px;
         cursor: pointer;
@@ -353,6 +344,7 @@
         @include media('d-only') {
             max-width: 399px;
             height: 56px;
+            background-color: $widgetAddButton;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             border-bottom-left-radius: 30px;

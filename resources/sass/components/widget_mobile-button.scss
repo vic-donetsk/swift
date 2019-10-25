@@ -1,0 +1,30 @@
+.widget_mobile-button {
+    width: 287px;
+    height: 49px;
+    justify-content: flex-start;
+    margin: 39px auto 0;
+
+    @include media('d-only') {
+        display: none;
+    }
+
+    .widget_mobile-button_icon {
+        width: 14px;
+        height: 14px;
+        fill: $white;
+
+        &:not(:last-of-type) {
+            margin-right: 7px;
+        }
+    }
+
+    .widget_mobile-button_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        height: 16px;
+        flex: 1;
+        color: $white;
+
+    }
+}

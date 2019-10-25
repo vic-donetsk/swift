@@ -1,5 +1,16 @@
 <template>
     <div class="cabinet_page widget-install">
+
+        <div class="widget_mobile-button button mod-blue">
+            <svg class="widget_mobile-button_icon">
+                <use xlink:href="#download"></use>
+            </svg>
+            <span class="widget_mobile-button_text">{{__('widget','Widget menu text 1')}}</span>
+            <svg class="widget_mobile-button_icon">
+                <use xlink:href="#arrow"></use>
+            </svg>
+        </div>
+
         <div class="widget_container">
             <widget-steps></widget-steps>
 
