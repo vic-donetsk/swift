@@ -57,7 +57,20 @@
                     <span>{{__('widget','Widget install button')}}</span>
                 </div>
 
+                <div class="widget-install_plugins mod-mobile">
+                    <h2 class="cabinet-page_title mod_margin">
+                        <svg class="cabinet-page_title-icon">
+                            <use xlink:href="#puzzle-plugin"></use>
+                        </svg>
+                        <span>{{__('widget','Cabinet page title 3')}}</span>
+                    </h2>
 
+                    <div class="widget-logo_plugins">
+                        <img src="/img/logo-for-plugins/joomla.svg" class="widget-plugin_image">
+                        <img src="/img/logo-for-plugins/wordpress-icon.svg" class="widget-plugin_image">
+                        <img src="/img/logo-for-plugins/wix.svg" class="widget-plugin_image">
+                    </div>
+                </div>
 
             </div>
         </div>

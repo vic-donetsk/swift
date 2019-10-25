@@ -197,6 +197,7 @@
                 width: 88px;
                 height: 80px;
                 border: 1px solid $widgetSidebarBorder;
+                border-left: none;
                 background-color: $lightBlueGradientFrom;
 
                 @include media('d-only'){

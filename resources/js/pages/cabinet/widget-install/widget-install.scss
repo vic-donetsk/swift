@@ -4,35 +4,79 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 54px 45px 0 38px;
+        padding: 39px 17px 0;
+
+        @include media('d-only') {
+            padding: 54px 45px 0 38px;
+
+        }
 
         .cabinet-page_title {
             margin-bottom: 30px;
 
-            &.mod_margin {
-                margin-bottom: 52px;
+            @include media('t-ipad') {
+                text-align: center;
             }
+            @include media('d-only') {
+                text-align: left;
+
+                &.mod_margin {
+                    margin-bottom: 52px;
+                }
+            }
+
+        }
+    }
+
+    .widget-install_wrap {
+        margin-bottom: 29px;
+
+        @include media('d-only') {
+            display: flex;
+            margin-bottom: 53px;
+        }
+    }
+
+    .widget-install_site {
+
+        @include media('d-only') {
+            width: 50%;
+            border-right: 1px solid $widgetInstallBorder;
+            padding-right: 39px;
         }
     }
 
     .widget-block_script {
-        max-width: 733px;
-        height: 100px;
-
         display: flex;
         align-items: center;
-        justify-content: flex-start;
 
-        font-size: 25px;
+        height: 70px;
+
+        font-size: 16px;
         font-weight: 600;
-        line-height: 27px;
+        line-height: 19px;
         color: $mainDarkBlue;
-
-        border: 1px solid $inputBorder;
-        border-radius: 8px;
         background-color: $white;
+
+        border: 1px solid rgba(0, 33, 95, 0.05);
         box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-        padding: 0 28px;
+        padding: 0 22px;
+
+        @include media('t-ipad') {
+            max-width: 733px;
+            margin: 0 auto;
+        }
+
+        @include media('d-only') {
+            height: 100px;
+
+            font-size: 25px;
+            line-height: 27px;
+            border-radius: 8px;
+            border: 1px solid $inputBorder;
+            padding: 0 28px;
+            margin: 0;
+        }
 
         &.mod_verify {
             max-width: 1531px;
@@ -57,40 +101,41 @@
         }
     }
 
-    .widget-install_wrap {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-bottom: 53px;
-    }
+    .widget-install_plugins {
+        display: none;
 
-        .widget-install_site {
-            width: 50%;
-            border-right: 1px solid $widgetInstallBorder;
-            padding-right: 39px;
-
-        }
-
-        .widget-install_plugins {
+        @include media('d-only') {
+            display: block;
             width: 50%;
             padding-left: 41px;
+        }
 
-            .widget-logo_plugins {
-                font-size: 0;
-                margin: 0 -20px;
+        &.mod-mobile {
+            display: block;
+            border-top: 1px solid $widgetInstallBorder;
+            padding-top: 39px;
 
-                .widget-plugin_image {
-                    width: 52px;
-                    height: 52px;
-                    margin: 0 20px;
-                    cursor: pointer;
-                }
+            @include media('d-only') {
+                display: none;
             }
         }
+
+        .widget-logo_plugins {
+            font-size: 0;
+            margin: 0 -20px;
+
+            .widget-plugin_image {
+                width: 52px;
+                height: 52px;
+                margin: 0 20px;
+                cursor: pointer;
+            }
+        }
+    }
 
 
     .widget-button {
         width: 264px;
-        margin: 0 auto;
+        margin: 0 auto 39px;
     }
 }
