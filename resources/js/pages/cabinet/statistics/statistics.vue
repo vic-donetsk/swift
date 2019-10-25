@@ -38,11 +38,21 @@
 
             <div class="statistics_diagrams">
                 <div class="statistics_diagrams-big">
-                    <div class="diagram_mod-big">
-                        <div class="diagram">
 
-                        </div>
-                    </div>
+                    <chart-js class="diagram_mod-big"
+                              chartId="firstBig"
+                              total="300"
+                              :chartTitle="__('statistics', 'TOTAL CALLS')"
+                              isIncrease=true
+                              percentage=12
+                              avatar="img/charts/total.svg"
+                              gradientFrom="rgba(110,166,242,0.58)"
+                              gradientTo="rgba(186,199,252,0.2)"
+                              :chartLabels = chartLabels
+                              :chartData = chartData>
+
+                    </chart-js>
+
                 </div>
                 <div class="statistics_diagrams-big">
                     <div class="diagram_mod-big">
