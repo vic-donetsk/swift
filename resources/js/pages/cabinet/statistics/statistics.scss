@@ -2,9 +2,11 @@
 
 .statistics {
 
+    width: calc(100% - 295px);
+
     &_container {
         max-width: 1625px;
-        padding: 110px 2.47% 0;
+        padding: 54px 2.47% 0;
     }
 
     &_header {
@@ -57,6 +59,7 @@
                 .onePeriod {
                     width: 95px;
                     text-align: center;
+                    cursor: pointer;
 
                     &:not(:last-of-type) {
                         border-right: 1px solid $inputBorder;
@@ -99,9 +102,10 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        border-bottom: 1px solid $widgetInstallBorder;
 
         &-big {
-            width: 46.31%;
+            width: 48.8%;
             margin-bottom: 42px;
             border: 1px solid rgba(0, 33, 95, 0.05);
             box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
@@ -116,7 +120,8 @@
         }
 
         &-small {
-            width: 21.9%;
+            width: 23.35%;
+            margin-bottom: 54px;
             border: 1px solid rgba(0, 33, 95, 0.05);
             box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
 
