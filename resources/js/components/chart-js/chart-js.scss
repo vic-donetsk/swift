@@ -1,14 +1,72 @@
 @import '@/app';
 
 .diagram_header {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     width: 100%;
     height: 25%;
-    background: blue;
+    padding: 3.2% 2.9% 0 3.6%;
+    line-height: 1;
+
+    .title_numbers {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .title_numbers-total {
+        font-size: 2.09vw;
+        font-weight: 800;
+        color: $mainDarkBlue;
+
+    }
+
+    .title_numbers-percent {
+        position: relative;
+        margin-left: 0.7vw;
+        font-size: 0.63vw;
+        font-weight: 700;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 0.2vw solid transparent;
+            border-right: 0.2vw solid transparent;
+            position: absolute;
+            left: -0.5vw;
+            top: -0.05vw;
+        }
+
+        &.mod_increase {
+            color: #35AC00;
+
+            &::before {
+                border-bottom: 0.5vw solid #35AC00;
+            }
+        }
+
+        &.mod_decrease {
+            color: #D31616;
+
+            &::before {
+                border-top: 0.5vw solid #D31616;
+            }
+        }
+    }
+
+    .title_name {
+        font-size: 0.79vw;
+        font-weight: 500;
+        color: #8995AD;
+    }
+
 }
+
 .diagram_canvas-container {
     position: absolute;
-    top:25%;
+    top: 25%;
     width: 100%;
     height: 75%;
 }

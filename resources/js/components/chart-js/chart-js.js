@@ -17,18 +17,6 @@ export default {
         'chartLabels', // data for axis X
         'chartData'    // responsive value for axis Y
     ],
-    created() {
-        console.log(this.chartId);
-        console.log(this.chartTitle);
-        console.log(this.total);
-        console.log(this.isIncrease);
-        console.log(this.percentage);
-        console.log(this.avatar);
-        console.log(this.gradientFrom);
-        console.log(this.gradientTo);
-        console.log(this.chartLabels);
-        console.log(this.chartData);
-    },
     mounted() {
 
         this.showChart();
@@ -39,7 +27,6 @@ export default {
         showChart() {
             let diagram = document.getElementById(this.chartId);
             let ctx = diagram.getContext("2d");
-            let diagramTitle = this.chartTitle;
 
             /*** Gradient ***/
             let gradient = ctx.createLinearGradient(0, 0, 0, diagram.clientHeight);

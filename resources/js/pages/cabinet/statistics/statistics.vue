@@ -19,18 +19,36 @@
                 </div>
                 <div class="statistics_header-dates">
                     <div class="dates_periods">
-                        <div class="onePeriod">{{__('statistics', "Today")}}</div>
-                        <div class="onePeriod">{{__('statistics', "Yesterday")}}</div>
-                        <div class="onePeriod mod_current">{{__('statistics', "7 days")}}</div>
-                        <div class="onePeriod">{{__('statistics', "One month")}}</div>
-                        <div class="onePeriod">{{__('statistics', "6 months")}}</div>
-                        <div class="onePeriod">{{__('statistics', "1 year")}}</div>
+                        <div class="onePeriod" @click="changePeriod(1)"
+                             :class="(activeMenuItem === 1) ? 'mod_current' : ''">
+                            {{__('statistics', "Today")}}
+                        </div>
+                        <div class="onePeriod" @click="changePeriod(2)"
+                             :class="(activeMenuItem === 2) ? 'mod_current' : ''">
+                            {{__('statistics', "Yesterday")}}
+                        </div>
+                        <div class="onePeriod" @click="changePeriod(3)"
+                             :class="(activeMenuItem=== 3) ? 'mod_current' : ''">
+                            {{__('statistics', "7 days")}}
+                        </div>
+                        <div class="onePeriod" @click="changePeriod(4)"
+                             :class="(activeMenuItem=== 4) ? 'mod_current' : ''">
+                            {{__('statistics', "One month")}}
+                        </div>
+                        <div class="onePeriod" @click="changePeriod(5)"
+                             :class="(activeMenuItem=== 5) ? 'mod_current' : ''">
+                            {{__('statistics', "6 months")}}
+                        </div>
+                        <div class="onePeriod" @click="changePeriod(6)"
+                             :class="(activeMenuItem=== 6) ? 'mod_current' : ''">
+                            {{__('statistics', "1 year")}}
+                        </div>
                     </div>
                     <div class="dates_calendar">
                         <svg class="calendar_icon">
                             <use xlink:href="#calendar"></use>
                         </svg>
-                        05/08/19 - 11/08/19
+                        {{period}}
                     </div>
 
                 </div>
@@ -40,54 +58,94 @@
                 <div class="statistics_diagrams-big">
 
                     <chart-js class="diagram_mod-big"
-                              chartId="firstBig"
+                              chartId="total"
                               total="300"
                               :chartTitle="__('statistics', 'TOTAL CALLS')"
                               isIncrease=true
                               percentage=12
-                              avatar="img/charts/total.svg"
+                              avatar="/img/charts/total.svg"
                               gradientFrom="rgba(110,166,242,0.58)"
                               gradientTo="rgba(186,199,252,0.2)"
-                              :chartLabels = chartLabels
-                              :chartData = chartData>
+                              :chartLabels=generalChartsData.totalCalls.chartLabels
+                              :chartData=generalChartsData.totalCalls.chartData>
 
                     </chart-js>
 
                 </div>
                 <div class="statistics_diagrams-big">
-                    <div class="diagram_mod-big">
-                        <div class="diagram">
+                    <chart-js class="diagram_mod-big"
+                              chartId="visitors"
+                              total="150"
+                              :chartTitle="__('statistics', 'VISITORS')"
+                              isIncrease=false
+                              percentage=4.2
+                              avatar="/img/charts/visitors.svg"
+                              gradientFrom="rgba(146,110,242,0.58)"
+                              gradientTo="rgba(211,204,251,0.2)"
+                              :chartLabels=generalChartsData.visitors.chartLabels
+                              :chartData=generalChartsData.visitors.chartData>
 
-                        </div>
-                    </div>
+                    </chart-js>
                 </div>
                 <div class="statistics_diagrams-small">
-                    <div class="diagram_mod-small">
-                        <div class="diagram">
+                    <chart-js class="diagram_mod-small"
+                              chartId="successCalls"
+                              total="280"
+                              :chartTitle="__('statistics', 'SUCCESS CALLS')"
+                              isIncrease=true
+                              percentage=8
+                              avatar="/img/charts/success.svg"
+                              gradientFrom="rgba(87,230,131,0.58)"
+                              gradientTo="rgba(185,253,205,0.2)"
+                              :chartLabels=generalChartsData.successCalls.chartLabels
+                              :chartData=generalChartsData.successCalls.chartData>
 
-                        </div>
-                    </div>
+                    </chart-js>
                 </div>
                 <div class="statistics_diagrams-small">
-                    <div class="diagram_mod-small">
-                        <div class="diagram">
+                    <chart-js class="diagram_mod-small"
+                              chartId="lostCalls"
+                              total="20"
+                              :chartTitle="__('statistics', 'LOST CALLS')"
+                              isIncrease=false
+                              percentage=5.1
+                              avatar="/img/charts/lost.svg"
+                              gradientFrom="rgba(242,110,110,0.58)"
+                              gradientTo="rgba(250,196,199,0.2)"
+                              :chartLabels=generalChartsData.lostCalls.chartLabels
+                              :chartData=generalChartsData.lostCalls.chartData>
 
-                        </div>
-                    </div>
+                    </chart-js>
                 </div>
                 <div class="statistics_diagrams-small">
-                    <div class="diagram_mod-small">
-                        <div class="diagram">
+                    <chart-js class="diagram_mod-small"
+                              chartId="durationAverage"
+                              total="5"
+                              :chartTitle="__('statistics', 'AVERAGE CALL DURATION (HOURS)')"
+                              isIncrease=true
+                              percentage=7.8
+                              avatar="/img/charts/duration.svg"
+                              gradientFrom="rgba(245,239,80,0.61)"
+                              gradientTo="rgba(252,248,169,0.24)"
+                              :chartLabels=generalChartsData.durationAverage.chartLabels
+                              :chartData=generalChartsData.durationAverage.chartData>
 
-                        </div>
-                    </div>
+                    </chart-js>
                 </div>
                 <div class="statistics_diagrams-small">
-                    <div class="diagram_mod-small">
-                        <div class="diagram">
+                    <chart-js class="diagram_mod-small"
+                              chartId="durationTotal"
+                              total="489"
+                              :chartTitle="__('statistics', 'TOTAL DURATION OF CALLS (HOURS)')"
+                              isIncrease=false
+                              percentage=4.3
+                              avatar="/img/charts/duration.svg"
+                              gradientFrom="rgba(242,196,110,0.58)"
+                              gradientTo="rgba(247,221,170,0.24)"
+                              :chartLabels=generalChartsData.durationTotal.chartLabels
+                              :chartData=generalChartsData.durationTotal.chartData>
 
-                        </div>
-                    </div>
+                    </chart-js>
                 </div>
 
             </div>
