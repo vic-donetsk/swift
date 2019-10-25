@@ -111,9 +111,7 @@
         }
 
         &.mod-mobile {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            display: block;
             border-top: 1px solid $widgetInstallBorder;
             padding-top: 39px;
 
@@ -134,7 +132,6 @@
             }
         }
     }
-
 
     .widget-button {
         width: 264px;
