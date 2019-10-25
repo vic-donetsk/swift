@@ -146,7 +146,6 @@
             display: flex;
             align-items: center;
             text-align: center;
-            padding: 10px 15px;
             font-size: 14px;
             font-weight: 600;
             color: $widgetActiveBlue;
@@ -161,6 +160,7 @@
                 color: $widgetElemText;
                 border: none;
                 background-color: $white;
+                padding: 10px 15px;
 
             }
 
@@ -193,17 +193,46 @@
                 }
             }
 
-            .widget-elem_icon {
-                width: 35px;
-                height: 35px;
-                flex-shrink: 0;
-                fill: $widgetActiveBlue;
+            .mobile-svg_wrap{
+                width: 88px;
+                height: 80px;
+                border: 1px solid $widgetSidebarBorder;
+                background-color: $lightBlueGradientFrom;
+
+                @include media('d-only'){
+                    width: 62px;
+                    height: 35px;
+                    border: none;
+                    background: none;
+                }
+
+                .widget-elem_icon {
+                    width: 35px;
+                    height: 35px;
+                    flex-shrink: 0;
+                    fill: $widgetActiveBlue;
+                    margin: 21px 26px;
 
 
-                @include media('d-only') {
-                    margin-left: 12px;
-                    margin-right: 15px;
-                    fill: $widgetBlockSvg;
+                    @include media('d-only') {
+                       margin: 0 15px 0 12px;
+                        fill: $widgetBlockSvg;
+                    }
+                }
+            }
+
+            .widget-elem_text{
+                height: 100%;
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+                padding: 0 40px;
+
+                @include media('d-only'){
+                    padding: 0;
+                    flex: inherit;
+
                 }
             }
         }
@@ -302,6 +331,8 @@
 
         width: 54px;
         height: 34px;
+
+        cursor: pointer;
 
         background: $landingHeaderbackground;
         box-shadow: 0 3px 12px rgba(239, 248, 253, 0.21);
