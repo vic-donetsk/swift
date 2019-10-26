@@ -319,7 +319,7 @@
     <symbol id="arrow">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.676 6.252">
             <path d="M331.5,36.608l4.13,4.13,4.13-4.13" transform="translate(-330.793 -35.901)" fill="none"
-                  stroke="#4c638f" stroke-width="2"/>
+                  stroke-width="2"/>
         </svg>
     </symbol>
 

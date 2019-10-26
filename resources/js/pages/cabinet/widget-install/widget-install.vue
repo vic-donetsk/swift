@@ -24,7 +24,7 @@
                             <span>{{__('widget','Cabinet page title 2')}}</span>
                         </h2>
 
-                        <div class="widget-block_script">
+                        <div class="widget-block_url">
                             <p>dev.pi.md/CMS/?page=home</p>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
                     </div>
                 </div>
 
-                <div class="widget-block_script mod_verify">
-                  <p>{{link}}</p>
+                <div class="widget-block_script">
+                    <p class="widget-block_script-text">{{link}}</p>
 
                     <svg class="widget-verification_icon">
                         <use xlink:href="#copy"></use>

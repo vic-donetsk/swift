@@ -46,7 +46,7 @@
         }
     }
 
-    .widget-block_script {
+    .widget-block_url {
         display: flex;
         align-items: center;
 
@@ -77,26 +77,63 @@
             padding: 0 28px;
             margin: 0;
         }
+    }
 
-        &.mod_verify {
-            max-width: 1531px;
-            height: 87px;
-            position: relative;
+    .widget-block_script {
+        position: relative;
 
+        max-width: 1530px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        text-align: center;
+
+        font-weight: 600;
+        color: $mainDarkBlue;
+        background-color: $white;
+
+        border: 1px solid rgba(0, 33, 95, 0.05);
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
+
+        font-size: 16px;
+        line-height: 30px;
+
+        word-break: break-word;
+
+        padding: 27px 14px 27px 14px;
+        margin-bottom: 30px;
+
+        @include media('d-only') {
+            flex-direction: row;
+            padding: 27px 75px 27px 30px;
             font-size: 18px;
-            line-height: 30px;
 
-            padding: 0 75px 0 30px;
-            margin-bottom: 31px;
+            text-align: left;
+        }
 
-            .widget-verification_icon {
-                width: 20px;
-                height: 24px;
+        .widget-block_script-text {
+            margin-bottom: 24px;
 
+            @include media('d-only') {
+                margin-bottom: 0;
+            }
+        }
+
+        .widget-verification_icon {
+            display: block;
+            width: 20px;
+            height: 24px;
+
+            flex-shrink: 0;
+
+            fill: $widgetActiveBlue;
+
+            @include media('d-only') {
                 position: absolute;
                 right: 33px;
                 top: 31px;
-                fill: $widgetActiveBlue;
             }
         }
     }
@@ -126,14 +163,17 @@
         }
 
         .widget-logo_plugins {
-            font-size: 0;
-            margin: 0 -20px;
+            display: flex;
+            align-items: center;
 
             .widget-plugin_image {
                 width: 52px;
                 height: 52px;
-                margin: 0 20px;
                 cursor: pointer;
+
+                &:not(:last-of-type) {
+                    margin-right: 40px;
+                }
             }
         }
     }
