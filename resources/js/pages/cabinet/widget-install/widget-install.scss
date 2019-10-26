@@ -111,9 +111,20 @@
         }
 
         &.mod-mobile {
-            display: block;
+            display: flex;
+            flex-direction: column;
             border-top: 1px solid $widgetInstallBorder;
             padding-top: 39px;
+
+            @include media('t-ipad') {
+                align-items: center;
+
+                .widget-logo_plugins {
+                    margin: 0;
+                }
+
+            }
+
 
             @include media('d-only') {
                 display: none;
