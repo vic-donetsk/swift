@@ -118,13 +118,7 @@
 
             @include media('t-ipad') {
                 align-items: center;
-
-                .widget-logo_plugins {
-                    margin: 0;
-                }
-
             }
-
 
             @include media('d-only') {
                 display: none;
