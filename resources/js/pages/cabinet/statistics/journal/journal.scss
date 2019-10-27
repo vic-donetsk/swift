@@ -1,21 +1,79 @@
 @import '@/app';
 
-.statistics_tableColumns-modal {
-    position: fixed;
-    top: 0;
+.statistics-journal {
+    position: relative;
+}
+
+.statistics_journal-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    //width: fit-content;
+    margin-top: 54px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $mainDarkBlue;
+    fill: $mainDarkBlue;
+
+    .title_icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+}
+
+.statistics_journal-export {
+    font-size: 14px;
+    font-weight: 400;
+    color: $widgetDeactivateLink;
+    margin: 0 0 35px 15px;
+
+    span {
+        color: $mainDarkBlue;
+    }
+
+    .export-format {
+        cursor: pointer;
+    }
+}
+
+.statistics_tableColumns-settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 48px;
+    background: $lightBlueGradientFrom;
+    cursor: pointer;
+
+    .settings_settings {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        fill: $mainDarkBlue;
+    }
+
+    .settings_dropdown {
+        width: 8px;
+        height: 4px;
+    }
+}
+
+.statistics_tableColumns-customize {
+    position: absolute;
     left: 0;
-    bottom: 0;
     right: 0;
-    background: rgba(0,0,0,0.5);
-    z-index:1;
+    width: 609px;
+    padding: 33px 0 32px 18px;
+    margin-bottom: 15px;
+    background: $lightBlueGradientFrom;
+    z-index: 10;
 }
-.statistics_tableColumns {
-    background: #fff;
-    z-index: 15;
-}
+
 .tableColumns_checkbox {
     display: none;
 }
+
 .tableColumns_label {
     display: flex;
     justify-content: flex-start;
@@ -34,6 +92,7 @@
         margin-right: 10px;
 
     }
+
     &-text {
         color: #00215F;
         font-size: 16px;
@@ -43,6 +102,30 @@
 }
 
 .tableColumns_checkbox:checked + .tableColumns_label .tableColumns_label-square::before {
-    content:url('/img/charts/select.svg');
+    content: url('/img/charts/select.svg');
+}
+
+.statistics_tableColumns {
+    border-collapse: collapse;
+    overflow-x: scroll;
+
+
+    th {
+        height: 94px;
+        line-height: 1.125;
+        vertical-align: middle;
+        padding: 0 20px;
+        background: $lightBlueGradientFrom;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: $mainDarkBlue;
+
+    }
+
+    td {
+        border: 1px solid #F1F3F6;
+    }
+
 }
 

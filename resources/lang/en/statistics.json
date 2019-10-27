@@ -12,7 +12,25 @@
     "SUCCESS CALLS" : "APELURI DE SUCCES",
     "LOST CALLS" : "APELURI PIERDUTE",
     "AVERAGE CALL DURATION (HOURS)" : "DURATA MEDIE A APELURILOR (ORE)",
-    "TOTAL DURATION OF CALLS (HOURS)" : "DURATA TOTALĂ A APELURILOR (ORE)"
+    "TOTAL DURATION OF CALLS (HOURS)" : "DURATA TOTALĂ A APELURILOR (ORE)",
+
+    "CALL JOURNAL" : "JURNAL DE APELURI",
+    "Export table in format:" : "Exportați tabel în format : ",
+    "Date" : "Data",
+    "Time" : "Ora",
+    "Call status" : "Statutul apelului",
+    "Duration" : "Durata",
+    "Client number" : "Numărul clientului",
+    "Manager number" : "Numărul managerului",
+    "Client name" : "Numele clientului",
+    "Email" : "Email",
+    "Source" : "Sursa",
+    "Home page" : "Pagina de intrare",
+    "The page on which the call was made" : "Pagina de pe care sa efectuat apelul",
+    "IP" : "IP",
+    "Notes" : "Notițe",
+    "Region" : "Regiune"
+
 
 
 }

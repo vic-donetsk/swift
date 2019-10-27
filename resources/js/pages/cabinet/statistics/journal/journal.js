@@ -1,35 +1,70 @@
 export default {
     data: function () {
         return {
-            checkedNames: [],
+            // initial state of table columns: (is in 'checkedNames') === displayed
+            checkedNames: [
+                "Date",
+                "Time",
+                "Call status",
+                "Duration",
+                "Client number",
+                "Manager number",
+                "Client name",
+                "Email",
+                "Source",
+                "Home page",
+                "The page on which the call was made",
+                "IP",
+                "Notes",
+                "Region"
+            ],
             settingsMode: false,
             tableColumns: [
-                'data1',
-                'data2',
-                'data3',
-                'data4',
-                'data5',
-                'data6',
-                'data7'
+            "Date",
+            "Time",
+            "Call status",
+            "Duration",
+            "Client number",
+            "Manager number",
+            "Client name",
+            "Email",
+            "Source",
+            "Home page",
+            "The page on which the call was made",
+            "IP",
+            "Notes",
+            "Region"
             ]
         };
     },
 
+    props: ['list'],
+
     mounted() {
 
-        this.openSettings();
+        //this.openSettings();
 
 
     },
     methods: {
         openSettings() {
-            this.settingsMode = true;
-            document.addEventListener('click', this.handleSettingsClick);
+            console.log('cumming');
+            console.log(this.settingsMode);
+            if (!this.settingsMode) {
+                //this.settingsMode = true;
+                console.log('internal ' + this.settingsMode);
+                document.addEventListener('click', this.handleSettingsClick);
+            }
         },
         handleSettingsClick(e) {
-            let container = document.querySelector(".statistics_tableColumns");
-            if ($(container).has(e.target).length === 0) {
-                this.closeSettings();
+            if (this.settingsMode) {
+                let container = document.querySelector(".statistics_tableColumns-customize");
+                if ($(container).has(e.target).length === 0) {
+                    console.log('wauuu');
+                    this.closeSettings();
+                }
+            } else {
+                this.settingsMode = true;
             }
         },
         closeSettings() {

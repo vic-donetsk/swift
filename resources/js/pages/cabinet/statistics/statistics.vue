@@ -150,7 +150,7 @@
 
             </div>
 
-            <statistics-journal></statistics-journal>
+            <statistics-journal :list="journalData"></statistics-journal>
 
         </div>
     </div>
