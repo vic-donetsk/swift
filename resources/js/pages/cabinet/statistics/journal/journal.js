@@ -1,8 +1,9 @@
 export default {
     data: function () {
         return {
-            checkedNames : [],
-            tableColumns : [
+            checkedNames: [],
+            settingsMode: true,
+            tableColumns: [
                 'data1',
                 'data2',
                 'data3',
@@ -18,9 +19,12 @@ export default {
 
 
 
+
     },
     methods: {
-
+        closeSettings() {
+            this.settingsMode = false;
+        }
 
     }
 }

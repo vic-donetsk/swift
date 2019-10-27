@@ -1,8 +1,11 @@
 <template>
     <div>
-        <div class="statistics_tableColumns">
+        <div v-if="settingsMode === true" class="statistics_tableColumns-modal" @click="closeSettings">
+        </div>
+        <div v-if="settingsMode === true" class="statistics_tableColumns" @click.stop>
             <div v-for="oneColumn in tableColumns">
-                <input class="tableColumns_checkbox" type="checkbox" :id="oneColumn" :value="oneColumn" v-model="checkedNames">
+                <input class="tableColumns_checkbox" type="checkbox" :id="oneColumn" :value="oneColumn"
+                       v-model="checkedNames">
                 <label class="tableColumns_label" :for="oneColumn">
                     <p class="tableColumns_label-square"></p>
                     <p class="tableColumns_label-text">{{oneColumn}}</p>
