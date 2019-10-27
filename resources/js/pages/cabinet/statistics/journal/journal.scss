@@ -1,0 +1,39 @@
+@import '@/app';
+
+input {
+    display: none;
+}
+.tableColumns_checkbox {
+
+    display: none;
+}
+.tableColumns_label {
+    display: flex;
+    justify-content: flex-start;
+    width: fit-content;
+    //align-items: center;
+    margin-bottom: 6px;
+    cursor: pointer;
+
+
+    &-square {
+        width: 22px;
+        height: 22px;
+        border-radius: 5px;
+        background: #00215F;
+        padding-left: 5px;
+        margin-right: 10px;
+
+    }
+    &-text {
+        color: #00215F;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+}
+
+.tableColumns_checkbox:checked + .tableColumns_label .tableColumns_label-square::before {
+    content:url('/img/charts/select.svg');
+}
+

@@ -1,8 +1,10 @@
-import ChartJs from './../../../components/chart-js/chart-js.vue'
+import ChartJs from './chart-js/chart-js.vue'
+import Journal from './journal/journal.vue'
 
 export default {
     components: {
-        'chart-js': ChartJs
+        'chart-js': ChartJs,
+        'statistics-journal' : Journal
     },
     data: function () {
         return {

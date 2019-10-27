@@ -150,6 +150,8 @@
 
             </div>
 
+            <statistics-journal></statistics-journal>
+
         </div>
     </div>
 </template>

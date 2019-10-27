@@ -26,5 +26,5 @@
 <script src="./chart-js.js"></script>
 
 <style lang='scss'>
-    @import './chart-js.scss';
+    @import 'chart-js.scss';
 </style>
