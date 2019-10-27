@@ -2,13 +2,13 @@
 
 .statistics-journal {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .statistics_journal-title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    //width: fit-content;
     margin-top: 54px;
     font-size: 20px;
     font-weight: 700;
@@ -124,7 +124,40 @@
     }
 
     td {
+        height: 67px;
+        line-height: 67px;
+        padding: 0 15px;
         border: 1px solid #F1F3F6;
+        font-size: 16px;
+        font-weight: 500;
+        color: $mainDarkBlue;
+        white-space: nowrap;
+
+        a {
+            color: #4A6BAA;
+            text-decoration: none;
+        }
+    }
+
+    .withImage {
+        display: flex;
+        img, svg {
+            width: 17px;
+            height: 17px;
+        }
+    }
+    &-callImage {
+        margin-top: 3px;
+        margin-right: 13px;
+    }
+    &-soundImage {
+        margin-top: 3px;
+        margin-left: 13px;
+        fill: $mainDarkBlue;
+
+        svg {
+            cursor: pointer;
+        }
     }
 
 }

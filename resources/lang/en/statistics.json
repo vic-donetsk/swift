@@ -26,10 +26,13 @@
     "Email" : "Email",
     "Source" : "Sursa",
     "Home page" : "Pagina de intrare",
-    "The page on which the call was made" : "Pagina de pe care sa efectuat apelul",
+    "The page on which the call was made" : "Pagina\u00a0de\u00a0pe\u00a0care sa\u00a0efectuat\u00a0apelul",
     "IP" : "IP",
     "Notes" : "Notițe",
-    "Region" : "Regiune"
+    "Region" : "Regiune",
+
+    "Success" : "De succes",
+    "Lost" : "Pierdute"
 
 
 
