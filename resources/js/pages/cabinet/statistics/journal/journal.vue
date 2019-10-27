@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-if="settingsMode === true" class="statistics_tableColumns-modal" @click="closeSettings">
-        </div>
-        <div v-if="settingsMode === true" class="statistics_tableColumns" @click.stop>
+<!--        <div v-if="settingsMode === true" class="statistics_tableColumns-modal" @click="closeSettings">-->
+<!--        </div>-->
+        <div v-if="settingsMode === true" class="statistics_tableColumns">
             <div v-for="oneColumn in tableColumns">
                 <input class="tableColumns_checkbox" type="checkbox" :id="oneColumn" :value="oneColumn"
                        v-model="checkedNames">
