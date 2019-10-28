@@ -177,67 +177,91 @@
                                 <span class="widget-table-text">{{__('widget','Widget chat head 8')}}</span>
                             </div>
                             <div class="widget-table_head-item mod-cross">
-                                <span class="widget-table-text">Cross</span>
+                                <span class="widget-table-text"></span>
                             </div>
                         </div>
 
                         <div class="widget-chat_table-content">
                             <div class="widget-chat_table-string">
                                 <div class="widget-table_item mod-name">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 1')}}</span>
+                                    <span class="widget-table-text">{{__('widget','Widget name 1')}}</span>
+                                    <img src="/img/Adrian_Ionascu.png" class="widget-chat_image">
                                 </div>
                                 <div class="widget-table_item mod-email">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 2')}}</span>
+                                    <span class="widget-table-text">ionascu@pi.md</span>
                                 </div>
                                 <div class="widget-table_item mod-phone">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 3')}}</span>
+                                    <span class="widget-table-text">{{__('widget','Widget contact phone 1')}}</span>
                                 </div>
                                 <div class="widget-table_item mod-id">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 4')}}</span>
+                                    <span class="widget-table-text">#21412</span>
                                 </div>
                                 <div class="widget-table_item mod-settings">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 5')}}</span>
+                                    <svg class="widget-table_icon-settings">
+                                        <use xlink:href="#settings"></use>
+                                    </svg>
                                 </div>
                                 <div class="widget-table_item mod-state">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 6')}}</span>
+                                    <div class="table-item_state offline">
+                                        <span>{{__('widget','Widget chat state 1')}}</span>
+                                    </div>
                                 </div>
                                 <div class="widget-table_item mod-date">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 7')}}</span>
+                                    <span class="widget-table-text">21/08/2019</span>
                                 </div>
                                 <div class="widget-table_item mod-chat">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 8')}}</span>
+                                    <div class="table-item_chat">
+                                        <svg class="table-item_chat-icon">
+                                            <use xlink:href="#link-symbol"></use>
+                                        </svg>
+                                        <span>{{__('widget','Widget chat open')}}</span>
+                                    </div>
                                 </div>
                                 <div class="widget-table_item mod-cross">
-                                    <span class="widget-table-text">Cross</span>
+                                    <svg class="widget-table_icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="widget-chat_table-string">
                                 <div class="widget-table_item mod-name">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 1')}}</span>
+                                    <span class="widget-table-text">{{__('widget','Widget name 2')}}</span>
+                                    <img src="/img/Mark_Antonov.png" class="widget-chat_image">
                                 </div>
                                 <div class="widget-table_item mod-email">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 2')}}</span>
+                                    <span class="widget-table-text">markantonov@gmail.com</span>
                                 </div>
                                 <div class="widget-table_item mod-phone">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 3')}}</span>
+                                    <span class="widget-table-text">{{__('widget','Widget contact phone 1')}}</span>
                                 </div>
                                 <div class="widget-table_item mod-id">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 4')}}</span>
+                                    <span class="widget-table-text">#21412</span>
                                 </div>
                                 <div class="widget-table_item mod-settings">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 5')}}</span>
+                                    <svg class="widget-table_icon-settings">
+                                        <use xlink:href="#settings"></use>
+                                    </svg>
                                 </div>
                                 <div class="widget-table_item mod-state">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 6')}}</span>
+                                    <div class="table-item_state online">
+                                        <span>{{__('widget','Widget chat state 2')}}</span>
+                                    </div>
                                 </div>
                                 <div class="widget-table_item mod-date">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 7')}}</span>
+                                    <span class="widget-table-text">22/08/2019</span>
                                 </div>
                                 <div class="widget-table_item mod-chat">
-                                    <span class="widget-table-text">{{__('widget','Widget chat head 8')}}</span>
+                                  <div class="table-item_chat">
+                                      <svg class="table-item_chat-icon">
+                                          <use xlink:href="#link-symbol"></use>
+                                      </svg>
+                                      <span>{{__('widget','Widget chat open')}}</span>
+                                  </div>
                                 </div>
                                 <div class="widget-table_item mod-cross">
-                                    <span class="widget-table-text">Cross</span>
+                                    <svg class="widget-table_icon-cross">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>

@@ -7,6 +7,8 @@
   "Cabinet header value 2": "09/10/19",
   "Cabinet header button": "UPGRATE",
   "Cabinet sidebar name": "Andrian Ionașcu",
+  "Widget name 1": "Andrian Ionașcu",
+  "Widget name 2": "Mark Antonov",
   "Sidebar menu name 1": "STATISTICS",
   "Sidebar menu name 2": "WIDGET",
   "Sidebar menu name 3": "CHAT",
@@ -67,5 +69,8 @@
   "Widget chat head 5": "Setări",
   "Widget chat head 6": "Stare",
   "Widget chat head 7": "Data adăugării",
-  "Widget chat head 8": "Chat"
+  "Widget chat head 8": "Chat",
+  "Widget chat state 1": "Offline",
+  "Widget chat state 2": "Online",
+  "Widget chat open": "Deschide"
 }

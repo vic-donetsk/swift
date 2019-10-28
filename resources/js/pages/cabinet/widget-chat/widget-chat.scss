@@ -262,8 +262,6 @@
 
         .widget-chat_table-head {
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
             border: 1px solid rgba(0, 33, 95, 0.05);
 
             height: 64px;
@@ -275,14 +273,16 @@
                 line-height: 29px;
                 color: $mainDarkBlue;
                 font-weight: 700;
+                display: flex;
+                align-items: center;
             }
 
         }
 
-
         .mod-name {
             width: 290px;
-            padding: 0 41px;
+            padding: 0 62px 0 41px;
+            justify-content: space-between;
         }
 
         .mod-email {
@@ -305,12 +305,14 @@
         .mod-settings {
             width: 107px;
             padding: 0 20px;
+            justify-content: center;
         }
 
 
         .mod-state {
             width: 150px;
             padding: 0 20px;
+            justify-content: center;
         }
 
 
@@ -322,6 +324,7 @@
         .mod-chat {
             width: 186px;
             padding: 0 20px;
+            justify-content: center;
 
         }
 
@@ -359,6 +362,70 @@
 
             &:not(:last-of-type) {
                 border-right: 1px solid $inputBorder;
+            }
+
+            .widget-table_icon-settings {
+                width: 18px;
+                height: 18px;
+                fill: $mainDarkBlue;
+                cursor: pointer;
+            }
+
+            .widget-table_icon-cross {
+                width: 14px;
+                height: 14px;
+                fill: $widgetTableCross;
+                cursor: pointer;
+            }
+
+            .widget-chat_image {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid $widgetSidebarBorder;
+            }
+        }
+
+        .table-item_state {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 109px;
+            height: 40px;
+            color: $white;
+
+            &.offline {
+                background-color: $widgetOffline;
+                border: 1px solid $widgetOfflineBoder;
+            }
+
+            &.online {
+                background-color: $widgetOnline;
+                border: 1px solid $widgetOnlineBorder;
+            }
+        }
+
+
+        .table-item_chat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 145px;
+            height: 40px;
+            background-color: $lightBlueGradientFrom;
+            border: 1px solid $widgetSidebarBorder;
+
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $mainDarkBlue;
+
+            .table-item_chat-icon {
+                width: 16px;
+                height: 14px;
+                fill: $widgetActiveBlue;
+                margin-right: 6px;
             }
         }
     }
