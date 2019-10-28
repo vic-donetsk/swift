@@ -37,7 +37,7 @@
 
     .widget-socials {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: -38px;
         flex-direction: column;
 
@@ -72,11 +72,6 @@
                     box-shadow: 0 3px 8px 0 rgba(0, 33, 95, 0.04);
                 }
 
-
-                @include media('d-only') {
-                    margin-bottom: 98px;
-                }
-
                 &.mod_message {
                     margin-bottom: 24px;
 
@@ -96,15 +91,8 @@
                         margin-bottom: 57px;
 
                         &:after {
-                            content: "";
-                            position: absolute;
-                            left: 50%;
                             bottom: -58px;
-                            transform: translateX(-50%);
-                            display: block;
-                            width: 1px;
                             height: 57px;
-                            background: $widgetElemBorder;
                         }
                     }
                 }
@@ -177,6 +165,17 @@
         .widget-soc_content {
             width: 50%;
             padding: 13px 10px;
+            color: $mainDarkBlue;
+
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: center;
+
+            @include media('d-only') {
+                font-size: 16px;
+                font-weight: 400;
+            }
 
             @include media("d-only") {
                 width: 100%;
@@ -185,19 +184,6 @@
                 align-items: center;
 
                 padding: 0 15px;
-            }
-            
-            .widget-soc_text {
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 20px;
-                text-align: center;
-                color: $mainDarkBlue;
-
-                @include media('d-only') {
-                    font-size: 16px;
-                    font-weight: 400;
-                }
             }
         }
 
@@ -218,36 +204,27 @@
 
             margin: 0 auto;
 
+            color: $white;
+
             @include media('d-only') {
                 font-size: 17px;
                 font-weight: 500;
                 line-height: 30px;
-            }
-
-            .widget-soc_text-active {
-                color: $white;
-
-                @include media('d-only') {
-                    text-transform: uppercase;
-                }
+                text-transform: uppercase;
             }
 
             &.mod-connect {
                 background-color: $widgetBackgroundMobi;
                 box-shadow: 0 3px 8px rgb(248, 251, 253);
 
+                color: $mainDarkBlue;
+
+
                 @include media('d-only') {
                     background-color: $white;
                     border: 1px solid $widgetElemBorder;
                     box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
-                }
-
-                .widget-soc_text-connect {
-                    color: $mainDarkBlue;
-
-                    @include media('d-only') {
-                        text-transform: uppercase;
-                    }
+                    text-transform: uppercase;
                 }
             }
         }
@@ -256,6 +233,8 @@
 
     .widget-chat_table {
         margin-bottom: 44px;
+        overflow-x: auto;
+        overflow-y: hidden;
 
         .widget-chat_table-head {
             display: flex;
@@ -263,7 +242,7 @@
 
             height: 64px;
             background-color: $lightBlueGradientFrom;
-
+            min-width: 1500px;
 
             .widget-table_head-item {
                 font-size: 16px;
@@ -276,9 +255,16 @@
         }
 
         .mod-name {
-            width: 290px;
-            padding: 0 62px 0 41px;
-            justify-content: space-between;
+            padding: 0 0 0 41px;
+            justify-content: flex-start;
+            flex: 1;
+            min-width: 246px;
+
+            & > span {
+                width: 130px;
+                flex-shrink: 0;
+                line-height: normal;
+            }
         }
 
         .mod-email {
@@ -330,6 +316,7 @@
             box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
             background: $white;
             border: 1px solid rgba(0, 33, 95, 0.05);
+            min-width: 1500px;
         }
 
         .widget-chat_table-string {
@@ -348,35 +335,38 @@
             align-items: center;
             height: 76px;
             font-size: 16px;
-            line-height: 28px;
+            line-height: 20px;
             color: $mainDarkBlue;
             font-weight: 400;
+            word-break: break-word;
+            overflow: hidden;
 
             &:not(:last-of-type) {
                 border-right: 1px solid $inputBorder;
             }
         }
 
-            .widget-table_icon-settings {
-                width: 18px;
-                height: 18px;
-                fill: $mainDarkBlue;
-                cursor: pointer;
-            }
+        .widget-table_icon-settings {
+            width: 18px;
+            height: 18px;
+            fill: $mainDarkBlue;
+            cursor: pointer;
+        }
 
-            .widget-table_icon-cross {
-                width: 14px;
-                height: 14px;
-                fill: $widgetTableCross;
-                cursor: pointer;
-            }
+        .widget-table_icon-cross {
+            width: 14px;
+            height: 14px;
+            fill: $widgetTableCross;
+            cursor: pointer;
+        }
 
-            .widget-chat_image {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                border: 1px solid $widgetSidebarBorder;
-            }
+        .widget-chat_image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $widgetSidebarBorder;
+            margin-left: 20px;
+        }
 
         .table_item-state {
             display: flex;
@@ -415,7 +405,7 @@
                 margin-right: 6px;
             }
 
-            .table_item-text_chat{
+            .table_item-text_chat {
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 28px;

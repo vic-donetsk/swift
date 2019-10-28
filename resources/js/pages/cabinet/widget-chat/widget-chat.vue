@@ -46,12 +46,12 @@
                                     <span class="widget-soc_name">Messenger</span>
                                 </div>
                                 <div class="widget-soc_content">
-                                    <p class="widget-soc_text">{{__('widget','Widget social text 1')}}</p>
+                                    <p>{{__('widget','Widget social text 1')}}</p>
                                 </div>
                             </div>
 
                             <div class="widget-soc_message mod-messenger">
-                                <span class="widget-soc_text-active">{{__('widget','Widget soc message 1')}}</span>
+                                <span>{{__('widget','Widget soc message 1')}}</span>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="widget-soc_message mod-telegram">
-                                <span class="widget-soc_text-active">{{__('widget','Widget soc message 1')}}</span>
+                                <span>{{__('widget','Widget soc message 1')}}</span>
                             </div>
                         </div>
 
@@ -84,12 +84,12 @@
                                 </div>
 
                                 <div class="widget-soc_content">
-                                    <p class="widget-soc_text">{{__('widget','Widget social text 1')}}</p>
+                                    <p>{{__('widget','Widget social text 1')}}</p>
                                 </div>
                             </div>
 
                             <div class="widget-soc_message mod-connect">
-                                <span class="widget-soc_text-connect">{{__('widget','Widget soc message 2')}}</span>
+                                <span>{{__('widget','Widget soc message 2')}}</span>
                             </div>
                         </div>
                         <div class="widget-soc_item">
@@ -122,7 +122,7 @@
                             </div>
 
                             <div class="widget-soc_message mod-whatsapp">
-                                <span class="widget-soc_text-active">{{__('widget','Widget soc message 1')}}</span>
+                                <span>{{__('widget','Widget soc message 1')}}</span>
                             </div>
                         </div>
                         <div class="widget-soc_item">
