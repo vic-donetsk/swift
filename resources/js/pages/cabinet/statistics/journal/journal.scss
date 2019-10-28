@@ -109,7 +109,6 @@
     border-collapse: collapse;
     overflow-x: scroll;
 
-
     th {
         height: 94px;
         line-height: 1.125;
@@ -120,7 +119,6 @@
         font-size: 16px;
         font-weight: 700;
         color: $mainDarkBlue;
-
     }
 
     td {
@@ -161,4 +159,71 @@
     }
 
 }
+
+.wavesurfer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: calc((100vw - 295px) * 0.9753);
+    height: 70px;
+    padding: 25px;
+    background: $conversationBackground;
+    border: 1px solid #F1F3F6;
+    z-index: 5;
+    transition: 0.25s ease;
+
+    &-button {
+        width: 31px;
+        height: 31px;
+        margin-right: 9px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-timer {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $mainDarkBlue;
+
+        &-item {
+            margin-right: 10px;
+        }
+    }
+
+    &-copy {
+        width: 17px;
+        height: 17px;
+        margin: -5px 67px 0 6px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-close {
+        width: 20px;
+        height: 20px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-container {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 0 15px;
+    }
+
+}
+
 
