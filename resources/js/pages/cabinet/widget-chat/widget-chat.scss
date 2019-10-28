@@ -37,26 +37,39 @@
     .widget-socials {
         display: flex;
         align-items: center;
-        margin: 0 -18px -38px;
+        margin-bottom: -38px;
         flex-direction: column;
 
         @include media('t-ipad-landscape') {
             flex-direction: row;
             flex-wrap: wrap;
+            margin: 0 -18px -38px;
         }
 
 
         .widget-soc_item {
-            margin: 0 18px 38px;
+            margin-bottom: 38px;
 
+            @include media('t-ipad-landscape') {
+                margin: 0 18px 38px;
+            }
             .widget-soc {
                 position: relative;
+                display: flex;
+                width: 286px;
+                height: 104px;
+                border: 1px solid $widgetElemBorder;
 
-                width: 188px;
-                height: 240px;
 
-                border: 1px solid rgba(0, 33, 95, 0.05);
-                box-shadow: 0 3px 8px 0 rgba(0, 33, 95, 0.04);
+                @include media('t-ipad-landscape') {
+                    display: block;
+                    width: 188px;
+                    height: 240px;
+
+                    border: 1px solid rgba(0, 33, 95, 0.05);
+                    box-shadow: 0 3px 8px 0 rgba(0, 33, 95, 0.04);
+                }
+
 
                 @include media('t-ipad-landscape') {
                     margin-bottom: 98px;
@@ -65,16 +78,12 @@
                 &.mod_message {
                     margin-bottom: 24px;
 
-                    @include media("t-ipad-landscape") {
-                        margin-bottom: 57px;
-                    }
-
                     &:after {
                         content: "";
                         position: absolute;
                         left: 50%;
+                        bottom: -25px;
                         transform: translateX(-50%);
-
                         display: block;
                         width: 1px;
                         height: 24px;
@@ -82,22 +91,39 @@
                     }
 
                     @include media("t-ipad-landscape") {
+                        margin-bottom: 57px;
+
                         &:after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: -58px;
+                            transform: translateX(-50%);
+                            display: block;
+                            width: 1px;
                             height: 57px;
+                            background: $widgetElemBorder;
                         }
                     }
                 }
             }
         }
 
-
         .widget-soc_head {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 104px;
-            border-bottom: 1px solid $widgetElemBorder;
+            width: 50%;
+
+            border-right: 1px solid $widgetElemBorder;
+
+
+            @include media("t-ipad-landscape") {
+                height: 104px;
+                width: 100%;
+                border-bottom: 1px solid $widgetElemBorder;
+            }
 
             .widget-soc_icon {
                 width: 36px;
@@ -117,50 +143,62 @@
 
 
         .mod-chat {
-                background: $brownChatSettings;
+            background: $brownChatSettings;
         }
 
         .mod-messenger {
-                background: $blueChatSettingsMessenger;
+            background: $blueChatSettingsMessenger;
         }
 
         .mod-telegram {
-                background: $blueChatSettingsTelegram;
+            background: $blueChatSettingsTelegram;
         }
 
         .mod-vk {
-                background: $blueChatSettingsVK;
+            background: $blueChatSettingsVK;
         }
 
         .mod-viber {
-                background: $chatSettingsViber;
+            background: $chatSettingsViber;
         }
 
         .mod-whatsapp {
 
-                background: $chatWhatsupSettings;
+            background: $chatWhatsupSettings;
         }
 
         .mod-email {
-                background: $chatEmailSettings;
+            background: $chatEmailSettings;
         }
 
 
-
         .widget-soc_content {
-            height: 134px;
-            display: flex;
-            align-items: center;
+            width: 50%;
+            padding: 13px 10px;
 
-            padding: 0 15px;
+            @include media("t-ipad-landscape") {
+                width: 100%;
+                height: 134px;
+                display: flex;
+                align-items: center;
+
+                padding: 0 15px;
+            }
 
 
             .widget-soc_text {
-                font-size: 16px;
-                font-weight: 400;
+                font-size: 14px;
+                font-weight: 600;
                 line-height: 20px;
                 text-align: center;
                 color: $mainDarkBlue;
+
+                @include media('t-ipad-landscape') {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+
             }
         }
 
@@ -171,26 +209,46 @@
             width: 188px;
             height: 41px;
 
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 26px;
 
+            border: 1px solid $widgetChatBorderMessage;
+            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
             border-radius: 8px;
+
             margin: 0 auto;
 
-            .widget-soc_text-active{
-                text-transform: uppercase;
+            @include media('t-ipad-landscape') {
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+
+            .widget-soc_text-active {
                 color: $white;
+
+                @include media('t-ipad-landscape') {
+                    text-transform: uppercase;
+                }
             }
 
             &.mod-connect {
-                background-color: $white;
-                border: 1px solid $widgetElemBorder;
-                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+                background-color: $widgetBackgroundMobi;
+                box-shadow: 0 3px 8px rgb(248, 251, 253);
 
-                .widget-soc_text-connect{
-                    text-transform: uppercase;
+                @include media('t-ipad-landscape') {
+                    background-color: $white;
+                    border: 1px solid $widgetElemBorder;
+                    box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+                }
+
+                .widget-soc_text-connect {
                     color: $mainDarkBlue;
+
+                    @include media('t-ipad-landscape') {
+                        text-transform: uppercase;
+                    }
                 }
             }
         }
