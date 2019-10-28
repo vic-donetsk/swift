@@ -135,7 +135,7 @@
 
         .mod_left {
             width: 365px;
-            padding-left: 11px;
+            padding: 11px;
             @include media("d-only") {
                 padding-left: 26px;
             }

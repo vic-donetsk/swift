@@ -6,7 +6,7 @@
         max-width: 1625px;
         padding: 39px 17px 0 17px;
 
-        @include media('t-ipad'){
+        @include media('t-ipad') {
             padding: 54px 41px 0 38px;
         }
     }
@@ -34,7 +34,7 @@
     }
 
 
-    .widget-chat_socials {
+    .widget-socials {
         display: flex;
         align-items: center;
         margin: 0 -18px -38px;
@@ -49,7 +49,7 @@
         .widget-soc_item {
             margin: 0 18px 38px;
 
-            .widget-chat_soc {
+            .widget-soc {
                 position: relative;
 
                 width: 188px;
@@ -113,35 +113,39 @@
                 color: $white;
             }
 
-
-            &.mod-chat {
-                background: $brownChatSettings;
-            }
-
-            &.mod-messenger {
-                background: $blueChatSettingsMessenger;
-            }
-
-            &.mod-telegram {
-                background: $blueChatSettingsTelegram;
-            }
-
-            &.mod-vk {
-                background: $blueChatSettingsVK;
-            }
-
-            &.mod-viber {
-                background: $chatSettingsViber;
-            }
-
-            &.mod-whatsapp {
-                background: $chatWhatsupSettings;
-            }
-
-            &.mod-email {
-                background: $chatEmailSettings;
-            }
         }
+
+
+        .mod-chat {
+                background: $brownChatSettings;
+        }
+
+        .mod-messenger {
+                background: $blueChatSettingsMessenger;
+        }
+
+        .mod-telegram {
+                background: $blueChatSettingsTelegram;
+        }
+
+        .mod-vk {
+                background: $blueChatSettingsVK;
+        }
+
+        .mod-viber {
+                background: $chatSettingsViber;
+        }
+
+        .mod-whatsapp {
+
+                background: $chatWhatsupSettings;
+        }
+
+        .mod-email {
+                background: $chatEmailSettings;
+        }
+
+
 
         .widget-soc_content {
             height: 134px;
@@ -160,13 +164,35 @@
             }
         }
 
-        .widget-chat_block-message {
+        .widget-soc_message {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 188px;
             height: 41px;
+
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 30px;
+
             border-radius: 8px;
-            background-color: red;
             margin: 0 auto;
 
+            .widget-soc_text-active{
+                text-transform: uppercase;
+                color: $white;
+            }
+
+            &.mod-connect {
+                background-color: $white;
+                border: 1px solid $widgetElemBorder;
+                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+
+                .widget-soc_text-connect{
+                    text-transform: uppercase;
+                    color: $mainDarkBlue;
+                }
+            }
         }
     }
 }

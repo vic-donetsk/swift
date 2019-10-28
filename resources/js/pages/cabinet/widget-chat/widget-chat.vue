@@ -23,9 +23,9 @@
                         <span>{{__('widget','Cabinet page title 11')}}</span>
                     </h2>
 
-                    <div class="widget-chat_socials">
+                    <div class="widget-socials">
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc">
+                            <div class="widget-soc">
                                 <div class="widget-soc_head mod-chat">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#chat-circle"></use>
@@ -37,9 +37,8 @@
                             </div>
                         </div>
 
-
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc mod_message">
+                            <div class="widget-soc mod_message">
                                 <div class="widget-soc_head mod-messenger">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#messenger"></use>
@@ -51,12 +50,13 @@
                                 </div>
                             </div>
 
-                            <div class="widget-chat_block-message"></div>
-
+                            <div class="widget-soc_message mod-messenger">
+                                <span class="widget-soc_text-active">{{__('widget','Widget soc message 1')}}</span>
+                            </div>
                         </div>
 
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc mod_message">
+                            <div class="widget-soc mod_message">
                                 <div class="widget-soc_head mod-telegram">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#telegram"></use>
@@ -69,11 +69,13 @@
                                 </div>
                             </div>
 
-                            <div class="widget-chat_block-message"></div>
+                            <div class="widget-soc_message mod-telegram">
+                                <span class="widget-soc_text-active">{{__('widget','Widget soc message 1')}}</span>
+                            </div>
                         </div>
 
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc mod_message">
+                            <div class="widget-soc mod_message">
                                 <div class="widget-soc_head mod-vk">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#vk"></use>
@@ -86,10 +88,12 @@
                                 </div>
                             </div>
 
-                            <div class="widget-chat_block-message"></div>
+                            <div class="widget-soc_message mod-connect">
+                                <span class="widget-soc_text-connect">{{__('widget','Widget soc message 2')}}</span>
+                            </div>
                         </div>
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc">
+                            <div class="widget-soc">
                                 <div class="widget-soc_head mod-viber">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#viber"></use>
@@ -104,12 +108,12 @@
 
                         </div>
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc mod_message">
+                            <div class="widget-soc mod_message">
                                 <div class="widget-soc_head mod-whatsapp">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#whatsapp"></use>
                                     </svg>
-                                    <span class="widget-soc_name">Whatsapp</span>
+                                    <span class="widget-soc_name">WhatsApp</span>
                                 </div>
 
                                 <div class="widget-soc_content">
@@ -117,10 +121,12 @@
                                 </div>
                             </div>
 
-                            <div class="widget-chat_block-message"></div>
+                            <div class="widget-soc_message mod-whatsapp">
+                                <span class="widget-soc_text-active">{{__('widget','Widget soc message 1')}}</span>
+                            </div>
                         </div>
                         <div class="widget-soc_item">
-                            <div class="widget-chat_soc">
+                            <div class="widget-soc">
                                 <div class="widget-soc_head mod-email">
                                     <svg class="widget-soc_icon">
                                         <use xlink:href="#email-circle"></use>
