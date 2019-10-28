@@ -149,6 +149,99 @@
                         </svg>
                         <span>{{__('widget','Cabinet page title 12')}}</span>
                     </h2>
+
+                    <div class="widget-chat_table">
+                        <div class="widget-chat_table-head">
+                            <div class="widget-table_head-item mod-name">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 1')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-email">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 2')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-phone">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 3')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-id">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 4')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-settings">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 5')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-state">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 6')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-date">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 7')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-chat">
+                                <span class="widget-table-text">{{__('widget','Widget chat head 8')}}</span>
+                            </div>
+                            <div class="widget-table_head-item mod-cross">
+                                <span class="widget-table-text">Cross</span>
+                            </div>
+                        </div>
+
+                        <div class="widget-chat_table-content">
+                            <div class="widget-chat_table-string">
+                                <div class="widget-table_item mod-name">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 1')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-email">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 2')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-phone">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 3')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-id">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 4')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-settings">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 5')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-state">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 6')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-date">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 7')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-chat">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 8')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-cross">
+                                    <span class="widget-table-text">Cross</span>
+                                </div>
+                            </div>
+                            <div class="widget-chat_table-string">
+                                <div class="widget-table_item mod-name">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 1')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-email">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 2')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-phone">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 3')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-id">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 4')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-settings">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 5')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-state">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 6')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-date">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 7')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-chat">
+                                    <span class="widget-table-text">{{__('widget','Widget chat head 8')}}</span>
+                                </div>
+                                <div class="widget-table_item mod-cross">
+                                    <span class="widget-table-text">Cross</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

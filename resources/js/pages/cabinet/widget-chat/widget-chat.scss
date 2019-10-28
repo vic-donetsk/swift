@@ -21,6 +21,7 @@
 
     .widget-chat_block {
 
+
         &.mod-border {
             padding-bottom: 38px;
             margin-bottom: 38px;
@@ -53,6 +54,7 @@
             @include media('t-ipad-landscape') {
                 margin: 0 18px 38px;
             }
+
             .widget-soc {
                 position: relative;
                 display: flex;
@@ -250,6 +252,113 @@
                         text-transform: uppercase;
                     }
                 }
+            }
+        }
+    }
+
+
+    .widget-chat_table {
+        margin-bottom: 44px;
+
+        .widget-chat_table-head {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border: 1px solid rgba(0, 33, 95, 0.05);
+
+            height: 64px;
+            background-color: $lightBlueGradientFrom;
+
+
+            .widget-table_head-item {
+                font-size: 16px;
+                line-height: 29px;
+                color: $mainDarkBlue;
+                font-weight: 700;
+            }
+
+        }
+
+
+        .mod-name {
+            width: 290px;
+            padding: 0 41px;
+        }
+
+        .mod-email {
+            width: 220px;
+            padding: 0 20px;
+        }
+
+        .mod-phone {
+            width: 200px;
+            padding: 0 20px;
+        }
+
+
+        .mod-id {
+            width: 150px;
+            padding: 0 20px;
+        }
+
+
+        .mod-settings {
+            width: 107px;
+            padding: 0 20px;
+        }
+
+
+        .mod-state {
+            width: 150px;
+            padding: 0 20px;
+        }
+
+
+        .mod-date {
+            width: 187px;
+            padding: 0 20px;
+        }
+
+        .mod-chat {
+            width: 186px;
+            padding: 0 20px;
+
+        }
+
+        .mod-cross {
+            width: 53px;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .widget-chat_table-content {
+            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+            background: $white;
+            border: 1px solid rgba(0, 33, 95, 0.05);
+        }
+
+        .widget-chat_table-string {
+            display: flex;
+
+            height: 76px;
+            border-bottom: 1px solid $inputBorder;
+
+            &:not(:first-of-type) {
+                border-bottom: none;
+            }
+        }
+
+        .widget-table_item {
+            display: flex;
+            align-items: center;
+            height: 76px;
+            font-size: 16px;
+            line-height: 28px;
+            color: $mainDarkBlue;
+            font-weight: 400;
+
+            &:not(:last-of-type) {
+                border-right: 1px solid $inputBorder;
             }
         }
     }
