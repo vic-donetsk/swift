@@ -27,7 +27,7 @@
             margin-bottom: 38px;
             border-bottom: 1px solid $widgetInstallBorder;
 
-            @include media('t-ipad-landscape') {
+            @include media('d-only') {
                 padding-bottom: 54px;
                 margin-bottom: 54px;
             }
@@ -41,7 +41,7 @@
         margin-bottom: -38px;
         flex-direction: column;
 
-        @include media('t-ipad-landscape') {
+        @include media('d-only') {
             flex-direction: row;
             flex-wrap: wrap;
             margin: 0 -18px -38px;
@@ -51,7 +51,7 @@
         .widget-soc_item {
             margin-bottom: 38px;
 
-            @include media('t-ipad-landscape') {
+            @include media('d-only') {
                 margin: 0 18px 38px;
             }
 
@@ -63,7 +63,7 @@
                 border: 1px solid $widgetElemBorder;
 
 
-                @include media('t-ipad-landscape') {
+                @include media('d-only') {
                     display: block;
                     width: 188px;
                     height: 240px;
@@ -73,7 +73,7 @@
                 }
 
 
-                @include media('t-ipad-landscape') {
+                @include media('d-only') {
                     margin-bottom: 98px;
                 }
 
@@ -92,7 +92,7 @@
                         background: $widgetElemBorder;
                     }
 
-                    @include media("t-ipad-landscape") {
+                    @include media("d-only") {
                         margin-bottom: 57px;
 
                         &:after {
@@ -121,7 +121,7 @@
             border-right: 1px solid $widgetElemBorder;
 
 
-            @include media("t-ipad-landscape") {
+            @include media("d-only") {
                 height: 104px;
                 width: 100%;
                 border-bottom: 1px solid $widgetElemBorder;
@@ -178,7 +178,7 @@
             width: 50%;
             padding: 13px 10px;
 
-            @include media("t-ipad-landscape") {
+            @include media("d-only") {
                 width: 100%;
                 height: 134px;
                 display: flex;
@@ -186,8 +186,7 @@
 
                 padding: 0 15px;
             }
-
-
+            
             .widget-soc_text {
                 font-size: 14px;
                 font-weight: 600;
@@ -195,12 +194,10 @@
                 text-align: center;
                 color: $mainDarkBlue;
 
-                @include media('t-ipad-landscape') {
+                @include media('d-only') {
                     font-size: 16px;
                     font-weight: 400;
                 }
-
-
             }
         }
 
@@ -221,7 +218,7 @@
 
             margin: 0 auto;
 
-            @include media('t-ipad-landscape') {
+            @include media('d-only') {
                 font-size: 17px;
                 font-weight: 500;
                 line-height: 30px;
@@ -230,7 +227,7 @@
             .widget-soc_text-active {
                 color: $white;
 
-                @include media('t-ipad-landscape') {
+                @include media('d-only') {
                     text-transform: uppercase;
                 }
             }
@@ -239,7 +236,7 @@
                 background-color: $widgetBackgroundMobi;
                 box-shadow: 0 3px 8px rgb(248, 251, 253);
 
-                @include media('t-ipad-landscape') {
+                @include media('d-only') {
                     background-color: $white;
                     border: 1px solid $widgetElemBorder;
                     box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
@@ -248,7 +245,7 @@
                 .widget-soc_text-connect {
                     color: $mainDarkBlue;
 
-                    @include media('t-ipad-landscape') {
+                    @include media('d-only') {
                         text-transform: uppercase;
                     }
                 }
@@ -276,7 +273,6 @@
                 display: flex;
                 align-items: center;
             }
-
         }
 
         .mod-name {
@@ -295,12 +291,10 @@
             padding: 0 20px;
         }
 
-
         .mod-id {
             width: 150px;
             padding: 0 20px;
         }
-
 
         .mod-settings {
             width: 107px;
@@ -308,13 +302,11 @@
             justify-content: center;
         }
 
-
         .mod-state {
             width: 150px;
             padding: 0 20px;
             justify-content: center;
         }
-
 
         .mod-date {
             width: 187px;
@@ -363,6 +355,7 @@
             &:not(:last-of-type) {
                 border-right: 1px solid $inputBorder;
             }
+        }
 
             .widget-table_icon-settings {
                 width: 18px;
@@ -384,9 +377,8 @@
                 border-radius: 50%;
                 border: 1px solid $widgetSidebarBorder;
             }
-        }
 
-        .table-item_state {
+        .table_item-state {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -406,7 +398,7 @@
         }
 
 
-        .table-item_chat {
+        .table_item-chat {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -416,16 +408,19 @@
             background-color: $lightBlueGradientFrom;
             border: 1px solid $widgetSidebarBorder;
 
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 28px;
-            color: $mainDarkBlue;
-
-            .table-item_chat-icon {
+            .table_item-icon_chat {
                 width: 16px;
                 height: 14px;
                 fill: $widgetActiveBlue;
                 margin-right: 6px;
+            }
+
+            .table_item-text_chat{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+                color: $mainDarkBlue;
+                height: 23px;
             }
         }
     }
