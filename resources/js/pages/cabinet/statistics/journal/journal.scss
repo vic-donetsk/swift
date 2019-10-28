@@ -161,7 +161,7 @@
 }
 
 .wavesurfer {
-    display: flex;
+    display: none;
     align-items: center;
     position: absolute;
     left: 0;
@@ -173,10 +173,15 @@
     z-index: 5;
     transition: 0.25s ease;
 
+    &.mod_visible {
+        display: flex;
+    }
+
     &-button {
         width: 31px;
         height: 31px;
         margin-right: 9px;
+        cursor: pointer;
 
         svg {
             width: 100%;
@@ -186,6 +191,7 @@
 
     &-timer {
         display: flex;
+        width: 210px;
         align-items: center;
         margin-top: 4px;
         font-size: 18px;
@@ -201,6 +207,7 @@
         width: 17px;
         height: 17px;
         margin: -5px 67px 0 6px;
+        cursor: pointer;
 
         svg {
             width: 100%;
@@ -211,6 +218,7 @@
     &-close {
         width: 20px;
         height: 20px;
+        cursor: pointer;
 
         svg {
             width: 100%;
@@ -218,10 +226,10 @@
         }
     }
 
-    &-container {
+    #wavesurfer-container {
         flex-grow: 1;
-        flex-shrink: 1;
-        padding: 0 15px;
+        //flex-shrink: 1;
+        margin: 0 15px;
     }
 
 }

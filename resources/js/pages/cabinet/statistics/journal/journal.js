@@ -1,3 +1,5 @@
+import WaveSurfer from 'wavesurfer.js';
+
 export default {
     data: function () {
         return {
@@ -35,9 +37,15 @@ export default {
                 {text: "Notes", var: "notes"},
                 {text: "Region", var: "region"},
             ],
-            audioFlag : false,
+            audioFlag: false,
             audioPlayerTop: 0,
             playMode: false,
+            muteMode: false,
+            wavesurfer: null,
+            currentTime: '',
+            duration: '',
+            wavURL: '',
+            wavName: ''
         };
     },
 
@@ -51,11 +59,8 @@ export default {
     },
     methods: {
         openSettings() {
-            console.log('cumming');
-            console.log(this.settingsMode);
             if (!this.settingsMode) {
                 //this.settingsMode = true;
-                console.log('internal ' + this.settingsMode);
                 document.addEventListener('click', this.handleSettingsClick);
             }
         },
@@ -63,7 +68,6 @@ export default {
             if (this.settingsMode) {
                 let container = document.querySelector(".statistics_tableColumns-customize");
                 if ($(container).has(e.target).length === 0) {
-                    console.log('wauuu');
                     this.closeSettings();
                 }
             } else {
@@ -75,23 +79,82 @@ export default {
             this.settingsMode = false;
         },
         playAudio(index) {
+            if (this.wavesurfer) this.wavesurfer.destroy();
             this.audioFlag = true;
-            this.audioPlayerTop = index*70.67 + 234;
+            this.audioPlayerTop = index * 70.67 + 234;
+            this.wavesurfer = WaveSurfer.create({
+                container: '#wavesurfer-container',
+                waveColor: '#D8DDE6',
+                progressColor: '#00215F',
+                cursorColor: '#F8FBFD',
+                height: 70
+            });
+
+            // TODO: set real URL for record of conversation
+            this.wavURL = '/example.wav';
+            // TODO: set real filename for download record of conversation
+            this.wavName = 'example.wav';
+
+            this.wavesurfer.load(this.wavURL);
+            let self = this;
+            this.wavesurfer.on('ready', function () {
+                self.duration = self.toMinutes(self.wavesurfer.getDuration());
+                self.currentTime = '0:00';
+            });
+            this.wavesurfer.on('audioprocess', function () {
+                if (self.wavesurfer.isPlaying()) {
+                    self.currentTime = self.toMinutes(self.wavesurfer.getCurrentTime());
+                }
+            });
+
+
+        },
+        toMinutes(seconds) {
+            let intSeconds = Math.round(seconds);
+            let shownSeconds = (intSeconds % 60 > 9) ? intSeconds % 60 : '0' + intSeconds % 60;
+            return Math.floor(intSeconds / 60) + ':' + shownSeconds;
         },
         playClick() {
             this.playMode = !this.playMode;
+            this.wavesurfer.playPause();
         },
         stopClick() {
-
+            this.wavesurfer.stop();
         },
         muteClick() {
-
-        },
-        downloadClick() {
+            if (this.muteMode) this.wavesurfer.setMute(false)
+            else this.wavesurfer.setMute(true);
+            this.muteMode = !this.muteMode;
 
         },
         closeAudio() {
             this.audioFlag = false;
-        }
+            this.playMode = false;
+            this.wavesurfer.destroy();
+        },
+
+
+        forceFileDownload(response) {
+            const url = window.URL.createObjectURL(new Blob([response.data]))
+            const link = document.createElement('a')
+            link.href = url
+            link.setAttribute('download', this.wavName) //or any other extension
+            document.body.appendChild(link)
+            link.click()
+        },
+
+        downloadClick() {
+            axios({
+                method: 'get',
+                url: this.wavURL,
+                responseType: 'arraybuffer'
+            })
+                .then(response => {
+
+                    this.forceFileDownload(response)
+
+                })
+                .catch(() => console.log('error occured'))
+        },
     }
 }

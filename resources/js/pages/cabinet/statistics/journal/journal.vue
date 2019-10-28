@@ -79,7 +79,7 @@
 
         <!--         audio (wavesurfer.js) block-->
 
-        <div v-if="audioFlag" class="wavesurfer" :style="{'top': audioPlayerTop + 'px'}">
+        <div class="wavesurfer" :class="{mod_visible: audioFlag}" :style="{'top': audioPlayerTop + 'px'}">
             <div id="wavesurfer-playPause" class="wavesurfer-button">
                 <svg v-if="!playMode" @click="playClick">
                     <use xlink:href="#playAudio"></use>
@@ -94,8 +94,11 @@
                 </svg>
             </div>
             <div id="wavesurfer-volume" class="wavesurfer-button">
-                <svg @click="muteClick">
+                <svg v-if="!muteMode" @click="muteClick">
                     <use xlink:href="#volumeAudio"></use>
+                </svg>
+                <svg v-if="muteMode" @click="muteClick">
+                    <use xlink:href="#muteAudio"></use>
                 </svg>
             </div>
             <div id="wavesurfer-download" class="wavesurfer-button">
@@ -103,13 +106,13 @@
                     <use xlink:href="#downloadAudio"></use>
                 </svg>
             </div>
-            <div class="wavesurfer-container">
-                test
+            <div id="wavesurfer-container">
+
             </div>
             <div class="wavesurfer-timer">
-                <div id="wavesurfer-played" class="wavesurfer-timer-item">1:24</div>
+                <div id="wavesurfer-played" class="wavesurfer-timer-item">{{currentTime}}</div>
                 <div class="wavesurfer-timer-item">/</div>
-                <div id="wavesurfer-total" class="wavesurfer-timer-item">2:36</div>
+                <div id="wavesurfer-total" class="wavesurfer-timer-item">{{duration}}</div>
                 <div class="wavesurfer-copy">
                     <svg @click="">
                     <use xlink:href="#copyAudio"></use>
@@ -233,6 +236,9 @@
                         </g>
                     </g>
                 </svg>
+            </symbol>
+            <symbol id="muteAudio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#00215f" d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z"></path></svg>
             </symbol>
 
         </svg>
