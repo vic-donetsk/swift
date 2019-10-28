@@ -34,7 +34,10 @@ export default {
                 {text: "IP", var: "ip"},
                 {text: "Notes", var: "notes"},
                 {text: "Region", var: "region"},
-            ]
+            ],
+            audioFlag : false,
+            audioPlayerTop: 0,
+            playMode: false,
         };
     },
 
@@ -70,6 +73,25 @@ export default {
         closeSettings() {
             document.removeEventListener('click', this.handleSettingsClick);
             this.settingsMode = false;
+        },
+        playAudio(index) {
+            this.audioFlag = true;
+            this.audioPlayerTop = index*70.67 + 234;
+        },
+        playClick() {
+            this.playMode = !this.playMode;
+        },
+        stopClick() {
+
+        },
+        muteClick() {
+
+        },
+        downloadClick() {
+
+        },
+        closeAudio() {
+            this.audioFlag = false;
         }
     }
 }
