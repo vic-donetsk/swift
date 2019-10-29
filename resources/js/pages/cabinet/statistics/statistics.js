@@ -4,22 +4,24 @@ import Journal from './journal/journal.vue'
 export default {
     components: {
         'chart-js': ChartJs,
-        'statistics-journal' : Journal
+        'statistics-journal': Journal
     },
     data: function () {
         return {
+            isCalls: true, // true = calls statistics, false = chat statistics
             generalChartsData: null,
             journalData: null,
-            activeMenuItem :1, // by default active item = "Today"
+            activeMenuItem: 1, // by default active item = "Today"
             period: ''
         };
     },
     created() {
         // TODO: rewrite initialising data for activeMenuItem
         this.generalChartsData = {
+            // Calls charts data
             "totalCalls": {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
-                chartData: [25.0, 26, 22.2, 29.0, 34.2, 27.0, 23.2, 24.1, 20.0, 18.4, 19.1, 17.4]
+                chartData: [25.0, 26.0, 27.2, 28.0, 29.2, 30.0, 31.2, 32.1, 33.0, 34.4, 35.1, 36.4]
             },
             "visitors": {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
@@ -41,32 +43,163 @@ export default {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
                 chartData: [25.0, 32.4, 22.2, 36.0, 34.2, 22.0, 23.2, 24.1, 20.0, 18.4, 19.1, 17.4]
             },
+            // chat charts data
+            "totalChats": {
+                chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
+                chartData: [25.0, 26.0, 27.2, 28.0, 29.2, 30.0, 31.2, 32.1, 33.0, 34.4, 35.1, 36.4]
+            },
+            "successChats": {
+                chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
+                chartData: [25.0, 26.0, 27.2, 28.0, 29.2, 30.0, 31.2, 32.1, 33.0, 34.4, 35.1, 36.4]
+            },
+            "failChats": {
+                chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
+                chartData: [25.0, 26.0, 27.2, 28.0, 29.2, 30.0, 31.2, 32.1, 33.0, 34.4, 35.1, 36.4]
+            },
+
         };
         this.period = this.calcDates();
-        // TODO: rewrite initialising data for Journal block
+        // TODO: rewrite initialising data for Calls Journal block
         this.journalData = [
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: false, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
-            { date: '27/10/2019', time: '17-09', callStatus: true, duration: '07-15', clientNumber: '+38-095-698-62-73', managerNumber: '+373(78)792000',
-                clientName: 'Vic Pavlovsky', email: 'pavlovskyi.va@gmail.com', source:'Pi.md/ejbgeqd', homePage: 'Pi.md/ejbgeqd', callPage: 'Pi.md/ejbgeqd', ip: '192.82.184.1', notes: 'The best client in the world', region: 'Mariupol' },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: false,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
+            {
+                date: '27/10/2019',
+                time: '17-09',
+                callStatus: true,
+                duration: '07-15',
+                clientNumber: '+38-095-698-62-73',
+                managerNumber: '+373(78)792000',
+                clientName: 'Vic Pavlovsky',
+                email: 'pavlovskyi.va@gmail.com',
+                source: 'Pi.md/ejbgeqd',
+                homePage: 'Pi.md/ejbgeqd',
+                callPage: 'Pi.md/ejbgeqd',
+                ip: '192.82.184.1',
+                notes: 'The best client in the world',
+                region: 'Mariupol'
+            },
         ]
     },
     mounted() {
 
     },
     methods: {
+        switchStats(switcher) {
+            if ((this.isCalls && switcher === 0) || (!this.isCalls && switcher === 1))
+                this.isCalls = !this.isCalls;
+            console.log(this.generalChartsData);
+        },
         changePeriod(newActive) {
             if (newActive !== this.activeMenuItem) {
                 this.activeMenuItem = newActive;
@@ -75,8 +208,8 @@ export default {
             this.period = this.calcDates();
         },
         calcDates() {
-            let currentDate =  new Date();
-            let pastDate =  new Date();
+            let currentDate = new Date();
+            let pastDate = new Date();
             switch (this.activeMenuItem) {
                 case 1:
                     return this.formattedDate(currentDate);

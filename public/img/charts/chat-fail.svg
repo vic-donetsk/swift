@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.293" height="39.036" viewBox="0 0 46.293 39.036">
+  <g id="mail-black-back-envelope" transform="translate(0 -48.875)">
+    <path id="Path_439" data-name="Path 439" d="M36.347,62.16V87.911H0V62.16l18.173,15.9Zm-1.726-1.509H1.725L18.173,75.044Z" fill="#dfe3eb"/>
+    <g id="diagonal-arrow" transform="translate(36.024 48.875) rotate(45)">
+      <g id="Group_229" data-name="Group 229" transform="translate(14.522 0) rotate(90)">
+        <path id="Path_434" data-name="Path 434" d="M14.3,10.864a.364.364,0,0,1-.4-.078L11.254,8.138,4.976,14.416a.363.363,0,0,1-.513,0L.106,10.06a.363.363,0,0,1,0-.513L6.384,3.268,3.737.621A.364.364,0,0,1,3.993,0H14.159a.363.363,0,0,1,.363.363V10.529A.363.363,0,0,1,14.3,10.864Z" transform="translate(0)" fill="#d31616"/>
+      </g>
+    </g>
+  </g>
+</svg>

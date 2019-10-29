@@ -3,14 +3,14 @@
         <div class="statistics_container">
             <div class="statistics_header">
                 <div class="statistics_header-title">
-                    <div class="mod_active">
+                    <div class="title_item" :class="{mod_active: isCalls}" @click="switchStats(1)">
                         <svg class="title_icon">
                             <use xlink:href="#phone"></use>
                         </svg>
                         {{__('statistics', "CALLS")}}
                     </div>
                     <div>|</div>
-                    <div>
+                    <div class="title_item" :class="{mod_active: !isCalls}" @click="switchStats(0)">
                         <svg class="title_icon">
                             <use xlink:href="#mail-envelope-open"></use>
                         </svg>
@@ -54,10 +54,10 @@
                 </div>
             </div>
 
-            <div class="statistics_diagrams">
-                <div class="statistics_diagrams-big">
+            <div v-if="isCalls" class="statistics_diagrams">
+                <div class="statistics_diagram mod_big">
 
-                    <chart-js class="diagram_mod-big"
+                    <chart-js class="diagram"
                               chartId="total"
                               total="300"
                               :chartTitle="__('statistics', 'TOTAL CALLS')"
@@ -72,8 +72,8 @@
                     </chart-js>
 
                 </div>
-                <div class="statistics_diagrams-big">
-                    <chart-js class="diagram_mod-big"
+                <div class="statistics_diagram mod_big">
+                    <chart-js class="diagram"
                               chartId="visitors"
                               total="150"
                               :chartTitle="__('statistics', 'VISITORS')"
@@ -87,8 +87,8 @@
 
                     </chart-js>
                 </div>
-                <div class="statistics_diagrams-small">
-                    <chart-js class="diagram_mod-small"
+                <div class="statistics_diagram mod_small">
+                    <chart-js class="diagram"
                               chartId="successCalls"
                               total="280"
                               :chartTitle="__('statistics', 'SUCCESS CALLS')"
@@ -102,8 +102,8 @@
 
                     </chart-js>
                 </div>
-                <div class="statistics_diagrams-small">
-                    <chart-js class="diagram_mod-small"
+                <div class="statistics_diagram mod_small">
+                    <chart-js class="diagram"
                               chartId="lostCalls"
                               total="20"
                               :chartTitle="__('statistics', 'LOST CALLS')"
@@ -117,8 +117,8 @@
 
                     </chart-js>
                 </div>
-                <div class="statistics_diagrams-small">
-                    <chart-js class="diagram_mod-small"
+                <div class="statistics_diagram mod_small">
+                    <chart-js class="diagram"
                               chartId="durationAverage"
                               total="5"
                               :chartTitle="__('statistics', 'AVERAGE CALL DURATION (HOURS)')"
@@ -132,8 +132,8 @@
 
                     </chart-js>
                 </div>
-                <div class="statistics_diagrams-small">
-                    <chart-js class="diagram_mod-small"
+                <div class="statistics_diagram mod_small">
+                    <chart-js class="diagram"
                               chartId="durationTotal"
                               total="489"
                               :chartTitle="__('statistics', 'TOTAL DURATION OF CALLS (HOURS)')"
@@ -144,13 +144,64 @@
                               gradientTo="rgba(247,221,170,0.24)"
                               :chartLabels=generalChartsData.durationTotal.chartLabels
                               :chartData=generalChartsData.durationTotal.chartData>
-
                     </chart-js>
                 </div>
 
+                <statistics-journal :list="journalData"></statistics-journal>
+
             </div>
 
-            <statistics-journal :list="journalData"></statistics-journal>
+            <div v-else class="statistics_diagrams">
+                <div class="statistics_diagram mod_medium">
+
+                    <chart-js class="diagram"
+                              chartId="totalChats"
+                              total="258"
+                              :chartTitle="__('statistics', 'CHATS IN TOTAL')"
+                              isIncrease=true
+                              percentage=12
+                              avatar="/img/charts/chat-total.svg"
+                              gradientFrom="rgba(110,166,242,0.58)"
+                              gradientTo="rgba(186,199,252,0.2)"
+                              :chartLabels=generalChartsData.totalChats.chartLabels
+                              :chartData=generalChartsData.totalChats.chartData>
+
+                    </chart-js>
+
+                </div>
+                <div class="statistics_diagram mod_medium">
+                    <chart-js class="diagram"
+                              chartId="successChats"
+                              total="250"
+                              :chartTitle="__('statistics', 'FEEDBACK CHATS')"
+                              isIncrease=false
+                              percentage=4.2
+                              avatar="/img/charts/chat-success.svg"
+                              gradientFrom="rgba(87,230,131,0.58)"
+                              gradientTo="rgba(185,253,205,0.2)"
+                              :chartLabels=generalChartsData.successChats.chartLabels
+                              :chartData=generalChartsData.successChats.chartData>
+
+                    </chart-js>
+                </div>
+                <div class="statistics_diagram mod_medium">
+                    <chart-js class="diagram"
+                              chartId="failChats"
+                              total="8"
+                              :chartTitle="__('statistics', 'CHAT-URI FĂRĂ FEEDBACK')"
+                              isIncrease=true
+                              percentage=8
+                              avatar="/img/charts/chat-fail.svg"
+                              gradientFrom="rgba(242,110,110,0.58)"
+                              gradientTo="rgba(250,196,199,0.2)"
+                              :chartLabels=generalChartsData.failChats.chartLabels
+                              :chartData=generalChartsData.failChats.chartData>
+                    </chart-js>
+                </div>
+
+
+            </div>
+
 
         </div>
     </div>
