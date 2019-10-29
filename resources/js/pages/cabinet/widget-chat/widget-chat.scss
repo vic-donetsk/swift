@@ -15,9 +15,6 @@
         margin-bottom: 32px;
     }
 
-    .widget-button {
-        width: 141px;
-    }
 
     .widget-chat_block {
 
@@ -34,19 +31,18 @@
         }
     }
 
-
     .widget-socials {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         margin-bottom: -38px;
         flex-direction: column;
 
         @include media('d-only') {
             flex-direction: row;
             flex-wrap: wrap;
+            align-items: flex-start;
             margin: 0 -18px -38px;
         }
-
 
         .widget-soc_item {
             margin-bottom: 38px;
@@ -161,7 +157,6 @@
             background: $chatEmailSettings;
         }
 
-
         .widget-soc_content {
             width: 50%;
             padding: 13px 10px;
@@ -229,7 +224,6 @@
             }
         }
     }
-
 
     .widget-chat_table {
         margin-bottom: 44px;
@@ -340,6 +334,7 @@
             font-weight: 400;
             word-break: break-word;
             overflow: hidden;
+            flex-shrink: 0;
 
             &:not(:last-of-type) {
                 border-right: 1px solid $inputBorder;
@@ -387,7 +382,6 @@
             }
         }
 
-
         .table_item-chat {
             display: flex;
             align-items: center;
@@ -414,4 +408,66 @@
             }
         }
     }
+
+
+    .widget-chat_inputs {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 38px;
+
+        @include media("d-only") {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            flex-direction: row;
+        }
+
+
+        .widget-input_wrap {
+            &:not(:last-of-type) {
+                margin-bottom: 26px;
+            }
+
+            @include media("d-only") {
+                padding-right: 45px;
+                margin-bottom: 32px;
+                margin-right: 45px;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $widgetInstallBorder;
+                }
+            }
+
+            .widget-input_title {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                color: $mainDarkBlue;
+                margin-bottom: 10px;
+
+                @include media("d-only") {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+            .widget-input {
+
+                @include media("d-only") {
+                    width: 412px;
+                }
+
+                &::placeholder {
+                    color: $widgetPlaceholder;
+
+                    @include media("d-only") {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+
 }

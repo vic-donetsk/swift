@@ -56,7 +56,10 @@
   "Widget install button": "Verifică link-ul",
   "Widget deactivate button 1": "Aplică",
   "Widget deactivate button 2": "Salvează",
-  "Widget input placeholder 6": "siteultău.com/subpage",
+  "Widget input placeholder 1": "SwiftCallBack (basic)",
+  "Widget input placeholder 2": "Andrian Ionașcu",
+  "Widget input placeholder 3": "ionascu@pi.md",
+  "Widget input placeholder 4": "siteultău.com/subpage",
   "Widget deactivate table title 1": "Pagina",
   "Widget deactivate table title 2": "Data creării",
   "Widget social text 1": "Pentru a activa canalul, trebuie să vă conectați pagina",
@@ -72,5 +75,8 @@
   "Widget chat head 8": "Chat",
   "Widget chat state 1": "Offline",
   "Widget chat state 2": "Online",
-  "Widget chat open": "Deschide"
+  "Widget chat open": "Deschide",
+  "Widget input title 1": "Numele",
+  "Widget input title 2": "Email",
+  "Widget input title 3": "Telefon"
 }
