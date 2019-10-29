@@ -115,8 +115,8 @@
                 <div id="wavesurfer-total" class="wavesurfer-timer-item">{{duration}}</div>
                 <div class="wavesurfer-copy">
                     <svg @click="">
-                    <use xlink:href="#copyAudio"></use>
-                </svg>
+                        <use xlink:href="#copyAudio"></use>
+                    </svg>
                 </div>
             </div>
             <div class="wavesurfer-close">
@@ -126,7 +126,7 @@
             </div>
         </div>
 
-<!--        svg for audio block-->
+        <!--        svg for audio block-->
 
         <svg xmlns="http://www.w3.org/2000/svg" class="audio-sprite" style="display: none">
 
@@ -238,7 +238,30 @@
                 </svg>
             </symbol>
             <symbol id="muteAudio">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#00215f" d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zM461.64 256l45.64-45.64c6.3-6.3 6.3-16.52 0-22.82l-22.82-22.82c-6.3-6.3-16.52-6.3-22.82 0L416 210.36l-45.64-45.64c-6.3-6.3-16.52-6.3-22.82 0l-22.82 22.82c-6.3 6.3-6.3 16.52 0 22.82L370.36 256l-45.63 45.63c-6.3 6.3-6.3 16.52 0 22.82l22.82 22.82c6.3 6.3 16.52 6.3 22.82 0L416 301.64l45.64 45.64c6.3 6.3 16.52 6.3 22.82 0l22.82-22.82c6.3-6.3 6.3-16.52 0-22.82L461.64 256z"></path></svg>
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 31.1 31.1" style="enable-background:new 0 0 31.1 31.1;" xml:space="preserve">
+<!--                <style type="text/css">-->
+                    /*.st0 {*/
+                    /*    fill: #00215F;*/
+                    /*}*/
+
+                    /*.st1 {*/
+                    /*    fill: #F8FBFD;*/
+                    /*}*/
+
+                    /*.st2 {*/
+                    /*    fill: #FFFFFF;*/
+                    /*}*/
+                /*</style>*/
+                    <circle id="Ellipse_28_1_" fill="#00215F" cx="15.5" cy="15.5" r="15.5"/>
+                    <path fill="#F8FBFD" d="M15.6,20.2c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.2l-3.6-3H9c-0.4,0-0.7-0.3-0.7-0.7c0,0,0,0,0,0v-2.6
+	c0-0.4,0.3-0.7,0.7-0.7h1.9l3.6-3c0.3-0.2,0.7-0.2,0.9,0.1c0.1,0.1,0.2,0.3,0.2,0.4L15.6,20.2L15.6,20.2z"/>
+                    <path fill="#FFFFFF" d="M21.5,15.7l1.2-1.2c0.2-0.2,0.2-0.4,0-0.6l-0.6-0.6c-0.2-0.2-0.4-0.2-0.6,0l-1.2,1.2l-1.2-1.2
+	c-0.2-0.2-0.4-0.2-0.6,0l-0.6,0.6c-0.2,0.2-0.2,0.4,0,0.6l1.2,1.2l-1.2,1.2c-0.2,0.2-0.2,0.4,0,0.6l0.6,0.6c0.2,0.2,0.4,0.2,0.6,0
+	l1.2-1.2l1.2,1.2c0.2,0.2,0.4,0.2,0.6,0l0.6-0.6c0.2-0.2,0.2-0.4,0-0.6L21.5,15.7z"/>
+                </svg>
             </symbol>
 
         </svg>
