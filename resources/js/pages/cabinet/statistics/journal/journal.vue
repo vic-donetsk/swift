@@ -242,19 +242,6 @@
                 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 31.1 31.1" style="enable-background:new 0 0 31.1 31.1;" xml:space="preserve">
-<!--                <style type="text/css">-->
-                    /*.st0 {*/
-                    /*    fill: #00215F;*/
-                    /*}*/
-
-                    /*.st1 {*/
-                    /*    fill: #F8FBFD;*/
-                    /*}*/
-
-                    /*.st2 {*/
-                    /*    fill: #FFFFFF;*/
-                    /*}*/
-                /*</style>*/
                     <circle id="Ellipse_28_1_" fill="#00215F" cx="15.5" cy="15.5" r="15.5"/>
                     <path fill="#F8FBFD" d="M15.6,20.2c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.2l-3.6-3H9c-0.4,0-0.7-0.3-0.7-0.7c0,0,0,0,0,0v-2.6
 	c0-0.4,0.3-0.7,0.7-0.7h1.9l3.6-3c0.3-0.2,0.7-0.2,0.9,0.1c0.1,0.1,0.2,0.3,0.2,0.4L15.6,20.2L15.6,20.2z"/>
