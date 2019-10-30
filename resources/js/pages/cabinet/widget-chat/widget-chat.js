@@ -7,7 +7,8 @@ export default {
     data: function () {
         return {
             home: true,
-            title: "Главная"
+            title: "Главная",
+            rowList: null
         };
     },
     created() {
@@ -29,6 +30,13 @@ export default {
         }
     },
     methods: {
+        toggleRowList(item) {
+            if (this.rowList === item) {
+                this.rowList = null;
+                return false;
+            }
+            this.rowList = item;
+        },
         goToAuth() {
             this.$router.push('/authentication');
         }

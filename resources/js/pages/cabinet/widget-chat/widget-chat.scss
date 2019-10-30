@@ -323,9 +323,13 @@
             padding: 0 6px;
             justify-content: center;
 
+            order: 5;
+
             @include media('d-only') {
                 padding: 0 20px;
                 width: 107px;
+
+                order: 0;
             }
         }
 
@@ -371,7 +375,13 @@
             }
         }
 
-        .widget-chat_table-string {
+        .widget-chat_table-row {
+            position: relative;
+        }
+
+        .widget-chat_table-row-cells{
+            position: relative;
+
             display: flex;
 
             height: 40px;
@@ -398,15 +408,7 @@
             overflow: hidden;
             flex-shrink: 0;
 
-            &.mod-add_btn {
-                border-right: 1px solid $inputBorder;
-            }
-
-            &.mod-name {
-                border-right: 1px solid $inputBorder;
-            }
-
-            &.mod-settings {
+            &.mod-add_btn, &.mod-name, &.mod-chat {
                 border-right: 1px solid $inputBorder;
             }
 
@@ -430,7 +432,7 @@
                 }
             }
 
-            &.mod-mobile {
+            &.mod-desktop {
                 display: none;
 
                 @include media('d-only') {
@@ -528,6 +530,19 @@
                 }
             }
         }
+    }
+
+    .widget-table_list {
+
+    }
+
+    .widget-table_list-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        height: 50px;
     }
 
     .widget-chat_inputs {
