@@ -125,7 +125,6 @@
             line-height: 14px;
             color: $mainDarkBlue;
 
-
             @include media("d-only") {
                 font-size: 16px;
                 font-weight: 700;
@@ -176,6 +175,7 @@
                 align-items: center;
                 border-right: 1px solid $inputBorder;
                 height: 53px;
+                word-break: break-word;
 
 
                 @include media("d-only") {

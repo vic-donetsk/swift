@@ -4,6 +4,14 @@
     line-height: 25px;
     color: $mainDarkBlue;
 
+    @include media('t-ipad') {
+        text-align: center;
+    }
+
+    @include media('d-only'){
+        text-align: left;
+    }
+
     .cabinet-page_title-icon {
         width: 17px;
         height: 17px;

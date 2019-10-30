@@ -14,17 +14,11 @@
         .cabinet-page_title {
             margin-bottom: 30px;
 
-            @include media('t-ipad') {
-                text-align: center;
-            }
             @include media('d-only') {
-                text-align: left;
-
                 &.mod_margin {
                     margin-bottom: 52px;
                 }
             }
-
         }
     }
 
