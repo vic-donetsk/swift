@@ -156,15 +156,15 @@
                                 <span>{{__('widget','Widget chat head 1')}}</span>
                             </div>
 
-                            <div class="widget-table_head-item mod-email">
+                            <div class="widget-table_head-item mod-email mod-mobile">
                                 <span>{{__('widget','Widget chat head 2')}}</span>
                             </div>
 
-                            <div class="widget-table_head-item mod-phone">
+                            <div class="widget-table_head-item mod-phone mod-mobile">
                                 <span>{{__('widget','Widget chat head 3')}}</span>
                             </div>
 
-                            <div class="widget-table_head-item mod-id">
+                            <div class="widget-table_head-item mod-id mod-mobile">
                                 <span>{{__('widget','Widget chat head 4')}}</span>
                             </div>
 
@@ -172,11 +172,11 @@
                                 <span>{{__('widget','Widget chat head 5')}}</span>
                             </div>
 
-                            <div class="widget-table_head-item mod-state">
+                            <div class="widget-table_head-item mod-state mod-mobile">
                                 <span>{{__('widget','Widget chat head 6')}}</span>
                             </div>
 
-                            <div class="widget-table_head-item mod-date">
+                            <div class="widget-table_head-item mod-date mod-mobile">
                                 <span>{{__('widget','Widget chat head 7')}}</span>
                             </div>
 
@@ -184,7 +184,7 @@
                                 <span>{{__('widget','Widget chat head 8')}}</span>
                             </div>
 
-                            <div class="widget-table_head-item mod-cross"></div>
+                            <div class="widget-table_head-item mod-cross mod-mobile"></div>
                         </div>
 
                         <div class="widget-chat_table-content">
@@ -194,15 +194,15 @@
                                     <img src="/img/Adrian_Ionascu.png" class="widget-chat_image">
                                 </div>
 
-                                <div class="widget-table_item mod-email">
+                                <div class="widget-table_item mod-email mod-mobile">
                                     <span>ionascu@pi.md</span>
                                 </div>
 
-                                <div class="widget-table_item mod-phone">
+                                <div class="widget-table_item mod-phone mod-mobile">
                                     <span>{{__('widget','Widget contact phone 1')}}</span>
                                 </div>
 
-                                <div class="widget-table_item mod-id">
+                                <div class="widget-table_item mod-id mod-mobile">
                                     <span>#21412</span>
                                 </div>
 
@@ -212,13 +212,13 @@
                                     </svg>
                                 </div>
 
-                                <div class="widget-table_item mod-state">
+                                <div class="widget-table_item mod-state mod-mobile">
                                     <div class="table_item-state offline">
                                         <span>{{__('widget','Widget chat state 1')}}</span>
                                     </div>
                                 </div>
 
-                                <div class="widget-table_item mod-date">
+                                <div class="widget-table_item mod-date mod-mobile">
                                     <span>21/08/2019</span>
                                 </div>
 
@@ -231,7 +231,7 @@
                                     </div>
                                 </div>
 
-                                <div class="widget-table_item mod-cross">
+                                <div class="widget-table_item mod-cross mod-mobile">
                                     <svg class="widget-table_icon-cross">
                                         <use xlink:href="#cross"></use>
                                     </svg>
@@ -243,15 +243,15 @@
                                     <img src="/img/Mark_Antonov.png" class="widget-chat_image">
                                 </div>
 
-                                <div class="widget-table_item mod-email">
+                                <div class="widget-table_item mod-email mod-mobile">
                                     <span>markantonov@gmail.com</span>
                                 </div>
 
-                                <div class="widget-table_item mod-phone">
+                                <div class="widget-table_item mod-phone mod-mobile">
                                     <span>{{__('widget','Widget contact phone 1')}}</span>
                                 </div>
 
-                                <div class="widget-table_item mod-id">
+                                <div class="widget-table_item mod-id mod-mobile">
                                     <span>#21412</span>
                                 </div>
 
@@ -261,13 +261,13 @@
                                     </svg>
                                 </div>
 
-                                <div class="widget-table_item mod-state">
+                                <div class="widget-table_item mod-state mod-mobile">
                                     <div class="table_item-state online">
                                         <span>{{__('widget','Widget chat state 2')}}</span>
                                     </div>
                                 </div>
 
-                                <div class="widget-table_item mod-date">
+                                <div class="widget-table_item mod-date mod-mobile">
                                     <span>22/08/2019</span>
                                 </div>
 
@@ -280,7 +280,7 @@
                                     </div>
                                 </div>
 
-                                <div class="widget-table_item mod-cross">
+                                <div class="widget-table_item mod-cross mod-mobile">
                                     <svg class="widget-table_icon-cross">
                                         <use xlink:href="#cross"></use>
                                     </svg>

@@ -284,86 +284,71 @@
             }
         }
 
-        .widget-table_head-item, .widget-table_item  {
-            &.mod-name {
-                padding: 0 0 0 41px;
-                justify-content: flex-start;
-                flex: 1;
-                min-width: 125px;
+        .mod-name {
+            padding: 0 0 0 41px;
+            justify-content: flex-start;
+            flex: 1;
+            min-width: 125px;
 
-                & > span {
-                    width: 130px;
-                    flex-shrink: 0;
-                    line-height: normal;
-                }
-
-                @include media('d-only') {
-                    min-width: 246px;
-                }
+            & > span {
+                width: 130px;
+                flex-shrink: 0;
+                line-height: normal;
             }
 
-            &.mod-email {
-                display: none;
-
-                @include media('d-only') {
-                    width: 220px;
-                    padding: 0 20px;
-                }
+            @include media('d-only') {
+                min-width: 246px;
             }
+        }
 
-            &.mod-phone {
-                display: none;
-                @include media('d-only') {
-                    width: 200px;
-                    padding: 0 20px;
-                }
-            }
+        .mod-email {
+            width: 220px;
+            padding: 0 20px;
 
-            &.mod-id {
-                display: none;
-                @include media('d-only') {
-                    width: 150px;
-                    padding: 0 20px;
-                }
-            }
+        }
 
-            &.mod-settings {
-                width: 107px;
-                padding: 0 20px;
-                justify-content: center;
-            }
+        .mod-phone {
+            width: 200px;
+            padding: 0 20px;
+        }
 
-            &.mod-state {
-                display: none;
-                @include media('d-only') {
-                    width: 150px;
-                    padding: 0 20px;
-                    justify-content: center;
-                }
-            }
+        .mod-id {
+            width: 150px;
+            padding: 0 20px;
 
-            &.mod-date {
-                display: none;
-                @include media('d-only') {
-                    width: 187px;
-                    padding: 0 20px;
-                }
-            }
 
-            &.mod-chat {
-                width: 186px;
-                padding: 0 20px;
-                justify-content: center;
-            }
+        }
 
-            &.mod-cross {
-                display: none;
-                @include media('d-only') {
-                    width: 53px;
-                    padding: 0;
-                    justify-content: center;
-                }
-            }
+        .mod-settings {
+            width: 107px;
+            padding: 0 20px;
+            justify-content: center;
+
+        }
+
+        .mod-state {
+            width: 150px;
+            padding: 0 20px;
+            justify-content: center;
+
+        }
+
+        .mod-date {
+            width: 187px;
+            padding: 0 20px;
+
+        }
+
+        .mod-chat {
+            width: 186px;
+            padding: 0 20px;
+            justify-content: center;
+        }
+
+        .mod-cross {
+            width: 53px;
+            padding: 0;
+            justify-content: center;
         }
 
         .widget-chat_table-content {
@@ -406,14 +391,26 @@
             overflow: hidden;
             flex-shrink: 0;
 
+            &:not(:last-of-type) {
+                border-right: 1px solid $inputBorder;
+            }
+
             @include media('d-only') {
                 height: 76px;
                 font-size: 16px;
                 line-height: 20px;
                 font-weight: 400;
+            }
+        }
 
-                &:not(:last-of-type) {
-                    border-right: 1px solid $inputBorder;
+        .widget-table_head-item, .widget-table_item {
+
+            &.mod-mobile {
+                display: none;
+                border-right: none;
+
+                @include media('d-only') {
+                    display: flex;
                 }
             }
         }
@@ -433,11 +430,16 @@
         }
 
         .widget-chat_image {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid $widgetSidebarBorder;
-            margin-left: 20px;
+            display: none;
+
+            @include media('d-only') {
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid $widgetSidebarBorder;
+                margin-left: 20px;
+            }
         }
 
         .table_item-state {
@@ -465,28 +467,44 @@
             align-items: center;
             justify-content: center;
 
-            width: 145px;
-            height: 40px;
+            width: 87px;
+            height: 30px;
             background-color: $lightBlueGradientFrom;
             border: 1px solid $widgetSidebarBorder;
 
             .table_item-icon_chat {
-                width: 16px;
-                height: 14px;
+                width: 12px;
+                height: 10px;
                 fill: $widgetActiveBlue;
-                margin-right: 6px;
+                margin-right: 4px;
             }
 
             .table_item-text_chat {
-                font-size: 16px;
+                font-size: 12px;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 21px;
                 color: $mainDarkBlue;
-                height: 23px;
+                height: 16px;
+            }
+
+            @include media('d-only') {
+                width: 145px;
+                height: 40px;
+
+                .table_item-icon_chat {
+                    width: 16px;
+                    height: 14px;
+                    margin-right: 6px;
+                }
+
+                .table_item-text_chat {
+                    font-size: 16px;
+                    line-height: 28px;
+                    height: 23px;
+                }
             }
         }
     }
-
 
     .widget-chat_inputs {
         display: flex;
@@ -507,6 +525,15 @@
                 margin-bottom: 26px;
             }
 
+            .widget-input_title {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                color: $mainDarkBlue;
+                margin-bottom: 10px;
+            }
+
             @include media("d-only") {
                 padding-right: 45px;
                 margin-bottom: 32px;
@@ -515,24 +542,15 @@
                 &:not(:last-of-type) {
                     border-right: 1px solid $widgetInstallBorder;
                 }
-            }
 
-            .widget-input_title {
-                display: block;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 16px;
-                color: $mainDarkBlue;
-                margin-bottom: 10px;
-
-                @include media("d-only") {
+                .widget-input_title {
                     font-size: 16px;
                     font-weight: 400;
                 }
+
             }
 
             .widget-input {
-
                 @include media("d-only") {
                     width: 412px;
                 }
