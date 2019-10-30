@@ -15,7 +15,7 @@
             <widget-steps></widget-steps>
 
             <div class="widget-chat_content">
-                <div class="widget-chat_block mod-border">
+                <div class="widget-chat_block mod-social">
                     <h2 class="cabinet-page_title">
                         <svg class="cabinet-page_title-icon">
                             <use xlink:href="#chat-settings"></use>
@@ -142,8 +142,8 @@
                     </div>
                 </div>
 
-                <div class="widget-chat_block">
-                    <h2 class="cabinet-page_title">
+                <div class="widget-chat_block mod-table">
+                    <h2 class="cabinet-page_title mod_table">
                         <svg class="cabinet-page_title-icon">
                             <use xlink:href="#user"></use>
                         </svg>
@@ -290,7 +290,7 @@
                     </div>
                 </div>
 
-                <div class="widget-chat_block">
+                <div class="widget-chat_block mod-inputs">
                     <h2 class="cabinet-page_title">
                         <svg class="cabinet-page_title-icon">
                             <use xlink:href="#user"></use>

@@ -4,22 +4,38 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 39px 17px 0 17px;
+        padding: 39px 0;
 
-        @include media('t-ipad') {
+        @include media('d-only') {
             padding: 54px 41px 0 38px;
         }
     }
 
     .cabinet-page_title {
-        margin-bottom: 32px;
+        margin-bottom: 38px;
+
+        @include media('t-ipad') {
+            margin-bottom: 32px;
+        }
+
+        &.mod_table {
+            padding: 0 17px;
+
+            @include media('d-only') {
+                padding: 0;
+            }
+        }
     }
 
 
     .widget-chat_block {
+        padding: 0 17px;
 
+        @include media('d-only') {
+            padding: 0;
+        }
 
-        &.mod-border {
+        &.mod-social {
             padding-bottom: 38px;
             margin-bottom: 38px;
             border-bottom: 1px solid $widgetInstallBorder;
@@ -28,6 +44,15 @@
                 padding-bottom: 54px;
                 margin-bottom: 54px;
             }
+        }
+
+        &.mod-table {
+            padding: 0;
+        }
+
+        &.mod-inputs {
+            margin-bottom: 50px;
+
         }
     }
 
@@ -227,117 +252,169 @@
 
     .widget-chat_table {
         margin-bottom: 44px;
-        overflow-x: auto;
-        overflow-y: hidden;
+
+        @include media('d-only') {
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
 
         .widget-chat_table-head {
             display: flex;
-            border: 1px solid rgba(0, 33, 95, 0.05);
-
-            height: 64px;
+            height: 60px;
             background-color: $lightBlueGradientFrom;
-            min-width: 1500px;
+
+            @include media('d-only') {
+                min-width: 1500px;
+                height: 64px;
+                border: 1px solid rgba(0, 33, 95, 0.05);
+            }
 
             .widget-table_head-item {
-                font-size: 16px;
-                line-height: 29px;
-                color: $mainDarkBlue;
-                font-weight: 700;
                 display: flex;
                 align-items: center;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 700;
+                color: $mainDarkBlue;
+
+                @include media('d-only') {
+                    font-size: 16px;
+                    line-height: 29px;
+                }
             }
         }
 
-        .mod-name {
-            padding: 0 0 0 41px;
-            justify-content: flex-start;
-            flex: 1;
-            min-width: 246px;
+        .widget-table_head-item, .widget-table_item  {
+            &.mod-name {
+                padding: 0 0 0 41px;
+                justify-content: flex-start;
+                flex: 1;
+                min-width: 125px;
 
-            & > span {
-                width: 130px;
-                flex-shrink: 0;
-                line-height: normal;
+                & > span {
+                    width: 130px;
+                    flex-shrink: 0;
+                    line-height: normal;
+                }
+
+                @include media('d-only') {
+                    min-width: 246px;
+                }
             }
-        }
 
-        .mod-email {
-            width: 220px;
-            padding: 0 20px;
-        }
+            &.mod-email {
+                display: none;
 
-        .mod-phone {
-            width: 200px;
-            padding: 0 20px;
-        }
+                @include media('d-only') {
+                    width: 220px;
+                    padding: 0 20px;
+                }
+            }
 
-        .mod-id {
-            width: 150px;
-            padding: 0 20px;
-        }
+            &.mod-phone {
+                display: none;
+                @include media('d-only') {
+                    width: 200px;
+                    padding: 0 20px;
+                }
+            }
 
-        .mod-settings {
-            width: 107px;
-            padding: 0 20px;
-            justify-content: center;
-        }
+            &.mod-id {
+                display: none;
+                @include media('d-only') {
+                    width: 150px;
+                    padding: 0 20px;
+                }
+            }
 
-        .mod-state {
-            width: 150px;
-            padding: 0 20px;
-            justify-content: center;
-        }
+            &.mod-settings {
+                width: 107px;
+                padding: 0 20px;
+                justify-content: center;
+            }
 
-        .mod-date {
-            width: 187px;
-            padding: 0 20px;
-        }
+            &.mod-state {
+                display: none;
+                @include media('d-only') {
+                    width: 150px;
+                    padding: 0 20px;
+                    justify-content: center;
+                }
+            }
 
-        .mod-chat {
-            width: 186px;
-            padding: 0 20px;
-            justify-content: center;
+            &.mod-date {
+                display: none;
+                @include media('d-only') {
+                    width: 187px;
+                    padding: 0 20px;
+                }
+            }
 
-        }
+            &.mod-chat {
+                width: 186px;
+                padding: 0 20px;
+                justify-content: center;
+            }
 
-        .mod-cross {
-            width: 53px;
-            padding: 0;
-            justify-content: center;
+            &.mod-cross {
+                display: none;
+                @include media('d-only') {
+                    width: 53px;
+                    padding: 0;
+                    justify-content: center;
+                }
+            }
         }
 
         .widget-chat_table-content {
-            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
             background: $white;
-            border: 1px solid rgba(0, 33, 95, 0.05);
-            min-width: 1500px;
+            border: 1px solid #E3ECF5;
+            border-top: none;
+
+
+            @include media('d-only') {
+                min-width: 1500px;
+                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+                border: 1px solid rgba(0, 33, 95, 0.05);
+            }
         }
 
         .widget-chat_table-string {
             display: flex;
 
-            height: 76px;
+            height: 40px;
             border-bottom: 1px solid $inputBorder;
 
             &:not(:first-of-type) {
                 border-bottom: none;
+            }
+
+            @include media('d-only') {
+                height: 76px;
             }
         }
 
         .widget-table_item {
             display: flex;
             align-items: center;
-            height: 76px;
-            font-size: 16px;
-            line-height: 20px;
+            height: 40px;
+            font-size: 12px;
+            line-height: 14px;
             color: $mainDarkBlue;
-            font-weight: 400;
+            font-weight: 500;
             word-break: break-word;
             overflow: hidden;
             flex-shrink: 0;
 
-            &:not(:last-of-type) {
-                border-right: 1px solid $inputBorder;
+            @include media('d-only') {
+                height: 76px;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $inputBorder;
+                }
             }
         }
 
@@ -370,6 +447,7 @@
             width: 109px;
             height: 40px;
             color: $white;
+            cursor: pointer;
 
             &.offline {
                 background-color: $widgetOffline;
@@ -412,11 +490,12 @@
 
     .widget-chat_inputs {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         margin-bottom: 38px;
 
         @include media("d-only") {
+            align-items: flex-start;
             flex-wrap: wrap;
             margin-bottom: 0;
             flex-direction: row;
@@ -469,5 +548,11 @@
         }
     }
 
+    .widget-button {
+        margin: 0 auto;
 
+        @include media('d-only') {
+            margin: 0;
+        }
+    }
 }
