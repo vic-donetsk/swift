@@ -176,8 +176,11 @@ export default {
         },
 
         searchChatID(chatId) {
-            // TODO: searche chat dialog with id = chatId
+            // TODO: search chat dialog with id = chatId
 
+        },
+        chatOpen(chatID) {
+            // TODO: open chat dialog with id = chatId
         }
     }
 }
