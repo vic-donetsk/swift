@@ -285,7 +285,7 @@
         }
 
         .mod-name {
-            padding: 0 0 0 41px;
+            padding: 0 0 0 9px;
             justify-content: flex-start;
             flex: 1;
             min-width: 125px;
@@ -298,6 +298,7 @@
 
             @include media('d-only') {
                 min-width: 246px;
+                padding: 0 0 0 41px;
             }
         }
 
@@ -315,22 +316,23 @@
         .mod-id {
             width: 150px;
             padding: 0 20px;
-
-
         }
 
         .mod-settings {
-            width: 107px;
-            padding: 0 20px;
+            width: 50px;
+            padding: 0 6px;
             justify-content: center;
 
+            @include media('d-only') {
+                padding: 0 20px;
+                width: 107px;
+            }
         }
 
         .mod-state {
             width: 150px;
             padding: 0 20px;
             justify-content: center;
-
         }
 
         .mod-date {
@@ -340,9 +342,15 @@
         }
 
         .mod-chat {
-            width: 186px;
-            padding: 0 20px;
-            justify-content: center;
+            width: 105px;
+            padding: 0 9px;
+            justify-content: flex-start;
+
+            @include media('d-only') {
+                width: 186px;
+                padding: 0 20px;
+                justify-content: center;
+            }
         }
 
         .mod-cross {
@@ -355,7 +363,6 @@
             background: $white;
             border: 1px solid #E3ECF5;
             border-top: none;
-
 
             @include media('d-only') {
                 min-width: 1500px;
@@ -391,7 +398,15 @@
             overflow: hidden;
             flex-shrink: 0;
 
-            &:not(:last-of-type) {
+            &.mod-add_btn {
+                border-right: 1px solid $inputBorder;
+            }
+
+            &.mod-name {
+                border-right: 1px solid $inputBorder;
+            }
+
+            &.mod-settings {
                 border-right: 1px solid $inputBorder;
             }
 
@@ -400,14 +415,23 @@
                 font-size: 16px;
                 line-height: 20px;
                 font-weight: 400;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $inputBorder;
+                }
             }
         }
 
         .widget-table_head-item, .widget-table_item {
+            &.mod-add_btn {
+                width: 40px;
+                @include media('d-only') {
+                    display: none;
+                }
+            }
 
             &.mod-mobile {
                 display: none;
-                border-right: none;
 
                 @include media('d-only') {
                     display: flex;
