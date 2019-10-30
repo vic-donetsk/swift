@@ -122,5 +122,29 @@
             padding: 21px 47px;
         }
     }
+
+
+    &_dropdown {
+        position: absolute;
+        bottom: -15.3vw;
+        width: 16.9vw;
+        height: 15.3vw;
+        border-radius: 9px;
+        background: $diagramBlue;
+
+        &.mod_tariffMinutes {
+             left: 25%;
+         }
+        &.mod_currentMinutes {
+             left: 50%;
+         }
+        &.mod_currentSMS {
+            left: 75%;
+        }
+
+    }
+
+
+
 }
 

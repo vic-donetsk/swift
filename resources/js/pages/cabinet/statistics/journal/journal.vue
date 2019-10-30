@@ -164,7 +164,7 @@
                     <td>{{oneRecord.email}}</td>
                     <td class="chats_message">{{oneRecord.message}}</td>
                     <td>
-                        <div class="chat_open">
+                        <div class="chat_open" @click="chatOpen(oneRecord.ID)">
                             <svg >
                                 <use xlink:href="#chatOpen"></use>
                             </svg>
