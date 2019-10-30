@@ -1,131 +1,182 @@
 <template>
-    <div class="statistics-journal">
-        <div class="statistics_journal-title">
-            <svg class="title_icon">
-                <use xlink:href="#phone"></use>
-            </svg>
-            {{__('statistics', "CALL JOURNAL")}}
-        </div>
-        <div class="statistics_journal-export">
-            {{__('statistics', "Export table in format:")}}
-            <span class="export-format">.xls</span>
-            <span> / </span>
-            <span class="export-format">.csv</span>
-        </div>
-        <div class="statistics_tableColumns-settings" @click="openSettings">
-            <svg class="settings_settings">
-                <use xlink:href="#settings"></use>
-            </svg>
-            <img src="/img/charts/dropdown.svg" class="settings_dropdown" alt="">
-        </div>
-        <div v-if="settingsMode === true" class="statistics_tableColumns-customize">
-            <div v-for="oneColumn in tableColumns">
-                <input class="tableColumns_checkbox" type="checkbox" :id="oneColumn.var" :value="oneColumn.var"
-                       v-model="checkedNames">
-                <label class="tableColumns_label" :for="oneColumn.var">
-                    <p class="tableColumns_label-square"></p>
-                    <p class="tableColumns_label-text">{{__('statistics', oneColumn.text)}}</p>
-                </label>
+    <div class="statistics-journal" :class="{mod_chat: !isCalls}">
+<!--        calls journal-->
+        <div v-if="isCalls">
+            <div class="statistics_journal-title">
+                <svg class="title_icon">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                {{__('statistics', "CALL JOURNAL")}}
             </div>
-        </div>
-        <table class="statistics_tableColumns">
-            <tr>
-                <th v-for="(oneColumn) in tableColumns" v-if="checkedNames.indexOf(oneColumn.var) !== -1">
-                    {{__('statistics', oneColumn.text)}}
-                </th>
-            </tr>
-            <tr v-for="(oneRecord, index) in list">
-                <td v-if="checkedNames.indexOf('date') !== -1">{{oneRecord.date}}</td>
-                <td v-if="checkedNames.indexOf('time') !== -1">{{oneRecord.time}}</td>
-                <td v-if="checkedNames.indexOf('callStatus') !== -1">
-                    <div class="withImage" v-if="oneRecord.callStatus === true">
+            <div class="statistics_journal-export">
+                {{__('statistics', "Export table in format:")}}
+                <span class="export-format">.xls</span>
+                <span> / </span>
+                <span class="export-format">.csv</span>
+            </div>
+            <div class="statistics_tableColumns-settings" @click="openSettings">
+                <svg class="settings_settings">
+                    <use xlink:href="#settings"></use>
+                </svg>
+                <img src="/img/charts/dropdown.svg" class="settings_dropdown" alt="">
+            </div>
+            <div v-if="settingsMode === true" class="statistics_tableColumns-customize">
+                <div v-for="oneColumn in tableColumns">
+                    <input class="tableColumns_checkbox" type="checkbox" :id="oneColumn.var" :value="oneColumn.var"
+                           v-model="checkedNames">
+                    <label class="tableColumns_label" :for="oneColumn.var">
+                        <p class="tableColumns_label-square"></p>
+                        <p class="tableColumns_label-text">{{__('statistics', oneColumn.text)}}</p>
+                    </label>
+                </div>
+            </div>
+            <table class="statistics_tableColumns">
+                <tr>
+                    <th v-for="(oneColumn) in tableColumns" v-if="checkedNames.indexOf(oneColumn.var) !== -1">
+                        {{__('statistics', oneColumn.text)}}
+                    </th>
+                </tr>
+                <tr v-for="(oneRecord, index) in list">
+                    <td v-if="checkedNames.indexOf('date') !== -1">{{oneRecord.date}}</td>
+                    <td v-if="checkedNames.indexOf('time') !== -1">{{oneRecord.time}}</td>
+                    <td v-if="checkedNames.indexOf('callStatus') !== -1">
+                        <div class="withImage" v-if="oneRecord.callStatus === true">
                         <span class="statistics_tableColumns-callImage"><img src="/img/charts/success.svg"
                                                                              alt=""></span>
-                        <span> {{__('statistics', 'Success')}}</span>
-                    </div>
-                    <div class="withImage" v-else>
-                        <span class="statistics_tableColumns-callImage"><img src="/img/charts/lost.svg" alt=""></span>
-                        <span> {{__('statistics', 'Lost')}}</span>
-                    </div>
-                </td>
-                <td v-if="checkedNames.indexOf('duration') !== -1">
-                    <div v-if="oneRecord.callStatus === true" class="withImage">
-                        <span>{{oneRecord.duration}}</span>
-                        <span class="statistics_tableColumns-soundImage">
+                            <span> {{__('statistics', 'Success')}}</span>
+                        </div>
+                        <div class="withImage" v-else>
+                            <span class="statistics_tableColumns-callImage"><img src="/img/charts/lost.svg"
+                                                                                 alt=""></span>
+                            <span> {{__('statistics', 'Lost')}}</span>
+                        </div>
+                    </td>
+                    <td v-if="checkedNames.indexOf('duration') !== -1">
+                        <div v-if="oneRecord.callStatus === true" class="withImage">
+                            <span>{{oneRecord.duration}}</span>
+                            <span class="statistics_tableColumns-soundImage">
                             <svg @click="playAudio(index)">
                                 <use xlink:href="#volume-up-solid"></use>
                             </svg>
                         </span>
+                        </div>
+                    </td>
+                    <td v-if="checkedNames.indexOf('clientNumber') !== -1">{{oneRecord.clientNumber}}</td>
+                    <td v-if="checkedNames.indexOf('managerNumber') !== -1">{{oneRecord.managerNumber}}</td>
+                    <td v-if="checkedNames.indexOf('clientName') !== -1">{{oneRecord.clientName}}</td>
+                    <td v-if="checkedNames.indexOf('email') !== -1">{{oneRecord.email}}</td>
+                    <td v-if="checkedNames.indexOf('source') !== -1">
+                        <a :href="oneRecord.source" target="_blank">{{oneRecord.source}}</a></td>
+                    <td v-if="checkedNames.indexOf('homePage') !== -1">
+                        <a :href="oneRecord.homePage" target="_blank">{{oneRecord.homePage}}</a>
+                    </td>
+                    <td v-if="checkedNames.indexOf('callPage') !== -1">
+                        <a :href="oneRecord.callPage" target="_blank">{{oneRecord.callPage}}</a>
+                    </td>
+                    <td v-if="checkedNames.indexOf('ip') !== -1">{{oneRecord.ip}}</td>
+                    <td v-if="checkedNames.indexOf('notes') !== -1">{{oneRecord.notes}}</td>
+                    <td v-if="checkedNames.indexOf('region') !== -1">{{oneRecord.region}}</td>
+
+                </tr>
+            </table>
+
+            <!--         audio (wavesurfer.js) block-->
+
+            <div class="wavesurfer" :class="{mod_visible: audioFlag}" :style="{'top': audioPlayerTop + 'px'}">
+                <div id="wavesurfer-playPause" class="wavesurfer-button">
+                    <svg v-if="!playMode" @click="playClick">
+                        <use xlink:href="#playAudio"></use>
+                    </svg>
+                    <svg v-if="playMode" @click="playClick">
+                        <use xlink:href="#pauseAudio"></use>
+                    </svg>
+                </div>
+                <div id="wavesurfer-stop" class="wavesurfer-button">
+                    <svg @click="stopClick">
+                        <use xlink:href="#stopAudio"></use>
+                    </svg>
+                </div>
+                <div id="wavesurfer-volume" class="wavesurfer-button">
+                    <svg v-if="!muteMode" @click="muteClick">
+                        <use xlink:href="#volumeAudio"></use>
+                    </svg>
+                    <svg v-if="muteMode" @click="muteClick">
+                        <use xlink:href="#muteAudio"></use>
+                    </svg>
+                </div>
+                <div id="wavesurfer-download" class="wavesurfer-button">
+                    <svg @click="downloadClick">
+                        <use xlink:href="#downloadAudio"></use>
+                    </svg>
+                </div>
+                <div id="wavesurfer-container">
+
+                </div>
+                <div class="wavesurfer-timer">
+                    <div id="wavesurfer-played" class="wavesurfer-timer-item">{{currentTime}}</div>
+                    <div class="wavesurfer-timer-item">/</div>
+                    <div id="wavesurfer-total" class="wavesurfer-timer-item">{{duration}}</div>
+                    <div class="wavesurfer-copy">
+                        <svg @click="">
+                            <use xlink:href="#copyAudio"></use>
+                        </svg>
                     </div>
-                </td>
-                <td v-if="checkedNames.indexOf('clientNumber') !== -1">{{oneRecord.clientNumber}}</td>
-                <td v-if="checkedNames.indexOf('managerNumber') !== -1">{{oneRecord.managerNumber}}</td>
-                <td v-if="checkedNames.indexOf('clientName') !== -1">{{oneRecord.clientName}}</td>
-                <td v-if="checkedNames.indexOf('email') !== -1">{{oneRecord.email}}</td>
-                <td v-if="checkedNames.indexOf('source') !== -1">
-                    <a :href="oneRecord.source" target="_blank">{{oneRecord.source}}</a></td>
-                <td v-if="checkedNames.indexOf('homePage') !== -1">
-                    <a :href="oneRecord.homePage" target="_blank">{{oneRecord.homePage}}</a>
-                </td>
-                <td v-if="checkedNames.indexOf('callPage') !== -1">
-                    <a :href="oneRecord.callPage" target="_blank">{{oneRecord.callPage}}</a>
-                </td>
-                <td v-if="checkedNames.indexOf('ip') !== -1">{{oneRecord.ip}}</td>
-                <td v-if="checkedNames.indexOf('notes') !== -1">{{oneRecord.notes}}</td>
-                <td v-if="checkedNames.indexOf('region') !== -1">{{oneRecord.region}}</td>
-
-            </tr>
-        </table>
-
-        <!--         audio (wavesurfer.js) block-->
-
-        <div class="wavesurfer" :class="{mod_visible: audioFlag}" :style="{'top': audioPlayerTop + 'px'}">
-            <div id="wavesurfer-playPause" class="wavesurfer-button">
-                <svg v-if="!playMode" @click="playClick">
-                    <use xlink:href="#playAudio"></use>
-                </svg>
-                <svg v-if="playMode" @click="playClick">
-                    <use xlink:href="#pauseAudio"></use>
-                </svg>
-            </div>
-            <div id="wavesurfer-stop" class="wavesurfer-button">
-                <svg @click="stopClick">
-                    <use xlink:href="#stopAudio"></use>
-                </svg>
-            </div>
-            <div id="wavesurfer-volume" class="wavesurfer-button">
-                <svg v-if="!muteMode" @click="muteClick">
-                    <use xlink:href="#volumeAudio"></use>
-                </svg>
-                <svg v-if="muteMode" @click="muteClick">
-                    <use xlink:href="#muteAudio"></use>
-                </svg>
-            </div>
-            <div id="wavesurfer-download" class="wavesurfer-button">
-                <svg @click="downloadClick">
-                    <use xlink:href="#downloadAudio"></use>
-                </svg>
-            </div>
-            <div id="wavesurfer-container">
-
-            </div>
-            <div class="wavesurfer-timer">
-                <div id="wavesurfer-played" class="wavesurfer-timer-item">{{currentTime}}</div>
-                <div class="wavesurfer-timer-item">/</div>
-                <div id="wavesurfer-total" class="wavesurfer-timer-item">{{duration}}</div>
-                <div class="wavesurfer-copy">
-                    <svg @click="">
-                        <use xlink:href="#copyAudio"></use>
+                </div>
+                <div class="wavesurfer-close">
+                    <svg @click="closeAudio">
+                        <use xlink:href="#closeAudio"></use>
                     </svg>
                 </div>
             </div>
-            <div class="wavesurfer-close">
-                <svg @click="closeAudio">
-                    <use xlink:href="#closeAudio"></use>
-                </svg>
-            </div>
+
         </div>
 
+<!--        chat journal-->
+
+        <div v-else >
+            <table class="statistics_tableColumns mod_chat">
+                <tr>
+                    <th v-for="(oneChatsColumn) in tableChatsColumns">
+                        {{__('statistics', oneChatsColumn)}}
+                    </th>
+                    <th>
+                        <div class="statistics_tableColumns-searchId">
+                            <input class="searchId_text" placeholder="Search ID" v-model="searchChatId">
+                            <div class="searchId_sign">
+                                <svg @click="searchChatID(searchChatId)">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr v-for="(oneRecord, index) in list">
+                    <td>{{oneRecord.date}}</td>
+                    <td>{{oneRecord.time}}</td>
+                    <td>{{oneRecord.ID}}</td>
+                    <td>
+                        <svg :style="'fill:'+chatsColors[oneRecord.source]" class="chats_icon">
+                            <use :xlink:href="'#'+oneRecord.source"></use>
+                        </svg>
+                    </td>
+                    <td>{{oneRecord.clientName}}</td>
+                    <td>{{oneRecord.clientNumber}}</td>
+                    <td>{{oneRecord.email}}</td>
+                    <td class="chats_message">{{oneRecord.message}}</td>
+                    <td>
+                        <div class="chat_open">
+                            <svg >
+                                <use xlink:href="#chatOpen"></use>
+                            </svg>
+                            <div class="chat_open-text">{{__('statistics', "Open")}}</div>
+                        </div>
+                    </td>
+
+
+
+                </tr>
+            </table>
+        </div>
         <!--        svg for audio block-->
 
         <svg xmlns="http://www.w3.org/2000/svg" class="audio-sprite" style="display: none">
@@ -134,14 +185,17 @@
                 <svg viewBox="0 0 21.59 21.59">
                     <g transform="translate(-1883.803 -945.879)">
                         <line id="Line_129" data-name="Line 129" x2="17.347" y2="17.347"
-                              transform="translate(1885.923 948)" fill="none" stroke="#00215f" stroke-linecap="round"
+                              transform="translate(1885.923 948)" fill="none" stroke="#00215f"
+                              stroke-linecap="round"
                               stroke-width="3"/>
                         <line id="Line_130" data-name="Line 130" x1="17.347" y2="17.347"
-                              transform="translate(1885.923 948)" fill="none" stroke="#00215f" stroke-linecap="round"
+                              transform="translate(1885.923 948)" fill="none" stroke="#00215f"
+                              stroke-linecap="round"
                               stroke-width="3"/>
                     </g>
                 </svg>
-                d="Path_508" data-name="Path 508" d="M331.5,36.608l4.13,4.13,4.13-4.13" transform="translate(-330.793
+                d="Path_508" data-name="Path 508" d="M331.5,36.608l4.13,4.13,4.13-4.13"
+                transform="translate(-330.793
                 -35.901)" fill="none" stroke="#00215f" stroke-width="2"/>
             </symbol>
 
@@ -250,9 +304,23 @@
 	l1.2-1.2l1.2,1.2c0.2,0.2,0.4,0.2,0.6,0l0.6-0.6c0.2-0.2,0.2-0.4,0-0.6L21.5,15.7z"/>
                 </svg>
             </symbol>
+            <symbol id="search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.168 16.169">
+                    <g id="magnifying-glass" transform="translate(-0.001 -0.001)">
+                        <path id="Path_706" data-name="Path 706" d="M10.8,1.85a6.327,6.327,0,1,0-.865,9.665,1.332,1.332,0,0,0,.361.671l3.592,3.592a1.337,1.337,0,1,0,1.89-1.89l-3.592-3.593a1.336,1.336,0,0,0-.67-.36A6.333,6.333,0,0,0,10.8,1.85ZM9.664,9.664a4.723,4.723,0,1,1,0-6.68A4.729,4.729,0,0,1,9.664,9.664Z" transform="translate(0 0)" fill="#00215f"/>
+                    </g>
+                </svg>
+            </symbol>
+            <symbol id="chatOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.723 13.477">
+                    <g id="Group_303" data-name="Group 303" transform="translate(0 0)">
+                        <path id="Path_1548" data-name="Path 1548" d="M12.073,79.828h-.562a.271.271,0,0,0-.281.281v2.808a1.407,1.407,0,0,1-1.4,1.4h-7.3a1.352,1.352,0,0,1-.991-.412,1.352,1.352,0,0,1-.412-.991v-7.3a1.352,1.352,0,0,1,.412-.991,1.352,1.352,0,0,1,.991-.412H8.7a.27.27,0,0,0,.281-.281v-.562A.27.27,0,0,0,8.7,73.09H2.527a2.434,2.434,0,0,0-1.786.741A2.434,2.434,0,0,0,0,75.617v7.3A2.433,2.433,0,0,0,.741,84.7a2.434,2.434,0,0,0,1.786.742h7.3a2.532,2.532,0,0,0,2.527-2.527V80.109a.271.271,0,0,0-.281-.281Z" transform="translate(0 -71.967)" fill="#4c638f"/>
+                        <path id="Path_1549" data-name="Path 1549" d="M205.114,36.714a.54.54,0,0,0-.395-.167h-4.492a.558.558,0,0,0-.395.956l1.544,1.544-5.72,5.721a.276.276,0,0,0,0,.4l1,1a.276.276,0,0,0,.4,0l5.72-5.72L204.324,42a.562.562,0,0,0,.956-.395V37.108A.54.54,0,0,0,205.114,36.714Z" transform="translate(-189.558 -36.547)" fill="#4c638f"/>
+                    </g>
+                </svg>
+            </symbol>
 
         </svg>
-
     </div>
 </template>
 

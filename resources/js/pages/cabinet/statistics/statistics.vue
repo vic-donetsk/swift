@@ -147,7 +147,7 @@
                     </chart-js>
                 </div>
 
-                <statistics-journal :list="journalData"></statistics-journal>
+                <statistics-journal :isCalls="true" :list="journalData"></statistics-journal>
 
             </div>
 
@@ -198,6 +198,8 @@
                               :chartData=generalChartsData.failChats.chartData>
                     </chart-js>
                 </div>
+
+                <statistics-journal :isCalls="false" :list="journalChatsData"></statistics-journal>
 
 
             </div>

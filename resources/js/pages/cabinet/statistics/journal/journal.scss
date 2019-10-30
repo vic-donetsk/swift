@@ -5,6 +5,11 @@
     margin-bottom: 10px;
 }
 
+.mod_chat {
+    width: 100%;
+    max-width: 1546px;
+}
+
 .statistics_journal-title {
     display: flex;
     justify-content: flex-start;
@@ -139,15 +144,18 @@
 
     .withImage {
         display: flex;
+
         img, svg {
             width: 17px;
             height: 17px;
         }
     }
+
     &-callImage {
         margin-top: 3px;
         margin-right: 13px;
     }
+
     &-soundImage {
         margin-top: 3px;
         margin-left: 13px;
@@ -155,6 +163,88 @@
 
         svg {
             cursor: pointer;
+        }
+    }
+
+
+
+    .chats_icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+
+    }
+
+    .chats_message {
+        max-width: 25%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 6%;
+    }
+    .chat_open {
+        display: flex;
+        width: fit-content;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        margin: 0 auto;
+        background: #EFF8FD;
+        cursor: pointer;
+
+        svg {
+            width: 16px;
+            height: 14px;
+            margin-right: 6px;
+        }
+
+        .chat_open-text {
+            margin-top: 6px;
+        }
+    }
+
+    &-searchId {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 11.7vw;
+        height: 40px;
+        padding: 0 19px;
+        border-radius: 14px;
+        border: 2px solid #BBC9DB;
+
+
+        .searchId_text {
+            width: 80%;
+            background: inherit;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: $mainDarkBlue;
+
+            &::-moz-placeholder {
+                color: #BBC9DB;
+                font-weight: 500;
+            }
+
+            &::-webkit-input-placeholder {
+                color: #BBC9DB;
+                font-weight: 500;
+            }
+        }
+
+        .searchId_sign {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
         }
     }
 

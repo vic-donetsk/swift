@@ -37,6 +37,25 @@ export default {
                 {text: "Notes", var: "notes"},
                 {text: "Region", var: "region"},
             ],
+            tableChatsColumns: [
+                "Date",
+                "Time",
+                "ID",
+                "Source",
+                "Client name",
+                "Client number",
+                "Email",
+                "Message",
+            ],
+            // colors for chats icons
+            chatsColors : {
+                'viber': 'blue',
+                'whatsapp': 'green',
+                'telegram' : 'red'
+            },
+            searchChatId : '',
+
+            // wavesurfer block variables
             audioFlag: false,
             audioPlayerTop: 0,
             playMode: false,
@@ -49,12 +68,11 @@ export default {
         };
     },
 
-    props: ['list'],
+    props: ['isCalls', 'list'],
 
     mounted() {
 
         //this.openSettings();
-
 
     },
     methods: {
@@ -156,5 +174,10 @@ export default {
                 })
                 .catch(() => console.log('error occured'))
         },
+
+        searchChatID(chatId) {
+            // TODO: searche chat dialog with id = chatId
+
+        }
     }
 }
