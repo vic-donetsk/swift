@@ -4,7 +4,7 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 39px 0;
+        padding: 39px 17px;
 
         @include media('d-only') {
             padding: 54px 41px 0 38px;
@@ -17,23 +17,10 @@
         @include media('t-ipad') {
             margin-bottom: 32px;
         }
-
-        &.mod_table {
-            padding: 0 17px;
-
-            @include media('d-only') {
-                padding: 0;
-            }
-        }
     }
 
 
     .widget-chat_block {
-        padding: 0 17px;
-
-        @include media('d-only') {
-            padding: 0;
-        }
 
         &.mod-social {
             padding-bottom: 38px;
@@ -47,12 +34,19 @@
         }
 
         &.mod-table {
-            padding: 0;
+            padding-bottom: 38px;
+            margin-bottom: 38px;
+            border-bottom: 1px solid $widgetInstallBorder;
+
+            @include media('d-only') {
+                padding-bottom: 0;
+                border-bottom: 0;
+                margin-bottom: 44px;
+            }
         }
 
         &.mod-inputs {
             margin-bottom: 50px;
-
         }
     }
 
@@ -250,11 +244,12 @@
     }
 
     .widget-chat_table {
-        margin-bottom: 44px;
+        margin: 0 -17px;
 
         @include media('d-only') {
             overflow-x: auto;
             overflow-y: hidden;
+            margin: 0;
         }
 
         .widget-chat_table-head {
@@ -429,6 +424,7 @@
             &.mod-add_btn {
                 width: 40px;
                 justify-content: center;
+                cursor: pointer;
                 @include media('d-only') {
                     display: none;
                 }
@@ -557,8 +553,9 @@
 
         &.mod_center {
             justify-content: center;
+            cursor: pointer;
 
-            .widget-table_list-title{
+            .widget-table_list-title {
                 height: 19px;
                 font-weight: 600;
             }
@@ -572,7 +569,7 @@
             font-weight: 500;
         }
 
-        .widget-table_list-icon{
+        .widget-table_list-icon {
             width: 13px;
             height: 13px;
             fill: $mainDarkBlue;

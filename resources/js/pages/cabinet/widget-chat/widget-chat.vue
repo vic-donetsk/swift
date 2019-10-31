@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="widget-chat_block mod-table">
-                    <h2 class="cabinet-page_title mod_table">
+                    <h2 class="cabinet-page_title">
                         <svg class="cabinet-page_title-icon">
                             <use xlink:href="#user"></use>
                         </svg>
