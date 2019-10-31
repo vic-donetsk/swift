@@ -3,10 +3,24 @@
 .landing-plan {
     max-width: 1379px;
     margin: 0 auto 77px;
+    position: relative;
 
-    @include media('d-only'){
+    @include media('d-only') {
         margin: 0 auto 80px;
         padding: 0 32px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0 19px;
+        background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+    }
+
+    .slide-arrow_icon{
+        width: 20px;
+        height: 10px;
+        fill: $widgetActiveBlue;
     }
 
     .landing-plan_title {
