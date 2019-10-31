@@ -233,7 +233,6 @@ export default {
         switchStats(switcher) {
             if ((this.isCalls && switcher === 0) || (!this.isCalls && switcher === 1))
                 this.isCalls = !this.isCalls;
-            console.log(this.generalChartsData);
         },
         changePeriod(newActive) {
             if (newActive !== this.activeMenuItem) {
