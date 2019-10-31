@@ -264,13 +264,13 @@
 
                                     <div class="widget-table_list-item">
                                         <span class="widget-table_list-title">{{__('widget','Widget chat head 6')}}</span>
-                                        <span class="widget-table_list-val"> : 21/08/2019</span>
+                                        <span class="widget-table_list-val offline"> : {{__('widget','Widget chat state 1')}}</span>
                                     </div>
                                     <div class="widget-table_list-item mod_center" @click="rowList = null">
                                         <svg class="widget-table_list-icon">
                                             <use xlink:href="#cross"></use>
                                         </svg>
-                                        <span class="widget-table_list-title">Șterge</span>
+                                        <span class="widget-table_list-title">{{__('widget','Widget table list close btn')}}</span>
                                     </div>
                                 </div>
                                 <!--                               todo: форма для редактирования  менеджера,

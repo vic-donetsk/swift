@@ -478,19 +478,27 @@
             justify-content: center;
             width: 109px;
             height: 40px;
-            color: $white;
             cursor: pointer;
-
-            &.offline {
-                background-color: $widgetOffline;
-                border: 1px solid $widgetOfflineBoder;
-            }
-
-            &.online {
-                background-color: $widgetOnline;
-                border: 1px solid $widgetOnlineBorder;
-            }
+            //color: $white;
         }
+
+            .offline {
+                color: $chatEmailSettings;
+                @include media('d-only') {
+                    background-color: $widgetOffline;
+                    border: 1px solid $widgetOfflineBoder;
+                    color: $white;
+                }
+            }
+
+            .online {
+                @include media('d-only') {
+                    background-color: $widgetOnline;
+                    border: 1px solid $widgetOnlineBorder;
+                    color: $white;
+                }
+            }
+
 
         .table_item-chat {
             display: flex;
