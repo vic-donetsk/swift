@@ -152,7 +152,6 @@
 
         }
 
-
         .mod-chat {
             background: $brownChatSettings;
         }
@@ -379,7 +378,7 @@
             position: relative;
         }
 
-        .widget-chat_table-row-cells{
+        .widget-chat_table-row-cells {
             position: relative;
 
             display: flex;
@@ -412,6 +411,7 @@
                 border-right: 1px solid $inputBorder;
             }
 
+
             @include media('d-only') {
                 height: 76px;
                 font-size: 16px;
@@ -427,6 +427,7 @@
         .widget-table_head-item, .widget-table_item {
             &.mod-add_btn {
                 width: 40px;
+                justify-content: center;
                 @include media('d-only') {
                     display: none;
                 }
@@ -439,6 +440,12 @@
                     display: flex;
                 }
             }
+        }
+
+        .mod-add_btn-icon {
+            width: 18px;
+            height: 18px;
+            fill: $mainDarkBlue;
         }
 
         .widget-table_icon-settings {
@@ -540,9 +547,36 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
         width: 100%;
         height: 50px;
+        font-size: 14px;
+        color: $mainDarkBlue;
+        border-bottom: 1px solid $inputBorder;
+        padding: 0 13px;
+
+        &.mod_center {
+            justify-content: center;
+
+            .widget-table_list-title{
+                height: 19px;
+                font-weight: 600;
+            }
+        }
+
+        .widget-table_list-title {
+            font-weight: 700;
+        }
+
+        .widget-table_list-val {
+            font-weight: 500;
+        }
+
+        .widget-table_list-icon{
+            width: 13px;
+            height: 13px;
+            fill: $mainDarkBlue;
+            margin-right: 8px;
+        }
     }
 
     .widget-chat_inputs {

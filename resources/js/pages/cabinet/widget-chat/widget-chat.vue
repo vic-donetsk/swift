@@ -195,8 +195,13 @@
                             <div class="widget-chat_table-row" v-for="item in 2">
                                 <div class="widget-chat_table-row-cells">
                                     <div class="widget-table_item mod-add_btn" @click="toggleRowList(item)">
-                                        <span v-if="item !== rowList">+</span>
-                                        <span v-else>-</span>
+                                            <svg v-if="item !== rowList" class="mod-add_btn-icon">
+                                                     <use xlink:href="#plus-add"></use>
+                                            </svg>
+
+                                            <svg v-else class="mod-add_btn-icon">
+                                                     <use xlink:href="#minus"></use>
+                                            </svg>
                                     </div>
                                     <div class="widget-table_item mod-name">
                                         <span>{{__('widget','Widget name 1')}}</span>
@@ -240,23 +245,36 @@
                                 </div>
                                 <div class="widget-table_list" v-if="item === rowList">
                                     <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">Email </span>
+                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 2')}}</span>
                                         <span class="widget-table_list-val"> : ionascu@pi.md</span>
                                     </div>
                                     <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">Email </span>
-                                        <span class="widget-table_list-val"> : ionascu@pi.md</span>
+                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 3')}}</span>
+                                        <span class="widget-table_list-val">: +373 (78) 792000</span>
                                     </div>
                                     <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">Email </span>
-                                        <span class="widget-table_list-val"> : ionascu@pi.md</span>
+                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 4')}}</span>
+                                        <span class="widget-table_list-val"> : #21412</span>
                                     </div>
-                                    <div class="widget-table_list-item" @click="rowList = null">
+
+                                    <div class="widget-table_list-item">
+                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 7')}}</span>
+                                        <span class="widget-table_list-val"> : 21/08/2019</span>
+                                    </div>
+
+                                    <div class="widget-table_list-item">
+                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 6')}}</span>
+                                        <span class="widget-table_list-val"> : 21/08/2019</span>
+                                    </div>
+                                    <div class="widget-table_list-item mod_center" @click="rowList = null">
+                                        <svg class="widget-table_list-icon">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
                                         <span class="widget-table_list-title">Șterge</span>
                                     </div>
                                 </div>
-<!--                               todo: форма для редактирования  менеджера,
-                                         которая открывается на колёсико. Эта форма и есть модальное окно -->
+                                <!--                               todo: форма для редактирования  менеджера,
+                                                                         которая открывается на колёсико. Эта форма и есть модальное окно -->
                                 <div class="widget-table_modal-wrap">
                                     <div class="widget-table_modal">
 
@@ -306,7 +324,6 @@
 
             </div>
         </div>
-    </div>
     </div>
 </template>
 
