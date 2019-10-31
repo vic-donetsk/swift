@@ -110,6 +110,7 @@ $media-expressions: (
     // Limited media
         'm-only': '(min-width: 1px) and (max-width: 599px)',
         't-only': '(min-width: 600px) and (max-width: 1279px)',
+        'm-t-only': '(min-width: 1px) and (max-width: 1279px)',
         'd-only': '(min-width: 1280px)',
         'middle-d-only': '(min-width: 1080px)',
 
