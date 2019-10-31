@@ -1,7 +1,23 @@
 <template>
     <nav class="cabinet-sidebar">
         <div class="cabinet-sidebar_content">
+            <div class="header-hamburger">
+                <div class="header-hamburger_item top"></div>
+                <div class="header-hamburger_item middle"></div>
+                <div class="header-hamburger_item bottom"></div>
+            </div>
+
             <logo size="landing"></logo>
+
+            <div class="cabinet-header_notify">
+                <svg class="cabinet-header_icon">
+                    <use xlink:href="#bell"></use>
+                </svg>
+
+                <div class="cabinet-header_icon-item">
+
+                </div>
+            </div>
 
             <div class="cabinet-sidebar_person">
                 <img src="/img/person.png" class="sidebar-person_image">

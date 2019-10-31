@@ -17,24 +17,102 @@
     }
 
     .cabinet-sidebar_content {
-        padding: 37px 0 35px 0;
-        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 24px 16px 21px 16px;
+        justify-content: space-between;
+        
+        @include media('d-only'){
+            display: block;
+            padding: 37px 0 35px 0;
+            height: 100vh;
+        }
+
+        .header-hamburger {
+            position: relative;
+            width: 26px;
+            height: 14px;
+            cursor: pointer;
+
+            @include media('d-only'){
+                display: none;
+            }
+
+            .header-hamburger_item {
+                width: 26px;
+                height: 2px;
+                position: absolute;
+                background-color: $widgetActiveBlue;
+                border-radius: 1px;
+
+                &.top {
+                    top: 0;
+                }
+
+                &.middle {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &.bottom {
+                    bottom: 0;
+                }
+            }
+
+            @include media('d-only') {
+                display: none;
+            }
+        }
 
         .logo {
+
             &.landingClass {
-                padding-bottom: 36px;
-                border-bottom: 1px solid $widgetSidebarBorder;
-                margin-bottom: 37px;
+                @include media('d-only'){
+                    padding-bottom: 36px;
+                    border-bottom: 1px solid $widgetSidebarBorder;
+                    margin-bottom: 37px;
+                }
+            }
+        }
+
+        .cabinet-header_notify {
+            display: flex;
+
+            @include media("d-only") {
+                display: none;
+            }
+
+
+            .cabinet-header_icon {
+                width: 18px;
+                height: 23px;
+                fill: $mainDarkBlue;
+            }
+
+            .cabinet-header_icon-item {
+                width: 12px;
+                height: 12px;
+                position: relative;
+                background: $widgerHeaderIconElem;
+                border-radius: 50%;
+                right: 10px;
+                top: 1px;
             }
         }
     }
 
     .cabinet-sidebar_person {
-        text-align: center;
-        color: $mainDarkBlue;
-        font-size: 0;
-        margin-bottom: 41px;
-        cursor: pointer;
+        display: none;
+
+        @include media('d-only') {
+            display: block;
+            text-align: center;
+            color: $mainDarkBlue;
+            font-size: 0;
+            margin-bottom: 41px;
+            cursor: pointer;
+        }
+
 
         .sidebar-person_image {
             width: 100px;
@@ -64,8 +142,12 @@
     }
 
     .cabinet-sidebar_menu {
-        display: flex;
-        flex-direction: column;
+        display: none;
+        @include media('d-only') {
+            display: flex;
+            flex-direction: column;
+        }
+
 
         .cabinet-sidebar_item {
             display: flex;
@@ -93,15 +175,20 @@
     }
 
     .sidebar-copyright {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 28px;
-        color: $widgetMenuPassive;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        height: 205px;
+        display: none;
+
+        @include media('d-only') {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 205px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            color: $widgetMenuPassive;
+
+        }
     }
 }
 
