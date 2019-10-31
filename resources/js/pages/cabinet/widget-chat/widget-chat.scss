@@ -366,6 +366,7 @@
             background: $white;
             border: 1px solid #E3ECF5;
             border-top: none;
+            border-bottom: none;
 
             @include media('d-only') {
                 min-width: 1500px;
