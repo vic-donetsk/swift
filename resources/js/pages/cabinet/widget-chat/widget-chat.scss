@@ -46,7 +46,11 @@
         }
 
         &.mod-inputs {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
+
+            @include media('d-only') {
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -482,22 +486,22 @@
             //color: $white;
         }
 
-            .offline {
-                color: $chatEmailSettings;
-                @include media('d-only') {
-                    background-color: $widgetOffline;
-                    border: 1px solid $widgetOfflineBoder;
-                    color: $white;
-                }
+        .offline {
+            color: $chatEmailSettings;
+            @include media('d-only') {
+                background-color: $widgetOffline;
+                border: 1px solid $widgetOfflineBoder;
+                color: $white;
             }
+        }
 
-            .online {
-                @include media('d-only') {
-                    background-color: $widgetOnline;
-                    border: 1px solid $widgetOnlineBorder;
-                    color: $white;
-                }
+        .online {
+            @include media('d-only') {
+                background-color: $widgetOnline;
+                border: 1px solid $widgetOnlineBorder;
+                color: $white;
             }
+        }
 
 
         .table_item-chat {
@@ -652,4 +656,67 @@
             margin: 0;
         }
     }
+
+
+    .widget-table_modal-wrap {
+
+        @include media('d-only') {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+    }
+
+    .widget-table_modal {
+        padding-top: 22px;
+
+        .modal-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 26px;
+
+            .modal-profile_title {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                color: $mainDarkBlue;
+                margin-bottom: 10px;
+            }
+
+            .modal-profile_download {
+                position: relative;
+                cursor: pointer;
+
+                .modal-profile_image {
+                    width: 49px;
+                    height: 49px;
+                    border-radius: 50%;
+                }
+
+                .modal-profile_icon {
+                    position: absolute;
+                    width: 14px;
+                    height: 15px;
+                    fill: $white;
+                    left: 18px;
+                    top: 14px;
+                }
+            }
+
+
+        }
+
+        .widget-chat_inputs {
+            margin-bottom: 50px;
+        }
+
+        .widget-button {
+            margin-bottom: 14px;
+        }
+    }
+
 }

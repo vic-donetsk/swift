@@ -8,7 +8,8 @@ export default {
         return {
             home: true,
             title: "Главная",
-            rowList: null
+            rowList: null,
+            Modal: null
         };
     },
     created() {

@@ -195,13 +195,13 @@
                             <div class="widget-chat_table-row" v-for="item in 2">
                                 <div class="widget-chat_table-row-cells">
                                     <div class="widget-table_item mod-add_btn" @click="toggleRowList(item)">
-                                            <svg v-if="item !== rowList" class="mod-add_btn-icon">
-                                                     <use xlink:href="#plus-add"></use>
-                                            </svg>
+                                        <svg v-if="item !== rowList" class="mod-add_btn-icon">
+                                            <use xlink:href="#plus-add"></use>
+                                        </svg>
 
-                                            <svg v-else class="mod-add_btn-icon">
-                                                     <use xlink:href="#minus"></use>
-                                            </svg>
+                                        <svg v-else class="mod-add_btn-icon">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
                                     </div>
                                     <div class="widget-table_item mod-name">
                                         <span>{{__('widget','Widget name 1')}}</span>
@@ -275,51 +275,89 @@
                                 </div>
                                 <!--                               todo: форма для редактирования  менеджера,
                                                                          которая открывается на колёсико. Эта форма и есть модальное окно -->
-                                <div class="widget-table_modal-wrap">
-                                    <div class="widget-table_modal">
-
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="widget-table_modal-wrap">
+                        <div class="widget-table_modal">
+                            <div class="modal-profile">
+                                <span class="modal-profile_title">{{__('widget','Widget profile title')}}</span>
+                                <div class="modal-profile_download">
+                                    <img src="/img/widget-profile.png" class="modal-profile_image">
+                                    <svg class="modal-profile_icon">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                                <div class="widget-chat_inputs">
+                                    <div class="widget-input_wrap">
+                                        <span class="widget-input_title">{{__('widget','Widget input title 1')}}</span>
+                                        <input type="text"
+                                               class="widget-input"
+                                               :placeholder='__("widget", "Widget input placeholder 2")'>
+                                    </div>
+
+                                    <div class="widget-input_wrap">
+                                        <span class="widget-input_title">{{__('widget','Widget input title 2')}}</span>
+                                        <input type="text"
+                                               class="widget-input"
+                                               :placeholder='__("widget", "Widget input placeholder 3")'>
+                                    </div>
+
+
+                                    <div class="widget-input_wrap">
+                                        <span class="widget-input_title">{{__('widget','Widget input title 3')}}</span>
+                                        <input type="text"
+                                               class="widget-input"
+                                               :placeholder='__("widget", "Widget contact phone 1")'>
+                                    </div>
+                                </div>
+
+                                <div class="widget-button">
+                                    <span>{{__('widget','Widget deactivate button 2')}}</span>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="widget-chat_block mod-inputs">
-                <h2 class="cabinet-page_title">
-                    <svg class="cabinet-page_title-icon">
-                        <use xlink:href="#user"></use>
-                    </svg>
-                    <span>{{__('widget','Cabinet page title 13')}}</span>
-                </h2>
 
-                <div class="widget-chat_inputs">
-                    <div class="widget-input_wrap">
-                        <span class="widget-input_title">{{__('widget','Widget input title 1')}}</span>
-                        <input type="text"
-                               class="widget-input"
-                               :placeholder='__("widget", "Widget input placeholder 2")'>
+                <div class="widget-chat_block mod-inputs">
+                    <h2 class="cabinet-page_title">
+                        <svg class="cabinet-page_title-icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>{{__('widget','Cabinet page title 13')}}</span>
+                    </h2>
+
+                    <div class="widget-chat_inputs">
+                        <div class="widget-input_wrap">
+                            <span class="widget-input_title">{{__('widget','Widget input title 1')}}</span>
+                            <input type="text"
+                                   class="widget-input"
+                                   :placeholder='__("widget", "Widget input placeholder 2")'>
+                        </div>
+
+                        <div class="widget-input_wrap">
+                            <span class="widget-input_title">{{__('widget','Widget input title 2')}}</span>
+                            <input type="text"
+                                   class="widget-input"
+                                   :placeholder='__("widget", "Widget input placeholder 3")'>
+                        </div>
+
+
+                        <div class="widget-input_wrap">
+                            <span class="widget-input_title">{{__('widget','Widget input title 3')}}</span>
+                            <input type="text"
+                                   class="widget-input"
+                                   :placeholder='__("widget", "Widget contact phone 1")'>
+                        </div>
                     </div>
 
-                    <div class="widget-input_wrap">
-                        <span class="widget-input_title">{{__('widget','Widget input title 2')}}</span>
-                        <input type="text"
-                               class="widget-input"
-                               :placeholder='__("widget", "Widget input placeholder 3")'>
+                    <div class="widget-button">
+                        <span>{{__('widget','Widget deactivate button 2')}}</span>
                     </div>
 
-
-                    <div class="widget-input_wrap">
-                        <span class="widget-input_title">{{__('widget','Widget input title 3')}}</span>
-                        <input type="text"
-                               class="widget-input"
-                               :placeholder='__("widget", "Widget contact phone 1")'>
-                    </div>
-                </div>
-
-                <div class="widget-button">
-                    <span>{{__('widget','Widget deactivate button 2')}}</span>
                 </div>
 
             </div>
