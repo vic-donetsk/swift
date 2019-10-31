@@ -1,0 +1,117 @@
+.cabinet-header_notify {
+    position: relative;
+
+    &.mod_active {
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: $widgerHeaderIconElem;
+            border-radius: 50%;
+            right: -2px;
+            top: 1px;
+        }
+    }
+
+    .cabinet-header_icon {
+        width: 18px;
+        height: 23px;
+        fill: $mainDarkBlue;
+    }
+}
+
+.cabinet-page_title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 31px;
+    color: $mainDarkBlue;
+
+    @include media('t-ipad') {
+        text-align: center;
+    }
+
+    @include media('d-only'){
+        text-align: left;
+    }
+
+    .cabinet-page_title-icon {
+        width: 17px;
+        height: 17px;
+        fill: $mainDarkBlue;
+    }
+}
+
+.widget-input {
+    width: 286px;
+    height: 45px;
+    padding: 0 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 11px;
+    color: $mainDarkBlue;
+    border: 1px solid $inputBorder;
+    border-radius: 8px;
+    background-color: $white;
+
+    @include media("d-only"){
+        width: 264px;
+        height: 49px;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 11px;
+        color: $inputBorder;
+
+        @include media("d-only"){
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+    }
+}
+
+.widget_mobile-button {
+    width: auto;
+    height: 49px;
+    justify-content: flex-start;
+    margin: 40px 17px 0;
+
+    @include media('t-ipad') {
+        width: 287px;
+        margin: 40px auto 0;
+    }
+
+    @include media('d-only') {
+        display: none;
+    }
+
+    .widget_mobile-button_icon {
+        width: 14px;
+        height: 14px;
+        stroke: $white;
+        fill: $white;
+
+        &:not(:last-of-type) {
+            margin-right: 7px;
+        }
+    }
+
+    .widget_mobile-button_text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        height: 16px;
+        flex: 1;
+        color: $white;
+
+    }
+}
+
