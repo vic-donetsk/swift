@@ -92,23 +92,6 @@
         @include media("d-only") {
             display: flex;
         }
-
-
-        .cabinet-header_icon {
-            width: 18px;
-            height: 23px;
-            fill: $mainDarkBlue;
-        }
-
-        .cabinet-header_icon-item {
-            width: 12px;
-            height: 12px;
-            position: relative;
-            background: $widgerHeaderIconElem;
-            border-radius: 50%;
-            right: 10px;
-            top: 1px;
-        }
     }
 
     .cabinet-header_content {

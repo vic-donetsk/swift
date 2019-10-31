@@ -58,14 +58,10 @@
 
                 </div>
 
-                <div class="cabinet-header_notify">
+                <div class="cabinet-header_notify mod_active">
                     <svg class="cabinet-header_icon">
                         <use xlink:href="#bell"></use>
                     </svg>
-
-                    <div class="cabinet-header_icon-item">
-
-                    </div>
                 </div>
             </div>
 

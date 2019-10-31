@@ -159,35 +159,27 @@
                             <div class="widget-table_head-item mod-name">
                                 <span>{{__('widget','Widget chat head 1')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-email mod-desktop">
                                 <span>{{__('widget','Widget chat head 2')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-phone mod-desktop">
                                 <span>{{__('widget','Widget chat head 3')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-id mod-desktop">
                                 <span>{{__('widget','Widget chat head 4')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-settings">
                                 <span>{{__('widget','Widget chat head 5')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-state mod-desktop">
                                 <span>{{__('widget','Widget chat head 6')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-date mod-desktop">
                                 <span>{{__('widget','Widget chat head 7')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-chat">
                                 <span>{{__('widget','Widget chat head 8')}}</span>
                             </div>
-
                             <div class="widget-table_head-item mod-cross mod-desktop"></div>
                         </div>
 
@@ -217,7 +209,7 @@
                                         <span>#21412</span>
                                     </div>
                                     <div class="widget-table_item mod-settings">
-                                        <svg class="widget-table_icon-settings">
+                                        <svg class="widget-table_icon-settings" @click="openModal = true">
                                             <use xlink:href="#settings"></use>
                                         </svg>
                                     </div>
@@ -279,49 +271,48 @@
                         </div>
                     </div>
 
-                    <div class="widget-table_modal-wrap">
+                    <div class="widget-table_modal-wrap" v-if="openModal">
                         <div class="widget-table_modal">
                             <div class="modal-profile">
                                 <span class="modal-profile_title">{{__('widget','Widget profile title')}}</span>
-                                <div class="modal-profile_download">
+                                <div class="modal-profile_avatar">
                                     <img src="/img/widget-profile.png" class="modal-profile_image">
                                     <svg class="modal-profile_icon">
                                         <use xlink:href="#download"></use>
                                     </svg>
                                 </div>
                             </div>
-                                <div class="widget-chat_inputs">
-                                    <div class="widget-input_wrap">
-                                        <span class="widget-input_title">{{__('widget','Widget input title 1')}}</span>
-                                        <input type="text"
-                                               class="widget-input"
-                                               :placeholder='__("widget", "Widget input placeholder 2")'>
-                                    </div>
-
-                                    <div class="widget-input_wrap">
-                                        <span class="widget-input_title">{{__('widget','Widget input title 2')}}</span>
-                                        <input type="text"
-                                               class="widget-input"
-                                               :placeholder='__("widget", "Widget input placeholder 3")'>
-                                    </div>
-
-
-                                    <div class="widget-input_wrap">
-                                        <span class="widget-input_title">{{__('widget','Widget input title 3')}}</span>
-                                        <input type="text"
-                                               class="widget-input"
-                                               :placeholder='__("widget", "Widget contact phone 1")'>
-                                    </div>
+                            <div class="widget-chat_inputs">
+                                <div class="widget-input_wrap">
+                                    <span class="widget-input_title">{{__('widget','Widget input title 1')}}</span>
+                                    <input type="text"
+                                           class="widget-input"
+                                           :placeholder='__("widget", "Widget input placeholder 2")'>
                                 </div>
 
-                                <div class="widget-button">
-                                    <span>{{__('widget','Widget deactivate button 2')}}</span>
+                                <div class="widget-input_wrap">
+                                    <span class="widget-input_title">{{__('widget','Widget input title 2')}}</span>
+                                    <input type="text"
+                                           class="widget-input"
+                                           :placeholder='__("widget", "Widget input placeholder 3")'>
                                 </div>
+
+
+                                <div class="widget-input_wrap">
+                                    <span class="widget-input_title">{{__('widget','Widget input title 3')}}</span>
+                                    <input type="text"
+                                           class="widget-input"
+                                           :placeholder='__("widget", "Widget contact phone 1")'>
+                                </div>
+                            </div>
+
+                            <div class="widget-button" @click="openModal = false">
+                                <span>{{__('widget','Widget deactivate button 2')}}</span>
+                            </div>
                         </div>
+                        <div class="widget-table_modal-blackout" @click="openModal = false"></div>
                     </div>
                 </div>
-
-
                 <div class="widget-chat_block mod-inputs">
                     <h2 class="cabinet-page_title">
                         <svg class="cabinet-page_title-icon">
@@ -359,7 +350,6 @@
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>

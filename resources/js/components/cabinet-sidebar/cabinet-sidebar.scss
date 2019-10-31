@@ -21,8 +21,8 @@
         align-items: center;
         padding: 24px 16px 21px 16px;
         justify-content: space-between;
-        
-        @include media('d-only'){
+
+        @include media('d-only') {
             display: block;
             padding: 37px 0 35px 0;
             height: 100vh;
@@ -34,7 +34,7 @@
             height: 14px;
             cursor: pointer;
 
-            @include media('d-only'){
+            @include media('d-only') {
                 display: none;
             }
 
@@ -67,7 +67,7 @@
         .logo {
 
             &.landingClass {
-                @include media('d-only'){
+                @include media('d-only') {
                     padding-bottom: 36px;
                     border-bottom: 1px solid $widgetSidebarBorder;
                     margin-bottom: 37px;
@@ -76,27 +76,10 @@
         }
 
         .cabinet-header_notify {
-            display: flex;
+            display: block;
 
             @include media("d-only") {
                 display: none;
-            }
-
-
-            .cabinet-header_icon {
-                width: 18px;
-                height: 23px;
-                fill: $mainDarkBlue;
-            }
-
-            .cabinet-header_icon-item {
-                width: 12px;
-                height: 12px;
-                position: relative;
-                background: $widgerHeaderIconElem;
-                border-radius: 50%;
-                right: 10px;
-                top: 1px;
             }
         }
     }
