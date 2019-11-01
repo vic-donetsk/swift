@@ -178,16 +178,24 @@ export default {
         },
         mobileShowDetails(newOpen) {
             let activeElem = document.querySelector('#rowFull' + newOpen);
+            let activeSign = document.querySelector('#sign' + newOpen);
 
             if (newOpen === this.openFullMobile) {
                 activeElem.style.height = 0;
+                activeSign.classList.remove('mod_open');
+                activeSign.classList.add('mod_closed');
                 this.openFullMobile = -1;
             } else {
                 if (this.openFullMobile !== -1) {
                     let prevElem = document.querySelector("#rowFull" + this.openFullMobile);
+                    let prevSign = document.querySelector("#sign" + this.openFullMobile);
                     prevElem.style.height = 0;
+                    prevSign.classList.remove('mod_open');
+                    prevSign.classList.add('mod_closed');
                 }
                 activeElem.style.height = '500px';
+                activeSign.classList.remove('mod_closed');
+                activeSign.classList.add('mod_open');
                 this.openFullMobile = newOpen;
             }
         },

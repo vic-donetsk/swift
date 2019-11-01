@@ -150,7 +150,7 @@
                 <div v-for="(oneRecord, index) in list" class="mobileTableColumns_row">
                     <div class="mobileTableColumns_row-brief">
                         <div class="row-brief_item mod_plus">
-                            <div @click="mobileShowDetails(index)">+</div>
+                            <div :id="'sign' + index" class="signOpenClose mod_closed" @click="mobileShowDetails(index)"></div>
                         </div>
                         <div class="row-brief_item mod_data">{{oneRecord.date}}</div>
                         <div class="row-brief_item mod_time">{{oneRecord.time}}</div>
@@ -391,7 +391,6 @@
                     </g>
                 </svg>
             </symbol>
-
         </svg>
     </div>
 </template>

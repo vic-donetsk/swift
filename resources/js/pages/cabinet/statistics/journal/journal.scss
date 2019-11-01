@@ -395,7 +395,35 @@
     }
 
     .mod_plus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 12.6%;
+
+        .signOpenClose {
+            //position: relative;
+            width: 19px;
+            height: 19px;
+            //background-color: $mainDarkBlue;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &.mod_closed::after {
+                content: url('/img/charts/plus.svg');
+                display: block;
+                width: 19px;
+                height: 19px;
+                margin-top: -4px;
+
+            }
+            &.mod_open::after {
+                content: url('/img/charts/minus.svg');
+                display: block;
+                width: 19px;
+                height: 19px;
+                margin-top: -4px;
+            }
+        }
     }
 
     .mod_data {
