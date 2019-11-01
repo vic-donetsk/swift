@@ -147,8 +147,6 @@
                     </chart-js>
                 </div>
 
-                <statistics-journal :isCalls="true" :list="journalData"></statistics-journal>
-
             </div>
 
             <div v-else class="statistics_diagrams">
@@ -199,13 +197,12 @@
                     </chart-js>
                 </div>
 
-                <statistics-journal :isCalls="false" :list="journalChatsData"></statistics-journal>
-
-
             </div>
 
 
         </div>
+            <statistics-journal v-if="isCalls" :isCalls="true" :list="journalData"></statistics-journal>
+            <statistics-journal v-else :isCalls="false" :list="journalChatsData"></statistics-journal>
     </div>
 </template>
 

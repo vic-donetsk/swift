@@ -20,6 +20,10 @@
         font-weight: 800;
         color: $mainDarkBlue;
 
+        @include media('m-t-only') {
+            font-size: 40px;
+        }
+
     }
 
     .title_numbers-percent {
@@ -27,6 +31,11 @@
         margin-left: 0.7vw;
         font-size: 0.63vw;
         font-weight: 700;
+
+        @include media('m-t-only') {
+            margin-left: 10px;
+            font-size: 12px;
+        }
 
         &::before {
             content: '';
@@ -37,13 +46,25 @@
             position: absolute;
             left: -0.5vw;
             top: -0.05vw;
+            @include media('m-t-only') {
+                border-left: 3.5px solid transparent;
+                border-right: 3.5px solid transparent;
+                left: -9px;
+                top: 1px;
+            }
         }
+
+
 
         &.mod_increase {
             color: #35AC00;
 
             &::before {
                 border-bottom: 0.5vw solid #35AC00;
+
+                @include media('m-t-only') {
+                    border-bottom: 8px solid #35AC00;
+                }
             }
         }
 
@@ -52,6 +73,10 @@
 
             &::before {
                 border-top: 0.5vw solid #D31616;
+
+                @include media('m-t-only') {
+                    border-top: 8px solid #D31616;
+                }
             }
         }
     }
@@ -60,6 +85,11 @@
         font-size: 0.79vw;
         font-weight: 500;
         color: #8995AD;
+
+        @include media('m-t-only') {
+            font-size: 15px;
+        }
+
     }
 
 }

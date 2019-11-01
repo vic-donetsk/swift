@@ -3,6 +3,13 @@
 .statistics-journal {
     position: relative;
     margin-bottom: 10px;
+    padding: 0 2.47% 0;
+
+    @include media ('m-t-only') {
+        padding: 0;
+    }
+
+
 }
 
 .mod_chat {
@@ -13,12 +20,17 @@
 .statistics_journal-title {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     margin-top: 54px;
     font-size: 20px;
     font-weight: 700;
     color: $mainDarkBlue;
     fill: $mainDarkBlue;
+
+    @include media('m-t-only') {
+        margin-top: 38px;
+        margin-left: 5.3%;
+    }
 
     .title_icon {
         width: 16px;
@@ -32,6 +44,10 @@
     font-weight: 400;
     color: $widgetDeactivateLink;
     margin: 0 0 35px 15px;
+
+    @include media('m-t-only') {
+        margin-left: calc(5.3% + 15px);
+    }
 
     span {
         color: $mainDarkBlue;
@@ -50,6 +66,10 @@
     height: 48px;
     background: $lightBlueGradientFrom;
     cursor: pointer;
+
+    @include media('m-t-only') {
+        display: none;
+    }
 
     .settings_settings {
         width: 22px;
@@ -73,6 +93,10 @@
     margin-bottom: 15px;
     background: $lightBlueGradientFrom;
     z-index: 10;
+
+    @include media('m-t-only') {
+        display: none;
+    }
 }
 
 .tableColumns_checkbox {
@@ -113,6 +137,10 @@
 .statistics_tableColumns {
     border-collapse: collapse;
     overflow-x: scroll;
+
+    @include media('m-t-only') {
+        display: none;
+    }
 
     th {
         height: 94px;
