@@ -29,9 +29,6 @@
         }
     }
 
-
-
-
     .landing-plan_title {
         font-size: 30px;
         font-weight: 700;
@@ -63,6 +60,7 @@
 
     .landing-plan_block {
         background: $landingPlanBackground;
+        box-shadow: 0 3px 12px rgba(189, 211, 252, 0.21);
         border-radius: 8px;
         padding: 50px 42px 40px;
         width: 100%;

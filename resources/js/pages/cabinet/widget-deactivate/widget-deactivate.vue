@@ -1,12 +1,12 @@
 <template>
     <div class="cabinet_page widget-deactivate">
 
-        <div class="widget_mobile-button button mod-blue">
-            <svg class="widget_mobile-button_icon">
+        <div class="cabinet_mobile-button button mod-blue">
+            <svg class="cabinet_mobile-button_icon">
                 <use xlink:href="#disable"></use>
             </svg>
-            <span class="widget_mobile-button_text">{{__('widget','Widget menu text 6')}}</span>
-            <svg class="widget_mobile-button_icon">
+            <span class="cabinet_mobile-button_text">{{__('widget','Widget menu text 6')}}</span>
+            <svg class="cabinet_mobile-button_icon">
                 <use xlink:href="#arrow"></use>
             </svg>
         </div>

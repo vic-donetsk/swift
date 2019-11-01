@@ -1,0 +1,240 @@
+@import '@/app';
+
+.billing-abonnement {
+
+    .billing_container {
+        max-width: 1625px;
+        padding: 39px 17px 0;
+
+        @include media('d-only') {
+            padding: 54px 45px 0 38px;
+
+        }
+
+        .billing-abonnement_content{
+            max-width: 1315px;
+        }
+
+        .cabinet-page_title {
+            margin-bottom: 30px;
+
+            @include media('d-only') {
+                &.mod_margin {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 16px;
+            height: 16px;
+            margin: 0 19px;
+            background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+
+            .slide-btn{
+
+                @include media('d-only'){
+                    display: none;
+                }
+                .slide-arrow_icon{
+                    width: 20px;
+                    height: 10px;
+                    fill: $widgetActiveBlue;
+                }
+            }
+        }
+
+        .landing-plan_container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 440px;
+            margin: auto;
+
+            @include media('d-only') {
+                max-width: 100%;
+            }
+        }
+
+        .landing-plan_block {
+            background: $landingPlanBackground;
+            box-shadow: 0 3px 12px rgba(189, 211, 252, 0.21);
+            border-radius: 8px;
+            padding: 50px 42px 40px;
+            width: 100%;
+
+            @include media('d-only') {
+                border: 1px solid $landingPlanBorder;
+                padding: 60px 70px 55px;
+            }
+
+            &.left {
+                .landing-plan_name {
+                    &:before {
+                        background: $landingPlanLineBlue;
+                    }
+                }
+            }
+
+            &.middle {
+                .landing-plan_name {
+                    &:before {
+                        background: $landingPlanLineGreen;
+                    }
+                }
+            }
+
+            &.right {
+                .landing-plan_name {
+                    &:before {
+                        background: $landingPlanLineBrown;
+                    }
+                }
+
+            }
+        }
+
+        .landing-plan_image {
+            width: 100%;
+            height: 165px;
+            margin-bottom: 62px;
+
+            @include media('d-only') {
+                height: 230px;
+                margin-bottom: 80px;
+            }
+        }
+
+        .landing-plan_name {
+            font-size: 21px;
+            font-weight: 500;
+            text-align: center;
+            color: $mainDarkBlue;
+            line-height: 32px;
+            padding-bottom: 37px;
+            position: relative;
+            margin-bottom: 35px;
+            border-bottom: 1px solid $landingPlanBorderMobi;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 18px;
+                height: 2px;
+            }
+
+            @include media('d-only') {
+                font-size: 30px;
+                line-height: 45px;
+                padding-bottom: 50px;
+                margin-bottom: 50px;
+
+                &:before {
+                    width: 25px;
+                    height: 3px;
+                }
+            }
+        }
+
+        .landing-plan_price {
+            text-align: center;
+            color: $mainDarkBlue;
+            margin-bottom: 36px;
+
+            @include media('d-only') {
+                margin-bottom: 50px;
+            }
+
+            .landin-plan_sum {
+
+                .landing-plan_sum-icon {
+                    width: 22px;
+                    height: 27px;
+                    fill: $mainDarkBlue;
+
+                    @include media('d-only') {
+                        width: 30px;
+                        height: 37px;
+                    }
+                }
+
+                .landing-plan_sum-number {
+                    font-size: 36px;
+                    line-height: 32px;
+                    font-weight: 600;
+
+                    @include media('d-only') {
+                        font-size: 50px;
+                        line-height: 45px;
+                    }
+                }
+            }
+
+            .landing-plan_price-text {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 33px;
+
+                @include media('d-only') {
+                    font-size: 22px;
+                    line-height: 45px;
+                }
+            }
+        }
+
+        .button {
+            margin: 0 auto 35px;
+            max-width: 164px;
+            height: 48px;
+
+
+            @include media("d-only") {
+                margin: 0 auto 50px;
+            }
+        }
+
+        .landing-plan_list-title {
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 600;
+            color: $mainDarkBlue;
+
+            @include media("d-only") {
+                font-size: 20px;
+                line-height: 45px;
+            }
+        }
+
+        .landing-plan_list {
+            font-size: 14px;
+            line-height: 33px;
+            font-weight: 400;
+            color: $widgetActiveBlue;
+
+            &:not(:last-of-type) {
+                margin-bottom: 26px;
+            }
+
+            & > * {
+                display: block;
+            }
+
+            @include media("d-only") {
+                font-size: 16px;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 37px;
+                }
+            }
+        }
+
+        .swiper-slide {
+            @include media("d-only") {
+                width: 33.33%;
+            }
+        }
+    }
+}

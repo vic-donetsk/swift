@@ -8,6 +8,7 @@ import widget from './pages/cabinet/widget/widget.vue';
 import widgetInstall from './pages/cabinet/widget-install/widget-install.vue';
 import widgetDeactivate from './pages/cabinet/widget-deactivate/widget-deactivate.vue';
 import widgetChat from './pages/cabinet/widget-chat/widget-chat.vue';
+import billingAbonnement from './pages/cabinet/billing-abonnement/billing-abonnement.vue';
 import cabinet from './components/cabinet/cabinet.vue';
 
 export default [
@@ -69,6 +70,11 @@ export default [
                 path: 'widget/chat',
                 name: 'cabinet-widget-chat',
                 component: widgetChat,
+            },
+            {
+                path: 'billing/abonnement',
+                name: 'cabinet-billing-abonnement',
+                component: billingAbonnement,
             }
         ]
     },

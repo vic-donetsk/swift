@@ -1,21 +1,21 @@
 @import '@/app';
 
-.widget-steps {
+.billing-steps {
     display: none;
     flex-wrap: wrap;
     margin-left: 24px;
-    margin-bottom: 54px;
+    margin-bottom: 51px;
 
     @include media("d-only") {
         display: flex;
     }
 
-    .widget-steps_item {
+    .billing-steps_item {
         @extend %lightBlueGradient;
 
         width: 100%;
-        min-width: 250px;
-        max-width: 280px;
+        min-width: 530px;
+        max-width: 547px;
         height: 49px;
 
         display: flex;
@@ -33,20 +33,20 @@
             padding-left: 54px;
         }
 
-        @for $i from 1 through 6 {
+        @for $i from 1 through 3 {
             &:nth-of-type(#{$i}) {
-                z-index: 6 - $i + 1;
+                z-index: 3 - $i + 1;
             }
         }
 
-        .widget-steps_icon {
+        .billing-steps_icon {
             width: 14px;
             height: 14px;
             fill: $mainDarkBlue;
             margin-right: 7px;
         }
 
-        .widget-steps_text {
+        .billing-steps_text {
             font-size: 16px;
             font-weight: 400;
             line-height: 18px;
