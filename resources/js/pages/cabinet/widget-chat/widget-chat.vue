@@ -274,6 +274,11 @@
                     <div class="widget-table_modal-wrap" v-if="openModal">
                         <div class="widget-table_modal">
                             <div class="modal-profile">
+                                <div class="modal-profile_user">
+                                    <svg class="modal-user_icon">
+                                        <use xlink:href="#user"></use>
+                                    </svg>
+                                </div>
                                 <span class="modal-profile_title">{{__('widget','Widget profile title')}}</span>
                                 <div class="modal-profile_avatar">
                                     <img src="/img/widget-profile.png" class="modal-profile_image">
@@ -281,6 +286,7 @@
                                         <use xlink:href="#download"></use>
                                     </svg>
                                 </div>
+
                             </div>
                             <div class="widget-chat_inputs">
                                 <div class="widget-input_wrap">

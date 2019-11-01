@@ -15,13 +15,22 @@
         height: 16px;
         margin: 0 19px;
         background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+
+        .slide-btn{
+
+            @include media('d-only'){
+                display: none;
+            }
+            .slide-arrow_icon{
+                width: 20px;
+                height: 10px;
+                fill: $widgetActiveBlue;
+            }
+        }
     }
 
-    .slide-arrow_icon{
-        width: 20px;
-        height: 10px;
-        fill: $widgetActiveBlue;
-    }
+
+
 
     .landing-plan_title {
         font-size: 30px;

@@ -686,22 +686,20 @@
     }
 
     .widget-table_modal {
+        padding-top: 22px;
+
         @include media('d-only') {
             position: absolute;
             top: 50%;
             left: 50%;
             z-index: 3;
+            width: 982px;
+            height: 645px;
 
             transform: translate(-50%, -50%);
             background: $white;
             border-radius: 8px;
-        }
-
-
-        padding-top: 22px;
-
-        .widget-input_wrap:not(:last-of-type) {
-            border: none;
+            padding-top: 49px;
         }
 
         .modal-profile {
@@ -709,6 +707,10 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 26px;
+
+            @include media('d-only') {
+                margin-bottom: 62px;
+            }
 
             .modal-profile_title {
                 font-size: 14px;
@@ -725,6 +727,9 @@
                 border-radius: 50%;
                 overflow: hidden;
 
+                @include media('d-only'){
+                    display: none;
+                }
 
                 &:before {
                     content: "";
@@ -756,16 +761,64 @@
                 }
             }
 
+            .modal-profile_user {
+                display: none;
 
+                @include media('d-only') {
+                    display: block;
+                    border: 2px solid $widgetActiveBlue;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-bottom: 16px;
+                }
+
+                .modal-user_icon {
+                    position: relative;
+                    top: 2px;
+
+                    display: block;
+                    width: 24px;
+                    height: 22px;
+                    fill: $widgetActiveBlue;
+                }
+            }
         }
 
         .widget-chat_inputs {
             margin-bottom: 50px;
+
+            @include media('d-only') {
+                margin-bottom: 31px;
+                align-items: center;
+                flex-direction: column;
+
+                .widget-input_wrap {
+                    padding-right: 0;
+                    margin: 0;
+
+                    &:not(:last-of-type) {
+                        border: none;
+                        margin-bottom: 31px;
+                    }
+                }
+
+                .widget-input {
+                    width: 307px;
+                }
+            }
         }
 
         .widget-button {
             margin-bottom: 14px;
+
+            @include media('d-only') {
+                width: 307px;
+                border-radius: 0;
+                background-image: linear-gradient(to right bottom, $blueGradientFrom, $blueGradientTo);
+                margin: 0 auto;
+            }
         }
     }
-
 }
