@@ -279,7 +279,8 @@
                                         <use xlink:href="#user"></use>
                                     </svg>
                                 </div>
-                                <span class="modal-profile_title">{{__('widget','Widget profile title')}}</span>
+                                <span class="modal-profile_title mod-mobile">{{__('widget','Widget profile title 1')}}</span>
+                                <span class="modal-profile_title">{{__('widget','Widget profile title 2')}}</span>
                                 <div class="modal-profile_avatar">
                                     <img src="/img/widget-profile.png" class="modal-profile_image">
                                     <svg class="modal-profile_icon">

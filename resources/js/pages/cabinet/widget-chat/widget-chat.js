@@ -9,7 +9,7 @@ export default {
             home: true,
             title: "Главная",
             rowList: null,
-            openModal: true
+            openModal: false
         };
     },
     created() {
