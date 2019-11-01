@@ -22,12 +22,12 @@
                     <span>{{__('widget','Cabinet page title 2')}}</span>
                 </h2>
                 <div class="landing-plan_container">
-<!--                    <div class="swiper-button-prev slide-btn">-->
-<!--                        <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-button-next slide-btn">-->
-<!--                        <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>-->
-<!--                    </div>-->
+                    <div class="swiper-button-prev slide-btn left">
+                        <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>
+                    </div>
+                    <div class="swiper-button-next slide-btn left">
+                        <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>
+                    </div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">

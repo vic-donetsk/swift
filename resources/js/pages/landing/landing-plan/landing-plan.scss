@@ -3,7 +3,6 @@
 .landing-plan {
     max-width: 1379px;
     margin: 0 auto 77px;
-    position: relative;
 
     @include media('d-only') {
         margin: 0 auto 80px;
@@ -15,17 +14,35 @@
         height: 16px;
         margin: 0 19px;
         background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+        top: 12px;
+        bottom: auto;
+        left: auto;
+        right: auto;
+    }
 
-        .slide-btn{
+    .slide-btn {
+        height: 22px;
 
-            @include media('d-only'){
-                display: none;
-            }
-            .slide-arrow_icon{
-                width: 20px;
-                height: 10px;
-                fill: $widgetActiveBlue;
-            }
+        &.left {
+            left: 77px;
+            top: -35px;
+            right: auto;
+        }
+
+        &.right {
+            left: auto;
+            top: -35px;
+            right: 77px;
+        }
+
+        @include media('d-only') {
+            display: none;
+        }
+
+        .slide-arrow_icon {
+            width: 30px;
+            height: 22px;
+            fill: $widgetActiveBlue;
         }
     }
 
@@ -35,7 +52,7 @@
         line-height: 35px;
         color: $mainDarkBlue;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 90px;
 
         @include media('t') {
             padding: 0 44px;
@@ -48,6 +65,7 @@
     }
 
     .landing-plan_container {
+        position: relative;
         display: flex;
         justify-content: space-between;
         max-width: 440px;
