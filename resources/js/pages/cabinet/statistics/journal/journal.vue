@@ -80,7 +80,14 @@
                         <a :href="oneRecord.callPage" target="_blank">{{oneRecord.callPage}}</a>
                     </td>
                     <td v-if="checkedNames.indexOf('ip') !== -1">{{oneRecord.ip}}</td>
-                    <td v-if="checkedNames.indexOf('notes') !== -1">{{oneRecord.notes}}</td>
+                    <td v-if="checkedNames.indexOf('notes') !== -1">
+                        <div class="withNotes">
+                            <div class="withNotes_text">{{oneRecord.notes}}</div>
+                            <svg @click="openNotes(index)">
+                                <use xlink:href="#openNote"></use>
+                            </svg>
+                        </div>
+                    </td>
                     <td v-if="checkedNames.indexOf('region') !== -1">{{oneRecord.region}}</td>
 
                 </tr>
@@ -150,7 +157,8 @@
                 <div v-for="(oneRecord, index) in list" class="mobileTableColumns_row">
                     <div class="mobileTableColumns_row-brief">
                         <div class="row-brief_item mod_plus">
-                            <div :id="'sign' + index" class="signOpenClose mod_closed" @click="mobileShowDetails(index)"></div>
+                            <div :id="'sign' + index" class="signOpenClose mod_closed"
+                                 @click="mobileShowDetails(index)"></div>
                         </div>
                         <div class="row-brief_item mod_data">{{oneRecord.date}}</div>
                         <div class="row-brief_item mod_time">{{oneRecord.time}}</div>
@@ -183,15 +191,28 @@
                         </div>
                         <div class="row-full_item">
                             <div class="half"><span>{{__('statistics', 'Home page')}}&nbsp;:</span></div>
-                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.homePage}}</a></div>
+                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.homePage}}</a>
+                            </div>
                         </div>
                         <div class="row-full_item">
-                            <div class="half"><span>{{__('statistics', 'The page on which the call was made')}}&nbsp;:</span></div>
-                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.callPage}}</a></div>
+                            <div class="half">
+                                <span>{{__('statistics', 'The page on which the call was made')}}&nbsp;:</span></div>
+                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.callPage}}</a>
+                            </div>
                         </div>
-                        <div class="row-full_item"><span>{{__('statistics', 'IP')}}</span>&nbsp;:&nbsp;{{oneRecord.ip}}</div>
-                        <div class="row-full_item"><span>{{__('statistics', 'Notes')}}</span>&nbsp;:&nbsp;{{oneRecord.notes}}</div>
-                        <div class="row-full_item"><span>{{__('statistics', 'Region')}}</span>&nbsp;:&nbsp;{{oneRecord.region}}</div>
+                        <div class="row-full_item"><span>{{__('statistics', 'IP')}}</span>&nbsp;:&nbsp;{{oneRecord.ip}}
+                        </div>
+                        <div class="row-full_item">
+                            <div class="withNotes">
+                                <span>{{__('statistics', 'Notes')}}&nbsp;:&nbsp;</span>
+                                <div class="withNotes_text">{{oneRecord.notes}}</div>
+                                <svg @click="openNotes(index)">
+                                    <use xlink:href="#openNote"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="row-full_item"><span>{{__('statistics', 'Region')}}</span>&nbsp;:&nbsp;{{oneRecord.region}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -388,6 +409,15 @@
                         <path id="Path_1549" data-name="Path 1549"
                               d="M205.114,36.714a.54.54,0,0,0-.395-.167h-4.492a.558.558,0,0,0-.395.956l1.544,1.544-5.72,5.721a.276.276,0,0,0,0,.4l1,1a.276.276,0,0,0,.4,0l5.72-5.72L204.324,42a.562.562,0,0,0,.956-.395V37.108A.54.54,0,0,0,205.114,36.714Z"
                               transform="translate(-189.558 -36.547)" fill="#4c638f"/>
+                    </g>
+                </svg>
+            </symbol>
+            <symbol id="openNote">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.76 11.76">
+                    <g id="pencil-on-a-notes-paper" transform="translate(1255 111)">
+                        <path id="Path_438" data-name="Path 438"
+                              d="M10.29,4.069V10.29a1.47,1.47,0,0,1-1.47,1.47H1.47A1.47,1.47,0,0,1,0,10.29V2.94A1.47,1.47,0,0,1,1.47,1.47H7.691L6.222,2.94H1.47v7.35H8.82V5.539ZM9.162,1.039l-.52.52L10.2,3.118l.52-.52ZM10.2,0l-.52.52,1.559,1.559.52-.52ZM3.445,6.757,5,8.316,9.682,3.638,8.123,2.079ZM2.94,8.82H4.41L2.94,7.35Z"
+                              transform="translate(-1255 -111)" fill="#00215f"/>
                     </g>
                 </svg>
             </symbol>

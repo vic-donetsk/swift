@@ -199,7 +199,10 @@ export default {
                 this.openFullMobile = newOpen;
             }
         },
-
+        openNotes(index) {
+          // TODO: handle click on "open notes" icon in calls journal
+            // index = order number in list
+        },
         searchChatID(chatId) {
             // TODO: search chat dialog with id = chatId
 
