@@ -28,6 +28,7 @@
                     <div class="swiper-button-next slide-btn left">
                         <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>
                     </div>
+                    <div class="swiper-pagination mod-green"></div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -56,7 +57,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                             <div class="swiper-slide">
                                 <div class="landing-plan_block middle">
                                     <img src="/img/illustration/Profesional.svg" class="landing-plan_image">
@@ -89,7 +89,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                             <div class="swiper-slide">
                                 <div class="landing-plan_block right">
                                     <img src="/img/illustration/Premium.svg" class="landing-plan_image">
@@ -123,7 +122,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination mod-green"></div>
                     </div>
                 </div>
             </div>

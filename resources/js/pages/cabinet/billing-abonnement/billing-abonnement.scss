@@ -1,6 +1,78 @@
 @import '@/app';
 
 .billing-abonnement {
+    .swiper-container {
+        @include media('d-only') {
+            padding: 0 10px;
+        }
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+        padding-bottom: 14px;
+
+        @include media('d-only') {
+            overflow: visible;
+        }
+    }
+
+    .swiper-pagination {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -54px;
+        font-size: 0;
+    }
+
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        margin: 0 19px;
+        outline: none;
+        background: #EFF8FD;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+            background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+        }
+    }
+
+    .slide-btn {
+        width: auto;
+        height: auto;
+        outline: none;
+        background: none;
+
+        &.swiper-button-prev {
+            left: 77px;
+            top: -35px;
+            right: auto;
+
+            .slide-arrow_icon {
+                transform: rotateZ(90deg);
+            }
+        }
+
+        &.swiper-button-next {
+            left: auto;
+            top: -35px;
+            right: 77px;
+
+            .slide-arrow_icon {
+                transform: rotateZ(-90deg);
+            }
+        }
+
+        @include media('d-only') {
+            display: none;
+        }
+
+        .slide-arrow_icon {
+            display: block;
+            width: 30px;
+            height: 22px;
+            stroke: $widgetActiveBlue;
+        }
+    }
 
     .billing_container {
         max-width: 1625px;
@@ -20,42 +92,6 @@
 
             @include media('d-only') {
                 margin-bottom: 16px;
-            }
-        }
-
-        .swiper-pagination-bullet {
-            width: 16px;
-            height: 16px;
-            margin: 0 19px;
-            background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
-        }
-
-        .slide-btn {
-            height: 22px;
-            background-size: contain;
-
-            &.left {
-                left: 77px;
-                top: -35px;
-                right: auto;
-
-
-            }
-
-            &.right {
-                left: auto;
-                top: -35px;
-                right: 77px;
-            }
-
-            @include media('d-only') {
-                display: none;
-            }
-
-            .slide-arrow_icon {
-                width: 30px;
-                height: 22px;
-                fill: $widgetActiveBlue;
             }
         }
 

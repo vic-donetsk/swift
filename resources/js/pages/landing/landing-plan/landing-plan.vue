@@ -3,12 +3,17 @@
         <h2 class="landing-plan_title">{{__("landing", "Plan title")}}</h2>
 
         <div class="landing-plan_container">
-            <div class="swiper-button-prev slide-btn left">
-                <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>
+            <div class="swiper-button-prev slide-btn">
+                <svg class="slide-arrow_icon">
+                    <use xlink:href="#arrow"></use>
+                </svg>
             </div>
-            <div class="swiper-button-next slide-btn right">
-                <svg class="slide-arrow_icon"><use xlink:href="#arrow"></use></svg>
+            <div class="swiper-button-next slide-btn">
+                <svg class="slide-arrow_icon">
+                    <use xlink:href="#arrow"></use>
+                </svg>
             </div>
+            <div class="swiper-pagination mod-green"></div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -104,7 +109,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination mod-green"></div>
             </div>
         </div>
 
