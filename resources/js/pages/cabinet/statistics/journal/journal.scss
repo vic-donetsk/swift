@@ -3,6 +3,10 @@
 .statistics-journal {
     position: relative;
     margin-bottom: 10px;
+
+    @include media('m-t-only') {
+        display: none;
+    }
 }
 
 .mod_chat {
