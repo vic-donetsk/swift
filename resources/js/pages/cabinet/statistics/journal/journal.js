@@ -48,12 +48,14 @@ export default {
                 "Message",
             ],
             // colors for chats icons
-            chatsColors : {
+            chatsColors: {
                 'viber': 'blue',
                 'whatsapp': 'green',
-                'telegram' : 'red'
+                'telegram': 'red'
             },
-            searchChatId : '',
+
+            openFullMobile: -1,
+            searchChatId: '',
 
             // wavesurfer block variables
             audioFlag: false,
@@ -173,6 +175,21 @@ export default {
 
                 })
                 .catch(() => console.log('error occured'))
+        },
+        mobileShowDetails(newOpen) {
+            let activeElem = document.querySelector('#rowFull' + newOpen);
+
+            if (newOpen === this.openFullMobile) {
+                activeElem.style.height = 0;
+                this.openFullMobile = -1;
+            } else {
+                if (this.openFullMobile !== -1) {
+                    let prevElem = document.querySelector("#rowFull" + this.openFullMobile);
+                    prevElem.style.height = 0;
+                }
+                activeElem.style.height = '500px';
+                this.openFullMobile = newOpen;
+            }
         },
 
         searchChatID(chatId) {

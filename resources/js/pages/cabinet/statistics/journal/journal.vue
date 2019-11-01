@@ -1,6 +1,8 @@
 <template>
     <div class="statistics-journal" :class="{mod_chat: !isCalls}">
-<!--        calls journal-->
+
+        <!--        calls journal-->
+
         <div v-if="isCalls">
             <div class="statistics_journal-title">
                 <svg class="title_icon">
@@ -8,12 +10,16 @@
                 </svg>
                 {{__('statistics', "CALL JOURNAL")}}
             </div>
+
             <div class="statistics_journal-export">
                 {{__('statistics', "Export table in format:")}}
                 <span class="export-format">.xls</span>
                 <span> / </span>
                 <span class="export-format">.csv</span>
             </div>
+
+            <!--            desktop calls journal block-->
+
             <div class="statistics_tableColumns-settings" @click="openSettings">
                 <svg class="settings_settings">
                     <use xlink:href="#settings"></use>
@@ -129,11 +135,72 @@
                 </div>
             </div>
 
+            <!--            mobile calls journal block-->
+
+            <div class="mobileTableColumns">
+
+                <div class="mobileTableColumns_header">
+                    <div class="mobileTableColumns_header-item mod_plus"></div>
+                    <div class="mobileTableColumns_header-item mod_data">Data</div>
+                    <div class="mobileTableColumns_header-item mod_time">Ora</div>
+                    <div class="mobileTableColumns_header-item mod_phone">Nr clientului</div>
+                    <div class="mobileTableColumns_header-item mod_direction">Stare</div>
+                </div>
+
+                <div v-for="(oneRecord, index) in list" class="mobileTableColumns_row">
+                    <div class="mobileTableColumns_row-brief">
+                        <div class="row-brief_item mod_plus">
+                            <div @click="mobileShowDetails(index)">+</div>
+                        </div>
+                        <div class="row-brief_item mod_data">{{oneRecord.date}}</div>
+                        <div class="row-brief_item mod_time">{{oneRecord.time}}</div>
+                        <div class="row-brief_item mod_phone">{{oneRecord.clientNumber}}</div>
+                        <div class="row-brief_item mod_direction">
+                            <img v-if="oneRecord.callStatus === true" src="/img/charts/success.svg" alt="">
+                            <img v-else src="/img/charts/lost.svg" alt="">
+                        </div>
+                    </div>
+                    <div :id="'rowFull'+index" class="mobileTableColumns_row-full">
+                        <div class="row-full_item">
+                            <span>{{__('statistics', 'Duration')}}</span>&nbsp;:&nbsp;
+                            {{oneRecord.duration}}
+                            <svg @click="playAudio(index)">
+                                <use xlink:href="#volume-up-solid"></use>
+                            </svg>
+                        </div>
+                        <div class="row-full_item">
+                            <span>Nr managerului</span>&nbsp;:&nbsp;{{oneRecord.managerNumber}}
+                        </div>
+                        <div class="row-full_item">
+                            <span>{{__('statistics', 'Client name')}}</span>&nbsp;:&nbsp;{{oneRecord.clientName}}
+                        </div>
+                        <div class="row-full_item">
+                            <span>{{__('statistics', 'Email')}}</span>&nbsp;:&nbsp;{{oneRecord.email}}
+                        </div>
+                        <div class="row-full_item">
+                            <span>{{__('statistics', 'Source')}}</span>&nbsp;:&nbsp;
+                            <a :href="oneRecord.source" target="_blank">{{oneRecord.source}}</a>
+                        </div>
+                        <div class="row-full_item">
+                            <div class="half"><span>{{__('statistics', 'Home page')}}&nbsp;:</span></div>
+                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.homePage}}</a></div>
+                        </div>
+                        <div class="row-full_item">
+                            <div class="half"><span>{{__('statistics', 'The page on which the call was made')}}&nbsp;:</span></div>
+                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.callPage}}</a></div>
+                        </div>
+                        <div class="row-full_item"><span>{{__('statistics', 'IP')}}</span>&nbsp;:&nbsp;{{oneRecord.ip}}</div>
+                        <div class="row-full_item"><span>{{__('statistics', 'Notes')}}</span>&nbsp;:&nbsp;{{oneRecord.notes}}</div>
+                        <div class="row-full_item"><span>{{__('statistics', 'Region')}}</span>&nbsp;:&nbsp;{{oneRecord.region}}</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-<!--        chat journal-->
+        <!--        chat journal-->
 
-        <div v-else >
+        <div v-else>
             <table class="statistics_tableColumns mod_chat">
                 <tr>
                     <th v-for="(oneChatsColumn) in tableChatsColumns">
@@ -165,13 +232,12 @@
                     <td class="chats_message">{{oneRecord.message}}</td>
                     <td>
                         <div class="chat_open" @click="chatOpen(oneRecord.ID)">
-                            <svg >
+                            <svg>
                                 <use xlink:href="#chatOpen"></use>
                             </svg>
                             <div class="chat_open-text">{{__('statistics', "Open")}}</div>
                         </div>
                     </td>
-
 
 
                 </tr>
@@ -307,15 +373,21 @@
             <symbol id="search">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.168 16.169">
                     <g id="magnifying-glass" transform="translate(-0.001 -0.001)">
-                        <path id="Path_706" data-name="Path 706" d="M10.8,1.85a6.327,6.327,0,1,0-.865,9.665,1.332,1.332,0,0,0,.361.671l3.592,3.592a1.337,1.337,0,1,0,1.89-1.89l-3.592-3.593a1.336,1.336,0,0,0-.67-.36A6.333,6.333,0,0,0,10.8,1.85ZM9.664,9.664a4.723,4.723,0,1,1,0-6.68A4.729,4.729,0,0,1,9.664,9.664Z" transform="translate(0 0)" fill="#00215f"/>
+                        <path id="Path_706" data-name="Path 706"
+                              d="M10.8,1.85a6.327,6.327,0,1,0-.865,9.665,1.332,1.332,0,0,0,.361.671l3.592,3.592a1.337,1.337,0,1,0,1.89-1.89l-3.592-3.593a1.336,1.336,0,0,0-.67-.36A6.333,6.333,0,0,0,10.8,1.85ZM9.664,9.664a4.723,4.723,0,1,1,0-6.68A4.729,4.729,0,0,1,9.664,9.664Z"
+                              transform="translate(0 0)" fill="#00215f"/>
                     </g>
                 </svg>
             </symbol>
             <symbol id="chatOpen">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.723 13.477">
                     <g id="Group_303" data-name="Group 303" transform="translate(0 0)">
-                        <path id="Path_1548" data-name="Path 1548" d="M12.073,79.828h-.562a.271.271,0,0,0-.281.281v2.808a1.407,1.407,0,0,1-1.4,1.4h-7.3a1.352,1.352,0,0,1-.991-.412,1.352,1.352,0,0,1-.412-.991v-7.3a1.352,1.352,0,0,1,.412-.991,1.352,1.352,0,0,1,.991-.412H8.7a.27.27,0,0,0,.281-.281v-.562A.27.27,0,0,0,8.7,73.09H2.527a2.434,2.434,0,0,0-1.786.741A2.434,2.434,0,0,0,0,75.617v7.3A2.433,2.433,0,0,0,.741,84.7a2.434,2.434,0,0,0,1.786.742h7.3a2.532,2.532,0,0,0,2.527-2.527V80.109a.271.271,0,0,0-.281-.281Z" transform="translate(0 -71.967)" fill="#4c638f"/>
-                        <path id="Path_1549" data-name="Path 1549" d="M205.114,36.714a.54.54,0,0,0-.395-.167h-4.492a.558.558,0,0,0-.395.956l1.544,1.544-5.72,5.721a.276.276,0,0,0,0,.4l1,1a.276.276,0,0,0,.4,0l5.72-5.72L204.324,42a.562.562,0,0,0,.956-.395V37.108A.54.54,0,0,0,205.114,36.714Z" transform="translate(-189.558 -36.547)" fill="#4c638f"/>
+                        <path id="Path_1548" data-name="Path 1548"
+                              d="M12.073,79.828h-.562a.271.271,0,0,0-.281.281v2.808a1.407,1.407,0,0,1-1.4,1.4h-7.3a1.352,1.352,0,0,1-.991-.412,1.352,1.352,0,0,1-.412-.991v-7.3a1.352,1.352,0,0,1,.412-.991,1.352,1.352,0,0,1,.991-.412H8.7a.27.27,0,0,0,.281-.281v-.562A.27.27,0,0,0,8.7,73.09H2.527a2.434,2.434,0,0,0-1.786.741A2.434,2.434,0,0,0,0,75.617v7.3A2.433,2.433,0,0,0,.741,84.7a2.434,2.434,0,0,0,1.786.742h7.3a2.532,2.532,0,0,0,2.527-2.527V80.109a.271.271,0,0,0-.281-.281Z"
+                              transform="translate(0 -71.967)" fill="#4c638f"/>
+                        <path id="Path_1549" data-name="Path 1549"
+                              d="M205.114,36.714a.54.54,0,0,0-.395-.167h-4.492a.558.558,0,0,0-.395.956l1.544,1.544-5.72,5.721a.276.276,0,0,0,0,.4l1,1a.276.276,0,0,0,.4,0l5.72-5.72L204.324,42a.562.562,0,0,0,.956-.395V37.108A.54.54,0,0,0,205.114,36.714Z"
+                              transform="translate(-189.558 -36.547)" fill="#4c638f"/>
                     </g>
                 </svg>
             </symbol>
