@@ -158,7 +158,7 @@
                     <div class="mobileTableColumns_row-brief">
                         <div class="row-brief_item mod_plus">
                             <div :id="'sign' + index" class="signOpenClose mod_closed"
-                                 @click="mobileShowDetails(index)"></div>
+                                 @click="mobileShowDetails(index, '500px')"></div>
                         </div>
                         <div class="row-brief_item mod_data">{{oneRecord.date}}</div>
                         <div class="row-brief_item mod_time">{{oneRecord.time}}</div>
@@ -268,25 +268,44 @@
 
             <div class="mobileTableColumns">
 
-                <div class="mobileTableColumns_header">
-                    <div class="mobileTableColumns_header-item mod_plus"></div>
+                <div v-if="!mobileChatSearchMode" class="mobileTableColumns_header">
+                    <div  class="mobileTableColumns_header-item mod_chatSearch">
+                        <svg @click="toggleChatMobileSearch">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
                     <div class="mobileTableColumns_header-item mod_chatData">{{__('statistics', 'Date')}}</div>
                     <div class="mobileTableColumns_header-item mod_chatTime">{{__('statistics', 'Time')}}</div>
                     <div class="mobileTableColumns_header-item mod_chatID">{{__('statistics', 'ID')}}</div>
                     <div class="mobileTableColumns_header-item mod_chatSource">{{__('statistics', 'Source')}}</div>
                     <div class="mobileTableColumns_header-item mod_chatOpen"></div>
                 </div>
+                <div v-else class="mobileTableColumns_header mod_header-search">
+                    <div class="header-search_block">
+                        <svg @click="searchChatID(searchChatId)">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                        <input class="searchId_text" placeholder="Search ID" v-model="searchChatId">
+                    </div>
+                    <div class="header-search_close">
+                        <svg @click="toggleChatMobileSearch">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+
+
+                </div>
 
                 <div v-for="(oneRecord, index) in list" class="mobileTableColumns_row">
                     <div class="mobileTableColumns_row-brief">
                         <div class="row-brief_item mod_plus">
                             <div :id="'sign' + index" class="signOpenClose mod_closed"
-                                 @click="mobileShowDetails(index)"></div>
+                                 @click="mobileShowDetails(index, '271px')"></div>
                         </div>
                         <div class="row-brief_item mod_chatData">{{oneRecord.date}}</div>
                         <div class="row-brief_item mod_chatTime">{{oneRecord.time}}</div>
                         <div class="row-brief_item mod_chatID">{{oneRecord.ID}}</div>
-                        <div class="row-brief_item mod_chatSource">
+                        <div class="row-brief_item mod_chatSource mod_icon">
                             <svg :style="'fill:'+chatsColors[oneRecord.source]" class="chats_icon">
                                 <use :xlink:href="'#'+oneRecord.source"></use>
                             </svg>
@@ -296,55 +315,36 @@
                                 <use xlink:href="#chatOpen"></use>
                             </svg>
                         </div>
+                    </div>
 
+                    <div :id="'rowFull'+index" class="mobileTableColumns_row-full">
+                        <div class="row-full_item">
+                            <span>{{__('statistics', 'Client name')}}</span>&nbsp;:&nbsp;{{oneRecord.clientName}}
+                        </div>
+                        <div class="row-full_item">
+                            <span>Nr clientului</span>&nbsp;:&nbsp;{{oneRecord.clientNumber}}
+                        </div>
+                        <div class="row-full_item">
+                            <span>{{__('statistics', 'Email')}}</span>&nbsp;:&nbsp;{{oneRecord.email}}
+                        </div>
+
+                        <div class="row-full_item">
+                                <span>{{__('statistics', 'Message')}}&nbsp;:&nbsp;</span>
+                            <div class="chatHalf">{{oneRecord.message}}</div>
+                        </div>
+
+                        <div class="row-full_button" @click="openNotes(index)">
+                            <div class="button_open">
+                                <svg @click="openNotes(index)">
+                                    <use xlink:href="#openNote"></use>
+                                </svg>
+                                <span>{{__('statistics', 'Open')}}</span>
+                            </div>
+                        </div>
 
                     </div>
-<!--                    <div :id="'rowFull'+index" class="mobileTableColumns_row-full">-->
-<!--                        <div class="row-full_item">-->
-<!--                            <span>{{__('statistics', 'Duration')}}</span>&nbsp;:&nbsp;-->
-<!--                            {{oneRecord.duration}}-->
-<!--                            <svg @click="playAudio(index)">-->
-<!--                                <use xlink:href="#volume-up-solid"></use>-->
-<!--                            </svg>-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <span>Nr managerului</span>&nbsp;:&nbsp;{{oneRecord.managerNumber}}-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <span>{{__('statistics', 'Client name')}}</span>&nbsp;:&nbsp;{{oneRecord.clientName}}-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <span>{{__('statistics', 'Email')}}</span>&nbsp;:&nbsp;{{oneRecord.email}}-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <span>{{__('statistics', 'Source')}}</span>&nbsp;:&nbsp;-->
-<!--                            <a :href="oneRecord.source" target="_blank">{{oneRecord.source}}</a>-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <div class="half"><span>{{__('statistics', 'Home page')}}&nbsp;:</span></div>-->
-<!--                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.homePage}}</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <div class="half">-->
-<!--                                <span>{{__('statistics', 'The page on which the call was made')}}&nbsp;:</span></div>-->
-<!--                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.callPage}}</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item"><span>{{__('statistics', 'IP')}}</span>&nbsp;:&nbsp;{{oneRecord.ip}}-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item">-->
-<!--                            <div class="withNotes">-->
-<!--                                <span>{{__('statistics', 'Notes')}}&nbsp;:&nbsp;</span>-->
-<!--                                <div class="withNotes_text">{{oneRecord.notes}}</div>-->
-<!--                                <svg @click="openNotes(index)">-->
-<!--                                    <use xlink:href="#openNote"></use>-->
-<!--                                </svg>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="row-full_item"><span>{{__('statistics', 'Region')}}</span>&nbsp;:&nbsp;{{oneRecord.region}}-->
-<!--                        </div>-->
-<!--                    </div>-->
+
+
                 </div>
             </div>
 
@@ -481,7 +481,7 @@
                     <g id="magnifying-glass" transform="translate(-0.001 -0.001)">
                         <path id="Path_706" data-name="Path 706"
                               d="M10.8,1.85a6.327,6.327,0,1,0-.865,9.665,1.332,1.332,0,0,0,.361.671l3.592,3.592a1.337,1.337,0,1,0,1.89-1.89l-3.592-3.593a1.336,1.336,0,0,0-.67-.36A6.333,6.333,0,0,0,10.8,1.85ZM9.664,9.664a4.723,4.723,0,1,1,0-6.68A4.729,4.729,0,0,1,9.664,9.664Z"
-                              transform="translate(0 0)" fill="#00215f"/>
+                              transform="translate(0 0)"/>
                     </g>
                 </svg>
             </symbol>
@@ -503,6 +503,14 @@
                         <path id="Path_438" data-name="Path 438"
                               d="M10.29,4.069V10.29a1.47,1.47,0,0,1-1.47,1.47H1.47A1.47,1.47,0,0,1,0,10.29V2.94A1.47,1.47,0,0,1,1.47,1.47H7.691L6.222,2.94H1.47v7.35H8.82V5.539ZM9.162,1.039l-.52.52L10.2,3.118l.52-.52ZM10.2,0l-.52.52,1.559,1.559.52-.52ZM3.445,6.757,5,8.316,9.682,3.638,8.123,2.079ZM2.94,8.82H4.41L2.94,7.35Z"
                               transform="translate(-1255 -111)" fill="#00215f"/>
+                    </g>
+                </svg>
+            </symbol>
+            <symbol id="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.59 21.59">
+                    <g id="close" transform="translate(-1883.803 -945.879)">
+                        <line id="Line_129" data-name="Line 129" x2="17.347" y2="17.347" transform="translate(1885.923 948)" fill="none" stroke="#00215f" stroke-linecap="round" stroke-width="3"/>
+                        <line id="Line_130" data-name="Line 130" x1="17.347" y2="17.347" transform="translate(1885.923 948)" fill="none" stroke="#00215f" stroke-linecap="round" stroke-width="3"/>
                     </g>
                 </svg>
             </symbol>

@@ -48,14 +48,18 @@ export default {
                 "Message",
             ],
             // colors for chats icons
+            // !!!! item name = journalChatData.source
             chatsColors: {
-                'viber': 'blue',
-                'whatsapp': 'green',
-                'telegram': 'red'
+                'messenger' : '#0080FF',
+                'VK' : '#4C75A3',
+                'viber': '#7E37B1',
+                'whatsapp': '#00D935',
+                'telegram': '#0088CC'
             },
 
             openFullMobile: -1,
             searchChatId: '',
+            mobileChatSearchMode: false,
 
             // wavesurfer block variables
             audioFlag: false,
@@ -176,7 +180,7 @@ export default {
                 })
                 .catch(() => console.log('error occured'))
         },
-        mobileShowDetails(newOpen) {
+        mobileShowDetails(newOpen, elemHeight) {
             let activeElem = document.querySelector('#rowFull' + newOpen);
             let activeSign = document.querySelector('#sign' + newOpen);
 
@@ -193,12 +197,16 @@ export default {
                     prevSign.classList.remove('mod_open');
                     prevSign.classList.add('mod_closed');
                 }
-                activeElem.style.height = '500px';
+                activeElem.style.height = elemHeight;
                 activeSign.classList.remove('mod_closed');
                 activeSign.classList.add('mod_open');
                 this.openFullMobile = newOpen;
             }
         },
+        toggleChatMobileSearch() {
+            this.mobileChatSearchMode = !this.mobileChatSearchMode;
+        },
+
         openNotes(index) {
           // TODO: handle click on "open notes" icon in calls journal
             // index = order number in list

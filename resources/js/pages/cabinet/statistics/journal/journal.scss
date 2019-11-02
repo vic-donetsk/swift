@@ -32,6 +32,7 @@
 .mod_chat {
     width: 100%;
     max-width: 1546px;
+    padding-bottom: 10px;
 }
 
 .statistics_journal-title {
@@ -260,25 +261,7 @@
         border: 2px solid #BBC9DB;
 
 
-        .searchId_text {
-            width: 80%;
-            background: inherit;
-            border: none;
-            outline: none;
-            font-size: 16px;
-            font-weight: 500;
-            color: $mainDarkBlue;
 
-            &::-moz-placeholder {
-                color: #BBC9DB;
-                font-weight: 500;
-            }
-
-            &::-webkit-input-placeholder {
-                color: #BBC9DB;
-                font-weight: 500;
-            }
-        }
 
         .searchId_sign {
             width: 16px;
@@ -286,6 +269,7 @@
             cursor: pointer;
 
             svg {
+                fill: #00215f;
                 width: 100%;
                 height: 100%;
             }
@@ -293,6 +277,26 @@
         }
     }
 
+}
+
+.searchId_text {
+    width: 80%;
+    background: inherit;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: $mainDarkBlue;
+
+    &::-moz-placeholder {
+        color: #BBC9DB;
+        font-weight: 500;
+    }
+
+    &::-webkit-input-placeholder {
+        color: #BBC9DB;
+        font-weight: 500;
+    }
 }
 
 .withNotes {
@@ -421,6 +425,41 @@
             line-height: 66px;
             text-align: center;
         }
+
+        &.mod_header-search {
+            justify-content: space-between;
+            padding: 0 20px 0 8px;
+
+        }
+    }
+
+    .header-search_block {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 264px;
+        height: 40px;
+        border: 2px solid #BBC9DB;
+        border-radius: 8px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: #BBC9DB;
+            margin-left: 16px;
+            margin-right: 8px;
+            cursor: pointer
+        }
+    }
+    .header-search_close {
+        width: 16px;
+        height: 16px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
     }
 
     &_row-brief {
@@ -489,6 +528,20 @@
         }
     }
 
+    .mod_chatSearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12.6%;
+
+        svg {
+            fill: $mainDarkBlue;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+    }
+
     .mod_chatData {
         width: 21.9%;
     }
@@ -501,6 +554,11 @@
     .mod_chatSource {
         width: 15.6%;
 
+
+        &.mod_icon {
+            padding-top: 8px;
+        }
+
         svg {
             width: 24px;
             height: 24px;
@@ -508,6 +566,13 @@
     }
     .mod_chatOpen {
         width: 15.3%;
+        padding-top: 3px;
+
+        svg {
+            width: 16px;
+            height: 14px;
+            cursor: pointer;
+        }
     }
 
     &_row-full {
@@ -532,6 +597,15 @@
             width: 50%;
         }
 
+        .chatHalf {
+            display: inline;
+            width: 55%;
+            padding: 10px 0;
+            white-space: pre;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         svg {
             width: 15px;
             height: 12px;
@@ -547,6 +621,37 @@
             color: $mainDarkBlue;
         }
 
+    }
+
+    .row-full_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 71px;
+        border-bottom: 1px solid $inputBorder;
+        cursor: pointer;
+
+        .button_open {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 145px;
+            height: 40px;
+            background: $lightBlueGradientFrom;
+            border: 1px solid $widgetSidebarBorder;
+
+            svg {
+                width: 16px;
+                height: 13px;
+                margin-right: 10px;
+                margin-top: -5px;
+            }
+            span {
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+        }
     }
 
 

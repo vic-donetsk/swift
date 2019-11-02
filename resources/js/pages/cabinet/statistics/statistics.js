@@ -211,7 +211,7 @@ export default {
                     clientName: 'Vic Pavlovsky',
                     clientNumber: '+38-095-698-62-73',
                     email: 'pavlovskyi.va@gmail.com',
-                    message: 'text message for chats table text message for chats table',
+                    message: 'text message \nfor chats table text message for chats table',
                 },
                 {
                     date: '27/10/2019',
