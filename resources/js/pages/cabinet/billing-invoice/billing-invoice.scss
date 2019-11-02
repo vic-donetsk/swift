@@ -23,15 +23,12 @@
                 }
             }
 
-            .billing-invoice_table-wrap{
-
-            }
-
             .widget-chat_table {
 
                 @include media('d-only') {
                     overflow-x: auto;
                     overflow-y: hidden;
+                    max-width: 1215px;
                 }
 
                 .widget-chat_table-head {
@@ -40,7 +37,7 @@
                     background-color: $lightBlueGradientFrom;
 
                     @include media('d-only') {
-                        max-width: 1215px;
+                        min-width: 1215px;
                         height: 64px;
                         border: 1px solid rgba(0, 33, 95, 0.05);
                     }
@@ -67,7 +64,6 @@
                     min-width: 78px;
 
                     & > span {
-                        width: 90px;
                         flex-shrink: 0;
                         line-height: normal;
                     }
@@ -79,47 +75,71 @@
                 }
 
                 .mod-transaction {
-                    width: 220px;
+                    width: 203px;
                     padding: 0 20px;
 
                 }
 
                 .mod-price {
-                    width: 200px;
+                    justify-content: center;
+                    width: 107px;
                     padding: 0 20px;
                 }
 
                 .mod-date {
-                    min-width: 86px;
+                    width: 90px;
                     padding: 0 0 0 12px;
 
                     @include media('d-only') {
-                        padding: 0 20px;
+                        padding: 0 0 0 20px;
                         width: 150px;
                     }
                 }
 
                 .mod-fiscal {
-                    width: 50px;
-                    padding: 0 6px;
+                    width: 77px;
+                    padding: 0 8px;
                     justify-content: center;
+                    text-align: center;
 
                     @include media('d-only') {
+                        justify-content: flex-start;
+                        text-align: left;
                         padding: 0 20px;
-                        width: 107px;
+                        width: 255px;
                     }
+
+                    .mod_desktop {
+                        display: none;
+
+                        @include media('d-only') {
+                            display: block;
+                        }
+                    }
+
+                    .mod-mobile {
+                        display: block;
+
+                        @include media('d-only') {
+                            display: none;
+                        }
+                    }
+
                 }
 
                 .mod-payment {
-                    width: 150px;
+                    width: 245px;
                     padding: 0 20px;
-                    justify-content: center;
                 }
 
                 .mod-download {
-                    width: 53px;
+                    width: 39px;
                     padding: 0;
                     justify-content: center;
+
+                    @include media('d-only') {
+                        width: 87px;
+                    }
                 }
 
                 .widget-chat_table-content {
@@ -129,7 +149,7 @@
                     border-bottom: none;
 
                     @include media('d-only') {
-                        max-width: 1215px;
+                        min-width: 1215px;
                         box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
                         border: 1px solid rgba(0, 33, 95, 0.05);
                     }
@@ -167,7 +187,7 @@
                     overflow: hidden;
                     flex-shrink: 0;
 
-                    &.mod-add_btn, &.mod-name {
+                    &.mod-add_btn, &.mod-invoice, &.mod-date, &.mod-fiscal {
                         border-right: 1px solid $inputBorder;
                     }
 
@@ -209,11 +229,16 @@
                     fill: $mainDarkBlue;
                 }
 
-                .widget-table_icon-download{
+                .widget-table_icon-download {
                     width: 14px;
                     height: 14px;
-                    fill: $widgetTableCross;
+                    fill: $widgetActiveBlue;
                     cursor: pointer;
+
+                    @include media('d-only'){
+                        width: 19px;
+                        height: 20px;
+                    }
                 }
             }
 

@@ -22,7 +22,6 @@
                     <span>{{__('billing','Billing menu text 2')}}</span>
                 </h2>
 
-                <div class="billing-invoice_table-wrap">
 
                     <div class="widget-chat_table">
                         <div class="widget-chat_table-head">
@@ -45,10 +44,10 @@
                             <div class="widget-table_head-item mod-fiscal">
                                 <span>{{__('billing','Billing invoice head 5')}}</span>
                             </div>
-                            <div class="widget-table_head-item mod-state mod-desktop">
+                            <div class="widget-table_head-item mod-payment mod-desktop">
                                 <span>{{__('billing','Billing invoice head 6')}}</span>
                             </div>
-                            <div class="widget-table_head-item mod-cross"></div>
+                            <div class="widget-table_head-item mod-download"></div>
 
                         </div>
 
@@ -78,7 +77,7 @@
                                     </div>
                                     <div class="widget-table_item mod-fiscal">
                                         <span class="mod-mobile">{{__('billing','Billing invoice table content 1')}}</span>
-                                        <span>{{__('billing','Billing invoice table content 3')}}</span>
+                                        <span class="mod_desktop">{{__('billing','Billing invoice table content 3')}}</span>
                                     </div>
                                     <div class="widget-table_item mod-payment mod-desktop">
                                             <span>{{__('billing','Billing invoice table content 5')}}</span>
@@ -122,7 +121,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
