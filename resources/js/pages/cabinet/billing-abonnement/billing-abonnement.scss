@@ -26,13 +26,16 @@
     .swiper-pagination-bullet {
         width: 16px;
         height: 16px;
-        margin: 0 19px;
         outline: none;
         background: #EFF8FD;
         opacity: 1;
 
+        &:not(:last-of-type) {
+            margin-right: 19px;
+        }
+
         &.swiper-pagination-bullet-active {
-            background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);
+            background-image: linear-gradient(to right bottom, $blueGradientFrom, $blueGradientTo);
         }
     }
 
@@ -76,11 +79,11 @@
 
     .billing_container {
         max-width: 1625px;
-        padding: 39px 17px 0;
+        padding: 39px 0;
 
         @include media('d-only') {
             padding: 54px 45px 0 38px;
-
+            margin-bottom: 64px;
         }
 
         .billing-abonnement_content {
@@ -88,9 +91,11 @@
         }
 
         .cabinet-page_title {
+            padding: 0 17px;
             margin-bottom: 94px;
 
             @include media('d-only') {
+                padding: 0;
                 margin-bottom: 16px;
             }
         }
@@ -116,6 +121,10 @@
 
             @include media('d-only') {
                 border: 1px solid $landingPlanBorder;
+                padding: 60px 30px 55px;
+            }
+
+            @include media('d-phd') {
                 padding: 60px 70px 55px;
             }
 

@@ -34,10 +34,13 @@
     .swiper-pagination-bullet {
         width: 16px;
         height: 16px;
-        margin: 0 19px;
         outline: none;
         background: #EFF8FD;
         opacity: 1;
+
+        &:not(:last-of-type) {
+            margin-right: 19px;
+        }
 
         &.swiper-pagination-bullet-active {
             background-image: linear-gradient(to right bottom, $greenGradientFrom, $greenGradientTo);

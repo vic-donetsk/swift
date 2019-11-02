@@ -1,0 +1,30 @@
+@import '@/app';
+
+.billing-invoice {
+
+    .billing_container {
+        max-width: 1625px;
+        padding: 39px 0;
+
+        @include media('d-only') {
+            padding: 54px 45px 0 38px;
+            margin-bottom: 64px;
+        }
+
+        .billing-invoice_content {
+
+            .cabinet-page_title {
+                padding: 0 17px;
+                margin-bottom: 38px;
+
+                @include media('d-only') {
+                    padding: 0;
+                    margin-bottom: 54px;
+                }
+            }
+
+
+
+        }
+    }
+}
