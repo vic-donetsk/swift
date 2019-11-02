@@ -489,6 +489,27 @@
         }
     }
 
+    .mod_chatData {
+        width: 21.9%;
+    }
+    .mod_chatTime {
+        width: 15.6%;
+    }
+    .mod_chatID {
+        width: 19.0%;
+    }
+    .mod_chatSource {
+        width: 15.6%;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .mod_chatOpen {
+        width: 15.3%;
+    }
+
     &_row-full {
         height: 0;
         overflow: hidden;

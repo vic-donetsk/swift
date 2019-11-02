@@ -148,8 +148,8 @@
 
                 <div class="mobileTableColumns_header">
                     <div class="mobileTableColumns_header-item mod_plus"></div>
-                    <div class="mobileTableColumns_header-item mod_data">Data</div>
-                    <div class="mobileTableColumns_header-item mod_time">Ora</div>
+                    <div class="mobileTableColumns_header-item mod_data">{{__('statistics', 'Date')}}</div>
+                    <div class="mobileTableColumns_header-item mod_time">{{__('statistics', 'Time')}}</div>
                     <div class="mobileTableColumns_header-item mod_phone">Nr clientului</div>
                     <div class="mobileTableColumns_header-item mod_direction">Stare</div>
                 </div>
@@ -263,6 +263,91 @@
 
                 </tr>
             </table>
+
+            <!--            mobile chat journal-->
+
+            <div class="mobileTableColumns">
+
+                <div class="mobileTableColumns_header">
+                    <div class="mobileTableColumns_header-item mod_plus"></div>
+                    <div class="mobileTableColumns_header-item mod_chatData">{{__('statistics', 'Date')}}</div>
+                    <div class="mobileTableColumns_header-item mod_chatTime">{{__('statistics', 'Time')}}</div>
+                    <div class="mobileTableColumns_header-item mod_chatID">{{__('statistics', 'ID')}}</div>
+                    <div class="mobileTableColumns_header-item mod_chatSource">{{__('statistics', 'Source')}}</div>
+                    <div class="mobileTableColumns_header-item mod_chatOpen"></div>
+                </div>
+
+                <div v-for="(oneRecord, index) in list" class="mobileTableColumns_row">
+                    <div class="mobileTableColumns_row-brief">
+                        <div class="row-brief_item mod_plus">
+                            <div :id="'sign' + index" class="signOpenClose mod_closed"
+                                 @click="mobileShowDetails(index)"></div>
+                        </div>
+                        <div class="row-brief_item mod_chatData">{{oneRecord.date}}</div>
+                        <div class="row-brief_item mod_chatTime">{{oneRecord.time}}</div>
+                        <div class="row-brief_item mod_chatID">{{oneRecord.ID}}</div>
+                        <div class="row-brief_item mod_chatSource">
+                            <svg :style="'fill:'+chatsColors[oneRecord.source]" class="chats_icon">
+                                <use :xlink:href="'#'+oneRecord.source"></use>
+                            </svg>
+                        </div>
+                        <div class="row-brief_item mod_chatOpen">
+                            <svg @click="chatOpen(oneRecord.ID)">
+                                <use xlink:href="#chatOpen"></use>
+                            </svg>
+                        </div>
+
+
+                    </div>
+<!--                    <div :id="'rowFull'+index" class="mobileTableColumns_row-full">-->
+<!--                        <div class="row-full_item">-->
+<!--                            <span>{{__('statistics', 'Duration')}}</span>&nbsp;:&nbsp;-->
+<!--                            {{oneRecord.duration}}-->
+<!--                            <svg @click="playAudio(index)">-->
+<!--                                <use xlink:href="#volume-up-solid"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <span>Nr managerului</span>&nbsp;:&nbsp;{{oneRecord.managerNumber}}-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <span>{{__('statistics', 'Client name')}}</span>&nbsp;:&nbsp;{{oneRecord.clientName}}-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <span>{{__('statistics', 'Email')}}</span>&nbsp;:&nbsp;{{oneRecord.email}}-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <span>{{__('statistics', 'Source')}}</span>&nbsp;:&nbsp;-->
+<!--                            <a :href="oneRecord.source" target="_blank">{{oneRecord.source}}</a>-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <div class="half"><span>{{__('statistics', 'Home page')}}&nbsp;:</span></div>-->
+<!--                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.homePage}}</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <div class="half">-->
+<!--                                <span>{{__('statistics', 'The page on which the call was made')}}&nbsp;:</span></div>-->
+<!--                            <div class="half"><a :href="oneRecord.source" target="_blank">{{oneRecord.callPage}}</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item"><span>{{__('statistics', 'IP')}}</span>&nbsp;:&nbsp;{{oneRecord.ip}}-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item">-->
+<!--                            <div class="withNotes">-->
+<!--                                <span>{{__('statistics', 'Notes')}}&nbsp;:&nbsp;</span>-->
+<!--                                <div class="withNotes_text">{{oneRecord.notes}}</div>-->
+<!--                                <svg @click="openNotes(index)">-->
+<!--                                    <use xlink:href="#openNote"></use>-->
+<!--                                </svg>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row-full_item"><span>{{__('statistics', 'Region')}}</span>&nbsp;:&nbsp;{{oneRecord.region}}-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
         </div>
         <!--        svg for audio block-->
 
