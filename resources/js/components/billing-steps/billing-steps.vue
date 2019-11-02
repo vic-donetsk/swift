@@ -2,19 +2,19 @@
     <div class="billing-steps">
         <div class="billing-steps_item">
             <svg class="billing-steps_icon">
-                <use xlink:href="#download"></use>
+                <use xlink:href="#subscribe"></use>
             </svg>
             <span class="billing-steps_text">{{__('billing','Billing menu text 1')}}</span>
         </div>
         <div class="billing-steps_item">
             <svg class="billing-steps_icon">
-                <use xlink:href="#phone"></use>
+                <use xlink:href="#invoice"></use>
             </svg>
             <span class="billing-steps_text">{{__('billing','Billing menu text 2')}}</span>
         </div>
         <div class="billing-steps_item">
             <svg class="billing-steps_icon">
-                <use xlink:href="#mail-envelope-open"></use>
+                <use xlink:href="#euro"></use>
             </svg>
             <span class="billing-steps_text">{{__('billing','Billing menu text 3')}}</span>
         </div>

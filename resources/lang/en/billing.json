@@ -1,5 +1,18 @@
 {
   "Billing menu text 1": "ABONAMENT",
   "Billing menu text 2": "INVOICES",
-  "Billing menu text 3": "METODA DE ACHITARE"
+  "Billing menu text 3": "METODA DE ACHITARE",
+  "Billing invoice head 1": "Factura#",
+  "Billing invoice head 2": "Transaction ID",
+  "Billing invoice head 3": "Preț",
+  "Billing invoice head 4": "Data emiterii",
+  "Billing invoice head 5": "Situația fiscală",
+  "Billing invoice head 6": "Modalitatea de achitare",
+  "Billing invoice table content 1": "Achitat",
+  "Billing invoice table content 2": "Neachitat",
+  "Billing invoice table content 3": "Factură achitată",
+  "Billing invoice table content 4": "Factură neachitată",
+  "Billing invoice table content 5": "Transfer bancar",
+  "Billing invoice table content 6": "Credit card"
 }
+

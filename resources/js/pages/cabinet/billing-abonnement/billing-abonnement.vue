@@ -3,9 +3,9 @@
 
         <div class="cabinet_mobile-button button mod-blue">
             <svg class="cabinet_mobile-button_icon">
-                <use xlink:href="#download"></use>
+                <use xlink:href="#subscribe"></use>
             </svg>
-            <span class="cabinet_mobile-button_text">{{__('widget','Widget menu text 1')}}</span>
+            <span class="cabinet_mobile-button_text">{{__('billing','Billing menu text 1')}}</span>
             <svg class="cabinet_mobile-button_icon">
                 <use xlink:href="#arrow"></use>
             </svg>
@@ -17,9 +17,9 @@
             <div class="billing-abonnement_content">
                 <h2 class="cabinet-page_title">
                     <svg class="cabinet-page_title-icon">
-                        <use xlink:href="#global"></use>
+                        <use xlink:href="#subscribe"></use>
                     </svg>
-                    <span>{{__('widget','Cabinet page title 2')}}</span>
+                    <span>{{__('billing','Billing menu text 1')}}</span>
                 </h2>
                 <div class="landing-plan_container">
                     <div class="swiper-button-prev slide-btn left">
