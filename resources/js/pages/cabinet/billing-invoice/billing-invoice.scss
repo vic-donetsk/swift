@@ -23,7 +23,7 @@
                 }
             }
 
-            .widget-chat_table {
+            .billing-invoice_table {
 
                 @include media('d-only') {
                     overflow-x: auto;
@@ -31,7 +31,7 @@
                     max-width: 1215px;
                 }
 
-                .widget-chat_table-head {
+                .billing-invoice_table-head {
                     display: flex;
                     height: 60px;
                     background-color: $lightBlueGradientFrom;
@@ -42,7 +42,7 @@
                         border: 1px solid rgba(0, 33, 95, 0.05);
                     }
 
-                    .widget-table_head-item {
+                    .billing-table_head-item {
                         display: flex;
                         align-items: center;
                         font-size: 12px;
@@ -142,7 +142,7 @@
                     }
                 }
 
-                .widget-chat_table-content {
+                .billing-invoice_table-content {
                     background: $white;
                     border: 1px solid #E3ECF5;
                     border-top: none;
@@ -155,11 +155,11 @@
                     }
                 }
 
-                .widget-chat_table-row {
+                .billing-invoice_table-row {
                     position: relative;
                 }
 
-                .widget-chat_table-row-cells {
+                .billing-invoice_table-row-cells {
                     position: relative;
                     display: flex;
 
@@ -175,7 +175,7 @@
                     }
                 }
 
-                .widget-table_item {
+                .billing-table_item {
                     display: flex;
                     align-items: center;
                     height: 40px;
@@ -204,7 +204,7 @@
                     }
                 }
 
-                .widget-table_head-item, .widget-table_item {
+                .billing-table_head-item, .billing-table_item {
                     &.mod-add_btn {
                         width: 40px;
                         justify-content: center;
@@ -229,24 +229,22 @@
                     fill: $mainDarkBlue;
                 }
 
-                .widget-table_icon-download {
+                .billing-table_icon-download {
                     width: 14px;
                     height: 14px;
                     fill: $widgetActiveBlue;
                     cursor: pointer;
 
-                    @include media('d-only'){
+                    @include media('d-only') {
                         width: 19px;
                         height: 20px;
                     }
                 }
             }
 
-            .widget-table_list {
 
-            }
 
-            .widget-table_list-item {
+            .billing-table_list-item {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
@@ -257,32 +255,16 @@
                 border-bottom: 1px solid $inputBorder;
                 padding: 0 13px;
 
-                &.mod_center {
-                    justify-content: center;
-                    cursor: pointer;
 
-                    .widget-table_list-title {
-                        height: 19px;
-                        font-weight: 600;
-                    }
-                }
-
-                .widget-table_list-title {
+                .billing-table_list-title {
                     font-weight: 700;
                 }
 
-                .widget-table_list-val {
+                .billing-table_list-val {
                     font-weight: 500;
                 }
 
-                .widget-table_list-icon {
-                    width: 13px;
-                    height: 13px;
-                    fill: $mainDarkBlue;
-                    margin-right: 8px;
-                }
             }
-
         }
     }
 }

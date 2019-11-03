@@ -23,104 +23,88 @@
                 </h2>
 
 
-                    <div class="widget-chat_table">
-                        <div class="widget-chat_table-head">
+                <div class="billing-invoice_table">
+                    <div class="billing-invoice_table-head">
 
-                            <div class="widget-table_head-item mod-add_btn">
-
-                            </div>
-                            <div class="widget-table_head-item mod-invoice">
-                                <span>{{__('billing','Billing invoice head 1')}}</span>
-                            </div>
-                            <div class="widget-table_head-item mod-transaction mod-desktop">
-                                <span>{{__('billing','Billing invoice head 2')}}</span>
-                            </div>
-                            <div class="widget-table_head-item mod-price mod-desktop">
-                                <span>{{__('billing','Billing invoice head 3')}}</span>
-                            </div>
-                            <div class="widget-table_head-item mod-date">
-                                <span>{{__('billing','Billing invoice head 4')}}</span>
-                            </div>
-                            <div class="widget-table_head-item mod-fiscal">
-                                <span>{{__('billing','Billing invoice head 5')}}</span>
-                            </div>
-                            <div class="widget-table_head-item mod-payment mod-desktop">
-                                <span>{{__('billing','Billing invoice head 6')}}</span>
-                            </div>
-                            <div class="widget-table_head-item mod-download"></div>
+                        <div class="billing-table_head-item mod-add_btn">
 
                         </div>
+                        <div class="billing-table_head-item mod-invoice">
+                            <span>{{__('billing','Billing invoice head 1')}}</span>
+                        </div>
+                        <div class="billing-table_head-item mod-transaction mod-desktop">
+                            <span>{{__('billing','Billing invoice head 2')}}</span>
+                        </div>
+                        <div class="billing-table_head-item mod-price mod-desktop">
+                            <span>{{__('billing','Billing invoice head 3')}}</span>
+                        </div>
+                        <div class="billing-table_head-item mod-date">
+                            <span>{{__('billing','Billing invoice head 4')}}</span>
+                        </div>
+                        <div class="billing-table_head-item mod-fiscal">
+                            <span>{{__('billing','Billing invoice head 5')}}</span>
+                        </div>
+                        <div class="billing-table_head-item mod-payment mod-desktop">
+                            <span>{{__('billing','Billing invoice head 6')}}</span>
+                        </div>
+                        <div class="billing-table_head-item mod-download"></div>
 
-                        <div class="widget-chat_table-content">
-                            <div class="widget-chat_table-row" v-for="item in 2">
-                                <div class="widget-chat_table-row-cells">
-                                    <div class="widget-table_item mod-add_btn" @click="toggleRowList(item)">
-                                        <svg v-if="item !== rowList" class="mod-add_btn-icon">
-                                            <use xlink:href="#plus-add"></use>
-                                        </svg>
+                    </div>
 
-                                        <svg v-else class="mod-add_btn-icon">
-                                            <use xlink:href="#minus"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="widget-table_item mod-invoice">
-                                        <span>25152</span>
-                                    </div>
-                                    <div class="widget-table_item mod-transaction mod-desktop">
-                                        <span>25326453</span>
-                                    </div>
-                                    <div class="widget-table_item  mod-price mod-desktop">
-                                        <span>15 €</span>
-                                    </div>
-                                    <div class="widget-table_item mod-date">
-                                        <span>12/08/2019</span>
-                                    </div>
-                                    <div class="widget-table_item mod-fiscal">
-                                        <span class="mod-mobile">{{__('billing','Billing invoice table content 1')}}</span>
-                                        <span class="mod_desktop">{{__('billing','Billing invoice table content 3')}}</span>
-                                    </div>
-                                    <div class="widget-table_item mod-payment mod-desktop">
-                                            <span>{{__('billing','Billing invoice table content 5')}}</span>
-                                    </div>
-                                    <div class="widget-table_item mod-download">
-                                        <svg class="widget-table_icon-download">
-                                            <use xlink:href="#download"></use>
-                                        </svg>
-                                    </div>
+                    <div class="billing-invoice_table-content">
+                        <div class="billing-invoice_table-row" v-for="item in 2">
+                            <div class="billing-invoice_table-row-cells">
+                                <div class="billing-table_item mod-add_btn" @click="toggleRowList(item)">
+                                    <svg v-if="item !== rowList" class="mod-add_btn-icon">
+                                        <use xlink:href="#plus-add"></use>
+                                    </svg>
+
+                                    <svg v-else class="mod-add_btn-icon">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
                                 </div>
-                                <div class="widget-table_list" v-if="item === rowList">
-                                    <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 2')}}</span>
-                                        <span class="widget-table_list-val"> : ionascu@pi.md</span>
-                                    </div>
-                                    <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 3')}}</span>
-                                        <span class="widget-table_list-val">: +373 (78) 792000</span>
-                                    </div>
-                                    <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 4')}}</span>
-                                        <span class="widget-table_list-val"> : #21412</span>
-                                    </div>
-
-                                    <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 7')}}</span>
-                                        <span class="widget-table_list-val"> : 21/08/2019</span>
-                                    </div>
-
-                                    <div class="widget-table_list-item">
-                                        <span class="widget-table_list-title">{{__('widget','Widget chat head 6')}}</span>
-                                        <span class="widget-table_list-val offline"> : {{__('widget','Widget chat state 1')}}</span>
-                                    </div>
-                                    <div class="widget-table_list-item mod_center" @click="rowList = null">
-                                        <svg class="widget-table_list-icon">
-                                            <use xlink:href="#cross"></use>
-                                        </svg>
-                                        <span class="widget-table_list-title">{{__('widget','Widget table list close btn')}}</span>
-                                    </div>
+                                <div class="billing-table_item mod-invoice">
+                                    <span>25152</span>
+                                </div>
+                                <div class="billing-table_item mod-transaction mod-desktop">
+                                    <span>25326453</span>
+                                </div>
+                                <div class="billing-table_item  mod-price mod-desktop">
+                                    <span>15 €</span>
+                                </div>
+                                <div class="billing-table_item mod-date">
+                                    <span>12/08/2019</span>
+                                </div>
+                                <div class="billing-table_item mod-fiscal">
+                                    <span class="mod-mobile">{{__('billing','Billing invoice table content 1')}}</span>
+                                    <span class="mod_desktop">{{__('billing','Billing invoice table content 3')}}</span>
+                                </div>
+                                <div class="billing-table_item mod-payment mod-desktop">
+                                    <span>{{__('billing','Billing invoice table content 5')}}</span>
+                                </div>
+                                <div class="billing-table_item mod-download">
+                                    <svg class="billing-table_icon-download">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="billing-table_list" v-if="item === rowList">
+                                <div class="billing-table_list-item">
+                                    <span class="billing-table_list-title">{{__('billing','Billing invoice head 2')}}</span>
+                                    <span class="billing-table_list-val"> : 25326453</span>
+                                </div>
+                                <div class="billing-table_list-item">
+                                    <span class="billing-table_list-title">{{__('billing','Billing invoice head 3')}}</span>
+                                    <span class="billing-table_list-val">: 15 €</span>
+                                </div>
+                                <div class="billing-table_list-item">
+                                    <span class="billing-table_list-title">{{__('billing','Billing invoice head 6')}}</span>
+                                    <span class="billing-table_list-val"> : {{__('billing','Billing invoice table content 7')}}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
