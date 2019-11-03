@@ -11,260 +11,259 @@
             margin-bottom: 64px;
         }
 
-        .billing-invoice_content {
+    }
 
-            .cabinet-page_title {
-                padding: 0 17px;
-                margin-bottom: 38px;
+    .cabinet-page_title {
+        padding: 0 17px;
+        margin-bottom: 38px;
 
-                @include media('d-only') {
-                    padding: 0;
-                    margin-bottom: 54px;
-                }
+        @include media('d-only') {
+            padding: 0;
+            margin-bottom: 54px;
+        }
+    }
+
+    .billing-invoice_table {
+
+        @include media('d-only') {
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 1215px;
+        }
+
+        .billing-invoice_table-head {
+            display: flex;
+            height: 60px;
+            background-color: $lightBlueGradientFrom;
+
+            @include media('d-only') {
+                min-width: 1215px;
+                height: 64px;
+                border: 1px solid rgba(0, 33, 95, 0.05);
             }
 
-            .billing-invoice_table {
-
-                @include media('d-only') {
-                    overflow-x: auto;
-                    overflow-y: hidden;
-                    max-width: 1215px;
-                }
-
-                .billing-invoice_table-head {
-                    display: flex;
-                    height: 60px;
-                    background-color: $lightBlueGradientFrom;
-
-                    @include media('d-only') {
-                        min-width: 1215px;
-                        height: 64px;
-                        border: 1px solid rgba(0, 33, 95, 0.05);
-                    }
-
-                    .billing-table_head-item {
-                        display: flex;
-                        align-items: center;
-                        font-size: 12px;
-                        line-height: 14px;
-                        font-weight: 700;
-                        color: $mainDarkBlue;
-
-                        @include media('d-only') {
-                            font-size: 16px;
-                            line-height: 29px;
-                        }
-                    }
-                }
-
-                .mod-invoice {
-                    padding: 0 0 0 12px;
-                    justify-content: flex-start;
-                    flex: 1;
-                    min-width: 78px;
-
-                    & > span {
-                        flex-shrink: 0;
-                        line-height: normal;
-                    }
-
-                    @include media('d-only') {
-                        min-width: 165px;
-                        padding: 0 0 0 20px;
-                    }
-                }
-
-                .mod-transaction {
-                    width: 203px;
-                    padding: 0 20px;
-
-                }
-
-                .mod-price {
-                    justify-content: center;
-                    width: 107px;
-                    padding: 0 20px;
-                }
-
-                .mod-date {
-                    width: 90px;
-                    padding: 0 0 0 12px;
-
-                    @include media('d-only') {
-                        padding: 0 0 0 20px;
-                        width: 150px;
-                    }
-                }
-
-                .mod-fiscal {
-                    width: 77px;
-                    padding: 0 8px;
-                    justify-content: center;
-                    text-align: center;
-
-                    @include media('d-only') {
-                        justify-content: flex-start;
-                        text-align: left;
-                        padding: 0 20px;
-                        width: 255px;
-                    }
-
-                    .mod_desktop {
-                        display: none;
-
-                        @include media('d-only') {
-                            display: block;
-                        }
-                    }
-
-                    .mod-mobile {
-                        display: block;
-
-                        @include media('d-only') {
-                            display: none;
-                        }
-                    }
-
-                }
-
-                .mod-payment {
-                    width: 245px;
-                    padding: 0 20px;
-                }
-
-                .mod-download {
-                    width: 39px;
-                    padding: 0;
-                    justify-content: center;
-
-                    @include media('d-only') {
-                        width: 87px;
-                    }
-                }
-
-                .billing-invoice_table-content {
-                    background: $white;
-                    border: 1px solid #E3ECF5;
-                    border-top: none;
-                    border-bottom: none;
-
-                    @include media('d-only') {
-                        min-width: 1215px;
-                        box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
-                        border: 1px solid rgba(0, 33, 95, 0.05);
-                    }
-                }
-
-                .billing-invoice_table-row {
-                    position: relative;
-                }
-
-                .billing-invoice_table-row-cells {
-                    position: relative;
-                    display: flex;
-
-                    height: 40px;
-                    border-bottom: 1px solid $inputBorder;
-
-                    &:not(:first-of-type) {
-                        border-bottom: none;
-                    }
-
-                    @include media('d-only') {
-                        height: 76px;
-                    }
-                }
-
-                .billing-table_item {
-                    display: flex;
-                    align-items: center;
-                    height: 40px;
-                    font-size: 12px;
-                    line-height: 14px;
-                    color: $mainDarkBlue;
-                    font-weight: 500;
-                    word-break: break-word;
-                    overflow: hidden;
-                    flex-shrink: 0;
-
-                    &.mod-add_btn, &.mod-invoice, &.mod-date, &.mod-fiscal {
-                        border-right: 1px solid $inputBorder;
-                    }
-
-
-                    @include media('d-only') {
-                        height: 76px;
-                        font-size: 16px;
-                        line-height: 20px;
-                        font-weight: 400;
-
-                        &:not(:last-of-type) {
-                            border-right: 1px solid $inputBorder;
-                        }
-                    }
-                }
-
-                .billing-table_head-item, .billing-table_item {
-                    &.mod-add_btn {
-                        width: 40px;
-                        justify-content: center;
-                        cursor: pointer;
-                        @include media('d-only') {
-                            display: none;
-                        }
-                    }
-
-                    &.mod-desktop {
-                        display: none;
-
-                        @include media('d-only') {
-                            display: flex;
-                        }
-                    }
-                }
-
-                .mod-add_btn-icon {
-                    width: 18px;
-                    height: 18px;
-                    fill: $mainDarkBlue;
-                }
-
-                .billing-table_icon-download {
-                    width: 14px;
-                    height: 14px;
-                    fill: $widgetActiveBlue;
-                    cursor: pointer;
-
-                    @include media('d-only') {
-                        width: 19px;
-                        height: 20px;
-                    }
-                }
-            }
-
-
-
-            .billing-table_list-item {
+            .billing-table_head-item {
                 display: flex;
                 align-items: center;
-                justify-content: flex-start;
-                width: 100%;
-                height: 50px;
-                font-size: 14px;
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 700;
                 color: $mainDarkBlue;
-                border-bottom: 1px solid $inputBorder;
-                padding: 0 13px;
 
-
-                .billing-table_list-title {
-                    font-weight: 700;
+                @include media('d-only') {
+                    font-size: 16px;
+                    line-height: 29px;
                 }
+            }
+        }
 
-                .billing-table_list-val {
-                    font-weight: 500;
+        .mod-invoice {
+            padding: 0 0 0 12px;
+            justify-content: flex-start;
+            flex: 1;
+            min-width: 78px;
+
+            & > span {
+                flex-shrink: 0;
+                line-height: normal;
+            }
+
+            @include media('d-only') {
+                min-width: 165px;
+                padding: 0 0 0 20px;
+            }
+        }
+
+        .mod-transaction {
+            width: 203px;
+            padding: 0 20px;
+
+        }
+
+        .mod-price {
+            justify-content: center;
+            width: 107px;
+            padding: 0 20px;
+        }
+
+        .mod-date {
+            width: 90px;
+            padding: 0 0 0 12px;
+
+            @include media('d-only') {
+                padding: 0 0 0 20px;
+                width: 150px;
+            }
+        }
+
+        .mod-fiscal {
+            width: 77px;
+            padding: 0 8px;
+            justify-content: center;
+            text-align: center;
+
+            @include media('d-only') {
+                justify-content: flex-start;
+                text-align: left;
+                padding: 0 20px;
+                width: 255px;
+            }
+
+            .mod_desktop {
+                display: none;
+
+                @include media('d-only') {
+                    display: block;
                 }
+            }
 
+            .mod-mobile {
+                display: block;
+
+                @include media('d-only') {
+                    display: none;
+                }
+            }
+
+        }
+
+        .mod-payment {
+            width: 245px;
+            padding: 0 20px;
+        }
+
+        .mod-download {
+            width: 39px;
+            padding: 0;
+            justify-content: center;
+
+            @include media('d-only') {
+                width: 87px;
+            }
+        }
+
+        .billing-invoice_table-content {
+            background: $white;
+            border: 1px solid #E3ECF5;
+            border-top: none;
+            border-bottom: none;
+
+            @include media('d-only') {
+                min-width: 1215px;
+                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+                border: 1px solid rgba(0, 33, 95, 0.05);
+            }
+        }
+
+        .billing-invoice_table-row {
+            position: relative;
+        }
+
+        .billing-invoice_table-row-cells {
+            position: relative;
+            display: flex;
+
+            height: 40px;
+            border-bottom: 1px solid $inputBorder;
+
+            &:not(:first-of-type) {
+                border-bottom: none;
+            }
+
+            @include media('d-only') {
+                height: 76px;
+            }
+        }
+
+        .billing-table_item {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            font-size: 12px;
+            line-height: 14px;
+            color: $mainDarkBlue;
+            font-weight: 500;
+            word-break: break-word;
+            overflow: hidden;
+            flex-shrink: 0;
+
+            &.mod-add_btn, &.mod-invoice, &.mod-date, &.mod-fiscal {
+                border-right: 1px solid $inputBorder;
+            }
+
+
+            @include media('d-only') {
+                height: 76px;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $inputBorder;
+                }
+            }
+        }
+
+        .billing-table_head-item, .billing-table_item {
+            &.mod-add_btn {
+                width: 40px;
+                justify-content: center;
+                cursor: pointer;
+                @include media('d-only') {
+                    display: none;
+                }
+            }
+
+            &.mod-desktop {
+                display: none;
+
+                @include media('d-only') {
+                    display: flex;
+                }
+            }
+        }
+
+        .mod-add_btn-icon {
+            width: 18px;
+            height: 18px;
+            fill: $mainDarkBlue;
+        }
+
+        .billing-table_icon-download {
+            width: 14px;
+            height: 14px;
+            fill: $widgetActiveBlue;
+            cursor: pointer;
+
+            @include media('d-only') {
+                width: 19px;
+                height: 20px;
             }
         }
     }
+
+
+    .billing-table_list-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        color: $mainDarkBlue;
+        border-bottom: 1px solid $inputBorder;
+        padding: 0 13px;
+
+
+        .billing-table_list-title {
+            font-weight: 700;
+        }
+
+        .billing-table_list-val {
+            font-weight: 500;
+        }
+
+    }
+
+
 }

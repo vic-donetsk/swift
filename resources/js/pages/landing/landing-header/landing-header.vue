@@ -1,11 +1,16 @@
 <template>
-    <div class="landing-header">
+    <div class="landing-header" :class="{'open-menu':menu}">
         <div class="landing-header_content">
-            <div class="header-hamburger">
-                <div class="header-hamburger_item top"></div>
-                <div class="header-hamburger_item middle"></div>
-                <div class="header-hamburger_item bottom"></div>
+            <div class="hamburger hamburger--slider"
+                 @click="openMenu"
+                 :class="{'is-active':menu}">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
             </div>
+            <!--            <svg class="landing-menu_icon">-->
+            <!--                <use xlink:href="#cross"></use>-->
+            <!--            </svg>-->
 
             <logo class="landingClass"></logo>
             <div class="landing-header_user">
@@ -33,42 +38,35 @@
                 </svg>
             </div>
         </div>
-<!--        <div class="landing-mobile_menu">-->
-<!--            <div class="landing-menu_head">-->
-<!--                <logo size="landing"></logo>-->
+        <div class="landing-mobile_menu">
+            <div class="landing-menu_content">
+                <nav class="landing-menu_nav">
+                    <div class="landing-menu_item">{{ __("landing", "Tarif") }}</div>
+                    <div class="landing-menu_item">{{ __("landing", "Produs") }}</div>
+                    <div class="landing-menu_item">{{ __("landing", "Dezvolatori") }}</div>
+                    <div class="landing-menu_item">{{ __("landing", "Support") }}</div>
+                    <div class="landing-menu_item">{{ __("landing", "Contacte") }}</div>
+                </nav>
 
-<!--                <svg class="landing-menu_icon">-->
-<!--                    <use xlink:href="#cross"></use>-->
-<!--                </svg>-->
-<!--            </div>-->
-<!--            <div class="landing-menu_content">-->
-<!--                <nav class="landing-menu_nav">-->
-<!--                    <span class="landing-menu_item">{{ __("landing", "Tarif") }}</span>-->
-<!--                    <span class="landing-menu_item">{{ __("landing", "Produs") }}</span>-->
-<!--                    <span class="landing-menu_item">{{ __("landing", "Dezvolatori") }}</span>-->
-<!--                    <span class="landing-menu_item">{{ __("landing", "Support") }}</span>-->
-<!--                    <span class="landing-menu_item">{{ __("landing", "Contacte") }}</span>-->
-<!--                </nav>-->
+                <div class="landing-menu_icons">
+                    <svg class="landing-menu_icon">
+                        <use xlink:href="#mail-envelope"></use>
+                    </svg>
 
-<!--                <div class="landing-menu_icons">-->
-<!--                    <svg class="landing-menu_icon">-->
-<!--                        <use xlink:href="#mail-envelope"></use>-->
-<!--                    </svg>-->
+                    <svg class="landing-menu_icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
 
-<!--                    <svg class="landing-menu_icon">-->
-<!--                        <use xlink:href="#phone"></use>-->
-<!--                    </svg>-->
+                    <div class="landing-header_block">
+                        <span class="landing-header_text">RO</span>
+                        <svg class="landing-header_icon">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
-<!--                    <div class="landing-header_block">-->
-<!--                        <span class="landing-header_text">RO</span>-->
-<!--                        <svg class="landing-header_icon">-->
-<!--                            <use xlink:href="#arrow"></use>-->
-<!--                        </svg>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
+        </div>
     </div>
 </template>
 

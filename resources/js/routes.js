@@ -11,6 +11,7 @@ import widgetChat from './pages/cabinet/widget-chat/widget-chat.vue';
 import chat from './pages/cabinet/chat/chat.vue';
 import billingAbonnement from './pages/cabinet/billing-abonnement/billing-abonnement.vue';
 import billingInvoice from './pages/cabinet/billing-invoice/billing-invoice.vue';
+import billingBank from './pages/cabinet/billing-bank/billing-bank.vue';
 import cabinet from './components/cabinet/cabinet.vue';
 
 export default [
@@ -86,6 +87,11 @@ export default [
                 path: 'billing/invoice',
                 name: 'cabinet-billing-invoice',
                 component: billingInvoice,
+            },
+            {
+                path: 'billing/bank',
+                name: 'cabinet-billing-bank',
+                component: billingBank,
             }
         ]
     },

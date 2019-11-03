@@ -1,7 +1,7 @@
 {
   "Billing menu text 1": "ABONAMENT",
   "Billing menu text 2": "INVOICES",
-  "Billing menu text 3": "METODA DE ACHITARE",
+  "Billing menu text 3": "RECVIZITE BANCARE",
   "Billing invoice head 1": "Factura#",
   "Billing invoice head 2": "Transaction ID",
   "Billing invoice head 3": "Preț",
@@ -14,6 +14,7 @@
   "Billing invoice table content 4": "Factură neachitată",
   "Billing invoice table content 5": "Transfer bancar",
   "Billing invoice table content 6": "Credit card",
-  "Billing invoice table content 7": "Transfer"
+  "Billing invoice table content 7": "Transfer",
+  "Billing input placeholder": "SwiftCallBack"
 }
 
