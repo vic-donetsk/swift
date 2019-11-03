@@ -1,0 +1,84 @@
+@import '@/app';
+
+.billing-bank {
+
+    .billing_container {
+        max-width: 1625px;
+        padding: 39px 17px;
+
+        @include media('d-only') {
+            padding: 54px 45px 0 38px;
+            margin-bottom: 50px;
+        }
+
+    }
+
+    .cabinet-page_title {
+        margin-bottom: 38px;
+
+        @include media('d-only') {
+            padding: 0;
+            margin-bottom: 55px;
+        }
+    }
+
+    .widget-chat_inputs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 38px;
+
+        @include media("d-only") {
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            flex-direction: row;
+        }
+
+
+        .widget-input_wrap {
+            &:not(:last-of-type) {
+                margin-bottom: 26px;
+            }
+
+            .widget-input_title {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                color: $mainDarkBlue;
+                margin-bottom: 10px;
+            }
+
+            @include media("d-only") {
+                padding-right: 45px;
+                margin-bottom: 32px;
+                margin-right: 45px;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $widgetInstallBorder;
+                }
+
+                .widget-input_title {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+            }
+
+            .widget-input {
+                @include media("d-only") {
+                    width: 412px;
+                }
+
+                &::placeholder {
+                    color: $widgetPlaceholder;
+
+                    @include media("d-only") {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
