@@ -797,6 +797,11 @@
 	V12.2z M9.3,10.4H1.7V9.3h7.5V10.4z M7.5,3.5V0.6l2.9,2.9H7.5z"/>
 </svg>
     </symbol>
+    <symbol id="send">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.667 22">
+            <path id="Path_520" data-name="Path 520" d="M0,60.25l25.667-11L0,38.25v8.556L18.333,49.25,0,51.694Z" transform="translate(0 -38.25)" />
+        </svg>
+    </symbol>
 
     <symbol id="subscribe">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.134 13.133">

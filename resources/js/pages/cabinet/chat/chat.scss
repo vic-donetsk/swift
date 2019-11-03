@@ -2,11 +2,9 @@
 
 .chat {
     display: flex;
-
     width: calc(100% - 295px);
     max-width: 1625px;
     height: calc(100% - 64px);
-    //overflow: visible;
     padding: 0 2.47% 40px;
 
     @include media ('m-t-only') {
@@ -73,9 +71,11 @@
                     font-weight: 600;
                     color: $mainDarkBlue;
                 }
+
                 .manager_info-site {
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
 
                     svg.arrow {
                         width: 10px;
@@ -98,6 +98,7 @@
             border-radius: 8px;
 
             &_text {
+                @include swift_placeholder(400, #88A5DB);
                 width: 80%;
                 background: inherit;
                 border: none;
@@ -106,15 +107,6 @@
                 font-weight: 600;
                 color: $mainDarkBlue;
 
-                &::-moz-placeholder {
-                    color: #88A5DB;
-                    font-weight: 400;
-                }
-
-                &::-webkit-input-placeholder {
-                    color: #88A5DB;
-                    font-weight: 400;
-                }
             }
 
             svg.search {
@@ -127,14 +119,220 @@
             }
         }
 
+        &-topics {
+            height: calc(100vh - 360px);
+            overflow-y: auto;
+            overflow-x: hidden;
 
+            &::-webkit-scrollbar {
+                width: 3px; /* width of vertical scrollbar */
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 0;
+                background: #E7F4FB;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background: $mainDarkBlue;
+            }
+        }
+
+        &-topic_wrapper {
+            padding: 0 40px;
+
+            &.mod_active {
+                background: $landingHeaderbackground
+            }
+        }
+
+        &-topic {
+            display: flex;
+            align-items: center;
+            height: 121px;
+            border-bottom: 1px solid #E7F4FB;
+            font-size: 16px;
+            font-weight: 400;
+            color: #88A5DB;
+            line-height: 1.5;
+
+            .topic_messenger {
+                width: 63px;
+                height: 63px;
+                margin-right: 15px;
+                border-radius: 50%;
+                background: blue;
+
+                .messenger-icon {
+                    width: 37px;
+                    height: 37px;
+                    margin: 13px;
+                    fill: $white;
+                }
+            }
+
+            .topic_data {
+                flex-grow: 1;
+
+                .topic_data-nameID {
+                    color: $mainDarkBlue;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .topic_time {
+                margin-top: -23px;
+            }
+        }
     }
 
     .chat_info {
         flex-shrink: 1;
         flex-grow: 1;
         margin-top: 40px;
+        padding: 0 40px 40px;
         border: 1px solid #ECF7FC;
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 119px;
+            line-height: 1.2;
+            margin-top: 10px;
+            border-bottom: 1px solid #E7F4FB;
+            font-size: 16px;
+            font-weight: 400;
+            color: $mainDarkBlue;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+
+        &-content {
+            padding: 12px 0;
+        }
+
+        &-dialog {
+            height: calc(100vh - 393px);
+            padding: 0 15px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 3px; /* width of vertical scrollbar */
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 0;
+                background: #E7F4FB;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background: $mainDarkBlue;
+            }
+        }
+
+        &-message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3vh;
+
+            &.mod_manager-message {
+                justify-content: flex-start;
+            }
+
+            &.mod_client-message {
+                justify-content: flex-end;
+            }
+        }
+
+        &-avatar {
+            width: 63px;
+            height: 63px;
+            border-radius: 50%;
+
+            &.mod_client {
+                border: 1px solid #E7F4FB;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-message-block {
+            max-width: 70%;
+            border: 1px solid #E7F4FB;
+            border-radius: 15px;
+            font-size: 16px;
+
+            &.mod_manager {
+                background: $white;
+                margin-left: 20px;
+                padding: 19px 14px 18px 25px;
+                text-align: left;
+            }
+
+            &.mod_client {
+                background: #EFF8FD;
+                margin-right: 20px;
+                padding: 19px 25px 18px 14px;
+                text-align: right;
+            }
+
+            .message-block_text {
+                line-height: 2;
+                font-weight: 400;
+                color: #23324E;
+            }
+
+            .message-block_time {
+                line-height: 2;
+                font-weight: 300;
+                font-style: italic;
+                color: #88A5DB;
+            }
+        }
+
+        &-newMessage {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 95px;
+            padding: 20px;
+            background: $white;
+            border: 1px solid #E3ECF5;
+            border-radius: 8px;
+            text-align: left;
+
+
+            .newMessage_text {
+                @include swift_placeholder(400, #B8D1DE);
+                width: 90%;
+                border: none;
+                outline: none;
+                resize: none;
+                font-size: 16px;
+                color: #23324E;
+                overflow: hidden;
+            }
+
+            .newMessage_send {
+                width: 26px;
+                height: 22px;
+                fill: #B8D1DE;
+                cursor: pointer;
+            }
+        }
 
     }
 }

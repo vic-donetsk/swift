@@ -280,6 +280,7 @@
 }
 
 .searchId_text {
+    @include swift_placeholder(500, #BBC9DB);
     width: 80%;
     background: inherit;
     border: none;
@@ -287,16 +288,6 @@
     font-size: 16px;
     font-weight: 500;
     color: $mainDarkBlue;
-
-    &::-moz-placeholder {
-        color: #BBC9DB;
-        font-weight: 500;
-    }
-
-    &::-webkit-input-placeholder {
-        color: #BBC9DB;
-        font-weight: 500;
-    }
 }
 
 .withNotes {
