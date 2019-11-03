@@ -13,45 +13,85 @@
         position: relative;
     }
 
+    &.open-menu {
+        .landing-header_content {
+            background: $landingHeaderbackground;
+            position: relative;
+
+            .landing-menu_icon {
+                width: 18px;
+                height: 16px;
+                position: absolute;
+                left: 17px;
+                fill: $widgetActiveBlue;
+                cursor: pointer;
+
+            }
+        }
+
+
+        .landing-header_user {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
     .landing-header_content {
         display: flex;
         align-items: center;
         max-width: 1650px;
         margin: 0 auto;
-        padding: 24px 16px 21px 16px;
+        padding: 23px 16px 20px 16px;
         justify-content: space-between;
+        transition: all 0.1s linear;
 
         @include media('d-only') {
             padding: 0 32px;
             height: 53px;
             justify-content: flex-end;
+            transition: none;
         }
 
-        .header-hamburger {
+        .hamburger {
             position: relative;
-            width: 26px;
-            height: 14px;
-            cursor: pointer;
 
-            .header-hamburger_item {
+            &.hamburger--slider.is-active {
+                .hamburger-inner::after {
+                    transform: translate3d(0, -12px, 0) rotate(-90deg);
+                }
+
+                .hamburger-inner {
+                    transform: translate3d(0, 3px, 0) rotate(45deg);
+                }
+            }
+
+            .hamburger-inner {
                 width: 26px;
                 height: 2px;
-                position: absolute;
                 background-color: $widgetActiveBlue;
                 border-radius: 1px;
 
-                &.top {
-                    top: 0;
+                top: 3px;
+
+                &:before {
+                    top: 6px;
                 }
 
-                &.middle {
-                    top: 50%;
-                    transform: translateY(-50%);
+                &:after {
+                    top: 12px;
                 }
 
-                &.bottom {
-                    bottom: 0;
+                &:before, &:after {
+                    width: 26px;
+                    height: 2px;
+                    background-color: $widgetActiveBlue;
+                    border-radius: 1px;
                 }
+            }
+
+            .hamburger-box {
+                width: 26px;
+                height: 14px;
             }
 
             @include media('d-only') {
@@ -73,9 +113,11 @@
             height: 28px;
             border-radius: 50%;
             overflow: hidden;
+            transition: all 0.1s linear;
 
             @include media('d-only') {
                 display: none;
+                transition: none;
             }
 
             .header-user_icon {
@@ -130,64 +172,42 @@
 
     .landing-mobile_menu {
         background-color: $landingBackground;
+        height: calc(100vh - 85px);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        display: none;
 
         @include media('d-only') {
             display: none;
         }
 
-        .landing-menu_head {
-            height: 85px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: $landingHeaderbackground;
-            position: relative;
-
-            .landing-menu_icon{
-                width: 18px;
-                height: 16px;
-                position: absolute;
-                left: 17px;
-                fill: $widgetActiveBlue;
-                cursor: pointer;
-
-            }
-        }
 
         .landing-menu_content {
             max-width: 1650px;
             margin: 0 auto;
-            padding: 55px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            padding: 21px 0;
 
             .landing-menu_nav {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
+                display: block;
+                width: 100%;
+                text-align: center;
                 margin-bottom: 51px;
             }
 
             .landing-menu_item {
-                list-style-type: none;
                 text-transform: uppercase;
-                padding: 2px 0;
+                padding: 20px 0 17px 0;
                 color: $mainDarkBlue;
                 cursor: pointer;
-                margin-bottom: 25px;
-
-                &:not(:last-of-type) {
-                    margin-bottom: 42px;
-                }
             }
 
             .landing-menu_icons {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                min-width: 223px;
+                width: 223px;
+                margin: auto;
 
                 .landing-menu_icon {
                     width: 21px;
