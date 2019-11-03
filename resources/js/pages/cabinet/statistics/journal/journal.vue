@@ -476,15 +476,7 @@
 	l1.2-1.2l1.2,1.2c0.2,0.2,0.4,0.2,0.6,0l0.6-0.6c0.2-0.2,0.2-0.4,0-0.6L21.5,15.7z"/>
                 </svg>
             </symbol>
-            <symbol id="search">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.168 16.169">
-                    <g id="magnifying-glass" transform="translate(-0.001 -0.001)">
-                        <path id="Path_706" data-name="Path 706"
-                              d="M10.8,1.85a6.327,6.327,0,1,0-.865,9.665,1.332,1.332,0,0,0,.361.671l3.592,3.592a1.337,1.337,0,1,0,1.89-1.89l-3.592-3.593a1.336,1.336,0,0,0-.67-.36A6.333,6.333,0,0,0,10.8,1.85ZM9.664,9.664a4.723,4.723,0,1,1,0-6.68A4.729,4.729,0,0,1,9.664,9.664Z"
-                              transform="translate(0 0)"/>
-                    </g>
-                </svg>
-            </symbol>
+
             <symbol id="chatOpen">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.723 13.477">
                     <g id="Group_303" data-name="Group 303" transform="translate(0 0)">

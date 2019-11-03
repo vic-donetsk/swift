@@ -8,6 +8,7 @@ import widget from './pages/cabinet/widget/widget.vue';
 import widgetInstall from './pages/cabinet/widget-install/widget-install.vue';
 import widgetDeactivate from './pages/cabinet/widget-deactivate/widget-deactivate.vue';
 import widgetChat from './pages/cabinet/widget-chat/widget-chat.vue';
+import chat from './pages/cabinet/chat/chat.vue';
 import billingAbonnement from './pages/cabinet/billing-abonnement/billing-abonnement.vue';
 import billingInvoice from './pages/cabinet/billing-invoice/billing-invoice.vue';
 import cabinet from './components/cabinet/cabinet.vue';
@@ -39,8 +40,7 @@ export default [
     {
         path: '*',
         name: '404',
-        component:
-        page404
+        component: page404
     },
     {
         path: '/cabinet',
@@ -71,6 +71,11 @@ export default [
                 path: 'widget/chat',
                 name: 'cabinet-widget-chat',
                 component: widgetChat,
+            },
+            {
+                path: 'chat',
+                name: 'cabinet-chat',
+                component: chat,
             },
             {
                 path: 'billing/abonnement',

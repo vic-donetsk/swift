@@ -1,0 +1,140 @@
+@import '@/app';
+
+.chat {
+    display: flex;
+
+    width: calc(100% - 295px);
+    max-width: 1625px;
+    height: calc(100% - 64px);
+    //overflow: visible;
+    padding: 0 2.47% 40px;
+
+    @include media ('m-t-only') {
+        width: 100%;
+        padding: 0 5.3% 0;
+        overflow: hidden;
+    }
+
+    .chat_handler {
+        width: 566px;
+        margin-top: 40px;
+        padding-top: 10px;
+
+        border-left: 1px solid #ECF7FC;
+        border-top: 1px solid #ECF7FC;
+        border-bottom: 1px solid #ECF7FC;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            height: 119px;
+            padding: 0 40px;
+
+            svg.leftArrow {
+                width: 22px;
+                height: 18px;
+                fill: $widgetActiveBlue;
+
+                @include media('d') {
+                    display: none;
+                }
+            }
+
+            svg.bell {
+                width: 24px;
+                height: 30px;
+                margin-top: -20px;
+                fill: $mainDarkBlue;
+                cursor: pointer;
+            }
+
+            &_manager {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                line-height: 1.2;
+                font-size: 16px;
+                font-weight: 400;
+                color: #88A5DB;
+
+                .manager_photo {
+                    width: 63px;
+                    height: 63px;
+                    margin-right: 13px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .manager_info-name {
+                    font-weight: 600;
+                    color: $mainDarkBlue;
+                }
+                .manager_info-site {
+                    display: flex;
+                    align-items: center;
+
+                    svg.arrow {
+                        width: 10px;
+                        height: 5px;
+                        stroke: #88A5DB;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+
+        &-search {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 483px;
+            height: 49px;
+            margin: 0 auto 38px;
+            border: 1px solid #E7F4FB;
+            border-radius: 8px;
+
+            &_text {
+                width: 80%;
+                background: inherit;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: $mainDarkBlue;
+
+                &::-moz-placeholder {
+                    color: #88A5DB;
+                    font-weight: 400;
+                }
+
+                &::-webkit-input-placeholder {
+                    color: #88A5DB;
+                    font-weight: 400;
+                }
+            }
+
+            svg.search {
+                width: 16px;
+                height: 16px;
+                fill: #88A5DB;
+                margin-left: 20px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+    .chat_info {
+        flex-shrink: 1;
+        flex-grow: 1;
+        margin-top: 40px;
+        border: 1px solid #ECF7FC;
+
+    }
+}
