@@ -9,6 +9,7 @@
 
     @include media ('m-t-only') {
         width: 100%;
+        flex-direction: column;
         padding: 0 5.3% 0;
         overflow: hidden;
     }
@@ -18,15 +19,23 @@
         margin-top: 40px;
         padding-top: 10px;
 
-        border-left: 1px solid #ECF7FC;
-        border-top: 1px solid #ECF7FC;
-        border-bottom: 1px solid #ECF7FC;
+        border: 1px solid #ECF7FC;
+
+        @include media ('m-t-only') {
+            width: 100%;
+            border-left: none;
+            border-right: none;
+        }
 
         &-header {
             display: flex;
             align-items: center;
             height: 119px;
             padding: 0 40px;
+
+            @include media ('m-t-only') {
+                padding: 0 16px;
+            }
 
             svg.leftArrow {
                 width: 22px;
@@ -44,6 +53,10 @@
                 margin-top: -20px;
                 fill: $mainDarkBlue;
                 cursor: pointer;
+                @include media('m-t-only') {
+                    display: none;
+                }
+
             }
 
             &_manager {
@@ -54,6 +67,10 @@
                 font-size: 16px;
                 font-weight: 400;
                 color: #88A5DB;
+
+                @include media('m-t-only') {
+                    justify-content: center;
+                }
 
                 .manager_photo {
                     width: 63px;
@@ -91,11 +108,14 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 483px;
             height: 49px;
-            margin: 0 auto 38px;
+            margin: 0 42px 38px;
             border: 1px solid #E7F4FB;
             border-radius: 8px;
+
+            @include media('m') {
+                margin: 0 5.3% 18px;
+            }
 
             &_text {
                 @include swift_placeholder(400, #88A5DB);
@@ -137,13 +157,21 @@
                 border-radius: 4px;
                 background: $mainDarkBlue;
             }
+
+            @include media('m-t-only') {
+                height: auto;
+            }
         }
 
         &-topic_wrapper {
             padding: 0 40px;
 
+            @include media('m-t-only') {
+                padding: 0;
+            }
+
             &.mod_active {
-                background: $landingHeaderbackground
+                background: $landingHeaderbackground;
             }
         }
 
@@ -174,18 +202,43 @@
 
             .topic_data {
                 flex-grow: 1;
+                cursor: pointer;
 
                 .topic_data-nameID {
                     color: $mainDarkBlue;
 
+                    @include media('m-t-only') {
+                        margin-bottom: 5px;
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+
                     span {
+                        font-size: 14px;
                         font-weight: 600;
+                        @include media('m-t-only') {
+                            display: block;
+                        }
+
+
+                    }
+                }
+                .topic_data-content {
+                    @include media('m-t-only') {
+                        font-size: 12px;
+                        font-weight: 300;
                     }
                 }
             }
 
             .topic_time {
                 margin-top: -23px;
+
+                @include media('m-t-only') {
+                    align-self: flex-start;
+                    margin-top: 23px;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -195,7 +248,10 @@
         flex-grow: 1;
         margin-top: 40px;
         padding: 0 40px 40px;
-        border: 1px solid #ECF7FC;
+
+        border-right: 1px solid #ECF7FC;
+        border-top: 1px solid #ECF7FC;
+        border-bottom: 1px solid #ECF7FC;
 
         &-title {
             display: flex;

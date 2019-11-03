@@ -43,7 +43,7 @@
                             </svg>
                         </div>
                         <div class="topic_data">
-                            <div class="topic_data-nameID"><span>Ivan Ivanov</span>&nbsp;(ID: 6661313)
+                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
                             <div class="topic_data-content">Hi,fuck away from my site</div>
                         </div>
@@ -59,7 +59,7 @@
                             </svg>
                         </div>
                         <div class="topic_data">
-                            <div class="topic_data-nameID"><span>Ivan Ivanov</span>&nbsp;(ID: 6661313)
+                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
                             <div class="topic_data-content">Hi,fuck away from my site</div>
                         </div>
@@ -75,7 +75,7 @@
                             </svg>
                         </div>
                         <div class="topic_data">
-                            <div class="topic_data-nameID"><span>Ivan Ivanov</span>&nbsp;(ID: 6661313)
+                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
                             <div class="topic_data-content">Hi,fuck away from my site</div>
                         </div>
@@ -91,7 +91,7 @@
                             </svg>
                         </div>
                         <div class="topic_data">
-                            <div class="topic_data-nameID"><span>Ivan Ivanov</span>&nbsp;(ID: 6661313)
+                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
                             <div class="topic_data-content">Hi,fuck away from my site</div>
                         </div>
@@ -131,11 +131,10 @@
 
                 </div>
                 <div class="chat_info-newMessage">
-                    <textarea class="newMessage_text"
-                              :placeholder="__('chat', 'Write a message ...')"
-                              v-model="currentMessage"
-                              @keyup="handleEnter">
-                        </textarea>
+                    <input class="newMessage_text"
+                           :placeholder="__('chat', 'Write a message ...')"
+                           v-model="currentMessage"
+                           @keyup="handleEnter">
                     <svg class="newMessage_send" @click="send">
                         <use xlink:href="#send"></use>
                     </svg>

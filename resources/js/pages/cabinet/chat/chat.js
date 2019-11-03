@@ -18,11 +18,11 @@ export default {
     },
     mounted(){
         let dialog = this.$el.querySelector("#chat_scrolling");
-        dialog.scrollTop = dialog.clientHeight;
+        dialog.scrollTop = dialog.scrollHeight;
     },
     updated(){
         let dialog = this.$el.querySelector("#chat_scrolling");
-        dialog.scrollTop = dialog.clientHeight;
+        dialog.scrollTop = dialog.scrollHeight;
     },
     methods: {
         handleEnter(event) {
