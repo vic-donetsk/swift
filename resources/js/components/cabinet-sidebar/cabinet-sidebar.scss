@@ -133,12 +133,50 @@
 
 
         .cabinet-sidebar_item {
+            position: relative;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            padding-left: 11px;
+            margin-left: 11px;
             height: 65px;
             cursor: pointer;
+
+            &:first-of-type {
+                background: white;
+                border-top-left-radius: 17px;
+                border-bottom-left-radius: 17px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-bottom: 17px solid $white;
+                    border-left: 17px solid transparent;
+                    right: 0;
+                    top: -17px;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-top: 17px solid $white;
+                    border-left: 17px solid transparent;
+                    right: 0;
+                    bottom: -17px;
+                }
+
+                .sidebar-menu_icon {
+                    fill: $mainDarkBlue;
+                }
+
+                .sidebar-menu_name {
+                    color: $mainDarkBlue;
+                }
+            }
+
 
             .sidebar-menu_icon {
                 width: 23px;
