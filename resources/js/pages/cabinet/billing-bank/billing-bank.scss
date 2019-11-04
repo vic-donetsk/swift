@@ -36,6 +36,7 @@
 
         @include media("d-only") {
             width: 100%;
+            padding-bottom: 20px;
 
             &:not(:last-of-type) {
                 margin-bottom: 0;
