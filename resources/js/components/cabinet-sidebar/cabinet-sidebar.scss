@@ -131,6 +131,45 @@
             flex-direction: column;
         }
 
+        .cabinet-sidebar_item-square {
+            display: none;
+            position: absolute;
+            right: 0;
+
+            overflow: hidden;
+
+            width: 17px;
+            height: 17px;
+
+            background: $white;
+
+            &:before {
+                content: '';
+                position: absolute;
+                background: #EFF8FD;
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+            }
+
+            &.top {
+                top: -17px;
+
+                &:before {
+                    top: -17px;
+                    left: -17px;
+                }
+            }
+
+            &.bottom {
+                bottom: -17px;
+
+                &:before {
+                    bottom: -17px;
+                    left: -17px;
+                }
+            }
+        }
 
         .cabinet-sidebar_item {
             position: relative;
@@ -141,32 +180,16 @@
             height: 65px;
             cursor: pointer;
 
-            &:first-of-type {
+
+            &.mod_active {
                 background: white;
                 border-top-left-radius: 17px;
                 border-bottom-left-radius: 17px;
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 0;
-                    height: 0;
-                    border-bottom: 17px solid $white;
-                    border-left: 17px solid transparent;
-                    right: 0;
-                    top: -17px;
+                .cabinet-sidebar_item-square {
+                    display: block;
                 }
 
-                &:after {
-                    content: "";
-                    position: absolute;
-                    width: 0;
-                    height: 0;
-                    border-top: 17px solid $white;
-                    border-left: 17px solid transparent;
-                    right: 0;
-                    bottom: -17px;
-                }
 
                 .sidebar-menu_icon {
                     fill: $mainDarkBlue;

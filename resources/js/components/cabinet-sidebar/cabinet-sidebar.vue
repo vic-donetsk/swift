@@ -26,7 +26,9 @@
             </div>
 
             <div class="cabinet-sidebar_menu">
-                <div class="cabinet-sidebar_item">
+                <div class="cabinet-sidebar_item mod_active">
+                    <div class="cabinet-sidebar_item-square top"></div>
+                    <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#statistics"></use>
                     </svg>
@@ -34,6 +36,8 @@
                 </div>
 
                 <div class="cabinet-sidebar_item">
+                    <div class="cabinet-sidebar_item-square top"></div>
+                    <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#widget"></use>
                     </svg>
@@ -41,6 +45,8 @@
                 </div>
 
                 <div class="cabinet-sidebar_item">
+                    <div class="cabinet-sidebar_item-square top"></div>
+                    <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-chat"></use>
                     </svg>
@@ -48,6 +54,8 @@
                 </div>
 
                 <div class="cabinet-sidebar_item">
+                    <div class="cabinet-sidebar_item-square top"></div>
+                    <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-billing"></use>
                     </svg>
@@ -55,6 +63,8 @@
                 </div>
 
                 <div class="cabinet-sidebar_item">
+                    <div class="cabinet-sidebar_item-square top"></div>
+                    <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-settings"></use>
                     </svg>
@@ -62,6 +72,8 @@
                 </div>
 
                 <div class="cabinet-sidebar_item">
+                    <div class="cabinet-sidebar_item-square top"></div>
+                    <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-support"></use>
                     </svg>
