@@ -1,7 +1,7 @@
 <template>
     <div class="cabinet_page chat">
         <div class="chat_handler">
-            <div class="chat_handler-header">
+            <div v-if="isDesktop || mobileMode === 0" class="chat_handler-header">
                 <svg class="leftArrow">
                     <use xlink:href="#leftArrow"></use>
                 </svg>
@@ -42,10 +42,10 @@
                                 <use xlink:href="#viber"></use>
                             </svg>
                         </div>
-                        <div class="topic_data">
+                        <div class="topic_data" @click="gotoChat(123)">
                             <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
-                            <div class="topic_data-content">Hi,fuck away from my site</div>
+                            <div class="topic_data-content">Hi,can I help you?</div>
                         </div>
                         <div class="topic_time">14:21</div>
                     </div>
@@ -58,10 +58,28 @@
                                 <use xlink:href="#viber"></use>
                             </svg>
                         </div>
-                        <div class="topic_data">
+                        <div class="topic_other">
+                            <div class="topic_data" @click="gotoChat(123)">
+                                <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
+                                </div>
+                                <div class="topic_data-content">Hi,can I help you?</div>
+                            </div>
+                            <div class="topic_time">14:21</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat_handler-topic_wrapper">
+                    <div class="chat_handler-topic">
+                        <div class="topic_messenger" style="background: blue">
+                            <svg class="messenger-icon">
+                                <use xlink:href="#viber"></use>
+                            </svg>
+                        </div>
+                        <div class="topic_data" @click="gotoChat(123)">
                             <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
-                            <div class="topic_data-content">Hi,fuck away from my site</div>
+                            <div class="topic_data-content">Hi,can I help you?</div>
                         </div>
                         <div class="topic_time">14:21</div>
                     </div>
@@ -74,10 +92,10 @@
                                 <use xlink:href="#viber"></use>
                             </svg>
                         </div>
-                        <div class="topic_data">
+                        <div class="topic_data" @click="gotoChat(123)">
                             <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
-                            <div class="topic_data-content">Hi,fuck away from my site</div>
+                            <div class="topic_data-content">Hi,can I help you?</div>
                         </div>
                         <div class="topic_time">14:21</div>
                     </div>
@@ -90,10 +108,26 @@
                                 <use xlink:href="#viber"></use>
                             </svg>
                         </div>
-                        <div class="topic_data">
+                        <div class="topic_data" @click="gotoChat(123)">
                             <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
                             </div>
-                            <div class="topic_data-content">Hi,fuck away from my site</div>
+                            <div class="topic_data-content">Hi,can I help you?</div>
+                        </div>
+                        <div class="topic_time">14:21</div>
+                    </div>
+                </div>
+
+                <div class="chat_handler-topic_wrapper">
+                    <div class="chat_handler-topic">
+                        <div class="topic_messenger" style="background: blue">
+                            <svg class="messenger-icon">
+                                <use xlink:href="#viber"></use>
+                            </svg>
+                        </div>
+                        <div class="topic_data" @click="gotoChat(123)">
+                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
+                            </div>
+                            <div class="topic_data-content">Hi,can I help you?</div>
                         </div>
                         <div class="topic_time">14:21</div>
                     </div>
@@ -102,13 +136,35 @@
 
         </div>
         <div class="chat_info">
-            <div class="chat_info-title">
+            <div v-if="mobileMode === 2" class="chat_info-mobileLayout"></div>
+            <div v-if="mobileMode === 2" class="mobileArrow">
+                <svg class="mobileTitle_arrow-icon" @click="returnToChat">
+                    <use xlink:href="#leftArrow"></use>
+                </svg>
+            </div>
+            <div v-if="isDesktop || mobileMode === 2" class="chat_info-title">
                 <div>{{__('chat', 'Client writes through')}}&nbsp;:&nbsp;<span>Telegram</span></div>
                 <div>{{__('chat', 'Name')}}&nbsp;:&nbsp;<span>JasMine FuckWade</span></div>
                 <div>{{__('chat', 'Phone')}}&nbsp;:&nbsp;<span>+373-789-666-13</span></div>
 
             </div>
-            <div class="chat_info-content">
+            <div v-if="isDesktop || mobileMode === 1 || mobileMode === 2" class="chat_info-content">
+
+                <div v-if="mobileMode === 1 || mobileMode === 2" class="chat-info_mobileTitle">
+                    <div class="mobileTitle_arrow">
+                        <svg class="mobileTitle_arrow-icon" @click="returnToTopics">
+                            <use xlink:href="#leftArrow"></use>
+                        </svg>
+                    </div>
+                    <div class="mobileTitle_data">
+                        <div class="name">Jasmine Wada</div>
+                        <div class="id">(ID: 325425)</div>
+                        <div class="status">Online</div>
+                    </div>
+                    <div class="mobileTitle_info" @click="showDetails">
+                        <img src="/img/icons/info.svg" class="mobileTitle_info-icon" alt="">
+                    </div>
+                </div>
 
                 <div id="chat_scrolling" class="chat_info-dialog">
 
