@@ -15,6 +15,13 @@
   "Billing invoice table content 5": "Transfer bancar",
   "Billing invoice table content 6": "Credit card",
   "Billing invoice table content 7": "Transfer",
-  "Billing input placeholder": "SwiftCallBack"
+  "Billing input placeholder": "SwiftCallBack",
+  "Billing input title 1": "Numele Companiei",
+  "Billing input title 2": "Cod fiscal (IDNO)",
+  "Billing input title 3": "IBAN",
+  "Billing input title 4": "Codul băncii",
+  "Billing input title 5": "Adresa juridică",
+  "Billing input title 6": "Cod TVA",
+  "Billing input title 7": "Banca"
 }
 
