@@ -10,10 +10,10 @@
                         <img src="/img/person.png" alt="">
                     </div>
                     <div class="manager_info">
-                        <div class="manager_info-name">Adrian Ktototam</div>
-                        <div class="manager_info-email">test@rambler.ru</div>
+                        <div class="manager_info-name">{{currentManager.name}}</div>
+                        <div class="manager_info-email">{{currentManager.email}}</div>
                         <div class="manager_info-site" @click="changeSite">
-                            swiftcalldown.ru
+                            {{currentManager.sites[0]}}
                             <svg class="arrow">
                                 <use xlink:href="#arrow"></use>
                             </svg>
@@ -35,101 +35,21 @@
             </div>
 
             <div class="chat_handler-topics">
-                <div class="chat_handler-topic_wrapper mod_active">
-                    <div class="chat_handler-topic">
-                        <div class="topic_messenger" style="background: blue">
+                <div v-for="oneChat in chatDatabase" class="chat_handler-topic_wrapper" :id="oneChat.chatID">
+                    <div  class="chat_handler-topic">
+                        <div class="topic_messenger" :style="'background:' + chatsColors[oneChat.source]">
                             <svg class="messenger-icon">
-                                <use xlink:href="#viber"></use>
-                            </svg>
-                        </div>
-                        <div class="topic_data" @click="gotoChat(123)">
-                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
-                            </div>
-                            <div class="topic_data-content">Hi,can I help you?</div>
-                        </div>
-                        <div class="topic_time">14:21</div>
-                    </div>
-                </div>
-
-                <div class="chat_handler-topic_wrapper">
-                    <div class="chat_handler-topic">
-                        <div class="topic_messenger" style="background: blue">
-                            <svg class="messenger-icon">
-                                <use xlink:href="#viber"></use>
+                                <use :xlink:href="'#' + oneChat.source"></use>
                             </svg>
                         </div>
                         <div class="topic_other">
-                            <div class="topic_data" @click="gotoChat(123)">
-                                <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
+                            <div class="topic_data" @click="gotoChat(oneChat.messages)">
+                                <div class="topic_data-nameID"><span>{{oneChat.clientName}} </span>(ID:{{oneChat.chatID}})
                                 </div>
-                                <div class="topic_data-content">Hi,can I help you?</div>
+                                <div class="topic_data-content">{{oneChat.messages[oneChat.messages.length-1].text}} </div>
                             </div>
-                            <div class="topic_time">14:21</div>
+                            <div class="topic_time">{{oneChat.messages[oneChat.messages.length-1].time}}</div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="chat_handler-topic_wrapper">
-                    <div class="chat_handler-topic">
-                        <div class="topic_messenger" style="background: blue">
-                            <svg class="messenger-icon">
-                                <use xlink:href="#viber"></use>
-                            </svg>
-                        </div>
-                        <div class="topic_data" @click="gotoChat(123)">
-                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
-                            </div>
-                            <div class="topic_data-content">Hi,can I help you?</div>
-                        </div>
-                        <div class="topic_time">14:21</div>
-                    </div>
-                </div>
-
-                <div class="chat_handler-topic_wrapper">
-                    <div class="chat_handler-topic">
-                        <div class="topic_messenger" style="background: blue">
-                            <svg class="messenger-icon">
-                                <use xlink:href="#viber"></use>
-                            </svg>
-                        </div>
-                        <div class="topic_data" @click="gotoChat(123)">
-                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
-                            </div>
-                            <div class="topic_data-content">Hi,can I help you?</div>
-                        </div>
-                        <div class="topic_time">14:21</div>
-                    </div>
-                </div>
-
-                <div class="chat_handler-topic_wrapper">
-                    <div class="chat_handler-topic">
-                        <div class="topic_messenger" style="background: blue">
-                            <svg class="messenger-icon">
-                                <use xlink:href="#viber"></use>
-                            </svg>
-                        </div>
-                        <div class="topic_data" @click="gotoChat(123)">
-                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
-                            </div>
-                            <div class="topic_data-content">Hi,can I help you?</div>
-                        </div>
-                        <div class="topic_time">14:21</div>
-                    </div>
-                </div>
-
-                <div class="chat_handler-topic_wrapper">
-                    <div class="chat_handler-topic">
-                        <div class="topic_messenger" style="background: blue">
-                            <svg class="messenger-icon">
-                                <use xlink:href="#viber"></use>
-                            </svg>
-                        </div>
-                        <div class="topic_data" @click="gotoChat(123)">
-                            <div class="topic_data-nameID"><span>Victor Viktorov </span>(ID: 6661313)
-                            </div>
-                            <div class="topic_data-content">Hi,can I help you?</div>
-                        </div>
-                        <div class="topic_time">14:21</div>
                     </div>
                 </div>
             </div>

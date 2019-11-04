@@ -189,7 +189,13 @@
             color: #88A5DB;
             line-height: 1.5;
 
+            @include media('m-t-only') {
+                height: 82px;
+                border-bottom: none;
+            }
+
             .topic_messenger {
+                flex-shrink: 0;
                 width: 63px;
                 height: 63px;
                 margin-right: 15px;
@@ -199,16 +205,23 @@
                 .messenger-icon {
                     width: 37px;
                     height: 37px;
-                    margin: 13px;
+                    margin-left: 14px;
+                    margin-top: 12px;
                     fill: $white;
                 }
             }
 
             .topic_other {
                 width: 100%;
+                height: 121px;
                 display: flex;
                 justify-content: space-between;
-                border-bottom: 1px solid red;
+                align-items: center;
+
+                @include media('m-t-only') {
+                    height: 82px;
+                    border-bottom: 1px solid #E7F4FB;
+                }
             }
 
             .topic_data {
@@ -248,7 +261,7 @@
 
                 @include media('m-t-only') {
                     align-self: flex-start;
-                    margin-top: 23px;
+                    margin-top: 10px;
                     font-size: 14px;
                 }
             }

@@ -54,7 +54,8 @@ export default {
                 'VK' : '#4C75A3',
                 'viber': '#7E37B1',
                 'whatsapp': '#00D935',
-                'telegram': '#0088CC'
+                'telegram': '#0088CC',
+                'chat': '#D7C47E'
             },
 
             openFullMobile: -1,
