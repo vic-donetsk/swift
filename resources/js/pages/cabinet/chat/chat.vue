@@ -28,25 +28,30 @@
             </div>
 
             <div class="chat_handler-search">
-                <svg class="search" @click="searchChatID(searchChatId)">
+                <svg class="search" @click="searchChatID">
                     <use xlink:href="#search"></use>
                 </svg>
-                <input class="chat_handler-search_text" placeholder="Search ID">
+                <input class="chat_handler-search_text"
+                       placeholder="Search ID"
+                       v-model="searchID"
+                       @keyup="handleSearchEnter"
+                >
             </div>
 
             <div class="chat_handler-topics">
-                <div v-for="oneChat in chatDatabase" class="chat_handler-topic_wrapper" :id="oneChat.chatID">
-                    <div  class="chat_handler-topic">
+                <div v-for="oneChat in chatDatabase" class="chat_handler-topic_wrapper" :id="'id' + oneChat.chatID">
+                    <div class="chat_handler-topic">
                         <div class="topic_messenger" :style="'background:' + chatsColors[oneChat.source]">
                             <svg class="messenger-icon">
-                                <use :xlink:href="'#' + oneChat.source"></use>
+                                <use :xlink:href="'#' + oneChat.source.toLowerCase()"></use>
                             </svg>
                         </div>
                         <div class="topic_other">
-                            <div class="topic_data" @click="gotoChat(oneChat.messages)">
+                            <div class="topic_data" @click="gotoChat(oneChat)">
                                 <div class="topic_data-nameID"><span>{{oneChat.clientName}} </span>(ID:{{oneChat.chatID}})
                                 </div>
-                                <div class="topic_data-content">{{oneChat.messages[oneChat.messages.length-1].text}} </div>
+                                <div class="topic_data-content">{{oneChat.messages[oneChat.messages.length-1].text}}
+                                </div>
                             </div>
                             <div class="topic_time">{{oneChat.messages[oneChat.messages.length-1].time}}</div>
                         </div>
@@ -63,9 +68,12 @@
                 </svg>
             </div>
             <div v-if="isDesktop || mobileMode === 2" class="chat_info-title">
-                <div>{{__('chat', 'Client writes through')}}&nbsp;:&nbsp;<span>Telegram</span></div>
-                <div>{{__('chat', 'Name')}}&nbsp;:&nbsp;<span>JasMine FuckWade</span></div>
-                <div>{{__('chat', 'Phone')}}&nbsp;:&nbsp;<span>+373-789-666-13</span></div>
+                <div>{{__('chat', 'Client writes through')}}&nbsp;:&nbsp;
+                    <span>{{activeElementData.source.charAt(0).toUpperCase() + activeElementData.source.slice(1)}}
+                    </span>
+                </div>
+                <div>{{__('chat', 'Name')}}&nbsp;:&nbsp;<span>{{activeElementData.clientName}}</span></div>
+                <div>{{__('chat', 'Phone')}}&nbsp;:&nbsp;<span>{{activeElementData.clientPhone}}</span></div>
 
             </div>
             <div v-if="isDesktop || mobileMode === 1 || mobileMode === 2" class="chat_info-content">
@@ -77,9 +85,9 @@
                         </svg>
                     </div>
                     <div class="mobileTitle_data">
-                        <div class="name">Jasmine Wada</div>
-                        <div class="id">(ID: 325425)</div>
-                        <div class="status">Online</div>
+                        <div class="name">{{activeElementData.clientName}}</div>
+                        <div class="id">(ID: {{activeElementData.chatID}})</div>
+                        <div class="status">{{activeElementData.clientStatus}}</div>
                     </div>
                     <div class="mobileTitle_info" @click="showDetails">
                         <img src="/img/icons/info.svg" class="mobileTitle_info-icon" alt="">
@@ -106,11 +114,11 @@
                     </div>
 
                 </div>
-                <div class="chat_info-newMessage">
+                <div v-if="activeElementID !== 0" class="chat_info-newMessage">
                     <input class="newMessage_text"
                            :placeholder="__('chat', 'Write a message ...')"
                            v-model="currentMessage"
-                           @keyup="handleEnter">
+                           @keyup="handleChatEnter">
                     <svg class="newMessage_send" @click="send">
                         <use xlink:href="#send"></use>
                     </svg>
