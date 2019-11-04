@@ -26,41 +26,41 @@
             </div>
 
             <div class="cabinet-sidebar_menu">
-                <div class="cabinet-sidebar_item mod_active">
+                <router-link to="/cabinet/statistics" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#statistics"></use>
                     </svg>
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 1')}}</span>
-                </div>
+                </router-link>
 
-                <div class="cabinet-sidebar_item">
+                <router-link to="/cabinet/widget" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#widget"></use>
                     </svg>
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 2')}}</span>
-                </div>
+                </router-link>
 
-                <div class="cabinet-sidebar_item">
+                <router-link to="/cabinet/chat" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-chat"></use>
                     </svg>
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 3')}}</span>
-                </div>
+                </router-link>
 
-                <div class="cabinet-sidebar_item">
+                <router-link to="/cabinet/billing/abonnement" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-billing"></use>
                     </svg>
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 4')}}</span>
-                </div>
+                </router-link>
 
                 <div class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>

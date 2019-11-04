@@ -179,9 +179,9 @@
             margin-left: 11px;
             height: 65px;
             cursor: pointer;
+            text-decoration: none;
 
-
-            &.mod_active {
+            &.router-link-active {
                 background: white;
                 border-top-left-radius: 17px;
                 border-bottom-left-radius: 17px;
