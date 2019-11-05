@@ -8,6 +8,18 @@ export default {
                 {title: 'api keys', svg: 'api_gear'},
                 {title: 'blacklist', svg: 'cross'},
                 {title: 'session', svg: 'global'}],
+            profile: {
+                name: '',
+                firstName: '',
+                phone: '',
+                email: '',
+                language: '',
+            },
+            password: {
+                old: '',
+                new: '',
+                confirm: ''
+            }
         }
     },
     created() {

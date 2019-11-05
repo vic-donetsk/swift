@@ -2,6 +2,23 @@
     "general" : "GENERAL",
     "api keys" : "API KEYS",
     "blacklist" : "BLACKLIST",
-    "session" : "SESIUNE"
+    "session" : "SESIUNE",
+
+    "Basic settings" : "Setări de bază",
+    "Name" : "Numele",
+    "First name" : "Prenume",
+    "Phone (for sms notifications)" : "Telefon (pentru sms notificări)",
+    "Email" : "Email",
+    "Language for notifications" : "Limba pentru notificări",
+    "Profile photo" : "Poza de profil",
+    "Save changes" : "Salvează modificările",
+    "Receive email notifications" : "Primește notificări prin Email",
+    "Receive SMS notifications" : "Primește notificări prin SMS ",
+
+    "Change password" : "Schimbă parola",
+    "Old password" : "Parola veche",
+    "New password" : "Parolă nouă",
+    "Confirm your password" : "Confirmă parola"
+
 
 }
