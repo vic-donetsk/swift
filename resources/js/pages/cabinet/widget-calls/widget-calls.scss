@@ -1,0 +1,82 @@
+@import '@/app';
+
+.widget-calls {
+
+    .widget_container {
+        max-width: 1625px;
+        padding: 39px 17px 0;
+
+        @include media('d-only') {
+            padding: 54px 45px 0 38px;
+
+        }
+
+        .cabinet-page_title {
+            margin-bottom: 7px;
+
+            &.mod_margin {
+                margin-bottom: 22px;
+            }
+
+            .right-icon {
+                fill: $widgetCallsIcon;
+            }
+
+            @include media('d-only') {
+                margin-bottom: 10px;
+
+                &.mod_margin {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+
+    .widget-calls-wrap {
+
+        @include media('d-only') {
+            display: flex;
+        }
+    }
+
+
+    .widget-calls_block-left {
+
+
+        .widget-calls_subtitle {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 15px;
+            color: $widgetDeactivateLink;
+            margin-left: 22px;
+            margin-bottom: 18px;
+        }
+
+        @include media('d-only') {
+            border-right: 1px solid $widgetInstallBorder;
+            padding-right: 40px;
+            margin-right: 42px;
+
+            .widget-calls_subtitle {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 37px;
+            }
+        }
+    }
+
+    .widget-calls_block-right {
+
+    }
+
+
+    .widget-button {
+        margin: 0 auto;
+
+        @include media('d-only') {
+            margin: 0 0 0 22px;
+        }
+
+
+    }
+}
