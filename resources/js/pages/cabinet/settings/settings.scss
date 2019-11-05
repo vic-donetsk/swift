@@ -1,18 +1,73 @@
 @import '@/app';
 
-.chat {
+.settings {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: calc(100% - 295px);
     max-width: 1625px;
     height: calc(100% - 64px);
-    padding: 0 2.47% 40px;
+    //padding: 0 2.47% 40px;
 
     @include media ('m-t-only') {
         position: relative;
         width: 100%;
         flex-direction: column;
-        padding: 0 5.3% 0;
+        //padding: 0 5.3% 0;
         overflow: hidden;
+    }
+
+    &_nav {
+        display: flex;
+        justify-content: center;
+        padding: 54px 2.3% 58px;
+
+        &-item {
+            @extend %lightBlueGradient;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 25.4%;
+            height: 49px;
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+            color: $mainDarkBlue;
+            fill: $mainDarkBlue;
+            cursor: pointer;
+
+            &:first-of-type {
+                padding-left: 1.9%
+            }
+            &:not(:first-of-type) {
+                margin-left: -2.25%;
+                padding-left: 4.1%
+            }
+            @for $i from 1 through 4 {
+                &:nth-of-type(#{$i}) {
+                    z-index: 4 - $i + 1;
+                }
+            }
+
+            &.mod_active {
+                @extend %blueGradient;
+                color: $white;
+                fill: $white;
+                cursor: default;
+            }
+
+            .nav-item_svg {
+                width: 14px;
+                height: 14px;
+                margin-right: 7px;
+            }
+
+            .nav-item_text {
+                height: 20px;
+                font-size: 16px;
+                font-weight: 400;
+
+            }
+        }
     }
 
 }

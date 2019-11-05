@@ -62,14 +62,14 @@
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 4')}}</span>
                 </router-link>
 
-                <div class="cabinet-sidebar_item">
+                <router-link to="/cabinet/settings" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#menu-settings"></use>
                     </svg>
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 5')}}</span>
-                </div>
+                </router-link>
 
                 <div class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>

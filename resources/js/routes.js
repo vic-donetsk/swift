@@ -15,6 +15,7 @@ import chat from './pages/cabinet/chat/chat.vue';
 import billingAbonnement from './pages/cabinet/billing-abonnement/billing-abonnement.vue';
 import billingInvoice from './pages/cabinet/billing-invoice/billing-invoice.vue';
 import billingBank from './pages/cabinet/billing-bank/billing-bank.vue';
+import settings from './pages/cabinet/settings/settings.vue';
 import cabinet from './components/cabinet/cabinet.vue';
 
 export default [
@@ -110,7 +111,12 @@ export default [
                 path: 'billing/bank',
                 name: 'cabinet-billing-bank',
                 component: billingBank,
-            }
+            },
+            {
+                path: 'settings',
+                name: 'cabinet-settings',
+                component: settings,
+            },
         ]
     },
 
