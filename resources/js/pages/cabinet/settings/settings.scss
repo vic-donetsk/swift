@@ -1,0 +1,18 @@
+@import '@/app';
+
+.chat {
+    display: flex;
+    width: calc(100% - 295px);
+    max-width: 1625px;
+    height: calc(100% - 64px);
+    padding: 0 2.47% 40px;
+
+    @include media ('m-t-only') {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        padding: 0 5.3% 0;
+        overflow: hidden;
+    }
+
+}
