@@ -1,6 +1,6 @@
 @import '@/app';
 
-.widget-install {
+.widget-sms {
 
     .widget_container {
         max-width: 1625px;
@@ -12,168 +12,216 @@
         }
 
         .cabinet-page_title {
-            margin-bottom: 30px;
+            margin-bottom: 7px;
 
             @include media('d-only') {
-                &.mod_margin {
-                    margin-bottom: 52px;
+                margin-bottom: 9px;
+            }
+        }
+
+        .mod_sender {
+            margin-bottom: 6px;
+        }
+
+        .mod_schemes {
+            margin-bottom: 24px;
+        }
+
+        @include media('d-only') {
+
+            .mod_sender {
+                margin-bottom: 24px;
+            }
+
+            .mod_schemes {
+                margin-bottom: 32px;
+            }
+        }
+
+    }
+
+
+    .widget-sms_informative {
+
+    }
+
+    .widget-sms_sender {
+
+    }
+
+    .widget-sms_schemes {
+
+        .widget-sms_table {
+
+            @include media('d-only') {
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            .billing-invoice_table-head {
+                display: flex;
+                height: 60px;
+                background-color: $lightBlueGradientFrom;
+
+                @include media('d-only') {
+                    min-width: 1500px;
+                    height: 64px;
+                    border: 1px solid rgba(0, 33, 95, 0.05);
+                }
+
+                .billing-table_head-item {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    line-height: 14px;
+                    font-weight: 700;
+                    color: $mainDarkBlue;
+
+                    @include media('d-only') {
+                        font-size: 16px;
+                        line-height: 29px;
+                    }
                 }
             }
-        }
-    }
 
-    .widget-install_wrap {
-        margin-bottom: 29px;
+            .mod-invoice {
+                padding: 0 0 0 12px;
+                justify-content: flex-start;
+                flex: 1;
+                min-width: 78px;
 
-        @include media('d-only') {
-            display: flex;
-            margin-bottom: 53px;
-        }
-    }
+                & > span {
+                    flex-shrink: 0;
+                    line-height: normal;
+                }
 
-    .widget-install_site {
-
-        @include media('d-only') {
-            width: 50%;
-            border-right: 1px solid $widgetInstallBorder;
-            padding-right: 39px;
-        }
-    }
-
-    .widget-block_url {
-        display: flex;
-        align-items: center;
-
-        height: 70px;
-
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 19px;
-        color: $mainDarkBlue;
-        background-color: $white;
-
-        border: 1px solid rgba(0, 33, 95, 0.05);
-        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-        padding: 0 22px;
-
-        @include media('t-ipad') {
-            max-width: 733px;
-            margin: 0 auto;
-        }
-
-        @include media('d-only') {
-            height: 100px;
-
-            font-size: 25px;
-            line-height: 27px;
-            border-radius: 8px;
-            border: 1px solid $inputBorder;
-            padding: 0 28px;
-            margin: 0;
-        }
-    }
-
-    .widget-block_script {
-        position: relative;
-
-        max-width: 1530px;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        text-align: center;
-
-        font-weight: 600;
-        color: $mainDarkBlue;
-        background-color: $white;
-
-        border: 1px solid rgba(0, 33, 95, 0.05);
-        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-
-        font-size: 16px;
-        line-height: 30px;
-
-        word-break: break-word;
-
-        padding: 27px 14px 27px 14px;
-        margin-bottom: 30px;
-
-        @include media('d-only') {
-            flex-direction: row;
-            padding: 27px 75px 27px 30px;
-            font-size: 18px;
-
-            text-align: left;
-        }
-
-        .widget-block_script-text {
-            margin-bottom: 24px;
-
-            @include media('d-only') {
-                margin-bottom: 0;
+                @include media('d-only') {
+                    min-width: 165px;
+                    padding: 0 0 0 20px;
+                }
             }
-        }
 
-        .widget-verification_icon {
-            display: block;
-            width: 20px;
-            height: 24px;
+            .mod-transaction {
+                width: 203px;
+                padding: 0 20px;
 
-            flex-shrink: 0;
-
-            fill: $widgetActiveBlue;
-
-            @include media('d-only') {
-                position: absolute;
-                right: 33px;
-                top: 31px;
             }
-        }
-    }
 
-    .widget-install_plugins {
-        display: none;
+            .mod-price {
+                justify-content: center;
+                width: 107px;
+                padding: 0 20px;
+            }
 
-        @include media('d-only') {
-            display: block;
-            width: 50%;
-            padding-left: 41px;
-        }
+            .mod-download {
+                width: 39px;
+                padding: 0;
+                justify-content: center;
 
-        &.mod-mobile {
-            display: flex;
-            flex-direction: column;
-            border-top: 1px solid $widgetInstallBorder;
-            padding-top: 39px;
+                @include media('d-only') {
+                    width: 87px;
+                }
+            }
 
-            @include media('t-ipad') {
+            .billing-invoice_table-content {
+                background: $white;
+                border: 1px solid #E3ECF5;
+                border-top: none;
+                border-bottom: none;
+
+                @include media('d-only') {
+                    min-width: 1500px;
+                    box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+                    border: 1px solid rgba(0, 33, 95, 0.05);
+                }
+            }
+
+            .billing-invoice_table-row {
+                position: relative;
+            }
+
+            .billing-invoice_table-row-cells {
+                position: relative;
+                display: flex;
+
+                height: 40px;
+                border-bottom: 1px solid $inputBorder;
+
+                &:not(:first-of-type) {
+                    border-bottom: none;
+                }
+
+                @include media('d-only') {
+                    height: 76px;
+                }
+            }
+
+            .billing-table_item {
+                display: flex;
                 align-items: center;
+                height: 250px;
+                font-size: 12px;
+                line-height: 14px;
+                color: $mainDarkBlue;
+                font-weight: 500;
+                word-break: break-word;
+                overflow: hidden;
+                flex-shrink: 0;
+
+                &.mod-add_btn, &.mod-invoice, &.mod-date {
+                    border-right: 1px solid $inputBorder;
+                }
+
+
+                @include media('d-only') {
+                    height: 260px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 400;
+
+                    &:not(:last-of-type) {
+                        border-right: 1px solid $inputBorder;
+                    }
+                }
             }
 
-            @include media('d-only') {
-                display: none;
+            .billing-table_head-item, .billing-table_item {
+                &.mod-add_btn {
+                    width: 40px;
+                    justify-content: center;
+                    cursor: pointer;
+                    @include media('d-only') {
+                        display: none;
+                    }
+                }
+
+                &.mod-desktop {
+                    display: none;
+
+                    @include media('d-only') {
+                        display: flex;
+                    }
+                }
             }
-        }
 
-        .widget-logo_plugins {
-            display: flex;
-            align-items: center;
+            .mod-add_btn-icon {
+                width: 18px;
+                height: 18px;
+                fill: $mainDarkBlue;
+            }
 
-            .widget-plugin_image {
-                width: 52px;
-                height: 52px;
+            .billing-table_icon-download {
+                width: 14px;
+                height: 14px;
+                fill: $widgetActiveBlue;
                 cursor: pointer;
 
-                &:not(:last-of-type) {
-                    margin-right: 40px;
+                @include media('d-only') {
+                    width: 19px;
+                    height: 20px;
                 }
             }
         }
-    }
 
-    .widget-button {
-        width: 264px;
-        margin: 0 auto 39px;
     }
 }

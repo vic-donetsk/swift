@@ -1,16 +1,16 @@
 import widgetSteps from "../../../components/widget-steps/widget-steps";
-// import FlagPhone from './../../../components/flag-phone/flag-phone.vue';
+import FlagPhone from './../../../components/flag-phone/flag-phone.vue';
 
 export default {
     components: {
         'widget-steps': widgetSteps,
-        // 'flag-phone': FlagPhone,
+        'flag-phone': FlagPhone,
     },
     data: function () {
         return {
             home: true,
             title: "Главная",
-            // phoneNumber: ''
+            phoneNumber: ''
 
         };
     },
@@ -37,8 +37,8 @@ export default {
             this.$router.push('/authentication');
         },
 
-        // updatePhone(value) {
-        //     this.phoneNumber = value;
-        // }
+        updatePhone(value) {
+            this.phoneNumber = value;
+        }
     }
 }
