@@ -21,7 +21,7 @@ export default {
         }
     },
     created() {
-      this.setMask(this.selectedFlag) ;
+      this.setMask(this.selectedbilling-steps) ;
     },
     methods: {
 

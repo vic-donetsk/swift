@@ -6,6 +6,9 @@ import restoring from './pages/auth/restoring/restoring.vue';
 import statistics from './pages/cabinet/statistics/statistics.vue';
 import widget from './pages/cabinet/widget/widget.vue';
 import widgetInstall from './pages/cabinet/widget-install/widget-install.vue';
+import widgetCalls from './pages/cabinet/widget-calls/widget-calls.vue';
+import widgetSMS from './pages/cabinet/widget-sms/widget-sms.vue';
+import widgetTime from './pages/cabinet/widget-time/widget-time.vue';
 import widgetDeactivate from './pages/cabinet/widget-deactivate/widget-deactivate.vue';
 import widgetChat from './pages/cabinet/widget-chat/widget-chat.vue';
 import chat from './pages/cabinet/chat/chat.vue';
@@ -62,6 +65,21 @@ export default [
                 path: 'widget/install',
                 name: 'cabinet-widget-install',
                 component: widgetInstall,
+            },
+            {
+                path: 'widget/calls',
+                name: 'cabinet-widget-calls',
+                component: widgetCalls,
+            },
+            {
+                path: 'widget/sms',
+                name: 'cabinet-widget-sms',
+                component: widgetSMS,
+            },
+            {
+                path: 'widget/time',
+                name: 'cabinet-widget-time',
+                component: widgetTime,
             },
             {
                 path: 'widget/deactivate',
