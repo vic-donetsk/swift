@@ -20,6 +20,7 @@
 
             .right-icon {
                 fill: $widgetCallsIcon;
+                margin-left: 8px;
             }
 
             @include media('d-only') {
@@ -42,7 +43,6 @@
 
     .widget-calls_block-left {
 
-
         .widget-calls_subtitle {
             font-size: 10px;
             font-weight: 400;
@@ -51,6 +51,7 @@
             margin-left: 22px;
             margin-bottom: 18px;
         }
+
 
         @include media('d-only') {
             border-right: 1px solid $widgetInstallBorder;
@@ -61,6 +62,43 @@
                 font-size: 14px;
                 line-height: 20px;
                 margin-bottom: 37px;
+            }
+        }
+    }
+
+    .widget-calls-inputs {
+
+        .widget-call_input {
+            display: flex;
+            align-items: center;
+
+            .widget-call_cross-icon {
+                width: 14px;
+                height: 14px;
+                fill: #E3ECF5;
+                margin-right: 12px;
+            }
+
+            .swift-widget_flagPhone {
+                width: 255px;
+                height: 45px;
+                margin: 0;
+
+                .swift-widget_flagPhone-input {
+                    height: 45px;
+                }
+
+                @include media('d-only') {
+                    width: 264px;
+                    height: 49px;
+                    margin: 0 12px 0 0;
+
+                    .swift-widget_flagPhone-input {
+                        height: 49px;
+                    }
+                }
+
+
             }
         }
     }

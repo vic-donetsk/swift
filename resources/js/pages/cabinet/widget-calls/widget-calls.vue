@@ -27,7 +27,14 @@
                         <p class="widget-calls_subtitle">{{__('widget','Widget calls subtitle')}}</p>
 
                         <div class="widget-calls-inputs">
-<!--                            <flag-phone @updatePhone="updatePhone"></flag-phone>-->
+                            <div class="widget-call_input">
+                                <svg class="widget-call_cross-icon">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                                <flag-phone @updatePhone="updatePhone" class="widget-calls_flag"></flag-phone>
+                            </div>
+
+
                         </div>
                         <div class="widget-button">
                             <span>{{__('widget','Widget deactivate button 2')}}</span>
