@@ -22,8 +22,6 @@
                 inactive-text="OFF">
             </el-switch>
 
-<!--                inactive-color="#ff4949"-->
-
         </div>
 
         <div class="settings_api-item">

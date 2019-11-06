@@ -1,14 +1,16 @@
 import settingsGeneral from "./settings-general/settings-general.vue";
 import settingsApi from "./settings-api/settings-api.vue";
+import settingsBlacklist from "./settings-blacklist/settings-blacklist.vue";
 
 export default {
     components: {
         'settings-general': settingsGeneral,
-        'settings-api': settingsApi
+        'settings-api': settingsApi,
+        'settings-blacklist' : settingsBlacklist
     },
     data: function () {
         return {
-            settingsMode: 0,
+            settingsMode: 2,
             mobileMenuOpened: false,
             settingChapters: [
                 {title: 'general', svg: 'settings'},
