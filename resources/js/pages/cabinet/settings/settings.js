@@ -8,12 +8,16 @@ export default {
                 {title: 'api keys', svg: 'api_gear'},
                 {title: 'blacklist', svg: 'cross'},
                 {title: 'session', svg: 'global'}],
+
+            // TODO: this is list of languages for notification, edit if necessary
+            languages: ['English', 'Русский', 'Česky', 'हिन्दी','עברית'],
+
             profile: {
                 name: '',
                 firstName: '',
                 phone: '',
                 email: '',
-                language: '',
+                language: 'Română',
             },
             password: {
                 old: '',
@@ -51,6 +55,13 @@ export default {
                 }
             }
             this.mobileMenuOpened = !this.mobileMenuOpened;
+        },
+        activateSelect() {
+
+
+            let select = document.getElementById('item_element-select');
+            let newEvent = new Event('click');
+            select.dispatchEvent(newEvent);
         }
 
     }

@@ -195,7 +195,9 @@
                     border-radius: 8px;
                 }
 
-                input[class="item_element-content"] {
+                input[class="item_element-content"],
+                select[class="item_element-content"]
+                {
                     @include swift_placeholder(400);
                     width: 100%;
                     padding-left: 20px;
@@ -208,6 +210,16 @@
                         font-size: 14px;
                     }
                 }
+
+                select[class="item_element-content"] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background: url('/img/icons/arrow_grey.svg') no-repeat 94% center;
+                    background-size: 12px 6px;
+
+                }
+
             }
         }
     }

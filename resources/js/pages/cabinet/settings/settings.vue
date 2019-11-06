@@ -61,6 +61,13 @@
                     <div class="item_element-title">{{__('settings', 'Email')}}</div>
                     <input type="text" class="item_element-content" placeholder="ionascu@pi.md" v-model="profile.email">
                 </div>
+                <div class="item_element">
+                    <div class="item_element-title">{{__('settings', 'Language for notifications')}}</div>
+                    <select class="item_element-content" v-model="profile.language">
+                        <option value="Română">Română</option>
+                        <option v-for="language in languages" value="language">{{language}}</option>
+                    </select>
+                </div>
 
             </div>
 
