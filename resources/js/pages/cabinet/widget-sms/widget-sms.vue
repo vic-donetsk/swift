@@ -47,12 +47,20 @@
                         </svg>
                         <span>{{__('widget','Cabinet page title 7')}}</span>
                     </h2>
+                    <p class="widget-sms_subtitle mod_mobile">{{__('widget','Widget sms subtitle 2')}}</p>
                     <div class="widget-sms_switch">
                         <span>{{__('widget','Cabinet switch off')}}</span>
                         <el-switch v-model="record"></el-switch>
                         <span>{{__('widget','Cabinet switch on')}}</span>
                     </div>
                     <p class="widget-sms_subtitle">{{__('widget','Widget sms subtitle 2')}}</p>
+
+                    <div class="widget-sms_input">
+                        <span class="widget-sms_input_title">{{__('widget','Widget sms input title')}}</span>
+                        <input type="text"
+                               class="widget-input"
+                               :placeholder='__("widget", "Widget chat head 1")'>
+                    </div>
                 </div>
 
                 <div class="widget-sms_schemes">

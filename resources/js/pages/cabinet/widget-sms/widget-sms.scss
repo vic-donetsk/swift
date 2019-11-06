@@ -38,8 +38,21 @@
             }
         }
 
-    }
+        .widget-sms_subtitle {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 15px;
+            color: $widgetDeactivateLink;
+            margin-left: 25px;
 
+
+            @include media('d-only') {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+            }
+        }
+    }
 
     .widget-sms_informative {
         padding-bottom: 38px;
@@ -47,11 +60,6 @@
         margin-bottom: 38px;
 
         .widget-sms_subtitle {
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 15px;
-            color: $widgetDeactivateLink;
-            margin-left: 25px;
             margin-bottom: 18px;
         }
 
@@ -60,9 +68,6 @@
             margin-bottom: 57px;
 
             .widget-sms_subtitle {
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 20px;
                 margin-bottom: 37px;
             }
         }
@@ -144,6 +149,15 @@
     }
 
     .widget-sms_sender {
+        padding-bottom: 38px;
+        border-bottom: 1px solid $widgetInstallBorder;
+        margin-bottom: 38px;
+
+        @include media ("d-only"){
+            padding-bottom: 46px;
+            margin-bottom: 46px;
+        }
+
 
         .widget-sms_switch {
             display: flex;
@@ -153,15 +167,77 @@
             margin-left: 25px;
             margin-bottom: 38px;
 
-            @include media('d-only'){
+            @include media('d-only') {
                 margin-bottom: 17px;
             }
 
-            .el-switch{
+            .el-switch {
                 margin: 0 17px;
             }
         }
 
+        .widget-sms_subtitle {
+            display: none;
+            @include media ("d-only") {
+                display: block;
+                margin-bottom: 49px;
+            }
+
+            &.mod_mobile {
+                display: block;
+                margin-bottom: 22px;
+
+                @include media ("d-only") {
+                    display: none;
+                }
+            }
+        }
+
+        .widget-sms_input {
+
+            @include media ("t-ipad") {
+                width: 286px;
+                margin: 0 auto;
+            }
+
+            @include media ("d-only") {
+                margin-left: 25px;
+                width: auto;
+            }
+
+
+            .widget-sms_input_title {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                margin-bottom: 10px;
+                color: $mainDarkBlue;
+
+                @include media('d-only') {
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $widgetInputTitle;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .widget-input {
+                width: 100%;
+
+                @include media("d-only") {
+                    width: 605px;
+                }
+
+                &::placeholder {
+                    color: $widgetPlaceholder;
+
+                    @include media("d-only") {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
     }
 
     .widget-sms_schemes {
