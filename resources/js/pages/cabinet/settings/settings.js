@@ -1,4 +1,9 @@
+import settingsGeneral from "./settings-general/settings-general.vue";
+
 export default {
+    components: {
+        'settings-general': settingsGeneral
+    },
     data: function () {
         return {
             settingsMode: 0,
@@ -8,30 +13,7 @@ export default {
                 {title: 'api keys', svg: 'api_gear'},
                 {title: 'blacklist', svg: 'cross'},
                 {title: 'session', svg: 'global'}],
-
-            // TODO: this is list of languages for notification, edit if necessary
-            languages: ['English', 'Русский', 'Česky', 'हिन्दी', 'עברית'],
-
-            profile: {
-                name: '',
-                firstName: '',
-                phone: '',
-                email: '',
-                language: 'Română',
-                isAgreeEmail: true,
-                isAgreeSMS: true
-            },
-            password: {
-                old: '',
-                new: '',
-                confirm: ''
-            }
         }
-    },
-    created() {
-
-    },
-    mounted() {
     },
     methods: {
         changeMode(mode) {
@@ -57,26 +39,6 @@ export default {
                 }
             }
             this.mobileMenuOpened = !this.mobileMenuOpened;
-        },
-        activateSelect() {
-
-
-            let select = document.getElementById('item_element-select');
-            let newEvent = new Event('click');
-            select.dispatchEvent(newEvent);
-        },
-
-        photoUpload() {
-            // TODO: handle the process of profile photo uploading
-        },
-
-        saveProfile() {
-            // TODO: handle profile data (this.profile)
-        },
-
-        savePassword() {
-            // TODO: handle password data (this.password)
         }
-
     }
 }
