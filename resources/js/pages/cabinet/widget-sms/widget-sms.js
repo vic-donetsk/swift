@@ -1,13 +1,18 @@
 import widgetSteps from "../../../components/widget-steps/widget-steps";
+import FlagPhone from './../../../components/flag-phone/flag-phone.vue';
 
 export default {
     components: {
-        'widget-steps': widgetSteps
+        'widget-steps': widgetSteps,
+        'flag-phone': FlagPhone
     },
     data: function () {
         return {
             home: true,
             title: "Главная",
+            phoneNumber: '',
+            checked: false,
+            record: false
         };
     },
     created() {
@@ -31,6 +36,10 @@ export default {
     methods: {
         goToAuth() {
             this.$router.push('/authentication');
+        },
+
+        updatePhone(value) {
+            this.phoneNumber = value;
         }
     }
 }
