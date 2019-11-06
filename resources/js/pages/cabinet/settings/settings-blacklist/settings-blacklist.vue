@@ -9,10 +9,18 @@
         </div>
 
         <div class="settings_blacklist-element">
-            <div class="element_menu"></div>
-            <input type="text" class="element_value">
-            <div class="element_button">{{__('settings', 'Apply')}}</div>
-
+            <div class="element_menu">
+                <el-select v-model="currentType">
+                    <el-option
+                        v-for="item in types"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                    </el-option>
+                </el-select>
+            </div>
+            <input type="text" class="element_value" v-model="currentValue">
+            <div class="element_button" @click="addBlacklistItem">{{__('settings', 'Apply')}}</div>
         </div>
 
 
@@ -36,8 +44,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </template>

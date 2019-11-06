@@ -5,7 +5,17 @@ export default {
             ID: '',
             isApiOn: '',
             blacklist: null,
-            currentID: 0
+            currentID: 0,
+            types: [{
+                value: 'Telefon',
+                label: 'Telefon'
+            }, {
+                value: 'IP',
+                label: 'IP'
+            }],
+            currentType: 'Telefon',
+            currentValue: ''
+
         }
     },
     created() {
@@ -23,7 +33,9 @@ export default {
     },
     methods: {
         addBlacklistItem() {
-            this.blacklist.push({first:666,second:666,third:666})
+            this.blacklist.push({ID:this.currentID++, value:this.currentValue, type: this.currentType})
+            this.currentValue = '';
+            // TODO: save updated blacklist and ID-counter (this.currentID)
         },
         deleteBlacklistItem(index) {
             this.blacklist.splice(index,1);
