@@ -2,6 +2,8 @@ import routes from './routes';
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Header from './components/header/header.vue';
+import {Checkbox, Switch} from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 import localization from './mixins/localization.js';
 
@@ -17,6 +19,8 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+Vue.use(Checkbox);
+Vue.use(Switch);
 
 const router = new VueRouter({
     routes,

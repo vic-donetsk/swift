@@ -27,19 +27,11 @@
                         <p class="widget-calls_subtitle">{{__('widget','Widget calls subtitle')}}</p>
 
                         <div class="widget-calls-inputs">
-                            <div class="widget-call_input">
-                                <svg class="widget-call_cross-icon">
-                                    <use xlink:href="#cross"></use>
-                                </svg>
-                                <flag-phone @updatePhone="updatePhone" class="widget-calls_flag"></flag-phone>
-                            </div>
-
-
+                            <calls-item></calls-item>
                         </div>
                         <div class="widget-button">
                             <span>{{__('widget','Widget deactivate button 2')}}</span>
                         </div>
-
                     </div>
 
                     <div class="widget-calls_block-right">
@@ -52,7 +44,7 @@
                                 <use xlink:href="#info"></use>
                             </svg>
                         </h2>
-
+                        <el-switch v-model="record"></el-switch>
 
                     </div>
                 </div>
