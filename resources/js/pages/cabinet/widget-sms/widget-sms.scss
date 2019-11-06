@@ -38,15 +38,216 @@
             }
         }
 
+        .widget-button {
+            margin: 0 auto;
+
+            @include media('d-only') {
+                margin: 0 0 0 25px;
+            }
+        }
+
+        .widget-sms_subtitle {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 15px;
+            color: $widgetDeactivateLink;
+            margin-left: 25px;
+
+
+            @include media('d-only') {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+            }
+        }
     }
 
-
     .widget-sms_informative {
+        padding-bottom: 38px;
+        border-bottom: 1px solid $widgetInstallBorder;
+        margin-bottom: 38px;
 
+        .widget-sms_subtitle {
+            margin-bottom: 18px;
+        }
+
+        @include media('d-only') {
+            padding-bottom: 44px;
+            margin-bottom: 57px;
+
+            .widget-sms_subtitle {
+                margin-bottom: 37px;
+            }
+        }
+
+        .widget-sms-input {
+            width: 286px;
+            height: 85px;
+            background-color: rgba(239, 248, 253, 0.14);
+            border: 1px solid $widgetSidebarBorder;
+            border-radius: 8px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            margin-bottom: 30px;
+
+            @include media('d-only') {
+                display: flex;
+                align-items: center;
+                width: auto;
+                height: auto;
+                background: none;
+                border: none;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 26px;
+            }
+
+            .swift-widget_flagPhone {
+                width: 255px !important;
+                height: 45px;
+                margin: 0 auto;
+
+                .swift-widget_flagPhone-input {
+                    height: 45px;
+                }
+
+                @include media('d-only') {
+                    width: 264px !important;
+                    height: 49px;
+                    margin-left: 25px;
+
+                    .swift-widget_flagPhone-input {
+                        height: 49px;
+                    }
+                }
+            }
+        }
+
+        .widget-add_button {
+            margin-bottom: 18px;
+
+            @include media('d-only') {
+                width: 412px;
+                height: 57px;
+                background-color: $lightBlueGradientFrom;
+                border-radius: 8px;
+                margin: 0 0 37px 25px;
+
+                .widget-add_text {
+                    font-size: 16px;
+                    text-transform: none;
+                }
+
+                .widget-add_icon {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 9px;
+                }
+            }
+        }
     }
 
     .widget-sms_sender {
+        padding-bottom: 38px;
+        border-bottom: 1px solid $widgetInstallBorder;
+        margin-bottom: 38px;
 
+        @include media ("d-only") {
+            padding-bottom: 46px;
+            margin-bottom: 46px;
+        }
+
+
+        .widget-sms_switch {
+            display: flex;
+            font-size: 14px;
+            font-weight: 400;
+            color: $mainDarkBlue;
+            margin-left: 25px;
+            margin-bottom: 38px;
+
+            @include media('d-only') {
+                margin-bottom: 17px;
+            }
+
+            .el-switch {
+                margin: 0 17px;
+            }
+        }
+
+        .widget-sms_subtitle {
+            display: none;
+            @include media ("d-only") {
+                display: block;
+                margin-bottom: 49px;
+            }
+
+            &.mod_mobile {
+                display: block;
+                margin-bottom: 22px;
+
+                @include media ("d-only") {
+                    display: none;
+                }
+            }
+
+            &.mod_display {
+                display: block;
+                margin-bottom:18px;
+
+                @include media('d-only'){
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        .widget-sender_input {
+            margin-bottom: 6px;
+
+            @include media ("t-ipad") {
+                width: 286px;
+                margin: 0 auto 6px;
+            }
+
+            @include media ("d-only") {
+                margin-left: 25px;
+                width: auto;
+                margin-bottom: 12px;
+            }
+
+
+            .widget-sms_input_title {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                margin-bottom: 10px;
+                color: $mainDarkBlue;
+
+                @include media('d-only') {
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $widgetInputTitle;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .widget-input {
+                width: 100%;
+
+                @include media("d-only") {
+                    width: 605px;
+                }
+
+                &::placeholder {
+                    color: $widgetPlaceholder;
+
+                    @include media("d-only") {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
     }
 
     .widget-sms_schemes {

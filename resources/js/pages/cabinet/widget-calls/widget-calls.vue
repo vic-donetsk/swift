@@ -52,7 +52,12 @@
                                 <use xlink:href="#info"></use>
                             </svg>
                         </h2>
-                        <el-switch v-model="record"></el-switch>
+                        <div class="widget-calls_switch">
+                            <span>{{__('widget','Cabinet switch off')}}</span>
+                            <el-switch v-model="record"></el-switch>
+                            <span>{{__('widget','Cabinet switch on')}}</span>
+                        </div>
+
 
                     </div>
                 </div>

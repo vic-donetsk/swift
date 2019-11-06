@@ -21,6 +21,7 @@
             .right-icon {
                 fill: $widgetCallsIcon;
                 margin-left: 8px;
+                cursor: pointer;
             }
 
             @include media('d-only') {
@@ -46,12 +47,6 @@
         border-bottom: 1px solid $widgetInstallBorder;
         margin-bottom: 38px;
 
-        @include media('d-only') {
-            padding-bottom: 0;
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
         .widget-calls_subtitle {
             font-size: 10px;
             font-weight: 400;
@@ -61,11 +56,11 @@
             margin-bottom: 18px;
         }
 
-
         @include media('d-only') {
+            border-bottom: none;
             border-right: 1px solid $widgetInstallBorder;
-            padding-right: 40px;
-            margin-right: 42px;
+            padding: 0 40px 0 0;
+            margin: 0 42px 0 0;
 
             .widget-calls_subtitle {
                 font-size: 14px;
@@ -171,7 +166,7 @@
                 }
 
                 @include media('d-only') {
-                    width: 264px;
+                    width: 264px !important;
                     height: 49px;
                     margin: 0 12px 0 0;
 
@@ -222,7 +217,6 @@
                     }
                 }
 
-
                 &.mod-desktop {
                     display: none;
 
@@ -272,14 +266,26 @@
 
     .widget-calls_block-right {
 
-    }
 
+        .widget-calls_switch {
+            display: flex;
+            font-size: 14px;
+            font-weight: 400;
+            color: $mainDarkBlue;
+            margin-left: 25px;
+
+            .el-switch{
+                margin: 0 17px;
+            }
+        }
+
+    }
 
     .widget-button {
         margin: 0 auto;
 
         @include media('d-only') {
-            margin: 0 0 0 22px;
+            margin: 0 0 0 25px;
         }
     }
 }

@@ -62,6 +62,11 @@
   "Widget input placeholder 3": "ionascu@pi.md",
   "Widget input placeholder 4": "siteultău.com/subpage",
   "Widget calls subtitle": "Introduceți numerele de telefon pentru primirea apelurilor de la clienți. Vă recomandăm introducerea a 4-5 numere",
+  "Widget sms subtitle 1": "Introduceți numărul dvs. de telefon pentru rapoarte SMS privind calitatea apelurilor primite.",
+  "Widget sms subtitle 2": "În cazul când porniți ON,numele companiei va fi ID-ul expeditorului SMS pentru clienți.În cazul când lăsați OFF, ID-ul de expeditor va rămâne SwiftCallBack",
+  "Widget sms subtitle 3": "Trebui să conțină numai caractere alfanumerice.Nu trebuie să depășească 11 caractere.Vă rugăm să rețineți ,că sms-urile de BRAND trebuie să includă doar numele companiei",
+  "Widget sms input title": "SENDER ID",
+  "Widget sender input placeholder": "SwiftCallBack (Basic)",
   "Widget deactivate table title 1": "Pagina",
   "Widget deactivate table title 2": "Data creării",
   "Widget social text 1": "Pentru a activa canalul, trebuie să vă conectați pagina",
@@ -89,5 +94,7 @@
   "Widget profile title 1": "Poză de profil",
   "Widget profile title 2": "Schimbă poza",
   "Widget call checkbox 1": "Activ",
-  "Widget call checkbox 2": "Dezactivat"
+  "Widget call checkbox 2": "Dezactivat",
+  "Cabinet switch off": "OFF",
+  "Cabinet switch on": "ON"
 }
