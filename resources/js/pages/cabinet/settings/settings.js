@@ -10,7 +10,7 @@ export default {
                 {title: 'session', svg: 'global'}],
 
             // TODO: this is list of languages for notification, edit if necessary
-            languages: ['English', 'Русский', 'Česky', 'हिन्दी','עברית'],
+            languages: ['English', 'Русский', 'Česky', 'हिन्दी', 'עברית'],
 
             profile: {
                 name: '',
@@ -18,6 +18,8 @@ export default {
                 phone: '',
                 email: '',
                 language: 'Română',
+                isAgreeEmail: true,
+                isAgreeSMS: true
             },
             password: {
                 old: '',
@@ -62,6 +64,18 @@ export default {
             let select = document.getElementById('item_element-select');
             let newEvent = new Event('click');
             select.dispatchEvent(newEvent);
+        },
+
+        photoUpload() {
+            // TODO: handle the process of profile photo uploading
+        },
+
+        saveProfile() {
+            // TODO: handle profile data (this.profile)
+        },
+
+        savePassword() {
+            // TODO: handle password data (this.password)
         }
 
     }

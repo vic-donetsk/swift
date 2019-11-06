@@ -68,6 +68,25 @@
                         <option v-for="language in languages" value="language">{{language}}</option>
                     </select>
                 </div>
+                <div class="item_element">
+                    <div class="item_element-title mod_center">{{__('settings', 'Profile photo')}}</div>
+                    <div class="item_element-upload">
+                        <svg class="upload_svg" @click="photoUpload">
+                            <use xlink:href="#upload"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div id="firstButton" class="item_element-single mod_button" @click="saveProfile">{{__('settings', 'Save changes')}}</div>
+                <div class="item_element-single mod_checkboxes">
+                    <div class="single_checkbox">
+                        <input type="checkbox" class="single_checkbox-input" id="agreeEmail" v-model="profile.isAgreeEmail">
+                        <label for="agreeEmail" class="single_checkbox-label">{{__('settings', 'Receive email notifications')}}</label>
+                    </div>
+                    <div class="single_checkbox">
+                        <input type="checkbox" class="single_checkbox-input" id="agreeSMS" v-model="profile.isAgreeSMS">
+                        <label for="agreeSMS" class="single_checkbox-label">{{__('settings', 'Receive SMS notifications')}}</label>
+                    </div>
+                </div>
 
             </div>
 
@@ -92,6 +111,10 @@
                     <div class="item_element-title">{{__('settings', 'Confirm your password')}}</div>
                     <input type="text" class="item_element-content" placeholder="**************"
                            v-model="password.confirm">
+                </div>
+                <div class="item_element">
+                    <div class="item_element-title"></div>
+                    <div class="item_element-single mod_button" @click="savePassword">{{__('settings', 'Confirm your password')}}</div>
                 </div>
 
             </div>
