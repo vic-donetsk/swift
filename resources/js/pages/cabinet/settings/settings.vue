@@ -34,6 +34,7 @@
         </nav>
 
         <settings-general v-if="settingsMode === 0"></settings-general>
+        <settings-api v-if="settingsMode === 1"></settings-api>
 
 
     </div>

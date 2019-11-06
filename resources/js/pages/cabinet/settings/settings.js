@@ -1,8 +1,10 @@
 import settingsGeneral from "./settings-general/settings-general.vue";
+import settingsApi from "./settings-api/settings-api.vue";
 
 export default {
     components: {
-        'settings-general': settingsGeneral
+        'settings-general': settingsGeneral,
+        'settings-api': settingsApi
     },
     data: function () {
         return {
