@@ -47,6 +47,7 @@
   "Widget contact phone 1": "+373 (78) 792000",
   "Widget contact phone 2": "+373 (78) 590000",
   "Widget add button text": "Adaugă un widget",
+  "Widget add button text 2": "Adaugă un număr",
   "Widget menu text 1": "INSTALARE",
   "Widget menu text 2": "APELURI",
   "Widget menu text 3": "SMS",
@@ -84,6 +85,9 @@
   "Consumed": "・Consumate",
   "Remained": "Rămase",
   "Widget table list close btn": "Șterge",
+  "Widget call input close": "Șterge",
   "Widget profile title 1": "Poză de profil",
-  "Widget profile title 2": "Schimbă poza"
+  "Widget profile title 2": "Schimbă poza",
+  "Widget call checkbox 1": "Activ",
+  "Widget call checkbox 2": "Dezactivat"
 }

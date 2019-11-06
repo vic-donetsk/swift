@@ -28,6 +28,14 @@
 
                         <div class="widget-calls-inputs">
                             <calls-item></calls-item>
+                            <calls-item></calls-item>
+                        </div>
+
+                        <div class="widget-add_button">
+                            <svg class="widget-add_icon">
+                                <use xlink:href="#plus-add"></use>
+                            </svg>
+                            <span class="widget-add_text">{{__("widget", "Widget add button text 2")}}</span>
                         </div>
                         <div class="widget-button">
                             <span>{{__('widget','Widget deactivate button 2')}}</span>
