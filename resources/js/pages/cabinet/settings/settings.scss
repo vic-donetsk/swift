@@ -7,7 +7,6 @@
     width: calc(100% - 295px);
     max-width: 1625px;
     height: calc(100% - 64px);
-    //padding: 0 2.47% 40px;
 
     @include media ('m-t-only') {
         position: relative;
@@ -22,6 +21,10 @@
         justify-content: center;
         padding: 54px 2.3% 58px;
 
+        @include media('d-1400-only') {
+            padding: 24px 2.3% 28px;
+        }
+
         @include media('d') {
             display: flex;
         }
@@ -31,7 +34,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 39px 5.3% 58px;
+        padding: 39px 5.3% 35px;
 
         @include media('d') {
             display: none;
@@ -120,107 +123,6 @@
             font-size: 16px;
             font-weight: 400;
 
-        }
-    }
-
-    &_content {
-        display: flex;
-        padding: 0 1.2% 0 2.3%;
-
-        &-item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            width: 626px;
-            max-width: 50%;
-
-            &:first-of-type {
-                border-right: 1px solid $billingBorder;
-                padding-right: 1.2%;
-            }
-
-            &:last-of-type {
-                padding-left: 3.6%;
-            }
-
-            .item_header {
-                display: flex;
-                align-items: center;
-                width: 100%;
-                margin-bottom: 60px;
-
-                &-svg {
-                    width: 16px;
-                    height: 16px;
-                    fill: $mainDarkBlue;
-                    margin-right: 4px;
-                }
-
-                &-value {
-                    height: 27px;
-                    font-size: 20px;
-                    font-weight: 700;
-                    color: $mainDarkBlue;
-                    text-transform: uppercase;
-                }
-            }
-
-            .item_element {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
-                width: 264px;
-                height: 76px;
-                margin-right: 2.4%;
-                margin-bottom: 34px;
-
-                @include media('d-1400-only') {
-                    width: 220px;
-                }
-
-                &-title {
-                    font-size: 16px;
-                    font-weight: 400;
-                    color: $mainDarkBlue;
-
-                    @include media('d-1400-only') {
-                        font-size: 14px;
-                    }
-                }
-
-                &-content {
-                    height: 49px;
-                    border-radius: 8px;
-                }
-
-                input[class="item_element-content"],
-                select[class="item_element-content"]
-                {
-                    @include swift_placeholder(400);
-                    width: 100%;
-                    padding-left: 20px;
-                    border: 1px solid $inputBorder;
-                    outline: none;
-                    font-size: 16px;
-                    color: #23324E;
-
-                    @include media('d-1400-only') {
-                        font-size: 14px;
-                    }
-                }
-
-                select[class="item_element-content"] {
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    background: url('/img/icons/arrow_grey.svg') no-repeat 94% center;
-                    background-size: 12px 6px;
-
-                }
-
-            }
         }
     }
 }

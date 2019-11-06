@@ -33,70 +33,8 @@
             </div>
         </nav>
 
-        <div class="settings_content">
-
-            <div class="settings_content-item">
-
-                <div class="item_header">
-                    <svg class="item_header-svg">
-                        <use xlink:href="#settings"></use>
-                    </svg>
-                    <div class="item_header-value">{{__('settings', 'Basic settings')}}</div>
-                </div>
-
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'Name')}}</div>
-                    <input type="text" class="item_element-content" placeholder="Ktototam" v-model="profile.name">
-                </div>
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'First name')}}</div>
-                    <input type="text" class="item_element-content" placeholder="Andrian" v-model="profile.firstName">
-                </div>
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'Phone (for sms notifications)')}}</div>
-                    <input type="text" class="item_element-content" placeholder="+373 (78) 79 2000"
-                           v-model="profile.phone">
-                </div>
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'Email')}}</div>
-                    <input type="text" class="item_element-content" placeholder="ionascu@pi.md" v-model="profile.email">
-                </div>
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'Language for notifications')}}</div>
-                    <select class="item_element-content" v-model="profile.language">
-                        <option value="Română">Română</option>
-                        <option v-for="language in languages" value="language">{{language}}</option>
-                    </select>
-                </div>
-
-            </div>
-
-            <div class="settings_content-item">
-
-                <div class="item_header">
-                    <svg class="item_header-svg">
-                        <use xlink:href="#settings"></use>
-                    </svg>
-                    <div class="item_header-value">{{__('settings', 'Change password')}}</div>
-                </div>
-
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'Old password')}}</div>
-                    <input type="text" class="item_element-content" placeholder="**************" v-model="password.old">
-                </div>
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'New password')}}</div>
-                    <input type="text" class="item_element-content" placeholder="*************" v-model="password.new">
-                </div>
-                <div class="item_element">
-                    <div class="item_element-title">{{__('settings', 'Confirm your password')}}</div>
-                    <input type="text" class="item_element-content" placeholder="**************"
-                           v-model="password.confirm">
-                </div>
-
-            </div>
-
-        </div>
+        <settings-general v-if="settingsMode === 0"></settings-general>
+        <settings-api v-if="settingsMode === 1"></settings-api>
 
 
     </div>

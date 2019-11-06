@@ -1,0 +1,112 @@
+@import '@/app';
+
+.settings_api {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 2.3%;
+    color: $mainDarkBlue;
+
+    @include media('m-t-only') {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4%;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 540px;
+
+        @include media('m-t-only') {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        &:first-of-type {
+            border-right: 1px solid $billingBorder;
+            padding-right: 3.3%;
+
+            @include media('m-t-only') {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid $billingBorder;
+            }
+        }
+
+        &:last-of-type {
+            padding-left: 3.3%;
+
+            @include media('m-t-only') {
+                margin-top: 40px;
+                padding-left: 0;
+            }
+        }
+
+        .item_header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+
+            @include media('m-t-only') {
+                margin-bottom: 39px;
+            }
+
+            &-svg {
+                width: 16px;
+                height: 16px;
+                fill: $mainDarkBlue;
+                margin-right: 8px;
+            }
+
+            &-value {
+                height: 27px;
+                font-size: 20px;
+                font-weight: 700;
+                color: $mainDarkBlue;
+                text-transform: uppercase;
+            }
+        }
+
+        .item_element {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            max-width: 485px;
+            height: 49px;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border: 1px solid $inputBorder;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+
+            @include media('m-t-only') {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+        .el-switch {
+            margin-bottom: 38px;
+        }
+
+        .el-switch__label * {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.4;
+            color: $mainDarkBlue;
+
+            @include media('m-t-only') {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+
+

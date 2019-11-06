@@ -823,6 +823,23 @@
         </svg>
     </symbol>
 
+    <symbol id="upload">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.077 15.016">
+            <g transform="translate(-16)">
+                <g id="Group_276" data-name="Group 276" transform="translate(26.793 11.262) rotate(180)">
+                    <g id="Group_275" data-name="Group 275">
+                        <path id="Path_1481" data-name="Path 1481" d="M135.464,6.844a.468.468,0,0,0-.427-.275H133.16V.469A.469.469,0,0,0,132.691,0h-1.877a.469.469,0,0,0-.469.469v6.1h-1.877a.469.469,0,0,0-.353.778L131.4,11.1a.468.468,0,0,0,.706,0l3.285-3.754A.468.468,0,0,0,135.464,6.844Z" transform="translate(-127.998)"/>
+                    </g>
+                </g>
+                <g id="Group_278" data-name="Group 278" transform="translate(16 10.323)">
+                    <g id="Group_277" data-name="Group 277">
+                        <path id="Path_1482" data-name="Path 1482" d="M28.2,352v2.815H17.877V352H16v3.754a.938.938,0,0,0,.938.938h12.2a.938.938,0,0,0,.938-.938V352Z" transform="translate(-16 -352)"/>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </symbol>
+
 
     <symbol id="invoice">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
