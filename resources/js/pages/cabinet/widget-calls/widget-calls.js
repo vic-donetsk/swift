@@ -1,44 +1,14 @@
 import widgetSteps from "../../../components/widget-steps/widget-steps";
-import FlagPhone from './../../../components/flag-phone/flag-phone.vue';
+import CallsItem from './widget-calls-item.vue';
 
 export default {
     components: {
         'widget-steps': widgetSteps,
-        'flag-phone': FlagPhone,
+        'calls-item': CallsItem
     },
     data: function () {
         return {
-            home: true,
-            title: "Главная",
-            phoneNumber: ''
-
+            record: false
         };
-    },
-    created() {
-        this.title = "Лендинг 1";
-
-        EventBus.$on('renameText', () => {
-            this.title = "Лендинг 3";
-        })
-    },
-    mounted() {
-        setTimeout(() => {
-            this.title = "Лендинг 2";
-        }, 1000);
-
-    },
-    computed: {
-        getTitle() {
-            return this.title + ' - Вычисленный';
-        }
-    },
-    methods: {
-        goToAuth() {
-            this.$router.push('/authentication');
-        },
-
-        updatePhone(value) {
-            this.phoneNumber = value;
-        }
     }
 }
