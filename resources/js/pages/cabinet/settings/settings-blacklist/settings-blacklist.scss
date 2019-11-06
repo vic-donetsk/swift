@@ -1,0 +1,167 @@
+@import '@/app';
+
+.settings_blacklist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2.3%;
+    color: $mainDarkBlue;
+
+    @include media('m-t-only') {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 4%;
+    }
+
+
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include media('m-t-only') {
+            margin-bottom: 39px;
+        }
+
+        .header_svg {
+            width: 16px;
+            height: 16px;
+            fill: $mainDarkBlue;
+            margin-right: 8px;
+        }
+
+        .header_value {
+            height: 27px;
+            font-size: 20px;
+            font-weight: 700;
+            color: $mainDarkBlue;
+            text-transform: uppercase;
+        }
+    }
+
+    &-element {
+        display: flex;
+        align-items: center;
+        height: 49px;
+        margin-bottom: 55px;
+        font-size: 16px;
+        font-weight: 600;
+
+        .element_menu {
+            width: 162px;
+            height: 100%;
+            padding-left: 20px;
+            border: 1px solid $inputBorder;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .element_value {
+            width: 264px;
+            height: 100%;
+            padding-left: 20px;
+            border-top: 1px solid $inputBorder;
+            border-right: 1px solid $inputBorder;
+            border-bottom: 1px solid $inputBorder;
+            border-left: none;
+            border-radius: 0 8px 8px 0;
+            outline: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: $mainDarkBlue;
+        }
+        .element_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 210px;
+            height: 100%;
+            margin-left: 12px;
+            padding-top: 4px;
+            background: $widgetActiveBlue;
+            border: 1px solid $widgetInstallBorderBtn;
+            border-radius: 8px;
+            color: $white;
+            cursor: pointer;
+        }
+
+
+
+    }
+
+    .blacklistTable {
+        font-size: 16px;
+        color: $mainDarkBlue;
+
+        &_header {
+            display: flex;
+            align-items: center;
+            height: 63px;
+            background-color: $lightBlueGradientFrom;
+            font-weight: 700;
+
+            &-item {
+                height: 100%;
+                line-height: 66px;
+                padding-left: 20px;
+                text-align: left;
+            }
+        }
+
+        &-body {
+            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04)
+        }
+
+        &_row {
+            display: flex;
+            height: 76px;
+            font-weight: 400;
+
+            &-item {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                height: 100%;
+                padding-left: 20px;
+                border-bottom: 1px solid $inputBorder;
+                border-right: 1px solid $inputBorder;
+
+                //&:not(:last-of-type) {
+                //    border-right: 1px solid $inputBorder;
+                //}
+                &:first-of-type {
+                    border-left: 1px solid $inputBorder;
+                }
+            }
+        }
+
+        .mod_ID {
+            width: 164px;
+        }
+
+        .mod_value {
+            width: 217px;
+        }
+
+        .mod_type {
+            width: 200px;
+        }
+
+        .mod_close {
+            justify-content: center;
+            width: 62px;
+            padding-left: 0;
+
+            .close_svg {
+                width: 16px;
+                height: 16px;
+                stroke: $inputBorder;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+}
+
+
+

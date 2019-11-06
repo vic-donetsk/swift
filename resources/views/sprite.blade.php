@@ -673,6 +673,15 @@
         </svg>
     </symbol>
 
+    <symbol id="crossLight">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.509 15.509">
+            <g id="Group_239" data-name="Group 239" transform="translate(-7.686 -111.911)">
+                <path id="Path_479" data-name="Path 479" d="M-.607-26.382,13.487-12.287" transform="translate(9 139)" stroke-width="2"/>
+                <path id="Path_480" data-name="Path 480" d="M13.487-26.382-.607-12.287" transform="translate(9 139)" stroke-width="2"/>
+            </g>
+        </svg>
+    </symbol>
+
     <symbol id="chat-circle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.383 36.673">
             <path

@@ -18,7 +18,14 @@
     "Change password" : "Schimbă parola",
     "Old password" : "Parola veche",
     "New password" : "Parolă nouă",
-    "Confirm your password" : "Confirmă parola"
+    "Confirm your password" : "Confirmă parola",
+
+    "Value" : "Valori",
+    "Phone" : "Telefon",
+    "Type" : "Tipul",
+    "Apply" : "Aplică",
+    "ID" : "ID",
+    "IP" : "IP"
 
 
 }
