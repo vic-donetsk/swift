@@ -66,6 +66,7 @@
   "Widget sms subtitle 2": "În cazul când porniți ON,numele companiei va fi ID-ul expeditorului SMS pentru clienți.În cazul când lăsați OFF, ID-ul de expeditor va rămâne SwiftCallBack",
   "Widget sms subtitle 3": "Trebui să conțină numai caractere alfanumerice.Nu trebuie să depășească 11 caractere.Vă rugăm să rețineți ,că sms-urile de BRAND trebuie să includă doar numele companiei",
   "Widget sms input title": "SENDER ID",
+  "Widget sender input placeholder": "SwiftCallBack (Basic)",
   "Widget deactivate table title 1": "Pagina",
   "Widget deactivate table title 2": "Data creării",
   "Widget social text 1": "Pentru a activa canalul, trebuie să vă conectați pagina",

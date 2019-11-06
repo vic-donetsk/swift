@@ -55,11 +55,15 @@
                     </div>
                     <p class="widget-sms_subtitle">{{__('widget','Widget sms subtitle 2')}}</p>
 
-                    <div class="widget-sms_input">
+                    <div class="widget-sender_input">
                         <span class="widget-sms_input_title">{{__('widget','Widget sms input title')}}</span>
                         <input type="text"
                                class="widget-input"
-                               :placeholder='__("widget", "Widget chat head 1")'>
+                               :placeholder='__("widget", "Widget sender input placeholder")'>
+                    </div>
+                    <p class="widget-sms_subtitle mod_display">{{__('widget','Widget sms subtitle 3')}}</p>
+                    <div class="widget-button">
+                        <span>{{__('widget','Widget deactivate button 2')}}</span>
                     </div>
                 </div>
 
