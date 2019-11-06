@@ -42,13 +42,22 @@
 
 
     .widget-calls_block-left {
+        padding-bottom: 38px;
+        border-bottom: 1px solid $widgetInstallBorder;
+        margin-bottom: 38px;
+
+        @include media('d-only') {
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
 
         .widget-calls_subtitle {
             font-size: 10px;
             font-weight: 400;
             line-height: 15px;
             color: $widgetDeactivateLink;
-            margin-left: 22px;
+            margin-left: 25px;
             margin-bottom: 18px;
         }
 
@@ -67,22 +76,95 @@
     }
 
     .widget-calls-inputs {
+        margin-bottom: 28px;
+
+        @include media('d-only') {
+            margin-bottom: 26px;
+        }
 
         .widget-call_input {
-            display: flex;
-            align-items: center;
+            width: 286px;
+            height: 175px;
+            background-color: rgba(239, 248, 253, 0.14);
+            border: 1px solid $widgetSidebarBorder;
+            border-radius: 8px;
+            margin: 0 auto;
+            padding: 20px 15px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 18px;
+            }
+
+            @include media('d-only') {
+                display: flex;
+                align-items: center;
+                width: auto;
+                height: auto;
+                background: none;
+                border: none;
+                margin: 0;
+                padding: 0;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 12px;
+                }
+            }
+
+            .widget-call_mobile-block {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14px;
+                color: $mainDarkBlue;
+
+                @include media('d-only') {
+                    display: none;
+                }
+            }
+
+            .widget-checkbox_mobile {
+                display: flex;
+
+                & > span {
+                    height: 1px;
+                }
+            }
+
+            .widget-cross_mobile {
+                display: flex;
+
+                .widget-call_cross-text {
+
+                }
+            }
+
 
             .widget-call_cross-icon {
-                width: 14px;
-                height: 14px;
-                fill: #E3ECF5;
-                margin-right: 12px;
+                width: 13px;
+                height: 13px;
+                fill: $mainDarkBlue;
+                margin-right: 8px;
+                cursor: pointer;
+
+                &.mod_desktop {
+                    display: none;
+
+                    @include media ('d-only') {
+                        display: block;
+                        width: 14px;
+                        height: 14px;
+                        fill: $inputBorder;
+                        margin-right: 12px;
+                    }
+                }
             }
 
             .swift-widget_flagPhone {
-                width: 255px;
+                width: 255px !important;
                 height: 45px;
-                margin: 0;
+                margin: 0 auto 7px;
 
                 .swift-widget_flagPhone-input {
                     height: 45px;
@@ -97,8 +179,93 @@
                         height: 49px;
                     }
                 }
+            }
+
+            .widget-input {
+                width: 255px;
+                height: 45px;
+                text-align: center;
+                display: block;
+                margin: 0 auto 15px;
 
 
+                &::placeholder {
+                    font-weight: 600;
+                }
+
+                @include media('d-only') {
+                    width: 210px;
+                    height: 49px;
+                    margin: 0 13px 0 0;
+
+                    &::placeholder {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .el-checkbox {
+
+                .el-checkbox__input {
+                    width: 20px;
+                    height: 20px;
+
+                    .el-checkbox__inner {
+                        width: 20px;
+                        height: 20px;
+                        //background: $white;
+                        border: 1px solid $inputBorder;
+                    }
+
+                    @include media('d-only') {
+                        display: none;
+                    }
+                }
+
+
+                &.mod-desktop {
+                    display: none;
+
+                    @include media('d-only') {
+                        display: block;
+
+                        .el-checkbox__input {
+                            width: 49px;
+                            height: 49px;
+
+                            .el-checkbox__inner {
+                                width: 49px;
+                                height: 49px;
+                                //background: $white;
+                                border-radius: 8px;
+                                border: 1px solid $inputBorder;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-add_button {
+        margin-bottom: 18px;
+
+        @include media('d-only') {
+            width: 412px;
+            height: 57px;
+            background-color: $lightBlueGradientFrom;
+            border-radius: 8px;
+            margin: 0 0 37px 25px;
+
+            .widget-add_text {
+                font-size: 16px;
+                text-transform: none;
+            }
+
+            .widget-add_icon {
+                width: 18px;
+                height: 18px;
+                margin-right: 9px;
             }
         }
     }
@@ -114,7 +281,5 @@
         @include media('d-only') {
             margin: 0 0 0 22px;
         }
-
-
     }
 }
