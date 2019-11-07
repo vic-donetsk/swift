@@ -11,15 +11,16 @@
 
         <div class="widget-call_mobile-block">
             <div class="widget-checkbox_mobile">
-                <el-checkbox v-model="checked"></el-checkbox>
-                <span>{{__('widget','Widget call checkbox 1')}}</span>
+                <el-checkbox v-model="checked" class="mod_mobile">
+                    {{__('widget','Widget call checkbox 1')}}
+                </el-checkbox>
             </div>
 
             <div class="widget-cross_mobile">
                 <svg class="widget-call_cross-icon">
                     <use xlink:href="#cross"></use>
                 </svg>
-                <span>{{__('widget','Widget call input close')}}</span>
+                <span class="widget-cross_mobile-text">{{__('widget','Widget call input close')}}</span>
             </div>
 
         </div>

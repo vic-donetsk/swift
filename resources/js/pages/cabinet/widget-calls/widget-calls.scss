@@ -120,19 +120,19 @@
             }
 
             .widget-checkbox_mobile {
-                display: flex;
-
-                & > span {
-                    height: 1px;
-                }
+                padding: 5px;
             }
 
             .widget-cross_mobile {
                 display: flex;
+                align-items: center;
+                padding: 5px;
 
-                .widget-call_cross-text {
+                cursor: pointer;
+            }
 
-                }
+            .widget-cross_mobile-text {
+                margin-top: 3px;
             }
 
 
@@ -200,20 +200,43 @@
             }
 
             .el-checkbox {
-
-                .el-checkbox__input {
-                    width: 20px;
-                    height: 20px;
-
-                    .el-checkbox__inner {
+                &.mod_mobile {
+                    .el-checkbox__input {
                         width: 20px;
                         height: 20px;
-                        //background: $white;
-                        border: 1px solid $inputBorder;
+
+                        &.is-checked {
+                            .el-checkbox__inner {
+                                background: none;
+                            }
+                        }
+
+                        .el-checkbox__inner {
+                            width: 20px;
+                            height: 20px;
+                            //background: $white;
+                            border: 1px solid $inputBorder;
+                        }
+
+                        .el-checkbox__inner::after {
+                            border-width: 3px;
+                            border-color: $mainDarkBlue;
+                            height: 10px;
+                            left: 6px;
+                            top: 1px;
+                            width: 4px;
+                            transition-delay: 0s;
+                            transition-duration: 0.1s;
+                        }
                     }
 
-                    @include media('d-only') {
-                        display: none;
+                    .el-checkbox__label {
+                        color: $mainDarkBlue;
+                        padding-top: 1px;
+                        font-size: 14px;
+                        margin-top: 5px;
+                        vertical-align: top;
+                        line-height: 1;
                     }
                 }
 
@@ -227,12 +250,29 @@
                             width: 49px;
                             height: 49px;
 
+                            &.is-checked {
+                                .el-checkbox__inner {
+                                    background: none;
+                                }
+                            }
+
                             .el-checkbox__inner {
                                 width: 49px;
                                 height: 49px;
                                 //background: $white;
                                 border-radius: 8px;
                                 border: 1px solid $inputBorder;
+                            }
+
+                            .el-checkbox__inner::after {
+                                border-width: 3px;
+                                border-color: $mainDarkBlue;
+                                height: 21px;
+                                left: 17px;
+                                top: 8px;
+                                width: 11px;
+                                transition-delay: 0s;
+                                transition-duration: 0.1s;
                             }
                         }
                     }
@@ -274,7 +314,7 @@
             color: $mainDarkBlue;
             margin-left: 25px;
 
-            .el-switch{
+            .el-switch {
                 margin: 0 17px;
             }
         }

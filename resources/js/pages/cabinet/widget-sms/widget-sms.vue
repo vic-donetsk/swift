@@ -95,7 +95,53 @@
                         <div class="widget-sms_table-content">
                             <div class="widget-sms_table-row">
                                 <div class="widget-sms_table-row-cells">
-
+                                    <div class="widget-table_item mod-message">
+                                        <span>{{__('widget','Widget sms table message 1')}}</span>
+                                    </div>
+                                    <div class="widget-table_item mod-context">
+                                        <div class="mod-context_wrap">
+                                            <div class="landing-main_message"
+                                                 v-html='__("widget", "Message 1")'></div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-table_item mod-description"></div>
+                                    <div class="widget-table_item mod_switch">
+                                        <div class="widget-sms_switch">
+                                            <el-switch v-model="record"></el-switch>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-sms_table-row">
+                                <div class="widget-sms_table-row-cells">
+                                    <div class="widget-table_item mod-message">
+                                        <span>{{__('widget','Widget sms table message 2')}}</span>
+                                    </div>
+                                    <div class="widget-table_item mod-context">
+                                        <div class="mod-context_wrap"></div>
+                                    </div>
+                                    <div class="widget-table_item mod-description"></div>
+                                    <div class="widget-table_item mod_switch">
+                                        <div class="widget-sms_switch">
+                                            <el-switch v-model="record"></el-switch>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-sms_table-row">
+                                <div class="widget-sms_table-row-cells">
+                                    <div class="widget-table_item mod-message">
+                                        <span>{{__('widget','Widget sms table message 3')}}</span>
+                                    </div>
+                                    <div class="widget-table_item mod-context">
+                                        <div class="mod-context_wrap"></div>
+                                    </div>
+                                    <div class="widget-table_item mod-description"></div>
+                                    <div class="widget-table_item mod_switch">
+                                        <div class="widget-sms_switch">
+                                            <el-switch v-model="record"></el-switch>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

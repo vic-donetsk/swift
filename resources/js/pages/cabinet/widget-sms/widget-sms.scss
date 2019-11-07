@@ -297,6 +297,9 @@
 
                 @include media('d-only') {
                     min-width: 25%;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
                     padding: 0 0 0 20px;
                 }
             }
@@ -339,8 +342,8 @@
             .widget-sms_table-row-cells {
                 position: relative;
                 display: flex;
-
                 height: 40px;
+
                 border-bottom: 1px solid $inputBorder;
 
                 &:not(:first-of-type) {
@@ -348,11 +351,11 @@
                 }
 
                 @include media('d-only') {
-                    height: 76px;
+                    height: 250px;
                 }
             }
 
-            .billing-table_item {
+            .widget-table_item {
                 display: flex;
                 align-items: center;
                 height: 250px;
@@ -362,23 +365,22 @@
                 font-weight: 500;
                 word-break: break-word;
                 overflow: hidden;
-                flex-shrink: 0;
-
-                &.mod-add_btn, &.mod-invoice, &.mod-date {
-                    border-right: 1px solid $inputBorder;
-                }
-
 
                 @include media('d-only') {
-                    height: 260px;
+                    height: 250px;
                     font-size: 16px;
-                    line-height: 20px;
-                    font-weight: 400;
+                    line-height: 29px;
 
                     &:not(:last-of-type) {
                         border-right: 1px solid $inputBorder;
                     }
                 }
+            }
+
+            .mod-context_wrap {
+                width: 555px;
+                height: 205px;
+                border: 1px solid $widgetSidebarBorder;
             }
 
             .billing-table_head-item, .billing-table_item {
@@ -418,7 +420,5 @@
                 }
             }
         }
-
-
     }
 }

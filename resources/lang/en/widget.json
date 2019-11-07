@@ -100,5 +100,8 @@
   "Widget schemes head 1": "Tipuri de mesaje",
   "Widget schemes head 2": "Contextul mesajului",
   "Widget schemes head 3": "Descrierea",
-  "Widget schemes head 4": "OFF / ON"
+  "Widget schemes head 4": "OFF / ON",
+  "Widget sms table message 1": "Mesaj de reamintire (apel programat)",
+  "Widget sms table message 2": "Mesaj indicativ (apel programat)",
+  "Widget sms table message 3": "Mesaj sumar (pentru vizitator)"
 }
