@@ -16,6 +16,7 @@ import billingAbonnement from './pages/cabinet/billing-abonnement/billing-abonne
 import billingInvoice from './pages/cabinet/billing-invoice/billing-invoice.vue';
 import billingBank from './pages/cabinet/billing-bank/billing-bank.vue';
 import settings from './pages/cabinet/settings/settings.vue';
+import support from './pages/cabinet/support/support.vue';
 import cabinet from './components/cabinet/cabinet.vue';
 
 export default [
@@ -116,6 +117,11 @@ export default [
                 path: 'settings',
                 name: 'cabinet-settings',
                 component: settings,
+            },
+            {
+                path: 'support',
+                name: 'cabinet-support',
+                component: support,
             },
         ]
     },

@@ -12,7 +12,7 @@ export default {
     },
     data: function () {
         return {
-            settingsMode: 3,
+            settingsMode: 0,
             mobileMenuOpened: false,
             settingChapters: [
                 {title: 'general', svg: 'settings'},
