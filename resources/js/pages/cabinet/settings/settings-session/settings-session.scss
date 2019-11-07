@@ -68,6 +68,10 @@
             font-size: 16px;
             color: $mainDarkBlue;
 
+            @include media('d-1400-only') {
+                font-size: 14px;
+            }
+
             &.mod_header {
                 background: $landingHeaderbackground;
                 font-weight: 700;
@@ -98,10 +102,29 @@
 
         .mod_status {
             width: 15.1%;
+            padding-left: 20px;
         }
 
         .mod_out {
             width: 21%;
+        }
+
+        .session_selectedBlock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            height: 40px;
+            cursor: pointer;
+
+            &.mod_active {
+                background: $widgetSidebarBorder;
+            }
+
+            &.mod_signOut {
+                background: $inputBorder;
+                color: #8DAED0;
+            }
         }
 
     }
