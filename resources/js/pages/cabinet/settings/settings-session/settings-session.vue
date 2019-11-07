@@ -37,6 +37,51 @@
             </div>
         </div>
 
+        <div class="settings_session-mobileTable">
+
+            <div class="settings_session-mobileTable_header">
+                <div class="settings_session-mobileTable_header-item mod_mobilePlus"></div>
+                <div class="settings_session-mobileTable_header-item mod_mobileAddress">{{__('settings', 'Address IP')}}</div>
+                <div class="settings_session-mobileTable_header-item mod_mobileActive">{{__('settings', 'Recent activities')}}</div>
+                <div class="settings_session-mobileTable_header-item mod_mobileSource"></div>
+            </div>
+
+            <div v-for="(oneSession, index) in sessions" class="settings_session-mobileTable_row">
+                <div class="settings_session-mobileTable_row-brief">
+                    <div class="row-brief_item mod_mobilePlus mod_icon">
+                        <div :id="'sign' + index" class="signOpenClose mod_closed"
+                             @click="mobileShowDetails(index, '200px')"></div>
+                    </div>
+                    <div class="row-brief_item mod_mobileAddress mod_text">{{oneSession.address}}</div>
+                    <div class="row-brief_item mod_mobileActive mod_text">{{oneSession.activity}}</div>
+                    <div class="row-brief_item mod_mobileSource mod_icon">
+                        <svg class="source_icon">
+                            <use v-if="oneSession.isDesktop" xlink:href="#pc"></use>
+                            <use v-else xlink:href="#mobile_phone"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div :id="'rowFull'+index" class="settings_session-mobileTable_row-full">
+                    <div class="row-full_item">
+                        <span>{{__('settings', 'Client')}}</span>&nbsp;:&nbsp;{{oneSession.client}}
+                    </div>
+                    <div class="row-full_item">
+                        <span>{{__('settings', 'Country')}}</span>&nbsp;:&nbsp;{{oneSession.country}}
+                    </div>
+                    <div class="row-full_item">
+                        <span>{{__('settings', 'Session status')}}</span>&nbsp;:&nbsp;{{ oneSession.isActive ? __('settings', 'Active') : 'Offline'}}
+                    </div>
+
+                    <div class="row-full_item mod_center">
+                        <div class="mod_mobileSignOut" @click="signOut(index)">{{__('settings', 'Sign out')}}</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
 
     </div>
 </template>
