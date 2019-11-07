@@ -10,9 +10,8 @@
     @include media('m-t-only') {
         flex-direction: column;
         align-items: center;
-        padding: 0 4%;
+        padding: 0;
     }
-
 
     &-header {
         display: flex;
@@ -51,6 +50,7 @@
             width: 100%;
             height: auto;
             flex-direction: column;
+            padding: 0 4%;
         }
 
         .element_menu {
@@ -116,6 +116,7 @@
                 margin-bottom: 39px;
                 border: 1px solid $inputBorder;
                 border-radius: 8px;
+                font-size: 14px;
             }
         }
         .element_button {
@@ -137,6 +138,7 @@
                 height: 45px;
                 max-width: 568px;
                 margin: 0 8% 39px;
+                font-size: 14px;
             }
         }
 
@@ -152,13 +154,23 @@
         @include media('m-t-only') {
             margin-bottom: 15px;
         }
-
+        @include media('t-only') {
+            font-size: 14px;
+        }
+        @include media('m-only') {
+            width: 100%;
+            font-size: 12px;
+        }
         &_header {
             display: flex;
             align-items: center;
             height: 63px;
             background-color: $lightBlueGradientFrom;
             font-weight: 700;
+
+            @include media('m-only') {
+                height: 60px;
+            }
 
             &-item {
                 height: 100%;
@@ -169,13 +181,21 @@
         }
 
         &-body {
-            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04)
+            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+
+            @include media('m-only') {
+                box-shadow: none;
+            }
         }
 
         &_row {
             display: flex;
             height: 76px;
             font-weight: 400;
+
+            @include media('m-only') {
+                height: 40px;
+            }
 
             &-item {
                 display: flex;
@@ -184,33 +204,59 @@
                 height: 100%;
                 padding-left: 20px;
                 border-bottom: 1px solid $inputBorder;
-                border-right: 1px solid $inputBorder;
+                //border-right: 1px solid $inputBorder;
 
-                //&:not(:last-of-type) {
-                //    border-right: 1px solid $inputBorder;
-                //}
+                &:not(:last-of-type) {
+                    border-right: 1px solid $inputBorder;
+                }
+
+                &:last-of-type {
+                    @include media('t') {
+                        border-right: 1px solid $inputBorder;
+                    }
+                }
                 &:first-of-type {
                     border-left: 1px solid $inputBorder;
+
+                    @include media('m-only') {
+                        border-left: none;
+                    }
                 }
             }
         }
 
         .mod_ID {
             width: 164px;
+
+            @include media('m-only') {
+                width: 21.0%;
+            }
         }
 
         .mod_value {
             width: 217px;
+
+            @include media('m-only') {
+                width: 40.3%;
+            }
         }
 
         .mod_type {
             width: 200px;
+
+            @include media('m-only') {
+                width: 21.6%;
+            }
         }
 
         .mod_close {
             justify-content: center;
             width: 62px;
             padding-left: 0;
+
+            @include media('m-only') {
+                width: 17.1%;
+            }
 
             .close_svg {
                 width: 16px;
