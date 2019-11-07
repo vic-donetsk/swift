@@ -76,25 +76,28 @@
                     </h2>
 
                     <div class="widget-sms_table">
-                        <div class="billing-invoice_table-head">
-                            <div class="billing-table_head-item mod-message">
+                        <div class="widget-sms_table-head">
+                            <div class="widget-table_head-item mod-message">
                                 <span>{{__('widget','Widget schemes head 1')}}</span>
                             </div>
-                            <div class="billing-table_head-item mod-context mod-desktop">
+                            <div class="widget-table_head-item mod-context mod-desktop">
                                 <span>{{__('widget','Widget schemes head 2')}}</span>
                             </div>
-                            <div class="billing-table_head-item mod-description mod-desktop">
+                            <div class="widget-table_head-item mod-description mod-desktop">
                                 <span>{{__('widget','Widget schemes head 3')}}</span>
                             </div>
 
-                            <div class="billing-table_head-item mod_switch">
+                            <div class="widget-table_head-item mod_switch">
                                 <span>{{__('widget','Widget schemes head 4')}}</span>
                             </div>
-
                         </div>
 
-                        <div class="billing-invoice_table-content">
+                        <div class="widget-sms_table-content">
+                            <div class="widget-sms_table-row">
+                                <div class="widget-sms_table-row-cells">
 
+                                </div>
+                            </div>
                         </div>
                     </div>
 

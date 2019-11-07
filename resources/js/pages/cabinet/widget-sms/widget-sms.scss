@@ -259,7 +259,7 @@
                 overflow-y: hidden;
             }
 
-            .billing-invoice_table-head {
+            .widget-sms_table-head {
                 display: flex;
                 height: 60px;
                 background-color: $lightBlueGradientFrom;
@@ -270,7 +270,7 @@
                     border: 1px solid rgba(0, 33, 95, 0.05);
                 }
 
-                .billing-table_head-item {
+                .widget-table_head-item {
                     display: flex;
                     align-items: center;
                     font-size: 12px;
@@ -307,7 +307,6 @@
             }
 
             .mod-description {
-                justify-content: center;
                 width: 50%;
                 padding: 0 20px;
             }
@@ -320,7 +319,7 @@
                 }
             }
 
-            .billing-invoice_table-content {
+            .widget-sms_table-content {
                 background: $white;
                 border: 1px solid #E3ECF5;
                 border-top: none;
@@ -333,11 +332,11 @@
                 }
             }
 
-            .billing-invoice_table-row {
+            .widget-sms_table-row {
                 position: relative;
             }
 
-            .billing-invoice_table-row-cells {
+            .widget-sms_table-row-cells {
                 position: relative;
                 display: flex;
 
@@ -419,5 +418,7 @@
                 }
             }
         }
+
+
     }
 }
