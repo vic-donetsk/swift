@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div v-if="isCalls" class="statistics_diagrams">
+            <div v-show="isCalls" class="statistics_diagrams">
                 <div class="statistics_diagram mod_big">
 
                     <chart-js class="diagram"
@@ -149,7 +149,7 @@
 
             </div>
 
-            <div v-else class="statistics_diagrams">
+            <div v-show="!isCalls" class="statistics_diagrams">
                 <div class="statistics_diagram mod_medium">
 
                     <chart-js class="diagram"
@@ -211,3 +211,5 @@
 <style lang='scss'>
     @import './statistics.scss';
 </style>
+
+

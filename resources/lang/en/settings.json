@@ -25,7 +25,17 @@
     "Type" : "Tipul",
     "Apply" : "Aplică",
     "ID" : "ID",
-    "IP" : "IP"
+    "IP" : "IP",
+
+    "Session history" : "ISTORICUL SESIUNILOR",
+    "Clients" : "Clienți",
+    "Address IP" : "Adresă IP",
+    "Country" : "Țară",
+    "Recent activities" : "Activități recente",
+    "Session status" : "Starea sesiunii",
+    "Active" : "Activă",
+    "Sign out" : "Deconectează-te",
+    "" : ""
 
 
 }

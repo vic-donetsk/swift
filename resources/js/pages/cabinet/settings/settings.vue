@@ -36,6 +36,7 @@
         <settings-general v-if="settingsMode === 0"></settings-general>
         <settings-api v-if="settingsMode === 1"></settings-api>
         <settings-blacklist v-if="settingsMode === 2"></settings-blacklist>
+        <settings-session v-if="settingsMode === 3"></settings-session>
 
 
     </div>

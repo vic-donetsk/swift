@@ -88,9 +88,15 @@
             }
         }
 
-        //i.el-select__caret.el-input__icon.el-icon-arrow-up::before {
-        //    content: url('/img/icons/arrow_grey.svg');
-        //}
+        i.el-select__caret.el-input__icon.el-icon-arrow-up {
+            width: 12px;
+            margin-right: 15px;
+
+            &::before {
+                content: url('/img/icons/arrow_up.svg');
+            }
+        }
+        
         .el-select .el-input__inner:focus {
             border-color: $inputBorder;
         }

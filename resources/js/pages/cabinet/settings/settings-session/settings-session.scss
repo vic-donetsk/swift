@@ -1,0 +1,111 @@
+@import '@/app';
+
+.settings_session {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2.3%;
+    color: $mainDarkBlue;
+
+    @include media('m-t-only') {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include media('m-t-only') {
+            display: none;
+        }
+
+        .header_svg {
+            width: 16px;
+            height: 16px;
+            fill: $mainDarkBlue;
+            margin-right: 8px;
+        }
+
+        .header_value {
+            height: 27px;
+            font-size: 20px;
+            font-weight: 700;
+            color: $mainDarkBlue;
+            text-transform: uppercase;
+        }
+    }
+
+    &-table {
+        width: 100%;
+
+        @include media('m-t-only') {
+            display: none;
+        }
+        
+        .session_table-header {
+            display: flex;
+            height: 63px;
+            border: 1px solid rgba(0, 33, 95, 0.05);
+        }
+
+        .session_table-body {
+            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.05);
+        }
+
+        .session_table-row {
+            display: flex;
+            height: 76px;
+
+        }
+        .session_table-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 16px;
+            color: $mainDarkBlue;
+
+            &.mod_header {
+                background: $landingHeaderbackground;
+                font-weight: 700;
+            }
+
+            &.mod_row {
+                background: $white;
+                border-right: 1px solid $inputBorder;
+                font-weight: 400;
+            }
+        }
+
+        .mod_client {
+            width: 20.4%;
+        }
+
+        .mod_address {
+            width: 12.9%;
+        }
+
+        .mod_country {
+            width: 16.1%;
+        }
+
+        .mod_last {
+            width: 14.5%;
+        }
+
+        .mod_status {
+            width: 15.1%;
+        }
+
+        .mod_out {
+            width: 21%;
+        }
+
+    }
+}
+
+
+

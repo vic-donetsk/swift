@@ -54,8 +54,6 @@ export default {
 
                     legend: {
                         display: false, // turn off the title
-
-
                     },
 
                     responsive: true,
@@ -124,6 +122,11 @@ export default {
 
                 }
             });
+        }
+    },
+    watch: {
+        chartData () {
+            console.log(this.chartData)
         }
     }
 }
