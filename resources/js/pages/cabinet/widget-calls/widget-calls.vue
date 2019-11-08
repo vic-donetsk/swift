@@ -38,7 +38,7 @@
                             <span class="widget-add_text">{{__("widget", "Widget add button text 2")}}</span>
                         </div>
                         <div class="widget-button">
-                            <span>{{__('widget','Widget deactivate button 2')}}</span>
+                            <span>{{__('widget','Widget save button')}}</span>
                         </div>
                     </div>
 

@@ -4,10 +4,10 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 39px 17px 0;
+        padding: 39px 17px 35px;
 
         @include media('d-only') {
-            padding: 54px 45px 0 38px;
+            padding: 54px 45px 80px 38px;
 
         }
 
@@ -294,6 +294,10 @@
                     font-weight: 700;
                     line-height: 29px;
                 }
+
+                &.mod-context {
+                    padding: 0 0 0 40px;
+                }
             }
         }
 
@@ -327,9 +331,9 @@
 
         .widget-sms_table-content {
             background: $white;
-            border: 1px solid #E3ECF5;
-            border-top: none;
-            border-bottom: none;
+            //border: 1px solid #E3ECF5;
+            //border-top: none;
+            //border-bottom: none;
 
             @include media('d-only') {
                 min-width: 1500px;
@@ -345,16 +349,12 @@
         .widget-sms_table-row-cells {
             position: relative;
             display: flex;
-            height: 40px;
+            //height: 522px;
 
-            border-bottom: 1px solid $inputBorder;
-
-            &:not(:first-of-type) {
-                border-bottom: none;
-            }
 
             @include media('d-only') {
                 height: 250px;
+                border-bottom: 1px solid $inputBorder;
             }
         }
 
@@ -411,43 +411,6 @@
             @include media('d-only') {
                 font-size: 16px;
                 line-height: 29px;
-            }
-        }
-
-        .billing-table_head-item, .billing-table_item {
-            &.mod-add_btn {
-                width: 40px;
-                justify-content: center;
-                cursor: pointer;
-                @include media('d-only') {
-                    display: none;
-                }
-            }
-
-            &.mod-desktop {
-                display: none;
-
-                @include media('d-only') {
-                    display: flex;
-                }
-            }
-        }
-
-        .mod-add_btn-icon {
-            width: 18px;
-            height: 18px;
-            fill: $mainDarkBlue;
-        }
-
-        .billing-table_icon-download {
-            width: 14px;
-            height: 14px;
-            fill: $widgetActiveBlue;
-            cursor: pointer;
-
-            @include media('d-only') {
-                width: 19px;
-                height: 20px;
             }
         }
     }

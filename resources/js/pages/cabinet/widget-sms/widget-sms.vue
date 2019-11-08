@@ -36,7 +36,7 @@
                         <span class="widget-add_text">{{__("widget", "Widget add button text 2")}}</span>
                     </div>
                     <div class="widget-button">
-                        <span>{{__('widget','Widget deactivate button 2')}}</span>
+                        <span>{{__('widget','Widget save button')}}</span>
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@
                     </div>
                     <p class="widget-sms_subtitle mod_display">{{__('widget','Widget sms subtitle 3')}}</p>
                     <div class="widget-button">
-                        <span>{{__('widget','Widget deactivate button 2')}}</span>
+                        <span>{{__('widget','Widget save button')}}</span>
                     </div>
                 </div>
 

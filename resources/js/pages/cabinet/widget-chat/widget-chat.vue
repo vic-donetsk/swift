@@ -314,7 +314,7 @@
                             </div>
 
                             <div class="widget-button" @click="openModal = false">
-                                <span>{{__('widget','Widget deactivate button 2')}}</span>
+                                <span>{{__('widget','Widget save button')}}</span>
                             </div>
                         </div>
                         <div class="widget-table_modal-blackout" @click="openModal = false"></div>
@@ -353,7 +353,7 @@
                     </div>
 
                     <div class="widget-button">
-                        <span>{{__('widget','Widget deactivate button 2')}}</span>
+                        <span>{{__('widget','Widget save button')}}</span>
                     </div>
 
                 </div>

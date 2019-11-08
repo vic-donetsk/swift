@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="widget-button mod_size">
-                    <span>{{__('widget','Widget deactivate button 2')}}</span>
+                    <span>{{__('widget','Widget save button')}}</span>
                 </div>
 
             </div>
