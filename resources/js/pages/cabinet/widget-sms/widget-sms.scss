@@ -53,11 +53,15 @@
             color: $widgetDeactivateLink;
             margin-left: 25px;
 
+            @include media('t-ipad'){
+                text-align: center;
+            }
 
             @include media('d-only') {
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 20px;
+                text-align: left;
             }
         }
     }
@@ -166,8 +170,13 @@
             margin-left: 25px;
             margin-bottom: 38px;
 
+            @include media('t-ipad'){
+                justify-content: center;
+            }
+
             @include media('d-only') {
                 margin-bottom: 17px;
+                justify-content: flex-start;
             }
 
             .el-switch {
@@ -252,185 +261,193 @@
 
     .widget-sms_schemes {
 
-        .widget-sms_table {
+    }
+
+    .widget-sms_table {
+
+        @include media('d-only') {
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .widget-sms_table-head {
+            display: flex;
+            height: 60px;
+            background-color: $lightBlueGradientFrom;
 
             @include media('d-only') {
-                overflow-x: auto;
-                overflow-y: hidden;
+                min-width: 1500px;
+                height: 64px;
+                border: 1px solid rgba(0, 33, 95, 0.05);
             }
 
-            .widget-sms_table-head {
-                display: flex;
-                height: 60px;
-                background-color: $lightBlueGradientFrom;
-
-                @include media('d-only') {
-                    min-width: 1500px;
-                    height: 64px;
-                    border: 1px solid rgba(0, 33, 95, 0.05);
-                }
-
-                .widget-table_head-item {
-                    display: flex;
-                    align-items: center;
-                    font-size: 12px;
-                    line-height: 14px;
-                    font-weight: 700;
-                    color: $mainDarkBlue;
-
-                    @include media('d-only') {
-                        font-size: 16px;
-                        line-height: 29px;
-                    }
-                }
-            }
-
-            .mod-message {
-                padding: 0 0 0 12px;
-                justify-content: flex-start;
-                min-width: 78px;
-
-                & > span {
-                    flex-shrink: 0;
-                    line-height: normal;
-                }
-
-                @include media('d-only') {
-                    min-width: 24%;
-                    font-size: 16px;
-                    line-height: 20px;
-                    font-weight: 600;
-                    padding: 0 0 0 20px;
-                }
-            }
-
-            .mod-context {
-                width: 40%;
-                padding: 0 0 0 20px;
-            }
-
-            .mod-description {
-                width: 28%;
-                padding: 0 0 0 22px;
-            }
-
-            .mod_switch {
-                justify-content: center;
-
-                @include media('d-only') {
-                    width: 130px;
-                }
-            }
-
-            .widget-sms_table-content {
-                background: $white;
-                border: 1px solid #E3ECF5;
-                border-top: none;
-                border-bottom: none;
-
-                @include media('d-only') {
-                    min-width: 1500px;
-                    box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
-                    border: 1px solid rgba(0, 33, 95, 0.05);
-                }
-            }
-
-            .widget-sms_table-row {
-                position: relative;
-            }
-
-            .widget-sms_table-row-cells {
-                position: relative;
-                display: flex;
-                height: 40px;
-
-                border-bottom: 1px solid $inputBorder;
-
-                &:not(:first-of-type) {
-                    border-bottom: none;
-                }
-
-                @include media('d-only') {
-                    height: 250px;
-                }
-            }
-
-            .widget-table_item {
+            .widget-table_head-item {
                 display: flex;
                 align-items: center;
-                height: 250px;
-                font-size: 12px;
-                line-height: 14px;
+                font-size: 14px;
+                line-height: 26px;
+                font-weight: 600;
                 color: $mainDarkBlue;
-                font-weight: 500;
-                word-break: break-word;
-                overflow: hidden;
 
                 @include media('d-only') {
-                    height: 250px;
                     font-size: 16px;
+                    font-weight: 700;
                     line-height: 29px;
-
-                    &:not(:last-of-type) {
-                        border-right: 1px solid $inputBorder;
-                    }
-
-                    &.mod-description {
-                        align-items: flex-start;
-                        padding: 22px;
-
-                    }
                 }
             }
+        }
 
-            .mod-context_wrap {
-                width: 555px;
-                height: 205px;
-                border: 1px solid $widgetSidebarBorder;
-                padding: 17px 20px;
+        .mod-message {
+            padding: 0 0 0 12px;
+            justify-content: flex-start;
+
+            @include media('d-only') {
+                min-width: 24%;
+                padding: 0 0 0 20px;
+            }
+        }
+
+        .mod-context {
+            width: 40%;
+            padding: 0 0 0 20px;
+        }
+
+        .mod-description {
+            width: 28%;
+            padding: 0 0 0 22px;
+        }
+
+        .mod_switch {
+            justify-content: center;
+
+            @include media('d-only') {
+                width: 130px;
+            }
+        }
+
+        .widget-sms_table-content {
+            background: $white;
+            border: 1px solid #E3ECF5;
+            border-top: none;
+            border-bottom: none;
+
+            @include media('d-only') {
+                min-width: 1500px;
+                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+                border: 1px solid rgba(0, 33, 95, 0.05);
+            }
+        }
+
+        .widget-sms_table-row {
+            position: relative;
+        }
+
+        .widget-sms_table-row-cells {
+            position: relative;
+            display: flex;
+            height: 40px;
+
+            border-bottom: 1px solid $inputBorder;
+
+            &:not(:first-of-type) {
+                border-bottom: none;
             }
 
-            .widget-table_item-text > * {
-                &:not(:last-child) {
-                    margin-bottom: 27px;
+            @include media('d-only') {
+                height: 250px;
+            }
+        }
+
+        .widget-table_item {
+            display: flex;
+            align-items: center;
+            height: 205px;
+            color: $mainDarkBlue;
+            word-break: break-word;
+            overflow: hidden;
+
+            &.mod-message {
+                font-size: 14px;
+                line-height: 19px;
+                font-weight: 600;
+            }
+
+            @include media('d-only') {
+                height: 250px;
+                font-size: 16px;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $inputBorder;
+                }
+
+                &.mod-message {
+                    font-size: 16px;
+                }
+
+                &.mod-description {
+                    align-items: flex-start;
+                    padding: 22px;
+
                 }
             }
+        }
 
-            .billing-table_head-item, .billing-table_item {
-                &.mod-add_btn {
-                    width: 40px;
-                    justify-content: center;
-                    cursor: pointer;
-                    @include media('d-only') {
-                        display: none;
-                    }
-                }
+        .mod-context_wrap {
+            width: 555px;
+            height: 205px;
+            border: 1px solid $widgetSidebarBorder;
+            padding: 17px 20px;
+        }
 
-                &.mod-desktop {
-                    display: none;
+        .widget-table_item-text > * {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 24px;
 
-                    @include media('d-only') {
-                        display: flex;
-                    }
-                }
+            &:not(:last-child) {
+                margin-bottom: 27px;
             }
 
-            .mod-add_btn-icon {
-                width: 18px;
-                height: 18px;
-                fill: $mainDarkBlue;
+            @include media('d-only') {
+                font-size: 16px;
+                line-height: 29px;
             }
+        }
 
-            .billing-table_icon-download {
-                width: 14px;
-                height: 14px;
-                fill: $widgetActiveBlue;
+        .billing-table_head-item, .billing-table_item {
+            &.mod-add_btn {
+                width: 40px;
+                justify-content: center;
                 cursor: pointer;
+                @include media('d-only') {
+                    display: none;
+                }
+            }
+
+            &.mod-desktop {
+                display: none;
 
                 @include media('d-only') {
-                    width: 19px;
-                    height: 20px;
+                    display: flex;
                 }
+            }
+        }
+
+        .mod-add_btn-icon {
+            width: 18px;
+            height: 18px;
+            fill: $mainDarkBlue;
+        }
+
+        .billing-table_icon-download {
+            width: 14px;
+            height: 14px;
+            fill: $widgetActiveBlue;
+            cursor: pointer;
+
+            @include media('d-only') {
+                width: 19px;
+                height: 20px;
             }
         }
     }

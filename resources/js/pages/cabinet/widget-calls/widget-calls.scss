@@ -54,6 +54,10 @@
             color: $widgetDeactivateLink;
             margin-left: 25px;
             margin-bottom: 18px;
+
+            @include media('t-ipad') {
+                text-align: center;
+            }
         }
 
         @include media('d-only') {
@@ -66,6 +70,7 @@
                 font-size: 14px;
                 line-height: 20px;
                 margin-bottom: 37px;
+                text-align: left;
             }
         }
     }
@@ -317,8 +322,15 @@
             .el-switch {
                 margin: 0 17px;
             }
-        }
 
+            @include media('t-ipad') {
+                justify-content: center;
+            }
+
+            @include media('d-only'){
+                justify-content: flex-start;
+            }
+        }
     }
 
     .widget-button {
