@@ -104,7 +104,10 @@
                                                  v-html='__("widget", "Widget sms table message 4")'></div>
                                         </div>
                                     </div>
-                                    <div class="widget-table_item mod-description"></div>
+                                    <div class="widget-table_item mod-description">
+                                        <div class="widget-table_item-text"
+                                             v-html='__("widget", "Widget sms table message 7")'></div>
+                                    </div>
                                     <div class="widget-table_item mod_switch">
                                         <div class="widget-sms_switch">
                                             <el-switch v-model="row1"></el-switch>
@@ -123,7 +126,10 @@
                                                  v-html='__("widget", "Widget sms table message 5")'></div>
                                         </div>
                                     </div>
-                                    <div class="widget-table_item mod-description"></div>
+                                    <div class="widget-table_item mod-description">
+                                        <div class="widget-table_item-text"
+                                             v-html='__("widget", "Widget sms table message 8")'></div>
+                                    </div>
                                     <div class="widget-table_item mod_switch">
                                         <div class="widget-sms_switch">
                                             <el-switch v-model="row2"></el-switch>
@@ -142,7 +148,10 @@
                                                  v-html='__("widget", "Widget sms table message 6")'></div>
                                         </div>
                                     </div>
-                                    <div class="widget-table_item mod-description"></div>
+                                    <div class="widget-table_item mod-description">
+                                        <div class="widget-table_item-text"
+                                             v-html='__("widget", "Widget sms table message 9")'></div>
+                                    </div>
                                     <div class="widget-table_item mod_switch">
                                         <div class="widget-sms_switch">
                                             <el-switch v-model="row3"></el-switch>

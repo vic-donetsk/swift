@@ -106,8 +106,8 @@
   "Widget sms table message 3": "Mesaj sumar (pentru vizitator)",
   "Widget sms table message 4": "<p>Bună, dragă client!</p><p>Recent, ați comandat un apel de pe site-ul :url. Veți primi un telefon de la un reprezentant în câteva minute.</p><p>Trimis de la :company_name</p>",
   "Widget sms table message 5": "<p>Bună!</p><p>Recent, ați comandat un apel de pe site-ul :url. Puteți anula un apel dând click pe acest link: link.</p><p>Trimis de la :company_name</p>",
-  "Widget sms table message 6": "<p>Vă mulțumim că ne-ați contactat pe site-ul :url</p><p>Numele</p><p>Tel.:: tel</p>",
-  "Widget sms table message 7": "Mesaj sumar (pentru vizitator)",
-  "Widget sms table message 8": "Mesaj sumar (pentru vizitator)",
-  "Widget sms table message 9": "Mesaj sumar (pentru vizitator)"
+  "Widget sms table message 6": "<p>Vă mulțumim că ne-ați contactat pe site-ul :url</p><div><p>Numele</p><p>Tel.:: tel</p></div>",
+  "Widget sms table message 7": "<p>Un mesaj de reamintire trimis vizitatorului cu câteva minute înainte de un apel programat.</p><div><p><b>: url</b> - adresa site-ului widget</p><p><b>: company_name</b> - your company ‘ s name</p></div>",
+  "Widget sms table message 8": "<p>Un mesaj trimis după comanda unui apel programat cu informații despre posibilitatea anulării.</p><div><p><b> : link</b> - link pentru a anula un apel programat</p></div>",
+  "Widget sms table message 9": "<p>Un mesaj cu datele de contact ale consultantului este trimis vizitatorului după ce conversația este finalizată cu succes.</p><div><p><b> : nume </b> - numele consultantului</p><p><b> : tel</b> - telefonul consultantului</p><p><b> : company_name</b> - your company ‘ s name</p></div>"
 }

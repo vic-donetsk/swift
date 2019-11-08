@@ -306,12 +306,12 @@
 
             .mod-context {
                 width: 40%;
-                padding: 0 20px;
+                padding: 0 0 0 20px;
             }
 
             .mod-description {
                 width: 28%;
-                padding: 0 20px;
+                padding: 0 0 0 22px;
             }
 
             .mod_switch {
@@ -374,6 +374,12 @@
                     &:not(:last-of-type) {
                         border-right: 1px solid $inputBorder;
                     }
+
+                    &.mod-description {
+                        align-items: flex-start;
+                        padding: 22px;
+
+                    }
                 }
             }
 
@@ -385,7 +391,7 @@
             }
 
             .widget-table_item-text > * {
-                &:not(:last-of-type) {
+                &:not(:last-child) {
                     margin-bottom: 27px;
                 }
             }
