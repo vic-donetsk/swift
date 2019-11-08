@@ -296,7 +296,7 @@
                 }
 
                 @include media('d-only') {
-                    min-width: 25%;
+                    min-width: 24%;
                     font-size: 16px;
                     line-height: 20px;
                     font-weight: 600;
@@ -305,12 +305,12 @@
             }
 
             .mod-context {
-                width: 50%;
+                width: 40%;
                 padding: 0 20px;
             }
 
             .mod-description {
-                width: 50%;
+                width: 28%;
                 padding: 0 20px;
             }
 
@@ -381,6 +381,13 @@
                 width: 555px;
                 height: 205px;
                 border: 1px solid $widgetSidebarBorder;
+                padding: 17px 20px;
+            }
+
+            .widget-table_item-text > * {
+                &:not(:last-of-type) {
+                    margin-bottom: 27px;
+                }
             }
 
             .billing-table_head-item, .billing-table_item {

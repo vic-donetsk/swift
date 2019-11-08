@@ -12,7 +12,10 @@ export default {
             title: "Главная",
             phoneNumber: '',
             checked: false,
-            record: false
+            record: false,
+            row1:false,
+            row2:false,
+            row3:false
         };
     },
     created() {
