@@ -65,6 +65,12 @@
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 1')}}</span>
                     </div>
+                    <div class="widget-sms_table-btn">
+
+                    </div>
+                    <div class="widget-sms_table-btn open">
+
+                    </div>
                 </div>
 
                 <div class="widget-sms_table-content">
@@ -91,6 +97,80 @@
                             <div class="widget-switch">
                                 <span>{{__('widget','Cabinet switch off')}}</span>
                                 <el-switch v-model="row1"></el-switch>
+                                <span>{{__('widget','Cabinet switch on')}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-sms_table-mobile">
+                <div class="widget-sms_table-head">
+                    <div class="widget-table_head-item mod-message">
+                        <span>{{__('widget','Widget sms table message 2')}}</span>
+                    </div>
+                </div>
+
+                <div class="widget-sms_table-content">
+                    <div class="widget-sms_table-row">
+                        <div class="widget-sms_table-row-cells">
+                            <div class="widget-table_item mod-message">
+                                <span>{{__('widget','Widget schemes head 2')}}</span>
+                            </div>
+                            <div class="widget-table_item mod-context">
+                                <div class="mod-context_wrap">
+                                    <div class="widget-table_item-text"
+                                         v-html='__("widget", "Widget sms table message 5")'></div>
+                                </div>
+                            </div>
+                            <div class="widget-table_item mod-message">
+                                <span>{{__('widget','Widget schemes head 3')}}</span>
+                            </div>
+                            <div class="widget-table_item mod-description">
+                                <div class="mod-context_wrap">
+                                    <div class="widget-table_item-text"
+                                         v-html='__("widget", "Widget sms table message 8")'></div>
+                                </div>
+                            </div>
+                            <div class="widget-switch">
+                                <span>{{__('widget','Cabinet switch off')}}</span>
+                                <el-switch v-model="row2"></el-switch>
+                                <span>{{__('widget','Cabinet switch on')}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-sms_table-mobile">
+                <div class="widget-sms_table-head">
+                    <div class="widget-table_head-item mod-message">
+                        <span>{{__('widget','Widget sms table message 3')}}</span>
+                    </div>
+                </div>
+
+                <div class="widget-sms_table-content">
+                    <div class="widget-sms_table-row">
+                        <div class="widget-sms_table-row-cells">
+                            <div class="widget-table_item mod-message">
+                                <span>{{__('widget','Widget schemes head 2')}}</span>
+                            </div>
+                            <div class="widget-table_item mod-context">
+                                <div class="mod-context_wrap">
+                                    <div class="widget-table_item-text"
+                                         v-html='__("widget", "Widget sms table message 6")'></div>
+                                </div>
+                            </div>
+                            <div class="widget-table_item mod-message">
+                                <span>{{__('widget','Widget schemes head 3')}}</span>
+                            </div>
+                            <div class="widget-table_item mod-description">
+                                <div class="mod-context_wrap">
+                                    <div class="widget-table_item-text"
+                                         v-html='__("widget", "Widget sms table message 9")'></div>
+                                </div>
+                            </div>
+                            <div class="widget-switch">
+                                <span>{{__('widget','Cabinet switch off')}}</span>
+                                <el-switch v-model="row3"></el-switch>
                                 <span>{{__('widget','Cabinet switch on')}}</span>
                             </div>
                         </div>

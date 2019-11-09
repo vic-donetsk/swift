@@ -256,8 +256,39 @@
     }
 
     .widget-sms_table-mobile {
+
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+
         margin-left: -17px;
         margin-right: -17px;
+
+        .widget-sms_table-btn {
+            position: relative;
+            width: 13px;
+            height: 3px;
+            background: $mainDarkBlue;
+            border-radius: 3px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 13px;
+                background: $mainDarkBlue;
+                border-radius: 3px;
+                top: -5px;
+                left: 5px;
+            }
+
+
+            &.open {
+                &:after {
+                    display: none;
+                }
+            }
+        }
 
         .widget-switch {
             justify-content: center;
@@ -418,10 +449,6 @@
         background: $white;
 
         @include media ('t-ipad') {
-            width: 286px;
-        }
-
-        @include media ('d-only') {
             width: 555px;
         }
     }
