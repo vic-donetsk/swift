@@ -12,9 +12,6 @@ export default {
                 return false;
             }
             this.rowList = item;
-        },
-        goToAuth() {
-            this.$router.push('/authentication');
         }
     }
 }

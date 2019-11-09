@@ -31,9 +31,6 @@ export default {
         this.billingSwiper.destroy();
     },
     methods: {
-        goToAuth() {
-            this.$router.push('/authentication');
-        },
         init() {
             this.billingSwiper = new Swiper('.billing-abonnement .swiper-container', {
                 slidesPerView: 1,
