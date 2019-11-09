@@ -32,10 +32,12 @@
                     <svg class="cabinet-page_title-icon">
                         <use xlink:href="#recorder"></use>
                     </svg>
-                    <span>{{__('widget','Cabinet page title 5')}}</span>
-                    <svg class="cabinet-page_title-icon right-icon">
-                        <use xlink:href="#info"></use>
-                    </svg>
+                    <span>
+                        {{__('widget','Cabinet page title 5')}}
+                        <svg class="cabinet-page_title-icon right-icon">
+                            <use xlink:href="#info"></use>
+                        </svg>
+                    </span>
                 </h2>
                 <div class="widget-switch">
                     <span>{{__('widget','Cabinet switch off')}}</span>

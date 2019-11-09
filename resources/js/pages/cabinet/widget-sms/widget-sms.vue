@@ -26,12 +26,21 @@
         </div>
 
         <div class="widget-sms_sender">
-            <h2 class="cabinet-page_title mod_sender">
+            <div class="cabinet-page_title mod_sender">
                 <svg class="cabinet-page_title-icon">
                     <use xlink:href="#mail-envelope-open"></use>
                 </svg>
                 <span>{{__('widget','Cabinet page title 7')}}</span>
-            </h2>
+                <svg class="cabinet-page_title-icon right-icon" @click.stop="tooltip = !tooltip">
+                    <use xlink:href="#info"></use>
+                </svg>
+
+                <div class="widget-sender_message" v-if="tooltip">
+                    <p>{{__('widget','Widget sender message')}}</p>
+                </div>
+            </div>
+
+
             <p class="widget-sms_subtitle mod_mobile">{{__('widget','Widget sms subtitle 2')}}</p>
             <div class="widget-switch">
                 <span>{{__('widget','Cabinet switch off')}}</span>
@@ -60,18 +69,18 @@
                 <span>{{__('widget','Cabinet page title 8')}}</span>
             </h2>
 
-            <div class="widget-sms_table-mobile" v-for="item in 1">
-                <div class="widget-sms_table-head">
+            <div class="widget-sms_table-mobile">
+                <div class="widget-sms_table-head" @click.stop="tableContent1 = !tableContent1">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 1')}}</span>
                     </div>
-                    <div class="widget-sms_table-btn" @click="toggleTableContent1(item)">
-                        <div v-if="item !== tableContent1" class="sms-btn_plus"></div>
+                    <div class="widget-sms_table-btn">
+                        <div v-if="!tableContent1" class="sms-btn_plus"></div>
                         <div v-else class="sms-btn_minus"></div>
                     </div>
                 </div>
 
-                <div class="widget-sms_table-content" v-if="item === tableContent1">
+                <div class="widget-sms_table-content" v-if="tableContent1">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">
@@ -101,18 +110,19 @@
                     </div>
                 </div>
             </div>
-            <div class="widget-sms_table-mobile" v-for="item in 1">
-                <div class="widget-sms_table-head">
+
+            <div class="widget-sms_table-mobile">
+                <div class="widget-sms_table-head" @click.stop="tableContent2 = !tableContent2">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 2')}}</span>
                     </div>
-                    <div class="widget-sms_table-btn" @click="toggleTableContent2(item)">
-                        <div v-if="item !== tableContent2" class="sms-btn_plus"></div>
+                    <div class="widget-sms_table-btn">
+                        <div v-if="!tableContent2" class="sms-btn_plus"></div>
                         <div v-else class="sms-btn_minus"></div>
                     </div>
                 </div>
 
-                <div class="widget-sms_table-content"  v-if="item === tableContent2">
+                <div class="widget-sms_table-content" v-if="tableContent2">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">
@@ -142,18 +152,18 @@
                     </div>
                 </div>
             </div>
-            <div class="widget-sms_table-mobile" v-for="item in 1">
-                <div class="widget-sms_table-head">
+            <div class="widget-sms_table-mobile">
+                <div class="widget-sms_table-head" @click.stop="tableContent3 = !tableContent3">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 3')}}</span>
                     </div>
-                    <div class="widget-sms_table-btn" @click="toggleTableContent3(item)">
-                        <div v-if="item !== tableContent3" class="sms-btn_plus"></div>
+                    <div class="widget-sms_table-btn">
+                        <div v-if="!tableContent3" class="sms-btn_plus"></div>
                         <div v-else class="sms-btn_minus"></div>
                     </div>
                 </div>
 
-                <div class="widget-sms_table-content" v-if="item === tableContent3">
+                <div class="widget-sms_table-content" v-if="tableContent3">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">

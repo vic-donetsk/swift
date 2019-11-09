@@ -35,9 +35,6 @@ export default {
         }
     },
     methods: {
-        goToAuth() {
-            this.$router.push('/authentication');
-        },
         nextWidgetComponent(item, key) {
             this.currentComponent = item.component;
             this.currentPageClass = item.pageClass;

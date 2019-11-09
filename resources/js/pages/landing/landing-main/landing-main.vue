@@ -31,7 +31,6 @@
                 </div>
             </div>
         </div>
-
         <div class="landing-main_block mod_3">
             <div class="landing-main_numbering">
                 <span class="landing-main_number">3</span>
@@ -59,7 +58,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
