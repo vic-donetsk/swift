@@ -16,6 +16,7 @@ export default {
             row3:false,
             tableContent1: null,
             tableContent2: null,
+            tableContent3: null,
         };
     },
     created() {
@@ -53,6 +54,13 @@ export default {
                 return false;
             }
             this.tableContent2 = item;
+        },
+        toggleTableContent3(item) {
+            if (this.tableContent3 === item) {
+                this.tableContent3 = null;
+                return false;
+            }
+            this.tableContent3 = item;
         },
 
         updatePhone(value) {

@@ -142,14 +142,18 @@
                     </div>
                 </div>
             </div>
-            <div class="widget-sms_table-mobile">
+            <div class="widget-sms_table-mobile" v-for="item in 1">
                 <div class="widget-sms_table-head">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 3')}}</span>
                     </div>
+                    <div class="widget-sms_table-btn" @click="toggleTableContent3(item)">
+                        <div v-if="item !== tableContent3" class="sms-btn_plus"></div>
+                        <div v-else class="sms-btn_minus"></div>
+                    </div>
                 </div>
 
-                <div class="widget-sms_table-content">
+                <div class="widget-sms_table-content" v-if="item === tableContent3">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">
