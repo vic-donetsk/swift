@@ -5,6 +5,7 @@ import widgetSms from './../widget-sms/widget-sms.vue';
 import widgetTime from './../widget-time/widget-time.vue';
 import widgetDeactivate from './../widget-deactivate/widget-deactivate.vue';
 import widgetChat from './../widget-chat/widget-chat.vue';
+import widgetSteps from "../../../components/widget-steps/widget-steps.vue";
 
 export default {
     components: {
@@ -14,16 +15,23 @@ export default {
         widgetSms,
         widgetTime,
         widgetDeactivate,
-        widgetChat
+        widgetChat,
+        'widget-steps': widgetSteps,
     },
     data: function () {
         return {
-            currentComponent: 'widgetMain'
+            currentComponent: 'widgetMain',
+            currentPageClass: 'widget-install',
+            currentPageIndex: 1,
+            currentButtonIcon: 'download'
         }
     },
     mounted() {
-        EventBus.$on('widget-component', (component) => {
-            this.currentComponent = component;
+        EventBus.$on('widget-component', (item) => {
+            this.currentComponent = item.component;
+            this.currentPageClass = item.pageClass;
+            this.currentPageIndex = item.id;
+            this.currentButtonIcon = item.icon;
         });
     },
     methods: {

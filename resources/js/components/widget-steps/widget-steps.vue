@@ -2,7 +2,7 @@
     <div class="widget-steps">
         <div class="widget-steps_item"
              v-for="(item, key) in widgetSteps"
-             @click.stop="nextWidgetComponent(item.component)"
+             @click.stop="nextWidgetComponent(item)"
              :class="{mod_active:current === item.component}">
             <svg class="widget-steps_icon">
                 <use :xlink:href="`#${item.icon}`"></use>

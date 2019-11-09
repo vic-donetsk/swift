@@ -1,75 +1,58 @@
 <template>
-    <div class="cabinet_page widget-deactivate">
-
-        <div class="cabinet_mobile-button button mod-blue">
-            <svg class="cabinet_mobile-button_icon">
+    <div class="widget-deactivate_content">
+        <h2 class="cabinet-page_title">
+            <svg class="cabinet-page_title-icon">
                 <use xlink:href="#disable"></use>
             </svg>
-            <span class="cabinet_mobile-button_text">{{__('widget','Widget menu text 6')}}</span>
-            <svg class="cabinet_mobile-button_icon">
-                <use xlink:href="#arrow"></use>
-            </svg>
-        </div>
+            <span>{{__('widget','Cabinet page title 14')}}</span>
+        </h2>
 
-        <div class="widget_container">
-            <widget-steps></widget-steps>
+        <div class="widget-deactivate_site">
+            <div class="widget-site_control">
+                <input type="text"
+                       class="widget-input"
+                       :placeholder='__("widget", "Widget input placeholder 4")'>
 
-            <div class="widget-deactivate_content">
-                <h2 class="cabinet-page_title">
-                    <svg class="cabinet-page_title-icon">
-                        <use xlink:href="#disable"></use>
-                    </svg>
-                    <span>{{__('widget','Cabinet page title 14')}}</span>
-                </h2>
+                <p class="widget-site_link mod-mobile">(e.x. swiftcallback.md/contacts)</p>
+            </div>
 
-                <div class="widget-deactivate_site">
-                    <div class="widget-site_control">
-                        <input type="text"
-                               class="widget-input"
-                               :placeholder='__("widget", "Widget input placeholder 4")'>
-
-                        <p class="widget-site_link mod-mobile">(e.x. swiftcallback.md/contacts)</p>
-                    </div>
-
-                    <div class="widget-site_link">
-                        <span>(e.x. swiftcallback.md/contacts)</span>
-                    </div>
-                </div>
-
-                <div class="widget-deactivate_table">
-                    <div class="widget_table-block mod_head">
-                        <div class="table-block_item mod_left">
-                            <span>{{__('widget','Widget deactivate table title 1')}}</span>
-                        </div>
-                        <div class="table-block_item mod_middle">
-                            <span>{{__('widget','Widget deactivate table title 2')}}</span>
-                        </div>
-
-                        <div class="table-block_item mod_right"></div>
-                    </div>
-
-                    <div class="widget_table-block mod_content">
-                        <div class="table-block_item mod_left">
-                            <span>swiftcallback.md/contacts</span>
-                        </div>
-                        <div class="table-block_item mod_middle">
-                            <span>12/08/2019, 12:43</span>
-                        </div>
-
-                        <div class="table-content_cross mod_right">
-                            <svg class="table-content_icon">
-                                <use xlink:href="#cross"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="widget-button mod_size">
-                    <span>{{__('widget','Widget save button')}}</span>
-                </div>
-
+            <div class="widget-site_link">
+                <span>(e.x. swiftcallback.md/contacts)</span>
             </div>
         </div>
+
+        <div class="widget-deactivate_table">
+            <div class="widget_table-block mod_head">
+                <div class="table-block_item mod_left">
+                    <span>{{__('widget','Widget deactivate table title 1')}}</span>
+                </div>
+                <div class="table-block_item mod_middle">
+                    <span>{{__('widget','Widget deactivate table title 2')}}</span>
+                </div>
+
+                <div class="table-block_item mod_right"></div>
+            </div>
+
+            <div class="widget_table-block mod_content">
+                <div class="table-block_item mod_left">
+                    <span>swiftcallback.md/contacts</span>
+                </div>
+                <div class="table-block_item mod_middle">
+                    <span>12/08/2019, 12:43</span>
+                </div>
+
+                <div class="table-content_cross mod_right">
+                    <svg class="table-content_icon">
+                        <use xlink:href="#cross"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget-button mod_size">
+            <span>{{__('widget','Widget save button')}}</span>
+        </div>
+
     </div>
 </template>
 
