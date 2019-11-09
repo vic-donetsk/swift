@@ -55,7 +55,7 @@
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 3')}}</span>
                 </router-link>
 
-                <router-link to="/cabinet/billing/abonnement" class="cabinet-sidebar_item">
+                <router-link to="/cabinet/billing" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
@@ -123,7 +123,7 @@
                         </svg>
                         <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 3')}}</span>
                     </router-link>
-                    <router-link to="/cabinet/billing/abonnement" class="cabinet-sidebar_item">
+                    <router-link to="/cabinet/billing" class="cabinet-sidebar_item">
                         <div class="cabinet-sidebar_item-square top"></div>
                         <div class="cabinet-sidebar_item-square bottom"></div>
                         <svg class="sidebar-menu_icon">

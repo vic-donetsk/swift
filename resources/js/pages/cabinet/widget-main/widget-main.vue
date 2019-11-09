@@ -142,3 +142,7 @@
 </template>
 
 <script src="./widget-main.js"></script>
+
+<style lang='scss'>
+    @import './widget-main.scss';
+</style>

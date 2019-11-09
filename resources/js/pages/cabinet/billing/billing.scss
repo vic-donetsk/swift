@@ -1,0 +1,11 @@
+@import '@/app';
+
+.billing_container {
+    .cabinet-steps_item {
+        @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) {
+                z-index: 3 - $i + 1;
+            }
+        }
+    }
+}

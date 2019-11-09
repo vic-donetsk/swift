@@ -21,6 +21,10 @@
         transform: translateX(-50%);
         top: -54px;
         font-size: 0;
+
+        @include media('d-only'){
+            display: none;
+        }
     }
 
     .swiper-pagination-bullet {

@@ -1,9 +1,4 @@
-import billingSteps from "../../../components/billing-steps/billing-steps";
-
 export default {
-    components: {
-        'billing-steps': billingSteps
-    },
     data: function () {
         return {
             initSwiper: false,
