@@ -6,27 +6,41 @@ export default {
     },
     data: function () {
         return {
-            home: true,
-            title: "Главная",
-            initSwiper: false
+            initSwiper: false,
+            billingSwiper: null
         };
     },
-    created() {
-        this.title = "Лендинг 1";
-
-        EventBus.$on('renameText', () => {
-            this.title = "Лендинг 3";
-        })
-    },
     mounted() {
-        setTimeout(() => {
-            this.title = "Лендинг 2";
-        }, 1000);
+        if ($(window).width() < 1280) {
+            this.init();
+            this.initSwiper = true;
+        }
+        $(window).on('resize', () => {
+            if ($(window).width() < 1280) {
+                if (!this.initSwiper) {
+                    this.init();
+                    this.initSwiper = true;
+                } else {
+                    this.billingSwiper.update();
+                }
+            } else {
+                if (this.initSwiper) {
+                    this.billingSwiper.destroy();
+                    this.initSwiper = false;
+                }
+            }
+        });
 
-        let billingSwiper;
-
-        function init() {
-            billingSwiper = new Swiper('.billing-abonnement .swiper-container', {
+    },
+    destroy() {
+        this.billingSwiper.destroy();
+    },
+    methods: {
+        goToAuth() {
+            this.$router.push('/authentication');
+        },
+        init() {
+            this.billingSwiper = new Swiper('.billing-abonnement .swiper-container', {
                 slidesPerView: 1,
                 loop: true,
                 paginationClickable: true,
@@ -41,33 +55,6 @@ export default {
                     clickable: true,
                 }
             });
-        }
-
-        $(window).on('resize load', function () {
-            if ($(window).width() < 1280) {
-                if (!this.initSwiper) {
-                    init();
-                    this.initSwiper = true;
-                } else {
-                    billingSwiper.update();
-                }
-            } else {
-                if (this.initSwiper) {
-                    billingSwiper.destroy();
-                    this.initSwiper = false;
-                }
-            }
-        });
-
-    },
-    computed: {
-        getTitle() {
-            return this.title + ' - Вычисленный';
-        }
-    },
-    methods: {
-        goToAuth() {
-            this.$router.push('/authentication');
         }
     }
 }

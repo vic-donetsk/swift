@@ -22,7 +22,7 @@
         </nav>
 
         <div class="widget_container">
-            <div class="widget-steps">
+            <div class="widget-steps" v-if="currentComponent !== 'widgetMain'">
                 <div class="widget-steps_item"
                      v-for="(item, key) in widgetSteps"
                      @click.stop="nextWidgetComponent(item, key)"

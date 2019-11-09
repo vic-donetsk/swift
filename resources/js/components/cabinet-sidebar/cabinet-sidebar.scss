@@ -2,25 +2,96 @@
 
 .cabinet-sidebar {
     position: fixed;
-    z-index: 10;
+    z-index: 99;
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 85px;
     background-color: $landingHeaderbackground;
-    overflow: hidden;
 
     @include media('d-only') {
         width: 295px;
         height: 100vh;
     }
 
+    .hamburger {
+        position: relative;
+
+        &.hamburger--slider.is-active {
+            .hamburger-inner::after {
+                transform: translate3d(0, -12px, 0) rotate(-90deg);
+            }
+
+            .hamburger-inner {
+                transform: translate3d(0, 3px, 0) rotate(45deg);
+            }
+        }
+
+        .hamburger-inner {
+            width: 26px;
+            height: 2px;
+            background-color: $widgetActiveBlue;
+            border-radius: 1px;
+
+            top: 3px;
+
+            &:before {
+                top: 6px;
+            }
+
+            &:after {
+                top: 12px;
+            }
+
+            &:before, &:after {
+                width: 26px;
+                height: 2px;
+                background-color: $widgetActiveBlue;
+                border-radius: 1px;
+            }
+        }
+
+        .hamburger-box {
+            width: 26px;
+            height: 14px;
+        }
+
+        @include media('d-only') {
+            display: none;
+        }
+    }
+
+    .landing-mobile_menu {
+        background-color: $landingHeaderbackground;
+    }
+
+    &.open-menu {
+        .cabinet-sidebar_content {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 8px;
+                right: 8px;
+                height: 1px;
+                background: #E0F1FA;
+            }
+        }
+
+        .cabinet-header_notify {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
     .cabinet-sidebar_content {
         display: flex;
         align-items: center;
-        padding: 24px 16px 21px 16px;
+        padding: 23px 16px 20px 16px;
         justify-content: space-between;
+        transition: all 0.1s linear;
 
         @include media('d-only') {
             display: block;
@@ -87,15 +158,15 @@
     .cabinet-sidebar_person {
         display: none;
 
+        text-align: center;
+        color: $mainDarkBlue;
+        font-size: 0;
+        margin-bottom: 41px;
+        cursor: pointer;
+
         @include media('d-only') {
             display: block;
-            text-align: center;
-            color: $mainDarkBlue;
-            font-size: 0;
-            margin-bottom: 41px;
-            cursor: pointer;
         }
-
 
         .sidebar-person_image {
             width: 100px;
@@ -126,9 +197,33 @@
 
     .cabinet-sidebar_menu {
         display: none;
+
         @include media('d-only') {
             display: flex;
             flex-direction: column;
+        }
+
+        &.mod_mobile {
+            display: flex;
+            flex-direction: column;
+
+            .cabinet-sidebar_person {
+                display: block;
+
+                margin-bottom: 14px;
+            }
+
+            .cabinet-sidebar_item {
+                margin-right: 18px;
+                margin-left: 18px;
+                border-radius: 17px;
+
+                &.router-link-active {
+                    .cabinet-sidebar_item-square {
+                        display: none;
+                    }
+                }
+            }
         }
 
         .cabinet-sidebar_item-square {
