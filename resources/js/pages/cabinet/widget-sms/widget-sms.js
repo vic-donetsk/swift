@@ -1,9 +1,7 @@
-import widgetSteps from "../../../components/widget-steps/widget-steps";
 import FlagPhone from './../../../components/flag-phone/flag-phone.vue';
 
 export default {
     components: {
-        'widget-steps': widgetSteps,
         'flag-phone': FlagPhone
     },
     data: function () {

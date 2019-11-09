@@ -1,7 +1,7 @@
 export default {
     methods: {
         nextWidgetComponent() {
-            EventBus.$emit('widget-component', 'widgetInstall');
+            EventBus.$emit('widget-to-install', 'widgetInstall');
         }
     }
 }

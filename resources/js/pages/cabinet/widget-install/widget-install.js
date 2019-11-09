@@ -1,9 +1,4 @@
-import widgetSteps from "../../../components/widget-steps/widget-steps";
-
 export default {
-    components: {
-        'widget-steps': widgetSteps
-    },
     data: function () {
         return {
             home: true,

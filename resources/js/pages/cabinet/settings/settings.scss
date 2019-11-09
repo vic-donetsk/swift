@@ -29,102 +29,101 @@
             display: flex;
         }
     }
+}
 
-    &_navMobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 39px 5.3% 35px;
+.settings_navMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 39px 5.3% 35px;
 
-        @include media('d') {
-            display: none;
-        }
-    }
-
-    .settings_nav-item {
-        @extend %lightBlueGradient;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 26.5%;
-        height: 49px;
-        border-top-right-radius: 24px;
-        border-bottom-right-radius: 24px;
-        color: $mainDarkBlue;
-        fill: $mainDarkBlue;
-        cursor: pointer;
-
-        &:first-of-type {
-            padding-left: 1.9%
-        }
-
-        &:not(:first-of-type) {
-            margin-left: -2.25%;
-            padding-left: 4.1%
-        }
-
-        @for $i from 1 through 4 {
-            &:nth-of-type(#{$i}) {
-                z-index: 4 - $i + 1;
-            }
-        }
-
-        &.mod_active {
-            @extend %blueGradient;
-            color: $white;
-            fill: $white;
-            cursor: default;
-        }
-
-        &.mod_mobile {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            padding-left: 21px;
-            border-radius: 8px;
-        }
-
-        &.mod_select {
-            position: relative;
-            cursor: pointer;
-
-            &::after {
-                content: url('/img/icons/arrow.svg');
-                position: absolute;
-                width: 10px;
-                height: 5px;
-                right: 16px;
-                top: 13px;
-            }
-        }
-
-        &.mod_option {
-            height: 0;
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.5s ease;
-        }
-
-        &.mod_open {
-            height: 49px;
-            visibility: visible;
-            opacity: 1;
-            font-size: 16px;
-        }
-
-        .nav-item_svg {
-            width: 14px;
-            height: 14px;
-            margin-right: 7px;
-        }
-
-        .nav-item_text {
-            height: 20px;
-            font-size: 16px;
-            font-weight: 400;
-
-        }
+    @include media('d') {
+        display: none;
     }
 }
 
+.settings_nav-item {
+    @extend %lightBlueGradient;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 26.5%;
+    height: 49px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    color: $mainDarkBlue;
+    fill: $mainDarkBlue;
+    cursor: pointer;
+
+    &:first-of-type {
+        padding-left: 1.9%
+    }
+
+    &:not(:first-of-type) {
+        margin-left: -2.25%;
+        padding-left: 4.1%
+    }
+
+    @for $i from 1 through 4 {
+        &:nth-of-type(#{$i}) {
+            z-index: 4 - $i + 1;
+        }
+    }
+
+    &.mod_active {
+        @extend %blueGradient;
+        color: $white;
+        fill: $white;
+        cursor: default;
+    }
+
+    &.mod_mobile {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding-left: 21px;
+        border-radius: 8px;
+    }
+
+    &.mod_select {
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: url('/img/icons/arrow.svg');
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            right: 16px;
+            top: 13px;
+        }
+    }
+
+    &.mod_option {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    &.mod_open {
+        height: 49px;
+        visibility: visible;
+        opacity: 1;
+        font-size: 16px;
+    }
+
+    .nav-item_svg {
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+    }
+
+    .nav-item_text {
+        height: 20px;
+        font-size: 16px;
+        font-weight: 400;
+
+    }
+}
 

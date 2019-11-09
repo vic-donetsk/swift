@@ -1,4 +1,3 @@
-import widgetSteps from "../../../components/widget-steps/widget-steps";
 import CallsItem from './widget-calls-item.vue';
 
 export default {
