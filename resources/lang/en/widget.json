@@ -109,5 +109,6 @@
   "Widget sms table message 6": "<p>Vă mulțumim că ne-ați contactat pe site-ul :url</p><div><p>Numele</p><p>Tel.:: tel</p></div>",
   "Widget sms table message 7": "<p>Un mesaj de reamintire trimis vizitatorului cu câteva minute înainte de un apel programat.</p><div><p><b>: url</b> - adresa site-ului widget</p><p><b>: company_name</b> - your company ‘ s name</p></div>",
   "Widget sms table message 8": "<p>Un mesaj trimis după comanda unui apel programat cu informații despre posibilitatea anulării.</p><div><p><b> : link</b> - link pentru a anula un apel programat</p></div>",
-  "Widget sms table message 9": "<p>Un mesaj cu datele de contact ale consultantului este trimis vizitatorului după ce conversația este finalizată cu succes.</p><div><p><b> : nume </b> - numele consultantului</p><p><b> : tel</b> - telefonul consultantului</p><p><b> : company_name</b> - your company ‘ s name</p></div>"
+  "Widget sms table message 9": "<p>Un mesaj cu datele de contact ale consultantului este trimis vizitatorului după ce conversația este finalizată cu succes.</p><div><p><b> : nume </b> - numele consultantului</p><p><b> : tel</b> - telefonul consultantului</p><p><b> : company_name</b> - your company ‘ s name</p></div>",
+  "Widget  sender message": "Această funcție este valabilă doar la abonamentele, PROFESIONAL și PREMIUM."
 }

@@ -31,7 +31,15 @@
                     <use xlink:href="#mail-envelope-open"></use>
                 </svg>
                 <span>{{__('widget','Cabinet page title 7')}}</span>
+                <svg class="cabinet-page_title-icon right-icon">
+                    <use xlink:href="#info"></use>
+                </svg>
             </h2>
+
+            <div class="widget-sender_message">
+                <p>{{__('widget','Widget  sender message')}}</p>
+            </div>
+
             <p class="widget-sms_subtitle mod_mobile">{{__('widget','Widget sms subtitle 2')}}</p>
             <div class="widget-switch">
                 <span>{{__('widget','Cabinet switch off')}}</span>
@@ -112,7 +120,7 @@
                     </div>
                 </div>
 
-                <div class="widget-sms_table-content"  v-if="item === tableContent2">
+                <div class="widget-sms_table-content" v-if="item === tableContent2">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">

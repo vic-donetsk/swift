@@ -14,6 +14,12 @@
         .cabinet-page_title {
             margin-bottom: 7px;
 
+            .right-icon {
+                fill: $widgetCallsIcon;
+                margin-left: 8px;
+                cursor: pointer;
+            }
+
             @include media('d-only') {
                 margin-bottom: 9px;
             }
@@ -159,6 +165,24 @@
         @include media ("d-only") {
             padding-bottom: 46px;
             margin-bottom: 46px;
+        }
+
+        .widget-sender_message {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: 326px;
+            height: 95px;
+            border-radius: 9px;
+            background: $diagramBlue;
+            padding: 20px 25px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            top: -40px;
+            left: 240px;
+            color: $white;
         }
 
 
