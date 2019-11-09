@@ -1,8 +1,8 @@
 <template>
-    <div class="logo" :class="sizeClass" @click="gotoMain()">
+    <router-link to="/" class="logo" :class="sizeClass" @click="gotoMain()">
         <div class="logo_title">SWIFT</div>
         <div class="logo_subtitle">callback</div>
-    </div>
+    </router-link>
 </template>
 
 <script src="./logo.js"></script>

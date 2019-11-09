@@ -1,9 +1,11 @@
 @import '@/app';
 
 .logo {
+    display: block;
     color: $mainDarkBlue;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
 
     .logo_title {
         font-weight: bold;

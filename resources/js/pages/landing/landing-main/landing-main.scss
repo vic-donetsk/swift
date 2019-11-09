@@ -28,6 +28,36 @@
         }
     }
 
+    &:after {
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 7px;
+        height: 12px;
+        background: $mainDarkBlue;
+        border-radius: 6px;
+        animation: mouseCircle 5s infinite 2s;
+
+        @include media('d-only') {
+            display: none;
+        }
+    }
+
+    @keyframes mouseCircle {
+        from {
+            top: 45px;
+        }
+        15% {
+            top: 60px;
+        }
+        30% {
+            top: 45px;
+        }
+    }
+
 
     .landing-main_numbering {
         position: relative;
