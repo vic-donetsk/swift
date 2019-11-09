@@ -60,20 +60,18 @@
                 <span>{{__('widget','Cabinet page title 8')}}</span>
             </h2>
 
-            <div class="widget-sms_table-mobile">
+            <div class="widget-sms_table-mobile" v-for="item in 1">
                 <div class="widget-sms_table-head">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 1')}}</span>
                     </div>
-                    <div class="widget-sms_table-btn">
-
-                    </div>
-                    <div class="widget-sms_table-btn open">
-
+                    <div class="widget-sms_table-btn" @click="toggleTableContent1(item)">
+                        <div v-if="item !== tableContent1" class="sms-btn_plus"></div>
+                        <div v-else class="sms-btn_minus"></div>
                     </div>
                 </div>
 
-                <div class="widget-sms_table-content">
+                <div class="widget-sms_table-content" v-if="item === tableContent1">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">
@@ -103,14 +101,18 @@
                     </div>
                 </div>
             </div>
-            <div class="widget-sms_table-mobile">
+            <div class="widget-sms_table-mobile" v-for="item in 1">
                 <div class="widget-sms_table-head">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget sms table message 2')}}</span>
                     </div>
+                    <div class="widget-sms_table-btn" @click="toggleTableContent2(item)">
+                        <div v-if="item !== tableContent2" class="sms-btn_plus"></div>
+                        <div v-else class="sms-btn_minus"></div>
+                    </div>
                 </div>
 
-                <div class="widget-sms_table-content">
+                <div class="widget-sms_table-content"  v-if="item === tableContent2">
                     <div class="widget-sms_table-row">
                         <div class="widget-sms_table-row-cells">
                             <div class="widget-table_item mod-message">
@@ -179,9 +181,6 @@
             </div>
 
 
-
-
-
             <div class="widget-sms_table">
                 <div class="widget-sms_table-head">
                     <div class="widget-table_head-item mod-message">
@@ -216,7 +215,7 @@
                                      v-html='__("widget", "Widget sms table message 7")'></div>
                             </div>
                             <div class="widget-table_item mod_switch">
-                                    <el-switch v-model="row1"></el-switch>
+                                <el-switch v-model="row1"></el-switch>
                             </div>
                         </div>
                     </div>
@@ -236,7 +235,7 @@
                                      v-html='__("widget", "Widget sms table message 8")'></div>
                             </div>
                             <div class="widget-table_item mod_switch">
-                                    <el-switch v-model="row2"></el-switch>
+                                <el-switch v-model="row2"></el-switch>
                             </div>
                         </div>
                     </div>
@@ -256,7 +255,7 @@
                                      v-html='__("widget", "Widget sms table message 9")'></div>
                             </div>
                             <div class="widget-table_item mod_switch">
-                                    <el-switch v-model="row3"></el-switch>
+                                <el-switch v-model="row3"></el-switch>
                             </div>
                         </div>
                     </div>

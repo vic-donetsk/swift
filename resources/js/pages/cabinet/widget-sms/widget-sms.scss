@@ -265,28 +265,34 @@
         margin-right: -17px;
 
         .widget-sms_table-btn {
-            position: relative;
-            width: 13px;
-            height: 3px;
-            background: $mainDarkBlue;
-            border-radius: 3px;
+            position: absolute;
+            right: 25px;
 
-            &:after {
-                content: "";
-                position: absolute;
-                width: 3px;
-                height: 13px;
+            .sms-btn_plus {
+                width: 13px;
+                height: 3px;
                 background: $mainDarkBlue;
                 border-radius: 3px;
-                top: -5px;
-                left: 5px;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 13px;
+                    background: $mainDarkBlue;
+                    border-radius: 3px;
+                    top: -5px;
+                    left: 5px;
+                }
             }
 
-
-            &.open {
-                &:after {
-                    display: none;
-                }
+            .sms-btn_minus {
+                width: 13px;
+                height: 3px;
+                background: $mainDarkBlue;
+                border-radius: 3px;
+                cursor: pointer;
             }
         }
 
