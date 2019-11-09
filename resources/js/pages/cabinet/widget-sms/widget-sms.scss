@@ -14,6 +14,12 @@
         .cabinet-page_title {
             margin-bottom: 7px;
 
+            .right-icon {
+                fill: $widgetCallsIcon;
+                margin-left: 8px;
+                cursor: pointer;
+            }
+
             @include media('d-only') {
                 margin-bottom: 9px;
             }
@@ -161,6 +167,24 @@
             margin-bottom: 46px;
         }
 
+        .widget-sender_message {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: 326px;
+            height: 95px;
+            border-radius: 9px;
+            background: $diagramBlue;
+            padding: 20px 25px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            top: -40px;
+            left: 240px;
+            color: $white;
+        }
+
 
         .widget-switch {
             margin-left: 25px;
@@ -265,28 +289,34 @@
         margin-right: -17px;
 
         .widget-sms_table-btn {
-            position: relative;
-            width: 13px;
-            height: 3px;
-            background: $mainDarkBlue;
-            border-radius: 3px;
+            position: absolute;
+            right: 25px;
 
-            &:after {
-                content: "";
-                position: absolute;
-                width: 3px;
-                height: 13px;
+            .sms-btn_plus {
+                width: 13px;
+                height: 3px;
                 background: $mainDarkBlue;
                 border-radius: 3px;
-                top: -5px;
-                left: 5px;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 13px;
+                    background: $mainDarkBlue;
+                    border-radius: 3px;
+                    top: -5px;
+                    left: 5px;
+                }
             }
 
-
-            &.open {
-                &:after {
-                    display: none;
-                }
+            .sms-btn_minus {
+                width: 13px;
+                height: 3px;
+                background: $mainDarkBlue;
+                border-radius: 3px;
+                cursor: pointer;
             }
         }
 

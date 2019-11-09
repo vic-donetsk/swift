@@ -13,7 +13,10 @@ export default {
             record: false,
             row1:false,
             row2:false,
-            row3:false
+            row3:false,
+            tableContent1: null,
+            tableContent2: null,
+            tableContent3: null,
         };
     },
     created() {
@@ -37,6 +40,27 @@ export default {
     methods: {
         goToAuth() {
             this.$router.push('/authentication');
+        },
+        toggleTableContent1(item) {
+            if (this.tableContent1 === item) {
+                this.tableContent1 = null;
+                return false;
+            }
+            this.tableContent1 = item;
+        },
+        toggleTableContent2(item) {
+            if (this.tableContent2 === item) {
+                this.tableContent2 = null;
+                return false;
+            }
+            this.tableContent2 = item;
+        },
+        toggleTableContent3(item) {
+            if (this.tableContent3 === item) {
+                this.tableContent3 = null;
+                return false;
+            }
+            this.tableContent3 = item;
         },
 
         updatePhone(value) {
