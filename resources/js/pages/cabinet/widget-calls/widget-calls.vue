@@ -37,7 +37,7 @@
                         <use xlink:href="#info"></use>
                     </svg>
                 </h2>
-                <div class="widget-calls_switch">
+                <div class="widget-switch">
                     <span>{{__('widget','Cabinet switch off')}}</span>
                     <el-switch v-model="record"></el-switch>
                     <span>{{__('widget','Cabinet switch on')}}</span>

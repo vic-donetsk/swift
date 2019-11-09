@@ -33,7 +33,7 @@
                 <span>{{__('widget','Cabinet page title 7')}}</span>
             </h2>
             <p class="widget-sms_subtitle mod_mobile">{{__('widget','Widget sms subtitle 2')}}</p>
-            <div class="widget-sms_switch">
+            <div class="widget-switch">
                 <span>{{__('widget','Cabinet switch off')}}</span>
                 <el-switch v-model="record"></el-switch>
                 <span>{{__('widget','Cabinet switch on')}}</span>
@@ -60,15 +60,57 @@
                 <span>{{__('widget','Cabinet page title 8')}}</span>
             </h2>
 
+            <div class="widget-sms_table-mobile">
+                <div class="widget-sms_table-head">
+                    <div class="widget-table_head-item mod-message">
+                        <span>{{__('widget','Widget sms table message 1')}}</span>
+                    </div>
+                </div>
+
+                <div class="widget-sms_table-content">
+                    <div class="widget-sms_table-row">
+                        <div class="widget-sms_table-row-cells">
+                            <div class="widget-table_item mod-message">
+                                <span>{{__('widget','Widget schemes head 2')}}</span>
+                            </div>
+                            <div class="widget-table_item mod-context">
+                                <div class="mod-context_wrap">
+                                    <div class="widget-table_item-text"
+                                         v-html='__("widget", "Widget sms table message 4")'></div>
+                                </div>
+                            </div>
+                            <div class="widget-table_item mod-message">
+                                <span>{{__('widget','Widget schemes head 3')}}</span>
+                            </div>
+                            <div class="widget-table_item mod-description">
+                                <div class="mod-context_wrap">
+                                    <div class="widget-table_item-text"
+                                         v-html='__("widget", "Widget sms table message 7")'></div>
+                                </div>
+                            </div>
+                            <div class="widget-switch">
+                                <span>{{__('widget','Cabinet switch off')}}</span>
+                                <el-switch v-model="row1"></el-switch>
+                                <span>{{__('widget','Cabinet switch on')}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
             <div class="widget-sms_table">
                 <div class="widget-sms_table-head">
                     <div class="widget-table_head-item mod-message">
                         <span>{{__('widget','Widget schemes head 1')}}</span>
                     </div>
-                    <div class="widget-table_head-item mod-context mod-desktop">
+                    <div class="widget-table_head-item mod-context">
                         <span>{{__('widget','Widget schemes head 2')}}</span>
                     </div>
-                    <div class="widget-table_head-item mod-description mod-desktop">
+                    <div class="widget-table_head-item mod-description">
                         <span>{{__('widget','Widget schemes head 3')}}</span>
                     </div>
 
@@ -94,9 +136,7 @@
                                      v-html='__("widget", "Widget sms table message 7")'></div>
                             </div>
                             <div class="widget-table_item mod_switch">
-                                <div class="widget-sms_switch">
                                     <el-switch v-model="row1"></el-switch>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,9 +156,7 @@
                                      v-html='__("widget", "Widget sms table message 8")'></div>
                             </div>
                             <div class="widget-table_item mod_switch">
-                                <div class="widget-sms_switch">
                                     <el-switch v-model="row2"></el-switch>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -138,14 +176,13 @@
                                      v-html='__("widget", "Widget sms table message 9")'></div>
                             </div>
                             <div class="widget-table_item mod_switch">
-                                <div class="widget-sms_switch">
                                     <el-switch v-model="row3"></el-switch>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
         </div>
     </div>

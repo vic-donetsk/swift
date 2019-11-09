@@ -179,6 +179,17 @@
     }
 }
 
+.widget-switch {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    color: $mainDarkBlue;
+
+    .el-switch {
+        margin: 0 17px;
+    }
+}
+
 .el-switch {
 
     .el-switch__core {

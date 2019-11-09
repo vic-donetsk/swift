@@ -53,7 +53,7 @@
             color: $widgetDeactivateLink;
             margin-left: 25px;
 
-            @include media('t-ipad'){
+            @include media('t-ipad') {
                 text-align: center;
             }
 
@@ -162,25 +162,17 @@
         }
 
 
-        .widget-sms_switch {
-            display: flex;
-            font-size: 14px;
-            font-weight: 400;
-            color: $mainDarkBlue;
+        .widget-switch {
             margin-left: 25px;
             margin-bottom: 38px;
 
-            @include media('t-ipad'){
+            @include media('t-ipad') {
                 justify-content: center;
             }
 
             @include media('d-only') {
                 margin-bottom: 17px;
                 justify-content: flex-start;
-            }
-
-            .el-switch {
-                margin: 0 17px;
             }
         }
 
@@ -263,155 +255,189 @@
 
     }
 
-    .widget-sms_table {
+    .widget-sms_table-mobile {
+        margin-left: -17px;
+        margin-right: -17px;
+
+        .widget-switch {
+            justify-content: center;
+        }
 
         @include media('d-only') {
+            display: none;
+        }
+    }
+
+    .widget-sms_table {
+        display: none;
+
+        @include media('d-only') {
+            display: block;
             overflow-x: auto;
             overflow-y: hidden;
         }
+    }
 
-        .widget-sms_table-head {
-            display: flex;
-            height: 60px;
-            background-color: $lightBlueGradientFrom;
+    .widget-sms_table-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: $lightBlueGradientFrom;
 
-            @include media('d-only') {
-                min-width: 1500px;
-                height: 64px;
-                border: 1px solid rgba(0, 33, 95, 0.05);
-            }
-
-            .widget-table_head-item {
-                display: flex;
-                align-items: center;
-                font-size: 14px;
-                line-height: 26px;
-                font-weight: 600;
-                color: $mainDarkBlue;
-
-                @include media('d-only') {
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 29px;
-                }
-
-                &.mod-context {
-                    padding: 0 0 0 40px;
-                }
-            }
-        }
-
-        .mod-message {
-            padding: 0 0 0 12px;
+        @include media('d-only') {
+            min-width: 1500px;
+            height: 64px;
+            border: 1px solid rgba(0, 33, 95, 0.05);
             justify-content: flex-start;
-
-            @include media('d-only') {
-                min-width: 24%;
-                padding: 0 0 0 20px;
-            }
         }
 
-        .mod-context {
+        .widget-table_head-item {
+            font-size: 14px;
+            line-height: 19px;
+            font-weight: 600;
+            color: $mainDarkBlue;
+
+            @include media('d-only') {
+                display: flex;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 29px;
+            }
+
+            &.mod-context {
+                padding: 0 0 0 40px;
+            }
+        }
+    }
+
+    .mod-message {
+        padding: 21px 0;
+
+        @include media('d-only') {
+            min-width: 24%;
+            padding: 0 0 0 20px;
+        }
+    }
+
+    .mod-context {
+        padding: 0 17px;
+        @include media('d-only') {
             width: 40%;
             padding: 0 0 0 20px;
         }
+    }
 
-        .mod-description {
+    .mod-description {
+        padding: 0 17px;
+        margin-bottom: 24px;
+        @include media('d-only') {
             width: 28%;
             padding: 0 0 0 22px;
+            margin-bottom: 0;
         }
+    }
 
-        .mod_switch {
-            justify-content: center;
-
-            @include media('d-only') {
-                width: 130px;
-            }
+    .mod_switch {
+        justify-content: center;
+        @include media('d-only') {
+            width: 130px;
         }
+    }
 
-        .widget-sms_table-content {
+    .widget-sms_table-content {
+        background: $widgetSmsTableBackground;
+
+        @include media('d-only') {
             background: $white;
-            //border: 1px solid #E3ECF5;
-            //border-top: none;
-            //border-bottom: none;
-
-            @include media('d-only') {
-                min-width: 1500px;
-                box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
-                border: 1px solid rgba(0, 33, 95, 0.05);
-            }
+            min-width: 1500px;
+            box-shadow: 0 3px 8px rgba(0, 33, 95, 0.04);
+            border: 1px solid rgba(0, 33, 95, 0.05);
         }
+    }
 
-        .widget-sms_table-row {
-            position: relative;
-        }
+    .widget-sms_table-row {
+        position: relative;
+    }
 
-        .widget-sms_table-row-cells {
+    .widget-sms_table-row-cells {
+
+        @include media('d-only') {
             position: relative;
             display: flex;
-            //height: 522px;
+            height: 250px;
+            border-bottom: 1px solid $inputBorder;
+        }
+    }
 
+    .widget-table_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $mainDarkBlue;
+        word-break: break-word;
+        overflow: hidden;
 
-            @include media('d-only') {
-                height: 250px;
-                border-bottom: 1px solid $inputBorder;
-            }
+        &.mod-message {
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 600;
+
         }
 
-        .widget-table_item {
-            display: flex;
-            align-items: center;
-            height: 205px;
-            color: $mainDarkBlue;
-            word-break: break-word;
-            overflow: hidden;
+        @include media('d-only') {
+            height: 250px;
+            font-size: 16px;
+
+            &:not(:last-of-type) {
+                border-right: 1px solid $inputBorder;
+            }
 
             &.mod-message {
-                font-size: 14px;
-                line-height: 19px;
-                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                justify-content: flex-start;
             }
 
-            @include media('d-only') {
-                height: 250px;
-                font-size: 16px;
+            &.mod-context {
+                justify-content: flex-start;
+            }
 
-                &:not(:last-of-type) {
-                    border-right: 1px solid $inputBorder;
-                }
-
-                &.mod-message {
-                    font-size: 16px;
-                }
-
-                &.mod-description {
-                    align-items: flex-start;
-                    padding: 22px;
-
-                }
+            &.mod-description {
+                align-items: flex-start;
+                padding: 22px;
             }
         }
+    }
 
-        .mod-context_wrap {
+    .mod-context_wrap {
+        width: 100%;
+        height: 205px;
+        border: 1px solid $widgetSidebarBorder;
+        padding: 17px 20px;
+        background: $white;
+
+        @include media ('t-ipad') {
+            width: 286px;
+        }
+
+        @include media ('d-only') {
             width: 555px;
-            height: 205px;
-            border: 1px solid $widgetSidebarBorder;
-            padding: 17px 20px;
+        }
+    }
+
+    .widget-table_item-text > * {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 24px;
+
+        &:not(:last-child) {
+            margin-bottom: 27px;
         }
 
-        .widget-table_item-text > * {
-            font-size: 13px;
-            font-weight: 500;
-            line-height: 24px;
-
-            &:not(:last-child) {
-                margin-bottom: 27px;
-            }
-
-            @include media('d-only') {
-                font-size: 16px;
-                line-height: 29px;
-            }
+        @include media('d-only') {
+            font-size: 16px;
+            line-height: 29px;
         }
     }
 }
