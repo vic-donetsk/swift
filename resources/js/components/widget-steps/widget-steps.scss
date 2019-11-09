@@ -29,6 +29,20 @@
         padding-left: 30px;
         margin-left: -24px;
 
+        cursor: pointer;
+
+        &.mod_active {
+            @extend %blueGradient;
+
+            & .widget-steps_icon {
+                fill: $white;
+            }
+
+            & .widget-steps_text {
+                color: $white;
+            }
+        }
+
         &:not(:first-of-type) {
             padding-left: 54px;
         }

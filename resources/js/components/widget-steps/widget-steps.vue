@@ -1,44 +1,18 @@
 <template>
     <div class="widget-steps">
-        <div class="widget-steps_item">
+        <div class="widget-steps_item"
+             v-for="(item, key) in widgetSteps"
+             @click.stop="nextWidgetComponent(item.component)"
+             :class="{mod_active:current === item.component}">
             <svg class="widget-steps_icon">
-                <use xlink:href="#download"></use>
+                <use :xlink:href="`#${item.icon}`"></use>
             </svg>
-            <span class="widget-steps_text">{{__('widget','Widget menu text 1')}}</span>
-        </div>
-        <div class="widget-steps_item">
-            <svg class="widget-steps_icon">
-                <use xlink:href="#phone"></use>
-            </svg>
-            <span class="widget-steps_text">{{__('widget','Widget menu text 2')}}</span>
-        </div>
-        <div class="widget-steps_item">
-            <svg class="widget-steps_icon">
-                <use xlink:href="#mail-envelope-open"></use>
-            </svg>
-            <span class="widget-steps_text">{{__('widget','Widget menu text 3')}}</span>
-        </div>
-        <div class="widget-steps_item">
-            <svg class="widget-steps_icon">
-                <use xlink:href="#wall-clock"></use>
-            </svg>
-            <span class="widget-steps_text">{{__('widget','Widget menu text 4')}}</span>
-        </div>
-        <div class="widget-steps_item">
-            <svg class="widget-steps_icon">
-                <use xlink:href="#chat-settings"></use>
-            </svg>
-            <span class="widget-steps_text">{{__('widget','Widget menu text 5')}}</span>
-        </div>
-        <div class="widget-steps_item">
-            <svg class="widget-steps_icon">
-                <use xlink:href="#disable"></use>
-            </svg>
-            <span class="widget-steps_text">{{__('widget','Widget menu text 6')}}</span>
+            <span class="widget-steps_text">{{__('widget',`Widget menu text ${key+1}`)}}</span>
         </div>
     </div>
 </template>
 
+<script src="./widget-steps.js"></script>
 
 <style lang='scss'>
     @import './widget-steps.scss';

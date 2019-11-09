@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="widget-block_script">
-                    <p class="widget-block_script-text">{{link}}</p>
+                    <p class="widget-block_script-text">987987987</p>
 
                     <svg class="widget-verification_icon">
                         <use xlink:href="#copy"></use>

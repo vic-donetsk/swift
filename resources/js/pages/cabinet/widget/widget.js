@@ -1,27 +1,30 @@
+import widgetMain from './../widget-main/widget-main.vue';
+import widgetInstall from './../widget-install/widget-install.vue';
+import widgetCalls from './../widget-calls/widget-calls.vue';
+import widgetSms from './../widget-sms/widget-sms.vue';
+import widgetTime from './../widget-time/widget-time.vue';
+import widgetDeactivate from './../widget-deactivate/widget-deactivate.vue';
+import widgetChat from './../widget-chat/widget-chat.vue';
+
 export default {
+    components: {
+        widgetMain,
+        widgetInstall,
+        widgetCalls,
+        widgetSms,
+        widgetTime,
+        widgetDeactivate,
+        widgetChat
+    },
     data: function () {
         return {
-            home: true,
-            title: "Главная"
-        };
-    },
-    created() {
-        this.title = "Лендинг 1";
-
-        EventBus.$on('renameText', () => {
-            this.title = "Лендинг 3";
-        })
+            currentComponent: 'widgetMain'
+        }
     },
     mounted() {
-        setTimeout(() => {
-            this.title = "Лендинг 2";
-        }, 1000);
-
-    },
-    computed: {
-        getTitle() {
-            return this.title + ' - Вычисленный';
-        }
+        EventBus.$on('widget-component', (component) => {
+            this.currentComponent = component;
+        });
     },
     methods: {
         goToAuth() {
