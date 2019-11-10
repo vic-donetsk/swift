@@ -3,8 +3,12 @@
 .landing {
     padding-top: 195px;
 
+    background: url("/img/cloud.png") -942px 117px no-repeat fixed,
+    url("/img/ellipse.png") 150% 150px no-repeat fixed;
+
     @include media('d-only') {
-        background: #F8FDFF;
+        background-color: #F8FDFF;
+
         padding-top: 0;
     }
 }
