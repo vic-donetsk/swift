@@ -1,5 +1,10 @@
 @import '@/app';
 
+//.cabinet_page {
+//    @include media ('m-t-only') {
+//        margin-top: 0;
+//    }
+//}
 .chat {
     display: flex;
     width: calc(100% - 295px);
@@ -14,6 +19,7 @@
         padding: 0;
         overflow: hidden;
         z-index: 105;
+        padding-top: 0 !important;
     }
 
     .chat_handler {

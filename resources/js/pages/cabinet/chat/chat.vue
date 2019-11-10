@@ -1,5 +1,5 @@
 <template>
-    <div class="chat">
+    <div class="cabinet_page chat">
         <div class="chat_handler">
             <div v-if="isDesktop || mobileMode === 0" class="chat_handler-header">
                 <router-link to="/cabinet">
