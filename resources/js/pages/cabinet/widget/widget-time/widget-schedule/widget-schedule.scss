@@ -1,0 +1,72 @@
+@import '@/app';
+
+.widget-schedule {
+    .noSlider {
+        &.noUi-target {
+            height: 4px;
+            background: $widgetSidebarBorder;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+
+        .noUi-handle {
+            width: 28px;
+            height: 28px;
+            background: $mainDarkBlue;
+            box-shadow: none;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            top: -12px;
+
+            &[data-handle="1"], &[data-handle="2"] {
+                background: #CBE5F4;
+            }
+
+            &:before, &:after {
+                content: none;
+            }
+        }
+    }
+
+    .widget-schedule_slider {
+        margin-bottom: 38px;
+    }
+
+    .widget-schedule_slider-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: $mainDarkBlue;
+        margin-bottom: 18px;
+    }
+
+    .widget-schedule_results {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 38px;
+    }
+
+    .widget-schedule_result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+        width: 164px;
+        height: 46px;
+        color: #cbe5f4;
+        font-size: 16px;
+        font-weight: 500;
+        background: $mainDarkBlue;
+
+        &:nth-child(2) {
+            margin-left: 15px;
+            background: #CBE5F4;
+            color: $mainDarkBlue;
+        }
+    }
+}
