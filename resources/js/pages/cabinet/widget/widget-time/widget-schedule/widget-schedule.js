@@ -4,18 +4,6 @@ import 'nouislider/distribute/nouislider.css';
 export default {
     data() {
         return {
-            sliders: [
-                {
-                    id: 'monday-friday',
-                    start: ["08:30", "12:30", "13:15", "17:35"],
-                    name: "mondayFriday"
-                },
-                {
-                    id: 'saturday',
-                    start: ["08:30", "12:30", "13:15", "17:35"],
-                    name: "saturday"
-                }
-            ],
             mondayFridayResult: [],
             saturdayResult: [],
         }
@@ -34,35 +22,43 @@ export default {
             let min = parseInt(split[1], 10);
             //console.log("value: " + value + "\thour: " + hour + "\tmin " + min);
             return hour + min;
-        },
-    },
-    created() {
-        this.mondayFridayResult = this.sliders[0].start;
-        this.saturdayResult = this.sliders[1].start;
+        }
     },
     mounted() {
-        this.sliders.forEach((item, index) => {
-            let sliderName = item.name;
-            sliderName = document.getElementById(item.id);
-            noUiSlider.create(sliderName, {
-                start: item.start,
-                margin: 15,
-                range: {
-                    'min': 0,
-                    'max': 24 * 60 - 1
-                },
-                format: {
-                    to: this.minutesToHHMM,
-                    from: this.HHMMtoMinutes
-                }
-            }).on('slide', () => {
-                if (item.name === 'mondayFriday') {
-                    this.mondayFridayResult = sliderName.noUiSlider.get();
-                } else if (item.name === 'saturday') {
-                    this.saturdayResult = sliderName.noUiSlider.get();
-                }
-            });
+        //mondayFriday
+        let mondayFriday = document.getElementById('monday-friday');
+        noUiSlider.create(mondayFriday, {
+            start: ["08:30", "12:30", "13:15", "17:35"],
+            margin: 15,
+            range: {
+                'min': 0,
+                'max': 24 * 60 - 1
+            },
+            format: {
+                to: this.minutesToHHMM,
+                from: this.HHMMtoMinutes
+            }
+        }).on('slide', () => {
+            this.mondayFridayResult = mondayFriday.noUiSlider.get();
         });
+        this.mondayFridayResult = mondayFriday.noUiSlider.options.start;
 
+        //saturday
+        let saturday = document.getElementById('saturday');
+        noUiSlider.create(saturday, {
+            start: ["08:30", "12:30", "13:15", "17:35"],
+            margin: 15,
+            range: {
+                'min': 0,
+                'max': 24 * 60 - 1
+            },
+            format: {
+                to: this.minutesToHHMM,
+                from: this.HHMMtoMinutes
+            }
+        }).on('slide', () => {
+            this.saturdayResult = saturday.noUiSlider.get();
+        });
+        this.saturdayResult = saturday.noUiSlider.options.start;
     }
 }
