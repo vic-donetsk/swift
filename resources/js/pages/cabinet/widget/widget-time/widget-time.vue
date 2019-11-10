@@ -24,6 +24,8 @@
                     </div>
                 </div>
 
+                <widget-schedule></widget-schedule>
+
                 <div class="widget-button">
                     <span>{{__('widget','Widget save button')}}</span>
                 </div>

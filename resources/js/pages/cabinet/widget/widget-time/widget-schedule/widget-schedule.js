@@ -27,7 +27,6 @@ export default {
     mounted() {
         let mondayFriday = document.getElementById('monday-friday');
         noUiSlider.create(mondayFriday, {
-            tooltips: true,
             start: ["08:30", "12:30", "13:15", "17:35"],
             margin: 15,
             range: {
