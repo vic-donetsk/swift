@@ -3,21 +3,21 @@
         <div class="diagram_header">
             <div class="diagram_header-title">
                 <div class="title_numbers">
-                    <div class="title_numbers-total">{{total}}</div>
+                    <div class="title_numbers-total">{{dataSet.total}}</div>
                     <div class="title_numbers-percent"
-                         :class="(isIncrease == 'true') ? 'mod_increase' : 'mod_decrease'">{{percentage}}%
+                         :class="(dataSet.isIncrease) ? 'mod_increase' : 'mod_decrease'">{{dataSet.percentage}}%
                     </div>
                 </div>
-                <div class="title_name">{{chartTitle}}</div>
+                <div class="title_name">{{__('statistics', dataSet.chartTitle)}}</div>
 
             </div>
             <div class="diagram_header-avatar">
-                <img :src="avatar" alt="">
+                <img :src="dataSet.avatar" alt="">
             </div>
         </div>
         <div class="diagram_canvas-container">
 
-            <line-chart :id="chartId" :chartData="chartDatas" class="diagram_chart"></line-chart>
+            <line-chart :id="dataSet.chartId" :chartData="chartDatas" class="diagram_chart"></line-chart>
 
         </div>
     </div>

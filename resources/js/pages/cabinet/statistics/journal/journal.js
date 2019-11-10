@@ -106,7 +106,7 @@ export default {
         playAudio(index) {
             if (this.wavesurfer) this.wavesurfer.destroy();
             this.audioFlag = true;
-            this.audioPlayerTop = index * 70.67 + 234;
+            this.audioPlayerTop = index * 70.6 + 287;
             this.wavesurfer = WaveSurfer.create({
                 container: '#wavesurfer-container',
                 waveColor: '#D8DDE6',
