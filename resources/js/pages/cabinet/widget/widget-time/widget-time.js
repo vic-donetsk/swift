@@ -6,7 +6,9 @@ export default {
     },
     data: function () {
         return {
-
+            checked1: false,
+            checked2: false,
+            checked3: false,
         };
     }
 }

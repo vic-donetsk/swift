@@ -35,7 +35,6 @@
         }
     }
 
-
     .widget-time_block-left {
         padding-bottom: 38px;
         border-bottom: 1px solid $widgetInstallBorder;
@@ -55,10 +54,12 @@
         }
 
         @include media('d-only') {
+            width: 65%;
             border-bottom: none;
             border-right: 1px solid $widgetInstallBorder;
             padding: 0 54px 0 0;
             margin: 0 52px 0 0;
+
 
             .widget-time_subtitle {
                 font-size: 14px;
@@ -115,11 +116,11 @@
 
         @include media('d-only') {
             justify-content: left;
+            margin-left: 25px;
             margin-bottom: 44px;
 
             .widget-time_symbols-item {
                 font-size: 14px;
-                margin-left: 25px;
 
                 &:not(:last-of-type) {
                     margin-right: 30px;
@@ -136,6 +137,95 @@
 
     .widget-time_block-right {
 
+        .widget-time_mode {
+            display: flex;
+            align-items: center;
+
+            @include media('d-only') {
+                &:not(:last-of-type) {
+                    padding-bottom: 17px;
+                    border-bottom: 1px solid $widgetInstallBorder;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .widget-time_checkbox {
+            margin-right: 25px;
+        }
+
+        .el-checkbox {
+            .el-checkbox__input {
+                width: 20px;
+                height: 20px;
+
+                &.is-checked {
+                    .el-checkbox__inner {
+                        background: none;
+                    }
+                }
+
+                .el-checkbox__inner {
+                    width: 20px;
+                    height: 20px;
+                    //background: $white;
+                    border: 1px solid $inputBorder;
+                }
+
+                .el-checkbox__inner::after {
+                    border-width: 3px;
+                    border-color: $mainDarkBlue;
+                    height: 10px;
+                    left: 6px;
+                    top: 1px;
+                    width: 4px;
+                    transition-delay: 0s;
+                    transition-duration: 0.1s;
+                }
+            }
+
+            .el-checkbox__label {
+                color: $mainDarkBlue;
+                padding-top: 1px;
+                font-size: 14px;
+                margin-top: 5px;
+                vertical-align: top;
+                line-height: 1;
+            }
+
+            @include media('d-only') {
+
+                .el-checkbox__input {
+                    width: 31px;
+                    height: 31px;
+
+                    &.is-checked {
+                        .el-checkbox__inner {
+                            background: none;
+                        }
+                    }
+
+                    .el-checkbox__inner {
+                        width: 31px;
+                        height: 31px;
+                        border-radius: 8px;
+                    }
+
+                    .el-checkbox__inner::after {
+                        border-width: 3px;
+                        border-color: $mainDarkBlue;
+                        height: 16px;
+                        left: 9px;
+                        top: 2px;
+                        width: 9px;
+                        transition-delay: 0s;
+                        transition-duration: 0.1s;
+                    }
+                }
+            }
+
+
+        }
     }
 
     .widget-button {
