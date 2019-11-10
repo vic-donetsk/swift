@@ -1,4 +1,4 @@
-import FlagPhone from './../../../components/flag-phone/flag-phone.vue';
+import FlagPhone from './../../../../components/flag-phone/flag-phone.vue';
 
 export default {
     components: {
