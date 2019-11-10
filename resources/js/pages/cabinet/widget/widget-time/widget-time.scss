@@ -54,7 +54,7 @@
         }
 
         @include media('d-only') {
-            width: 65%;
+            width: 60%;
             border-bottom: none;
             border-right: 1px solid $widgetInstallBorder;
             padding: 0 54px 0 0;

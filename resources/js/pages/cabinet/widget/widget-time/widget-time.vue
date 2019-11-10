@@ -25,10 +25,6 @@
                 </div>
 
                 <widget-schedule></widget-schedule>
-
-                <div class="widget-button">
-                    <span>{{__('widget','Widget save button')}}</span>
-                </div>
             </div>
 
             <div class="widget-time_block-right">
@@ -43,8 +39,10 @@
                     <div class="widget-time_mode">
                         <el-checkbox v-model="checked1" class="widget-time_checkbox"></el-checkbox>
                         <ul>
-                            <li v-html='__("widget", "Widget time mode 1.1")'></li>
-                            <li v-html='__("widget", "Widget time mode 1.2")'></li>
+                            <li v-html='__("widget", "Widget time mode 1.1",
+                            {time1:"(08:30 - 17:00)",time2:"(12:30 - 13:15)"})'></li>
+                            <li v-html='__("widget", "Widget time mode 1.2",
+                            {time1:"(09:30 - 17:00)",time2:"(12:30 - 13:15)"})'></li>
                             <li v-html='__("widget", "Widget time mode 1.3")'></li>
                         </ul>
                     </div>
@@ -52,7 +50,8 @@
                     <div class="widget-time_mode">
                         <el-checkbox v-model="checked2" class="widget-time_checkbox"></el-checkbox>
                         <ul>
-                            <li v-html='__("widget", "Widget time mode 2.1")'></li>
+                            <li v-html='__("widget", "Widget time mode 2.1",
+                            {time1:"(08:30 - 17:00)",time2:"(12:30 - 13:15)"})'></li>
                             <li v-html='__("widget", "Widget time mode 2.2")'></li>
                             <li v-html='__("widget", "Widget time mode 2.3")'></li>
                         </ul>
@@ -61,7 +60,8 @@
                     <div class="widget-time_mode">
                         <el-checkbox v-model="checked3" class="widget-time_checkbox"></el-checkbox>
                         <ul>
-                            <li v-html='__("widget", "Widget time mode 3.1")'></li>
+                            <li v-html='__("widget", "Widget time mode 3.1",
+                            {time1:"(08:00 - 17:00)",time2:"(13:00 - 13:45)"})'></li>
                             <li v-html='__("widget", "Widget time mode 3.2")'></li>
                             <li v-html='__("widget", "Widget time mode 3.3")'></li>
                         </ul>

@@ -46,7 +46,7 @@ export default {
         //saturday
         let saturday = document.getElementById('saturday');
         noUiSlider.create(saturday, {
-            start: ["08:30", "12:30", "13:15", "17:35"],
+            start: ["09:30", "12:30", "13:15", "17:00"],
             margin: 15,
             range: {
                 'min': 0,

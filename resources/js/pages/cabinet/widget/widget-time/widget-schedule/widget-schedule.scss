@@ -3,23 +3,27 @@
 .widget-schedule {
     .noSlider {
         &.noUi-target {
-            height: 4px;
+            height: 3px;
             background: $widgetSidebarBorder;
             border-radius: 0;
             box-shadow: none;
             border: none;
+
+            @include media('d-only') {
+                height: 4px;
+            }
         }
 
         .noUi-handle {
-            width: 28px;
-            height: 28px;
+            width: 17px;
+            height: 17px;
             background: $mainDarkBlue;
             box-shadow: none;
             border-radius: 50%;
             border: none;
             cursor: pointer;
             outline: none;
-            top: -12px;
+            top: -7px;
 
             &[data-handle="1"], &[data-handle="2"] {
                 background: #CBE5F4;
@@ -28,11 +32,31 @@
             &:before, &:after {
                 content: none;
             }
+
+            @include media('d-only') {
+                width: 28px;
+                height: 28px;
+                top: -12px;
+            }
         }
     }
 
     .widget-schedule_slider {
-        margin-bottom: 38px;
+        &:not(:last-of-type) {
+            margin-bottom: 38px;
+        }
+    }
+
+    .widget-schedule_sliders {
+        margin-bottom: 45px;
+    }
+
+    .noSlider-empty {
+        height: 4px;
+        background: #E0F1FA;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
     }
 
     .widget-schedule_slider-title {
