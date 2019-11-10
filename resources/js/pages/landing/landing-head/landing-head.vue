@@ -1,5 +1,12 @@
 <template>
     <div class="landing-head">
+<!--        <div class="landing-image_cloud">-->
+
+<!--        </div>-->
+
+<!--        <div class="landing-image_ellipce">-->
+
+<!--        </div>-->
         <div class="landing-head_content">
             <h1 class="landing-head_title mod_mobile">
                 <span>SwiftCallBack</span>

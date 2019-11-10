@@ -5,11 +5,38 @@
     position: relative;
     margin-bottom: 96px;
 
+    min-height: 100vh;
+    background-color: $landingBackground;
+    text-align: center;
+    background: url(/img/ellipse.png) 90% 90% no-repeat fixed,
+    url(/img/cloud.png) 40% 40% no-repeat fixed;
+
     @include media('d-only') {
         padding: 177px 32px 0;
         margin-bottom: 187px;
         min-height: calc(100vh - 155px);
     }
+
+
+    //.landing-image_cloud {
+    //    background-image: url("/img/cloud.png");
+    //    position: absolute;
+    //    width: 1685px;
+    //    height: 992px;
+    //    background-repeat: no-repeat;
+    //    left: -63%;
+    //    top: -65px;
+    //}
+    //
+    //.landing-image_ellipce {
+    //    background-image: url("/img/ellipse.png");
+    //    position: absolute;
+    //    width: 886px;
+    //    height: 886px;
+    //    background-repeat: no-repeat;
+    //    left: -63%;
+    //    top: -65px;
+    //}
 
     .landing-head_content {
         text-align: center;
