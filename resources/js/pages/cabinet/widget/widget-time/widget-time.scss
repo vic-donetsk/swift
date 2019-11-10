@@ -1,179 +1,150 @@
 @import '@/app';
 
-.widget-install {
+.widget-time {
 
     .widget_container {
         max-width: 1625px;
-        padding: 39px 17px 0;
+        padding: 0 17px 24px;
 
         @include media('d-only') {
-            padding: 54px 45px 0 38px;
+            padding: 53px 45px 0 38px;
 
         }
 
         .cabinet-page_title {
-            margin-bottom: 30px;
+            margin-bottom: 7px;
+
+            &.mod_margin {
+                margin-bottom: 15px;
+            }
 
             @include media('d-only') {
+                margin-bottom: 9px;
+
                 &.mod_margin {
-                    margin-bottom: 52px;
+                    margin-bottom: 29px;
                 }
             }
         }
     }
 
-    .widget-install_wrap {
-        margin-bottom: 29px;
+    .widget-time-wrap {
 
         @include media('d-only') {
             display: flex;
-            margin-bottom: 53px;
         }
     }
 
-    .widget-install_site {
+
+    .widget-time_block-left {
+        padding-bottom: 38px;
+        border-bottom: 1px solid $widgetInstallBorder;
+        margin-bottom: 38px;
+
+        .widget-time_subtitle {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 15px;
+            color: $widgetDeactivateLink;
+            margin-left: 25px;
+            margin-bottom: 18px;
+
+            @include media('t-ipad') {
+                text-align: center;
+            }
+        }
 
         @include media('d-only') {
-            width: 50%;
+            border-bottom: none;
             border-right: 1px solid $widgetInstallBorder;
-            padding-right: 39px;
+            padding: 0 54px 0 0;
+            margin: 0 52px 0 0;
+
+            .widget-time_subtitle {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                text-align: left;
+            }
         }
     }
 
-    .widget-block_url {
+    .widget-time_symbols {
         display: flex;
-        align-items: center;
+        margin-bottom: 38px;
 
-        height: 70px;
+        .widget-time_symbols-item {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 20px;
+            color: $widgetDeactivateLink;
 
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 19px;
-        color: $mainDarkBlue;
-        background-color: $white;
+            &:not(:last-of-type) {
+                margin-right: 30px;
+            }
+        }
 
-        border: 1px solid rgba(0, 33, 95, 0.05);
-        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-        padding: 0 22px;
+
+        .widget-time_symbol {
+            width: 10px;
+            height: 10px;
+            box-shadow: 0 3px 5px rgba(0, 33, 95, 0.08);
+            border-radius: 50%;
+            margin-right: 7px;
+
+            &.work {
+                background-color: $mainDarkBlue;
+
+            }
+
+            &.out {
+                background-color: $widgetTimeSymbol;
+            }
+        }
+
+        .widget-time_symbol-text {
+            height: 16px;
+        }
+
 
         @include media('t-ipad') {
-            max-width: 733px;
-            margin: 0 auto;
+            justify-content: center;
         }
 
         @include media('d-only') {
-            height: 100px;
+            justify-content: left;
+            margin-bottom: 44px;
 
-            font-size: 25px;
-            line-height: 27px;
-            border-radius: 8px;
-            border: 1px solid $inputBorder;
-            padding: 0 28px;
+            .widget-time_symbols-item {
+                font-size: 14px;
+                margin-left: 25px;
+
+                &:not(:last-of-type) {
+                    margin-right: 30px;
+                }
+
+                .widget-time_symbol {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .widget-time_block-right {
+
+    }
+
+    .widget-button {
+        margin: 0 auto;
+
+        @include media('d-only') {
             margin: 0;
         }
     }
 
-    .widget-block_script {
-        position: relative;
 
-        max-width: 1530px;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        text-align: center;
-
-        font-weight: 600;
-        color: $mainDarkBlue;
-        background-color: $white;
-
-        border: 1px solid rgba(0, 33, 95, 0.05);
-        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.04);
-
-        font-size: 16px;
-        line-height: 30px;
-
-        word-break: break-word;
-
-        padding: 27px 14px 27px 14px;
-        margin-bottom: 30px;
-
-        @include media('d-only') {
-            flex-direction: row;
-            padding: 27px 75px 27px 30px;
-            font-size: 18px;
-
-            text-align: left;
-        }
-
-        .widget-block_script-text {
-            margin-bottom: 24px;
-
-            @include media('d-only') {
-                margin-bottom: 0;
-            }
-        }
-
-        .widget-verification_icon {
-            display: block;
-            width: 20px;
-            height: 24px;
-
-            flex-shrink: 0;
-
-            fill: $widgetActiveBlue;
-
-            @include media('d-only') {
-                position: absolute;
-                right: 33px;
-                top: 31px;
-            }
-        }
-    }
-
-    .widget-install_plugins {
-        display: none;
-
-        @include media('d-only') {
-            display: block;
-            width: 50%;
-            padding-left: 41px;
-        }
-
-        &.mod-mobile {
-            display: flex;
-            flex-direction: column;
-            border-top: 1px solid $widgetInstallBorder;
-            padding-top: 39px;
-
-            @include media('t-ipad') {
-                align-items: center;
-            }
-
-            @include media('d-only') {
-                display: none;
-            }
-        }
-
-        .widget-logo_plugins {
-            display: flex;
-            align-items: center;
-
-            .widget-plugin_image {
-                width: 52px;
-                height: 52px;
-                cursor: pointer;
-
-                &:not(:last-of-type) {
-                    margin-right: 40px;
-                }
-            }
-        }
-    }
-
-    .widget-button {
-        width: 264px;
-        margin: 0 auto 39px;
-    }
 }

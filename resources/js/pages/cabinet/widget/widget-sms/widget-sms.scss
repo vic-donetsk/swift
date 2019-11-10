@@ -4,7 +4,7 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 39px 17px 35px;
+        padding: 0 17px 35px;
 
         @include media('d-only') {
             padding: 54px 45px 80px 38px;
