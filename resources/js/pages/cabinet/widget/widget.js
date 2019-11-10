@@ -18,9 +18,9 @@ export default {
     },
     data: function () {
         return {
-            currentComponent: 'widgetTime',
-            currentPageClass: 'widget-time',
-            currentButtonIcon: 'download',
+            currentComponent: 'widgetMain',
+            currentPageClass: 'widget-install',
+            currentButtonIcon: '',
             settingsMode: 0,
             mobileMenuOpened: false,
             widgetSteps: [
