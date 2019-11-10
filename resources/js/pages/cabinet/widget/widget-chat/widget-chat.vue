@@ -18,7 +18,20 @@
                             <span class="widget-soc_name">Chat</span>
                         </div>
 
-                        <div class="widget-soc_content"></div>
+                        <div class="widget-soc_content">
+                            <div class="widget-checkboxes">
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="chatDesktop">
+                                        {{__('widget','Widget chat checkbox 1')}}
+                                    </el-checkbox>
+                                </div>
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="chatMobile">
+                                        {{__('widget','Widget chat checkbox 2')}}
+                                    </el-checkbox>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -50,7 +63,18 @@
                         </div>
 
                         <div class="widget-soc_content">
-
+                            <div class="widget-checkboxes">
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="telegramDesktop">
+                                        {{__('widget','Widget chat checkbox 1')}}
+                                    </el-checkbox>
+                                </div>
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="telegramMobile">
+                                        {{__('widget','Widget chat checkbox 2')}}
+                                    </el-checkbox>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -87,7 +111,13 @@
                         </div>
 
                         <div class="widget-soc_content">
-
+                            <div class="widget-checkboxes">
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="viberMobile">
+                                        {{__('widget','Widget chat checkbox 2')}}
+                                    </el-checkbox>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -102,7 +132,18 @@
                         </div>
 
                         <div class="widget-soc_content">
-
+                            <div class="widget-checkboxes">
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="whatsappDesktop">
+                                        {{__('widget','Widget chat checkbox 1')}}
+                                    </el-checkbox>
+                                </div>
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="whatsappMobile">
+                                        {{__('widget','Widget chat checkbox 2')}}
+                                    </el-checkbox>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -120,7 +161,18 @@
                         </div>
 
                         <div class="widget-soc_content">
-
+                            <div class="widget-checkboxes">
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="emailDesktop">
+                                        {{__('widget','Widget chat checkbox 1')}}
+                                    </el-checkbox>
+                                </div>
+                                <div class="widget-chat_checkbox">
+                                    <el-checkbox v-model="emailMobile">
+                                        {{__('widget','Widget chat checkbox 2')}}
+                                    </el-checkbox>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

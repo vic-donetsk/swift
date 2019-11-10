@@ -146,6 +146,10 @@
             color: $mainDarkBlue;
             margin-bottom: 39px;
 
+            ul > li {
+                list-style-type: disc;
+            }
+
             .widget-time_checkbox {
                 margin-right: 33px;
             }
@@ -174,7 +178,6 @@
                 }
             }
         }
-
 
 
         .el-checkbox {
