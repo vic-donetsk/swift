@@ -1,6 +1,6 @@
-import billingAbonnement from './../billing-abonnement/billing-abonnement.vue';
-import billingBank from './../billing-bank/billing-bank.vue';
-import billingInvoice from './../billing-invoice/billing-invoice.vue';
+import billingAbonnement from './billing-abonnement/billing-abonnement.vue';
+import billingBank from './billing-bank/billing-bank.vue';
+import billingInvoice from './billing-invoice/billing-invoice.vue';
 
 export default {
     components: {
