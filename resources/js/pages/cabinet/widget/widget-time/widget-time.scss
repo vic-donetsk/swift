@@ -140,19 +140,42 @@
         .widget-time_mode {
             display: flex;
             align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            color: $mainDarkBlue;
+            margin-bottom: 39px;
+
+            .widget-time_checkbox {
+                margin-right: 33px;
+            }
+
+            .mod_color {
+                color: $widgetActiveBlue;
+            }
+
+            @include media('t-ipad') {
+                justify-content: center;
+            }
 
             @include media('d-only') {
+                justify-content: flex-start;
+                font-size: 18px;
+                line-height: 33px;
+
                 &:not(:last-of-type) {
                     padding-bottom: 17px;
                     border-bottom: 1px solid $widgetInstallBorder;
                     margin-bottom: 16px;
                 }
+
+                .widget-time_checkbox {
+                    margin-right: 25px;
+                }
             }
         }
 
-        .widget-time_checkbox {
-            margin-right: 25px;
-        }
+
 
         .el-checkbox {
             .el-checkbox__input {
