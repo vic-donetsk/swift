@@ -1,10 +1,12 @@
 <template>
-    <div class="cabinet_page chat">
+    <div class="chat">
         <div class="chat_handler">
             <div v-if="isDesktop || mobileMode === 0" class="chat_handler-header">
-                <svg class="leftArrow">
-                    <use xlink:href="#leftArrow"></use>
-                </svg>
+                <router-link to="/cabinet">
+                    <svg class="leftArrow">
+                        <use xlink:href="#leftArrow"></use>
+                    </svg>
+                </router-link>
                 <div class="chat_handler-header_manager">
                     <div class="manager_photo">
                         <img src="/img/person.png" alt="">

@@ -11,8 +11,9 @@
         position: relative;
         width: 100%;
         flex-direction: column;
-        padding: 0 5.3% 0;
+        padding: 0;
         overflow: hidden;
+        z-index: 105;
     }
 
     .chat_handler {
@@ -26,6 +27,9 @@
             width: 100%;
             border-left: none;
             border-right: none;
+            margin-top: 0;
+            background: #fff;
+            padding: 0 5.3%;
         }
 
         &-header {
@@ -289,14 +293,14 @@
             bottom: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.9);
-            z-index: 20;
+            z-index: 130;
         }
 
         .mobileArrow {
             position: fixed;
             top: 30px;
             left: 20px;
-            z-index: 35;
+            z-index: 135;
 
             svg {
                 width: 22px;
@@ -334,7 +338,7 @@
                 margin-top: 0;
                 background: #EFF8FD;
                 font-size: 14px;
-                z-index: 30;
+                z-index: 134;
             }
         }
 
@@ -353,7 +357,7 @@
                 width: 100%;
                 padding: 0;
                 background: #E6F5FF;
-                z-index: 10;
+                z-index: 120;
             }
         }
 
