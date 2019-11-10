@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div v-if="isCalls" class="statistics_diagrams">
+            <div v-show="isCalls" class="statistics_diagrams">
                 <div class="statistics_diagram mod_big">
 
                     <chart-js class="diagram"
@@ -64,8 +64,8 @@
                               isIncrease=true
                               percentage=12
                               avatar="/img/charts/total.svg"
-                              gradientFrom="rgba(110,166,242,0.58)"
-                              gradientTo="rgba(186,199,252,0.2)"
+                              :gradientFrom=generalChartsData.totalCalls.gradientFrom
+                              :gradientTo=generalChartsData.totalCalls.gradientTo
                               :chartLabels=generalChartsData.totalCalls.chartLabels
                               :chartData=generalChartsData.totalCalls.chartData>
 
@@ -80,8 +80,8 @@
                               isIncrease=false
                               percentage=4.2
                               avatar="/img/charts/visitors.svg"
-                              gradientFrom="rgba(146,110,242,0.58)"
-                              gradientTo="rgba(211,204,251,0.2)"
+                              :gradientFrom=generalChartsData.visitors.gradientFrom
+                              :gradientTo=generalChartsData.visitors.gradientTo
                               :chartLabels=generalChartsData.visitors.chartLabels
                               :chartData=generalChartsData.visitors.chartData>
 
@@ -95,8 +95,8 @@
                               isIncrease=true
                               percentage=8
                               avatar="/img/charts/success.svg"
-                              gradientFrom="rgba(87,230,131,0.58)"
-                              gradientTo="rgba(185,253,205,0.2)"
+                              :gradientFrom=generalChartsData.successCalls.gradientFrom
+                              :gradientTo=generalChartsData.successCalls.gradientTo
                               :chartLabels=generalChartsData.successCalls.chartLabels
                               :chartData=generalChartsData.successCalls.chartData>
 
@@ -110,8 +110,8 @@
                               isIncrease=false
                               percentage=5.1
                               avatar="/img/charts/lost.svg"
-                              gradientFrom="rgba(242,110,110,0.58)"
-                              gradientTo="rgba(250,196,199,0.2)"
+                              :gradientFrom=generalChartsData.lostCalls.gradientFrom
+                              :gradientTo=generalChartsData.lostCalls.gradientTo
                               :chartLabels=generalChartsData.lostCalls.chartLabels
                               :chartData=generalChartsData.lostCalls.chartData>
 
@@ -125,8 +125,8 @@
                               isIncrease=true
                               percentage=7.8
                               avatar="/img/charts/duration.svg"
-                              gradientFrom="rgba(245,239,80,0.61)"
-                              gradientTo="rgba(252,248,169,0.24)"
+                              :gradientFrom=generalChartsData.durationAverage.gradientFrom
+                              :gradientTo=generalChartsData.durationAverage.gradientTo
                               :chartLabels=generalChartsData.durationAverage.chartLabels
                               :chartData=generalChartsData.durationAverage.chartData>
 
@@ -140,8 +140,8 @@
                               isIncrease=false
                               percentage=4.3
                               avatar="/img/charts/duration.svg"
-                              gradientFrom="rgba(242,196,110,0.58)"
-                              gradientTo="rgba(247,221,170,0.24)"
+                              :gradientFrom=generalChartsData.durationTotal.gradientFrom
+                              :gradientTo=generalChartsData.durationTotal.gradientTo
                               :chartLabels=generalChartsData.durationTotal.chartLabels
                               :chartData=generalChartsData.durationTotal.chartData>
                     </chart-js>
@@ -149,7 +149,7 @@
 
             </div>
 
-            <div v-if="!isCalls" class="statistics_diagrams">
+            <div v-show="!isCalls" class="statistics_diagrams">
                 <div class="statistics_diagram mod_medium">
 
                     <chart-js class="diagram"
@@ -159,8 +159,8 @@
                               isIncrease=true
                               percentage=12
                               avatar="/img/charts/chat-total.svg"
-                              gradientFrom="rgba(110,166,242,0.58)"
-                              gradientTo="rgba(186,199,252,0.2)"
+                              :gradientFrom=generalChartsData.totalChats.gradientFrom
+                              :gradientTo=generalChartsData.totalChats.gradientTo
                               :chartLabels=generalChartsData.totalChats.chartLabels
                               :chartData=generalChartsData.totalChats.chartData>
 
@@ -175,8 +175,8 @@
                               isIncrease=false
                               percentage=4.2
                               avatar="/img/charts/chat-success.svg"
-                              gradientFrom="rgba(87,230,131,0.58)"
-                              gradientTo="rgba(185,253,205,0.2)"
+                              :gradientFrom=generalChartsData.successChats.gradientFrom
+                              :gradientTo=generalChartsData.successChats.gradientTo
                               :chartLabels=generalChartsData.successChats.chartLabels
                               :chartData=generalChartsData.successChats.chartData>
 
@@ -190,8 +190,8 @@
                               isIncrease=true
                               percentage=8
                               avatar="/img/charts/chat-fail.svg"
-                              gradientFrom="rgba(242,110,110,0.58)"
-                              gradientTo="rgba(250,196,199,0.2)"
+                              :gradientFrom=generalChartsData.failChats.gradientFrom
+                              :gradientTo=generalChartsData.failChats.gradientTo
                               :chartLabels=generalChartsData.failChats.chartLabels
                               :chartData=generalChartsData.failChats.chartData>
                     </chart-js>
