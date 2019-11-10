@@ -39,6 +39,27 @@
                     <span>{{__('widget','Cabinet page title 10')}}</span>
                 </h2>
 
+                <div class="widget-time_modes">
+                    <div class="widget-time_mode">
+                        <el-checkbox v-model="checked1" class="widget-time_checkbox"></el-checkbox>
+                        <ul>
+                            <li>{{__('widget','Widget time mode 1.1')}}</li>
+                            <li>{{__('widget','Widget time mode 1.2')}}</li>
+                            <li>{{__('widget','Widget time mode 1.3')}}</li>
+                        </ul>
+                    </div>
+
+                    <div class="widget-time_mode">
+                        <el-checkbox v-model="checked2" class="widget-time_checkbox"></el-checkbox>
+
+                    </div>
+
+                    <div class="widget-time_mode">
+                        <el-checkbox v-model="checked3" class="widget-time_checkbox"></el-checkbox>
+
+                    </div>
+
+                </div>
 
             </div>
         </div>
