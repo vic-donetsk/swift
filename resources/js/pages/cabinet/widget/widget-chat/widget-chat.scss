@@ -4,7 +4,7 @@
 
     .widget_container {
         max-width: 1625px;
-        padding: 39px 17px;
+        padding: 0 17px 40px;
 
         @include media('d-only') {
             padding: 54px 41px 0 38px;
@@ -18,7 +18,6 @@
             margin-bottom: 32px;
         }
     }
-
 
     .widget-chat_block {
 
@@ -46,7 +45,6 @@
         }
 
         &.mod-inputs {
-            margin-bottom: 40px;
 
             @include media('d-only') {
                 margin-bottom: 50px;

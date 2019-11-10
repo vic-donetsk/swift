@@ -84,7 +84,18 @@ export default {
         if (document.documentElement.clientWidth < 1280) {
             this.isDesktop = false;
             this.mobileMode = 0;
-        }
+        };
+
+        window.onresize = () => {
+           if (this.isDesktop == false && document.documentElement.clientWidth > 1279) {
+               this.isDesktop = true;
+               this.mobileMode = -1;
+           } else if (this.isDesktop == true && document.documentElement.clientWidth < 1280) {
+               this.isDesktop = false;
+               this.mobileMode = 0;
+           }
+
+        };
 
     },
     mounted() {
