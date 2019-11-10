@@ -9,7 +9,8 @@ export default {
             chartDatas: null,
         };
     },
-    props: ['chartId', // id for html layout
+    props: [
+        'chartId', // id for html layout
         // header
         'chartTitle',  // Title of chart (f.e.APELURI TOTALE)
         'total',       // Total number in header (300)

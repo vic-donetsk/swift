@@ -18,7 +18,7 @@ export default {
     },
     created() {
         // TODO: rewrite initialising data for activeMenuItem
-        this.generalChartsData = {
+        this.generalCallsData = {
             // Calls charts data
             "totalCalls": {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
@@ -47,8 +47,8 @@ export default {
             "durationAverage": {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
                 chartData: [25.0, 32.4, 22.2, 14, 16.5, 18.4, 23.2, 24.1, 27.3, 29.1, 31.3, 28],
-                gradientFrom:"rgba(245,239,80,0.61)",
-                gradientTo:"rgba(252,248,169,0.24)"
+                gradientFrom: "rgba(245,239,80,0.61)",
+                gradientTo: "rgba(252,248,169,0.24)"
             },
             "durationTotal": {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
@@ -56,7 +56,9 @@ export default {
                 gradientFrom: "rgba(242,196,110,0.58)",
                 gradientTo: "rgba(247,221,170,0.24)"
             },
-            // chat charts data
+        },
+            this.generalChatsData = {
+            // Chats charts data
             "totalChats": {
                 chartLabels: ["02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "00:00"],
                 chartData: [25.0, 40, 39, 28.0, 29.2, 30.0, 31.2, 32.1, 33.0, 34.4, 35.1, 36.4],

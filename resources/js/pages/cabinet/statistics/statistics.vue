@@ -64,10 +64,10 @@
                               isIncrease=true
                               percentage=12
                               avatar="/img/charts/total.svg"
-                              :gradientFrom=generalChartsData.totalCalls.gradientFrom
-                              :gradientTo=generalChartsData.totalCalls.gradientTo
-                              :chartLabels=generalChartsData.totalCalls.chartLabels
-                              :chartData=generalChartsData.totalCalls.chartData>
+                              :gradientFrom=generalCallsData.totalCalls.gradientFrom
+                              :gradientTo=generalCallsData.totalCalls.gradientTo
+                              :chartLabels=generalCallsData.totalCalls.chartLabels
+                              :chartData=generalCallsData.totalCalls.chartData>
 
                     </chart-js>
 
@@ -80,10 +80,10 @@
                               isIncrease=false
                               percentage=4.2
                               avatar="/img/charts/visitors.svg"
-                              :gradientFrom=generalChartsData.visitors.gradientFrom
-                              :gradientTo=generalChartsData.visitors.gradientTo
-                              :chartLabels=generalChartsData.visitors.chartLabels
-                              :chartData=generalChartsData.visitors.chartData>
+                              :gradientFrom=generalCallsData.visitors.gradientFrom
+                              :gradientTo=generalCallsData.visitors.gradientTo
+                              :chartLabels=generalCallsData.visitors.chartLabels
+                              :chartData=generalCallsData.visitors.chartData>
 
                     </chart-js>
                 </div>
@@ -95,10 +95,10 @@
                               isIncrease=true
                               percentage=8
                               avatar="/img/charts/success.svg"
-                              :gradientFrom=generalChartsData.successCalls.gradientFrom
-                              :gradientTo=generalChartsData.successCalls.gradientTo
-                              :chartLabels=generalChartsData.successCalls.chartLabels
-                              :chartData=generalChartsData.successCalls.chartData>
+                              :gradientFrom=generalCallsData.successCalls.gradientFrom
+                              :gradientTo=generalCallsData.successCalls.gradientTo
+                              :chartLabels=generalCallsData.successCalls.chartLabels
+                              :chartData=generalCallsData.successCalls.chartData>
 
                     </chart-js>
                 </div>
@@ -110,10 +110,10 @@
                               isIncrease=false
                               percentage=5.1
                               avatar="/img/charts/lost.svg"
-                              :gradientFrom=generalChartsData.lostCalls.gradientFrom
-                              :gradientTo=generalChartsData.lostCalls.gradientTo
-                              :chartLabels=generalChartsData.lostCalls.chartLabels
-                              :chartData=generalChartsData.lostCalls.chartData>
+                              :gradientFrom=generalCallsData.lostCalls.gradientFrom
+                              :gradientTo=generalCallsData.lostCalls.gradientTo
+                              :chartLabels=generalCallsData.lostCalls.chartLabels
+                              :chartData=generalCallsData.lostCalls.chartData>
 
                     </chart-js>
                 </div>
@@ -125,10 +125,10 @@
                               isIncrease=true
                               percentage=7.8
                               avatar="/img/charts/duration.svg"
-                              :gradientFrom=generalChartsData.durationAverage.gradientFrom
-                              :gradientTo=generalChartsData.durationAverage.gradientTo
-                              :chartLabels=generalChartsData.durationAverage.chartLabels
-                              :chartData=generalChartsData.durationAverage.chartData>
+                              :gradientFrom=generalCallsData.durationAverage.gradientFrom
+                              :gradientTo=generalCallsData.durationAverage.gradientTo
+                              :chartLabels=generalCallsData.durationAverage.chartLabels
+                              :chartData=generalCallsData.durationAverage.chartData>
 
                     </chart-js>
                 </div>
@@ -140,10 +140,10 @@
                               isIncrease=false
                               percentage=4.3
                               avatar="/img/charts/duration.svg"
-                              :gradientFrom=generalChartsData.durationTotal.gradientFrom
-                              :gradientTo=generalChartsData.durationTotal.gradientTo
-                              :chartLabels=generalChartsData.durationTotal.chartLabels
-                              :chartData=generalChartsData.durationTotal.chartData>
+                              :gradientFrom=generalCallsData.durationTotal.gradientFrom
+                              :gradientTo=generalCallsData.durationTotal.gradientTo
+                              :chartLabels=generalCallsData.durationTotal.chartLabels
+                              :chartData=generalCallsData.durationTotal.chartData>
                     </chart-js>
                 </div>
 
@@ -159,10 +159,10 @@
                               isIncrease=true
                               percentage=12
                               avatar="/img/charts/chat-total.svg"
-                              :gradientFrom=generalChartsData.totalChats.gradientFrom
-                              :gradientTo=generalChartsData.totalChats.gradientTo
-                              :chartLabels=generalChartsData.totalChats.chartLabels
-                              :chartData=generalChartsData.totalChats.chartData>
+                              :gradientFrom=generalChatsData.totalChats.gradientFrom
+                              :gradientTo=generalChatsData.totalChats.gradientTo
+                              :chartLabels=generalChatsData.totalChats.chartLabels
+                              :chartData=generalChatsData.totalChats.chartData>
 
                     </chart-js>
 
@@ -175,10 +175,10 @@
                               isIncrease=false
                               percentage=4.2
                               avatar="/img/charts/chat-success.svg"
-                              :gradientFrom=generalChartsData.successChats.gradientFrom
-                              :gradientTo=generalChartsData.successChats.gradientTo
-                              :chartLabels=generalChartsData.successChats.chartLabels
-                              :chartData=generalChartsData.successChats.chartData>
+                              :gradientFrom=generalChatsData.successChats.gradientFrom
+                              :gradientTo=generalChatsData.successChats.gradientTo
+                              :chartLabels=generalChatsData.successChats.chartLabels
+                              :chartData=generalChatsData.successChats.chartData>
 
                     </chart-js>
                 </div>
@@ -186,14 +186,14 @@
                     <chart-js class="diagram"
                               chartId="failChats"
                               total="8"
-                              :chartTitle="__('statistics', 'CHAT-URI FĂRĂ FEEDBACK')"
+                              :chartTitle="__('statistics', 'CHATS WITHOUT FEEDBACK')"
                               isIncrease=true
                               percentage=8
                               avatar="/img/charts/chat-fail.svg"
-                              :gradientFrom=generalChartsData.failChats.gradientFrom
-                              :gradientTo=generalChartsData.failChats.gradientTo
-                              :chartLabels=generalChartsData.failChats.chartLabels
-                              :chartData=generalChartsData.failChats.chartData>
+                              :gradientFrom=generalChatsData.failChats.gradientFrom
+                              :gradientTo=generalChatsData.failChats.gradientTo
+                              :chartLabels=generalChatsData.failChats.chartLabels
+                              :chartData=generalChatsData.failChats.chartData>
                     </chart-js>
                 </div>
 

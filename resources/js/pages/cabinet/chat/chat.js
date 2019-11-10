@@ -96,8 +96,8 @@ export default {
            }
 
         };
-
     },
+
     mounted() {
         if (this.isDesktop || this.mobileMode === 1) {
             let dialog = this.$el.querySelector("#chat_scrolling");
