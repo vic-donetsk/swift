@@ -18,14 +18,12 @@ export default {
     methods: {
 
         showChart() {
-            let diagram = document.getElementById(this.dataSet.chartId);
+            let diagram = this.$el.querySelector(".diagram_chart");
             let ctx = diagram.lastChild.getContext("2d");
             /*** Gradient ***/
             let gradient = ctx.createLinearGradient(0, 0, 0, diagram.clientHeight);
             gradient.addColorStop(0, this.dataSet.gradientFrom);
             gradient.addColorStop(1, this.dataSet.gradientTo);
-
-            console.log(this.dataSet);
 
             this.chartDatas = {
                 labels: this.dataSet.chartLabels,
@@ -42,9 +40,9 @@ export default {
 
          }
     },
-    // watch: {
-    //     chartData () {
-    //         console.log(this.chartData)
-    //     }
-    // }
+    watch: {
+        dataSet () {
+            this.showChart();
+        }
+    }
 }

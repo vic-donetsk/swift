@@ -54,19 +54,11 @@
                 </div>
             </div>
 
-            <div v-if="isCalls" class="statistics_diagrams">
-                <div v-for="oneChart in callsLayout" class="statistics_diagram" :class="oneChart.mod">
+            <div class="statistics_diagrams">
+                <div v-for="oneChart in layoutData" class="statistics_diagram" :class="oneChart.chartSize">
                     <chart-js class="diagram"
-                              :dataSet=generalCallsData[oneChart.set]>
-                    </chart-js>
-                </div>
-            </div>
-
-            <div v-if="!isCalls" class="statistics_diagrams">
-                <div v-for="oneChat in chatsLayout" class="statistics_diagram" :class="oneChat.mod">
-                   <chart-js class="diagram"
-                              :dataSet=generalChatsData[oneChat.set]>
-                    </chart-js>
+                              :dataSet="oneChart"
+                    />
                 </div>
             </div>
 

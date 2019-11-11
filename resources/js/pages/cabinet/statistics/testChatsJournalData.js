@@ -1,0 +1,32 @@
+export default [
+    {
+        date: '27/10/2019',
+        time: '17-09',
+        ID: '3057266',
+        source: 'telegram',
+        clientName: 'Vic Pavlovsky',
+        clientNumber: '+38(095)698-62-73',
+        email: 'pavlovskyi.va@gmail.com',
+        message: 'text message for chats table',
+    },
+    {
+        date: '27/10/2019',
+        time: '17-09',
+        ID: '3057266',
+        source: 'viber',
+        clientName: 'Vic Pavlovsky',
+        clientNumber: '+38(095)698-62-73',
+        email: 'pavlovskyi.va@gmail.com',
+        message: 'text message \nfor chats table text message for chats table',
+    },
+    {
+        date: '27/10/2019',
+        time: '17-09',
+        ID: '3057266',
+        source: 'whatsapp',
+        clientName: 'Vic Pavlovsky',
+        clientNumber: '+38(095)698-62-73',
+        email: 'pavlovskyi.va@gmail.com',
+        message: 'text message for chats table',
+    },
+]
