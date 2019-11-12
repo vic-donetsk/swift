@@ -7,7 +7,8 @@
                 {{__('widget','Cabinet header title 1')}}
             </span>
 
-                    <span class="cabinet-header_value" @mouseover="showChart('showTariffMinutes')">
+                    <span class="cabinet-header_value" @mouseover="showChart('showTariffMinutes')"
+                          @mouseleave="hideChart('showTariffMinutes')">
                 {{__('widget','Cabinet header value')}}
             </span>
 
