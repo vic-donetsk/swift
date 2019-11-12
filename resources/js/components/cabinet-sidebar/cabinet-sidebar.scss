@@ -157,7 +157,7 @@
 
     .cabinet-sidebar_person {
         display: none;
-
+        position: relative;
         text-align: center;
         color: $mainDarkBlue;
         font-size: 0;
@@ -184,6 +184,11 @@
             justify-content: center;
             align-items: center;
 
+            &.mod_rotate {
+                .sidebar-person_icon {
+                    transform: rotate(180deg);
+                }
+            }
         }
 
         .sidebar-person_icon {
@@ -193,7 +198,50 @@
             stroke: $mainDarkBlue;
             margin-left: 12px;
         }
+
+        .sidebar-person_menu {
+            position: absolute;
+            width: 264px;
+            height: 183px;
+            border-radius: 8px;
+            background-color: $white;
+            box-shadow: 0 3px 12px rgba(0, 33, 95, 0.21);
+            padding: 27px 44px;
+            z-index: 3;
+            top: 147px;
+            left: 50%;
+            transform: translateX(-50%);
+
+
+            .sidebar-person_menu-wrap {
+                margin-bottom: 20px;
+                border-bottom: 1px solid $widgetInstallBorder;
+            }
+
+
+            .sidebar-person_menu-item {
+                display: flex;
+
+                padding-bottom: 18px;
+            }
+
+            .sidebar-person_menu-icon {
+                width: 23px;
+                height: 23px;
+                fill: $mainDarkBlue;
+                margin-right: 24px;
+            }
+
+            .sidebar-person_menu-text {
+                height: 23px;
+                font-size: 16px;
+                line-height: 27px;
+                font-weight: 350;
+                color: $mainDarkBlue;
+            }
+        }
     }
+
 
     .cabinet-sidebar_menu {
         display: none;

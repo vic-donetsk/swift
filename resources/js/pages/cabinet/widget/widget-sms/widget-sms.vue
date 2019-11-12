@@ -31,7 +31,8 @@
                     <use xlink:href="#mail-envelope-open"></use>
                 </svg>
                 <span>{{__('widget','Cabinet page title 7')}}</span>
-                <svg class="cabinet-page_title-icon right-icon" @click.stop="tooltip = !tooltip">
+                <svg class="cabinet-page_title-icon right-icon" @mouseover="tooltip = true"
+                     @mouseleave="tooltip = false">
                     <use xlink:href="#info"></use>
                 </svg>
 

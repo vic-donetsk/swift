@@ -7,7 +7,8 @@ export default {
     },
     data: function () {
         return {
-            menu: false
+            menu: false,
+            personMenu:false,
         }
     },
     methods: {

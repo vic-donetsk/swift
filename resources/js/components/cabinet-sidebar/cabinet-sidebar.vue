@@ -20,10 +20,34 @@
             <div class="cabinet-sidebar_person">
                 <img src="/img/person.png" class="sidebar-person_image">
 
-                <div class="sidebar-person_name">
+                <div class="sidebar-person_name" @click.stop="personMenu = !personMenu"
+                     :class="{mod_rotate:personMenu}">
                     <span>{{__('widget','Cabinet sidebar name')}}</span>
 
                     <svg class="sidebar-person_icon"><use xlink:href="#arrow"></use></svg>
+                </div>
+
+                <div class="sidebar-person_menu" v-if="personMenu">
+                    <div class="sidebar-person_menu-wrap">
+                        <div class="sidebar-person_menu-item">
+                            <svg class="sidebar-person_menu-icon">
+                                <use xlink:href="#menu-settings"></use>
+                            </svg>
+                            <span class="sidebar-person_menu-text">{{__('widget','Cabinet sidebar person menu 1')}}</span>
+                        </div>
+                        <div class="sidebar-person_menu-item">
+                            <svg class="sidebar-person_menu-icon">
+                                <use xlink:href="#menu-support"></use>
+                            </svg>
+                            <span class="sidebar-person_menu-text">{{__('widget','Cabinet sidebar person menu 2')}}</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-person_menu-item">
+                        <svg class="sidebar-person_menu-icon">
+                            <use xlink:href="#man-running"></use>
+                        </svg>
+                        <span class="sidebar-person_menu-text">{{__('widget','Cabinet sidebar person menu 3')}}</span>
+                    </div>
                 </div>
             </div>
 
@@ -93,12 +117,38 @@
                     <div class="cabinet-sidebar_person">
                         <img src="/img/person.png" class="sidebar-person_image">
 
-                        <div class="sidebar-person_name">
+                        <div class="sidebar-person_name" @click.stop="personMenu = !personMenu"
+                        :class="{mod_rotate:personMenu}">
                             <span>{{__('widget','Cabinet sidebar name')}}</span>
 
                             <svg class="sidebar-person_icon"><use xlink:href="#arrow"></use></svg>
                         </div>
+
+                        <div class="sidebar-person_menu" v-if="personMenu">
+                            <div class="sidebar-person_menu-wrap">
+                                <div class="sidebar-person_menu-item">
+                                    <svg class="sidebar-person_menu-icon">
+                                        <use xlink:href="#menu-settings"></use>
+                                    </svg>
+                                    <span class="sidebar-person_menu-text">{{__('widget','Cabinet sidebar person menu 1')}}</span>
+                                </div>
+                                <div class="sidebar-person_menu-item">
+                                    <svg class="sidebar-person_menu-icon">
+                                        <use xlink:href="#menu-support"></use>
+                                    </svg>
+                                    <span class="sidebar-person_menu-text">{{__('widget','Cabinet sidebar person menu 2')}}</span>
+                                </div>
+                            </div>
+                            <div class="sidebar-person_menu-item">
+                                <svg class="sidebar-person_menu-icon">
+                                    <use xlink:href="#man-running"></use>
+                                </svg>
+                                <span class="sidebar-person_menu-text">{{__('widget','Cabinet sidebar person menu 3')}}</span>
+                            </div>
+                        </div>
                     </div>
+
+
                     <router-link to="/cabinet/statistics" class="cabinet-sidebar_item">
                         <div class="cabinet-sidebar_item-square top"></div>
                         <div class="cabinet-sidebar_item-square bottom"></div>
