@@ -21,7 +21,9 @@
                 {{__('widget','Cabinet header title 2')}}
             </span>
 
-                    <div class="cabinet-header_progress-wrap" @mouseover="showChart('showCurrentMinutes')">
+                    <div class="cabinet-header_progress-wrap" @mouseover="showChart('showCurrentMinutes')"
+                         @mouseleave="hideChart('showCurrentMinutes')"
+                    >
                         <div class="cabinet-header_progress"
                              :style="'width:' + abonementData.currentMinutes.percent + '%; background-color:'
                              +  abonementData.currentMinutes.color">
@@ -37,7 +39,8 @@
                 {{__('widget','Cabinet header title 3')}}
             </span>
 
-                    <div class="cabinet-header_progress-wrap" @mouseover="showChart('showCurrentSMS')">
+                    <div class="cabinet-header_progress-wrap" @mouseover="showChart('showCurrentSMS')"
+                         @mouseleave="hideChart('showCurrentSMS')">
                         <div class="cabinet-header_progress mod-sms"
                              :style="'width:' + abonementData.currentSMS.percent + '%; background-color:'
                              +  abonementData.currentSMS.color">
@@ -65,39 +68,51 @@
                 </div>
             </div>
 
-<!--             charts block-->
+            <!--             charts block-->
 
-            <div :class="{mod_active: showTariffMinutes}" class="cabinet-header_dropdown mod_tariffMinutes" @click="hideChart('showTariffMinutes')">
+            <div :class="{mod_active: showTariffMinutes}" class="cabinet-header_dropdown mod_tariffMinutes"
+                 @click="hideChart('showTariffMinutes')">
                 <div class="cabinet-header_dropdown-container">
                     <canvas id="tariffMinutes" class="cabinet-header_dropdown-chart"></canvas>
                     <div class="chart-title">{{abonementData.tariffMinutes.percent}}%</div>
                 </div>
                 <div class="cabinet-header_dropdown-information">
-                    <div class="dropdown-information_item">{{__('widget', 'Total')}}&nbsp:&nbsp<span>{{abonementData.tariffMinutes.total}} minute</span></div>
-                    <div class="dropdown-information_item">{{__('widget', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.tariffMinutes.consumed}} minute</span></div>
-                    <div class="dropdown-information_item">{{__('widget', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.tariffMinutes.total - abonementData.tariffMinutes.consumed}} minute</span></div>
+                    <div class="dropdown-information_item">{{__('widget', 'Total')}}&nbsp:&nbsp<span>{{abonementData.tariffMinutes.total}} minute</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('widget', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.tariffMinutes.consumed}} minute</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('widget', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.tariffMinutes.total - abonementData.tariffMinutes.consumed}} minute</span>
+                    </div>
                 </div>
             </div>
-            <div :class="{mod_active: showCurrentMinutes}" class="cabinet-header_dropdown mod_currentMinutes" @click="hideChart('showCurrentMinutes')">
+            <div :class="{mod_active: showCurrentMinutes}" class="cabinet-header_dropdown mod_currentMinutes"
+                 @click="hideChart('showCurrentMinutes')">
                 <div class="cabinet-header_dropdown-container">
                     <canvas id="currentMinutes" class="cabinet-header_dropdown-chart"></canvas>
                     <div class="chart-title">{{abonementData.currentMinutes.percent}}%</div>
                 </div>
                 <div class="cabinet-header_dropdown-information">
-                    <div class="dropdown-information_item">{{__('widget', 'Total')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.total}} minute</span></div>
-                    <div class="dropdown-information_item">{{__('widget', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.consumed}} minute</span></div>
-                    <div class="dropdown-information_item">{{__('widget', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.total - abonementData.currentMinutes.consumed}} minute</span></div>
+                    <div class="dropdown-information_item">{{__('widget', 'Total')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.total}} minute</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('widget', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.consumed}} minute</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('widget', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.total - abonementData.currentMinutes.consumed}} minute</span>
+                    </div>
                 </div>
             </div>
-            <div :class="{mod_active: showCurrentSMS}" class="cabinet-header_dropdown mod_currentSMS" @click="hideChart('showCurrentSMS')">
+            <div :class="{mod_active: showCurrentSMS}" class="cabinet-header_dropdown mod_currentSMS"
+                 @click="hideChart('showCurrentSMS')">
                 <div class="cabinet-header_dropdown-container">
                     <canvas id="currentSMS" class="cabinet-header_dropdown-chart"></canvas>
                     <div class="chart-title">{{abonementData.currentSMS.percent}}%</div>
                 </div>
                 <div class="cabinet-header_dropdown-information">
-                    <div class="dropdown-information_item">{{__('widget', 'Total')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.total}} SMS</span></div>
-                    <div class="dropdown-information_item">{{__('widget', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.consumed}} SMS</span></div>
-                    <div class="dropdown-information_item">{{__('widget', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.total - abonementData.currentSMS.consumed}} SMS</span></div>
+                    <div class="dropdown-information_item">{{__('widget', 'Total')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.total}} SMS</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('widget', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.consumed}} SMS</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('widget', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.total - abonementData.currentSMS.consumed}} SMS</span>
+                    </div>
                 </div>
             </div>
         </div>

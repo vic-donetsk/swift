@@ -1,26 +1,26 @@
 @import '@/app';
 
 .landing-main {
-    position: relative;
-    padding: 105px 20px 46px;
+    position:  relative;
+    padding:   105px 20px 46px;
     max-width: 1690px;
-    margin: 0 auto 77px;
+    margin:    0 auto 77px;
 
     @include media('d-only') {
         padding: 0 32px 30px;
-        margin: 0 auto 202px;
+        margin:  0 auto 202px;
 
     }
 
     &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        width: 2px;
+        content:    "";
+        position:   absolute;
+        top:        0;
+        bottom:     0;
+        left:       50%;
+        transform:  translateX(-50%);
+        display:    block;
+        width:      2px;
         background: $landingMainMessage;
 
         @include media('d-only') {
@@ -29,17 +29,17 @@
     }
 
     &:after {
-        content: "";
-        position: absolute;
-        top: 45px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        width: 7px;
-        height: 12px;
-        background: $mainDarkBlue;
+        content:       "";
+        position:      absolute;
+        top:           45px;
+        left:          50%;
+        transform:     translateX(-50%);
+        display:       block;
+        width:         7px;
+        height:        12px;
+        background:    $mainDarkBlue;
         border-radius: 6px;
-        animation: mouseCircle 5s infinite 2s;
+        animation:     mouseCircle 3s infinite ease;
 
         @include media('d-only') {
             display: none;
@@ -50,38 +50,38 @@
         from {
             top: 45px;
         }
-        15% {
+        50% {
             top: 60px;
         }
-        30% {
+        100% {
             top: 45px;
         }
     }
 
 
     .landing-main_numbering {
-        position: relative;
-        z-index: 2;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        position:         relative;
+        z-index:          2;
+        width:            40px;
+        height:           40px;
+        border-radius:    50%;
         background-color: $mainDarkBlue;
-        margin: 0 auto 45px;
+        margin:           0 auto 45px;
 
         @include media('d-only') {
-            width: 90px;
+            width:  90px;
             height: 90px;
         }
     }
 
     .landing-main_number {
-        position: absolute;
-        top: 53%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
+        position:    absolute;
+        top:         53%;
+        left:        50%;
+        transform:   translate(-50%, -50%);
+        font-size:   20px;
         font-weight: 700;
-        color: $white;
+        color:       $white;
         line-height: 1;
 
 
@@ -93,7 +93,7 @@
     .landing-main_content {
 
         @include media('d-only') {
-            display: flex;
+            display:     flex;
             align-items: center;
         }
 
@@ -104,12 +104,12 @@
 
                 @include media('d-only') {
                     padding-right: 96px;
-                    padding-left: 40px;
+                    padding-left:  40px;
                 }
 
                 .landing-main_message {
                     &:before {
-                        left: auto;
+                        left:  auto;
                         right: -98px;
                     }
                 }
@@ -127,7 +127,7 @@
 
     .landing-main_message-wrap {
         @include media('d-only') {
-            padding-left: 96px;
+            padding-left:  96px;
             padding-right: 0;
         }
 
@@ -139,38 +139,38 @@
     }
 
     .landing-main_message {
-        position: relative;
+        position:      relative;
         border-radius: 24px;
-        border: 2px solid $landingMainMessage;
-        font-size: 14px;
-        padding: 24px 32px;
-        line-height: 20px;
-        font-weight: 500;
-        color: $widgetActiveBlue;
-        background: $white;
-        text-align: center;
+        border:        2px solid $landingMainMessage;
+        font-size:     14px;
+        padding:       24px 32px;
+        line-height:   20px;
+        font-weight:   500;
+        color:         $widgetActiveBlue;
+        background:    $white;
+        text-align:    center;
 
         @include media('t-ipad') {
-            font-size: 20px;
+            font-size:   20px;
             line-height: 30px;
             font-weight: 500;
         }
 
         @include media('d-only') {
-            font-size: 28px;
+            font-size:   28px;
             line-height: 38px;
             font-weight: 600;
-            background: none;
-            border: 3px solid $landingMainMessage;
+            background:  none;
+            border:      3px solid $landingMainMessage;
 
             &:before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                display: block;
-                width: 96px;
-                height: 3px;
+                content:    "";
+                position:   absolute;
+                top:        50%;
+                transform:  translateY(-50%);
+                display:    block;
+                width:      96px;
+                height:     3px;
                 background: $landingMainMessage;
             }
         }
@@ -188,9 +188,9 @@
         }
 
         .landing-main_image {
-            display: none;
-            position: relative;
-            z-index: 2;
+            display:        none;
+            position:       relative;
+            z-index:        2;
             padding-bottom: 46px;
 
             &.mod_image {
@@ -198,10 +198,10 @@
             }
 
             &.mod_border {
-                display: block;
-                background: $white;
+                display:       block;
+                background:    $white;
                 border-radius: 24px;
-                border: 2px solid $landingMainMessage;
+                border:        2px solid $landingMainMessage;
                 margin-bottom: 46px;
             }
         }
@@ -240,7 +240,7 @@
                 }
 
                 .landing-main_image {
-                    display: block;
+                    display:       block;
                     padding-right: 40px;
 
                     &.mod_image {
@@ -261,7 +261,7 @@
                 }
 
                 .landing-main_image {
-                    display: block;
+                    display:      block;
                     padding-left: 96px;
 
                     &.mod_image {
@@ -278,15 +278,15 @@
                 }
 
                 .landing-main_message {
-                    padding-top: 65px;
+                    padding-top:    65px;
                     padding-bottom: 65px;
-                    padding-left: 55px;
-                    padding-right: 55px;
+                    padding-left:   55px;
+                    padding-right:  55px;
                 }
 
                 .landing-main_image {
-                    display: block;
-                    padding-left: 70px;
+                    display:       block;
+                    padding-left:  70px;
                     padding-right: 188px;
 
                     &.mod_border {
@@ -306,8 +306,8 @@
                 }
 
                 .landing-main_image {
-                    display: block;
-                    padding-left: 140px;
+                    display:       block;
+                    padding-left:  140px;
                     padding-right: 70px;
 
                     &.mod_border {
