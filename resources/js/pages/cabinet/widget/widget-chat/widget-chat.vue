@@ -310,6 +310,9 @@
 
             <div class="widget-table_modal-wrap" v-if="openModal">
                 <div class="widget-table_modal">
+                    <svg class="widget-modal_cross-icon" @click="openModal = false">
+                        <use xlink:href="#cross"></use>
+                    </svg>
                     <div class="modal-profile">
                         <div class="modal-profile_user">
                             <svg class="modal-user_icon">

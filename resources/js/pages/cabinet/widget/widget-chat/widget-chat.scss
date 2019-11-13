@@ -765,6 +765,16 @@
     .widget-table_modal {
         padding-top: 22px;
 
+        .widget-modal_cross-icon {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            right: 33px;
+            top: 28px;
+            fill: $inputBorder;
+            cursor: pointer;
+        }
+
         @include media('d-only') {
             position: absolute;
             top: 50%;
