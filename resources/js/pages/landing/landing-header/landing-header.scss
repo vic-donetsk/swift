@@ -4,7 +4,6 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background: white;
     z-index: 999;
 
     @include media('d-only') {
