@@ -24,15 +24,18 @@ export default {
         };
     },
     methods: {
-        changeHour(hour, result, indexResult) {
-            Vue.set(this.results[result], indexResult,
+        changeHour(hour, resultName, indexResult) {
+            Vue.set(this.results[resultName], indexResult,
                 hour.toString() + ':' + this.currentMinute);
 
             //todo: выделить и текущего элемента минуты и прибавляь к часам
-            console.log(this.results[result])
+            console.log(this.results[resultName])
         },
-        changeMinute(minute, result, indexResult) {
+        changeMinute(minute, resultName, indexResult) {
             //todo: выделить и текущего элемента часы и прибавляь к минутам
+        },
+        hmFormat(val) {
+            return val < 10 ? '0' + val : val.toString();
         },
         timepickerToggle(e) {
             let $button = $(e.target);

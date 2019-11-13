@@ -42,17 +42,19 @@
                                                 <ul class="hours dropdown_list">
                                                     <template v-for="hour in 23">
                                                         <li class="dropdown_item"
-                                                            @click.stop="changeHour(hour,'mondayFridayResult',0)"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'mondayFridayResult',0)"
                                                             v-if="hour >= 7 && hour <= 17">
-                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                            {{hmFormat(hour)}}
                                                         </li>
                                                     </template>
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(minute,'mondayFridayResult',3)"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'mondayFridayResult',3)"
                                                         v-for="minute in 59">
-                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                        {{hmFormat(minute)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -63,14 +65,19 @@
                                                 <ul class="hours dropdown_list">
                                                     <template v-for="hour in 23">
                                                         <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'mondayFridayResult',0)"
                                                             v-if="hour >= 7 && hour <= 17">
-                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                            {{hmFormat(hour)}}
                                                         </li>
                                                     </template>
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
-                                                    <li class="dropdown_item" v-for="minute in 59">
-                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'mondayFridayResult',3)"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
                                                     </li>
                                                 </ul>
                                             </div>
