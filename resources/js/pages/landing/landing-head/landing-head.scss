@@ -128,10 +128,26 @@
         }
 
         .head-icon_elem {
+            position: absolute;
             width: 7px;
             height: 12px;
+            top: 21px;
             border-radius: 6px;
             background-color: #0E3378;
+            animation: mouseCircle 3s infinite ease;
+        }
+
+    }
+
+    @keyframes mouseCircle {
+        from {
+            top: 21px;
+        }
+        50% {
+            top: 33px;
+        }
+        100% {
+            top: 21px;
         }
     }
 }

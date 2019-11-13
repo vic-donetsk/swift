@@ -39,14 +39,14 @@
         height:        12px;
         background:    $mainDarkBlue;
         border-radius: 6px;
-        animation:     mouseCircle 3s infinite ease;
+        animation:     mouseCircle1 3s infinite ease;
 
         @include media('d-only') {
             display: none;
         }
     }
 
-    @keyframes mouseCircle {
+    @keyframes mouseCircle1 {
         from {
             top: 45px;
         }

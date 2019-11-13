@@ -251,14 +251,29 @@
         }
 
         .button {
-            margin: 0 auto 35px;
-            max-width: 164px;
-            height: 48px;
 
-
-            @include media("d-only") {
-                margin: 0 auto 50px;
+            &.mod-green {
+                box-shadow: 0 3px 12px rgba(27, 130, 15, 0.21);
             }
+
+            &.mod-brown {
+                box-shadow: 0 3px 12px rgba(181, 137, 17, 0.21);
+            }
+
+            &.mod_landing {
+                margin: 0 auto 35px;
+                min-width: 164px;
+                width: 164px;
+                height: 48px;
+
+                @include media("d-only") {
+                    min-width: 225px;
+                    max-width: 225px;
+                    height: 65px;
+                    margin: 0 auto 50px;
+                }
+            }
+
         }
 
         .landing-plan_list-title {
