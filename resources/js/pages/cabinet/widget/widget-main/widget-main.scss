@@ -105,7 +105,6 @@
 
     .widget-block_elem-wrap {
         width: 100%;
-        height: 80px;
         margin-bottom: 29px;
 
         @include media('d-only') {
@@ -183,23 +182,28 @@
             }
 
             &.right {
-                display: none;
+                flex-direction: column;
+                justify-content: center;
+                background-color: $white;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                color: $widgetElemText;
+                padding: 0 20px;
 
                 @include media('d-only') {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
+                    border: none;
                 }
             }
 
-            .mobile-svg_wrap{
+            .mobile-svg_wrap {
                 width: 88px;
                 height: 80px;
                 border: 1px solid $widgetSidebarBorder;
                 border-left: none;
                 background-color: $lightBlueGradientFrom;
 
-                @include media('d-only'){
+                @include media('d-only') {
                     width: 62px;
                     height: 35px;
                     border: none;
@@ -221,15 +225,16 @@
                 }
             }
 
-            .widget-elem_text{
+            .widget-elem_text {
                 height: 100%;
                 display: flex;
                 flex: 1;
                 align-items: center;
                 justify-content: center;
                 padding: 0 40px;
+                cursor: pointer;
 
-                @include media('d-only'){
+                @include media('d-only') {
                     padding: 0;
                     flex: inherit;
 
@@ -352,7 +357,18 @@
             width: 14px;
             height: 8px;
             fill: $mainDarkBlue;
-            transform: rotate(180deg);
+            stroke: $mainDarkBlue;
+        }
+
+
+        &.mod_rotate {
+            .widget-arrow_icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        &.mod_close {
+            margin-top: -11px;
         }
     }
 }
