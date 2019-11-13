@@ -135,122 +135,119 @@
         }
     }
 
-    .widget-time_block-right {
+    .widget-time_mode {
+        display: flex;
+        align-items: center;
+        margin-bottom: 39px;
 
-        .widget-time_mode {
+        .el-radio {
             display: flex;
             align-items: center;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-            color: $mainDarkBlue;
-            margin-bottom: 39px;
 
-            ul > li {
-                list-style-type: disc;
-            }
+            &.is-checked {
+                .el-radio__inner {
+                    background: none;
 
-            .widget-time_checkbox {
-                margin-right: 33px;
-            }
-
-            .mod_color {
-                color: $widgetActiveBlue;
-            }
-
-            @include media('t-ipad') {
-                justify-content: center;
-            }
-
-            @include media('d-only') {
-                justify-content: flex-start;
-                font-size: 18px;
-                line-height: 33px;
-
-                &:not(:last-of-type) {
-                    padding-bottom: 17px;
-                    border-bottom: 1px solid $widgetInstallBorder;
-                    margin-bottom: 16px;
-                }
-
-                .widget-time_checkbox {
-                    margin-right: 25px;
-                }
-            }
-        }
-
-
-        .el-checkbox {
-            .el-checkbox__input {
-                width: 20px;
-                height: 20px;
-
-                &.is-checked {
-                    .el-checkbox__inner {
-                        background: none;
+                    &:after {
+                        transform: rotate(45deg) scaleY(1);
                     }
                 }
+            }
 
-                .el-checkbox__inner {
-                    width: 20px;
-                    height: 20px;
-                    //background: $white;
-                    border: 1px solid $inputBorder;
-                }
+            .el-radio__inner {
+                width: 20px;
+                height: 20px;
+                border: 1px solid $inputBorder;
+                border-radius: 0;
 
-                .el-checkbox__inner::after {
-                    border-width: 3px;
-                    border-color: $mainDarkBlue;
+                &:after {
+                    position: absolute;
+                    box-sizing: content-box;
+                    content: "";
+                    display: block;
+                    border: 3px solid $mainDarkBlue;
+                    border-left: 0;
+                    border-top: 0;
                     height: 10px;
                     left: 6px;
                     top: 1px;
                     width: 4px;
+                    border-radius: 0;
+                    background: none;
                     transition-delay: 0s;
                     transition-duration: 0.1s;
+                    transform: rotate(45deg) scaleY(0);
                 }
             }
 
-            .el-checkbox__label {
-                color: $mainDarkBlue;
-                padding-top: 1px;
-                font-size: 14px;
-                margin-top: 5px;
-                vertical-align: top;
-                line-height: 1;
+            .el-radio__input {
+                width: 20px;
+                height: 20px;
+                margin-right: 16px;
+            }
+
+            .el-radio__label {
+                display: block;
+
+                li {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    color: $mainDarkBlue;
+                    list-style-type: disc;
+
+                    @include media('d-only') {
+                        font-size: 18px;
+                        line-height: 33px;
+                    }
+                }
             }
 
             @include media('d-only') {
-
-                .el-checkbox__input {
+                .el-radio__input {
                     width: 31px;
                     height: 31px;
+                }
 
-                    &.is-checked {
-                        .el-checkbox__inner {
-                            background: none;
-                        }
-                    }
+                .el-radio__inner {
+                    width: 31px;
+                    height: 31px;
+                    border-radius: 8px;
+                }
 
-                    .el-checkbox__inner {
-                        width: 31px;
-                        height: 31px;
-                        border-radius: 8px;
-                    }
-
-                    .el-checkbox__inner::after {
-                        border-width: 3px;
-                        border-color: $mainDarkBlue;
-                        height: 16px;
-                        left: 9px;
-                        top: 2px;
-                        width: 9px;
-                        transition-delay: 0s;
-                        transition-duration: 0.1s;
-                    }
+                .el-radio__inner::after {
+                    height: 16px;
+                    left: 9px;
+                    top: 2px;
+                    width: 9px;
                 }
             }
+        }
 
+        .widget-time_checkbox {
+            margin-right: 33px;
+        }
 
+        .mod_color {
+            color: $widgetActiveBlue;
+        }
+
+        @include media('t-ipad') {
+            justify-content: center;
+        }
+
+        @include media('d-only') {
+            justify-content: flex-start;
+
+            &:not(:last-of-type) {
+                padding-bottom: 17px;
+                border-bottom: 1px solid $widgetInstallBorder;
+                margin-bottom: 16px;
+            }
+
+            .widget-time_checkbox {
+                margin-right: 25px;
+            }
         }
     }
 
@@ -261,6 +258,99 @@
             margin: 0;
         }
     }
+}
 
+.widget-schedule {
+    .noSlider {
+        &.noUi-target {
+            height: 3px;
+            background: $widgetSidebarBorder;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
 
+            @include media('d-only') {
+                height: 4px;
+            }
+        }
+
+        .noUi-handle {
+            width: 17px;
+            height: 17px;
+            background: $mainDarkBlue;
+            box-shadow: none;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            top: -7px;
+
+            &[data-handle="1"], &[data-handle="2"] {
+                background: #CBE5F4;
+            }
+
+            &:before, &:after {
+                content: none;
+            }
+
+            @include media('d-only') {
+                width: 28px;
+                height: 28px;
+                top: -12px;
+            }
+        }
+    }
+
+    .widget-schedule_slider {
+        &:not(:last-of-type) {
+            margin-bottom: 38px;
+        }
+    }
+
+    .widget-schedule_sliders {
+        margin-bottom: 45px;
+    }
+
+    .noSlider-empty {
+        height: 4px;
+        background: #E0F1FA;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    .widget-schedule_slider-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: $mainDarkBlue;
+        margin-bottom: 18px;
+    }
+
+    .widget-schedule_results {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 38px;
+    }
+
+    .widget-schedule_result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+        width: 164px;
+        height: 46px;
+        color: #cbe5f4;
+        font-size: 16px;
+        font-weight: 500;
+        background: $mainDarkBlue;
+
+        &:nth-child(2) {
+            margin-left: 15px;
+            background: #CBE5F4;
+            color: $mainDarkBlue;
+        }
+    }
 }

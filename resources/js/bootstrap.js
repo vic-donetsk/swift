@@ -2,7 +2,7 @@ import routes from './routes';
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Header from './components/header/header.vue';
-import {Checkbox, Switch, Select, Option} from 'element-ui';
+import {Checkbox, Option, Radio, RadioGroup, Select, Switch} from 'element-ui';
 
 import localization from './mixins/localization.js';
 
@@ -22,6 +22,8 @@ Vue.use(Checkbox);
 Vue.use(Switch);
 Vue.use(Select);
 Vue.use(Option);
+Vue.use(RadioGroup);
+Vue.use(Radio);
 
 const router = new VueRouter({
     routes,
