@@ -165,6 +165,7 @@
                 width: 255px !important;
                 height: 45px;
                 margin: 0 auto 7px;
+                border-right: none;
 
                 .swift-widget_flagPhone-input {
                     height: 45px;
@@ -310,7 +311,7 @@
     }
 
     .widget-calls_block-right {
-
+        position: relative;
 
         .widget-switch {
             margin-left: 25px;
@@ -319,8 +320,34 @@
                 justify-content: center;
             }
 
-            @include media('d-only'){
+            @include media('d-only') {
                 justify-content: flex-start;
+            }
+        }
+
+
+        .widget-sender_message {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 26px;
+            z-index: 2;
+
+            border-radius: 9px;
+            background: $diagramBlue;
+            padding: 20px 25px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: $white;
+
+            @include media('d-only') {
+                width: 300px;
+                top: 110px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
             }
         }
     }
