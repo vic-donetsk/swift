@@ -117,6 +117,7 @@
                 width: 255px !important;
                 height: 45px;
                 margin: 0 auto;
+                border-right: none;
 
                 .swift-widget_flagPhone-input {
                     height: 45px;
@@ -366,12 +367,17 @@
             line-height: 19px;
             font-weight: 600;
             color: $mainDarkBlue;
+            margin: 0 87px 0 87px;
+            text-align: center;
 
             @include media('d-only') {
                 display: flex;
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 29px;
+                margin: 0;
+                text-align: left;
+
             }
 
             &.mod-context {

@@ -34,11 +34,16 @@
                     </svg>
                     <span>
                         {{__('widget','Cabinet page title 5')}}
-                        <svg class="cabinet-page_title-icon right-icon">
+                        <svg class="cabinet-page_title-icon right-icon" @mouseover="tooltip = true"
+                             @mouseleave="tooltip = false">
                             <use xlink:href="#info"></use>
                         </svg>
                     </span>
                 </h2>
+
+                <div class="widget-sender_message" v-if="tooltip">
+                    <p>{{__('widget','Widget sender message')}}</p>
+                </div>
                 <div class="widget-switch">
                     <span>{{__('widget','Cabinet switch off')}}</span>
                     <el-switch v-model="record"></el-switch>

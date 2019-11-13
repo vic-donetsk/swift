@@ -6,7 +6,8 @@ export default {
     },
     data: function () {
         return {
-            record: false
+            record: false,
+            tooltip: false,
         };
     }
 }
