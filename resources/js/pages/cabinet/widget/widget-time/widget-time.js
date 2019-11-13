@@ -27,8 +27,8 @@ export default {
                     ["09:30", "12:30", "13:15", "17:00"]
                 );
 
-                this.slider2 = true;
-                this.slider3 = false;
+                this.sliderShow2 = true;
+                this.sliderShow3 = false;
             }
 
             if (value === 'schedule-2') {
@@ -36,8 +36,8 @@ export default {
                     ["08:30", "12:30", "13:15", "17:35"]
                 );
 
-                this.slider2 = false;
-                this.slider3 = false;
+                this.sliderShow2 = false;
+                this.sliderShow3 = false;
             }
 
             if (value === 'schedule-3') {
@@ -45,8 +45,8 @@ export default {
                     ["08:00", "13:00", "13:45", "17:00"]
                 );
 
-                this.slider2 = false;
-                this.slider3 = false;
+                this.sliderShow2 = false;
+                this.sliderShow3 = false;
             }
 
             this.mondayFridayResult = this.mondayFriday.noUiSlider.get();
