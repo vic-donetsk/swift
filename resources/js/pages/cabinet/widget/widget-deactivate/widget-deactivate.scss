@@ -50,7 +50,6 @@
         }
 
         .widget-site_control {
-            margin-bottom: 39px;
 
             .widget-input {
                 margin-bottom: 7px;
@@ -60,6 +59,7 @@
                     margin-right: 12px;
                 }
             }
+
 
             @include media("d-only") {
                 display: flex;
@@ -81,13 +81,13 @@
             &.mod-mobile {
                 display: block;
 
-                @include media('d-only'){
+                @include media('d-only') {
                     display: none;
                 }
             }
 
             @include media('d-only') {
-                //display: block;
+                display: block;
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 20px;

@@ -13,7 +13,13 @@
                        class="widget-input"
                        :placeholder='__("widget", "Widget input placeholder 4")'>
 
-                <p class="widget-site_link mod-mobile">(e.x. swiftcallback.md/contacts)</p>
+                <div class="widget-site_link mod-mobile">
+                    <span>(e.x. swiftcallback.md/contacts)</span>
+                </div>
+
+                <div class="widget-button">
+                    <span>{{__('widget','Widget deactivate button')}}</span>
+                </div>
             </div>
 
             <div class="widget-site_link">
