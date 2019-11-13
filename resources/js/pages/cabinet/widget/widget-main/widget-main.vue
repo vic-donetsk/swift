@@ -11,7 +11,7 @@
             <span>dev.pi.md</span>
         </div>
 
-        <div class="widget-block">
+        <div class="widget-block" v-if="widgetMainMenu">
             <div class="widget-block_top">
                 <div class="widget-block_elem-wrap mod_size">
                     <p>dev.pi.md/CMS/?page=home</p>
@@ -45,10 +45,10 @@
                             </svg>
                         </div>
 
-                        <p class="widget-elem_text">{{__('widget','Widget elem text 1')}}</p>
+                        <p class="widget-elem_text" @click.stop="widgetElemBottom1 = !widgetElemBottom1">{{__('widget','Widget elem text 1')}}</p>
                     </div>
 
-                    <div class="widget-block_elem right">
+                    <div class="widget-block_elem right" v-if="widgetElemBottom1">
                         <span>{{__('widget','Widget contact phone 1')}}</span>
                         <span>{{__('widget','Widget contact phone 2')}}</span>
                     </div>
@@ -60,9 +60,9 @@
                                 <use xlink:href="#wall-clock"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text">{{__('widget','Widget elem text 2')}}</p>
+                        <p class="widget-elem_text" @click.stop="widgetElemBottom2 = !widgetElemBottom2">{{__('widget','Widget elem text 2')}}</p>
                     </div>
-                    <div class="widget-block_elem right">
+                    <div class="widget-block_elem right" v-if="widgetElemBottom2">
                         <p>{{__('widget','Widget elem text 3')}}</p>
                         <p>{{__('widget','Widget elem text 4')}}</p>
                     </div>
@@ -74,9 +74,9 @@
                                 <use xlink:href="#cellphone-sms"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text">{{__('widget','Widget elem text 5')}}</p>
+                        <p class="widget-elem_text" @click.stop="widgetElemBottom3 = !widgetElemBottom3">{{__('widget','Widget elem text 5')}}</p>
                     </div>
-                    <div class="widget-block_elem right">
+                    <div class="widget-block_elem right" v-if="widgetElemBottom3">
                         <span>{{__('widget','Widget contact phone 1')}}</span>
                         <span>{{__('widget','Widget contact phone 2')}}</span>
                     </div>
@@ -88,9 +88,9 @@
                                 <use xlink:href="#chat-bubbles"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text">{{__('widget','Widget elem text 6')}}</p>
+                        <p class="widget-elem_text" @click.stop="widgetElemBottom4 = !widgetElemBottom4">{{__('widget','Widget elem text 6')}}</p>
                     </div>
-                    <div class="widget-block_elem right">
+                    <div class="widget-block_elem right" v-if="widgetElemBottom4">
                         <p>{{__('widget','Widget elem text 7')}}</p>
                     </div>
                 </div>
@@ -101,10 +101,10 @@
                                 <use xlink:href="#mail-envelope"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text">{{__('widget','Widget elem text 8')}}</p>
+                        <p class="widget-elem_text" @click.stop="widgetElemBottom5 = !widgetElemBottom5">{{__('widget','Widget elem text 8')}}</p>
                     </div>
-                    <div class="widget-block_elem right">
-                        <p>{{__('widget','Widget elem text 9')}}</p>
+                    <div class="widget-block_elem right" v-if="widgetElemBottom5"   v-html='__("widget", "Widget elem text 9")'>
+<!--                        <p>{{__('widget','Widget elem text 9')}}</p>-->
                     </div>
                 </div>
                 <div class="widget-block_elem-wrap">
@@ -115,9 +115,9 @@
                             </svg>
                         </div>
 
-                        <p class="widget-elem_text">{{__('widget','Widget elem text 10')}}</p>
+                        <p class="widget-elem_text" @click.stop="widgetElemBottom6 = !widgetElemBottom6">{{__('widget','Widget elem text 10')}}</p>
                     </div>
-                    <div class="widget-block_elem right">
+                    <div class="widget-block_elem right" v-if="widgetElemBottom6">
                         <p>{{__('widget','Widget elem text 11')}}</p>
                         <p>{{__('widget','Widget elem text 12')}}</p>
                     </div>
@@ -125,7 +125,8 @@
             </div>
         </div>
 
-        <div class="widget-arrow_button">
+        <div class="widget-arrow_button" @click.stop="widgetMainMenu = !widgetMainMenu"
+             :class="{mod_rotate:widgetMainMenu, mod_close:!widgetMainMenu}">
             <svg class="widget-arrow_icon">
                 <use xlink:href="#arrow"></use>
             </svg>

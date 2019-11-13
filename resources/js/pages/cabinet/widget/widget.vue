@@ -1,6 +1,6 @@
 <template>
     <div class="cabinet_page" :class="currentPageClass">
-        <nav class="settings_navMobile">
+        <nav class="settings_navMobile"  v-if="currentComponent !== 'widgetMain'">
             <div class="settings_nav-item mod_active mod_mobile mod_select" @click="showModes()">
                 <svg class="nav-item_svg">
                     <use :xlink:href="'#' + widgetSteps[settingsMode].icon"></use>

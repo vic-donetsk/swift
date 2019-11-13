@@ -18,8 +18,8 @@ export default {
     },
     data: function () {
         return {
-            currentComponent: 'widgetTime',
-            currentPageClass: 'widget-time',
+            currentComponent: 'widgetMain',
+            currentPageClass: 'widget-install',
             currentButtonIcon: '',
             settingsMode: 0,
             mobileMenuOpened: false,
