@@ -1,23 +1,49 @@
 import noUiSlider from 'noUiSlider';
 import 'nouislider/distribute/nouislider.css';
 
+import Vue from "Vue";
+
 export default {
     data: function () {
         return {
             radioChecked: 'schedule-1',
-            mondayFridayResult: [],
-            saturdayResult: [],
-            sundayResult: [],
+            results: {
+                mondayFridayResult: [],
+                saturdayResult: [],
+                sundayResult: [],
+            },
             mondayFriday: false,
             saturday: false,
             sunday: false,
             sliderShow1: true,
             sliderShow2: true,
-            sliderShow3: false
-
+            sliderShow3: false,
+            overlayShow: false,
+            currentHour: '00',
+            currentMinute: '00'
         };
     },
     methods: {
+        changeHour(hour, result, indexResult) {
+            Vue.set(this.results[result], indexResult,
+                hour.toString() + ':' + this.currentMinute);
+
+            //todo: выделить и текущего элемента минуты и прибавляь к часам
+            console.log(this.results[result])
+        },
+        changeMinute(minute, result, indexResult) {
+            //todo: выделить и текущего элемента часы и прибавляь к минутам
+        },
+        timepickerToggle(e) {
+            let $button = $(e.target);
+            let $dropdown = $button.find('.dropdown_double');
+            $dropdown.removeClass('mod_hide');
+            this.overlayShow = true;
+        },
+        timepickerClose() {
+            $('.timepicker .dropdown_double').addClass('mod_hide');
+            this.overlayShow = false;
+        },
         changeSchedule(value) {
             if (value === 'schedule-1') {
                 this.mondayFriday.noUiSlider.set(
@@ -49,8 +75,24 @@ export default {
                 this.sliderShow3 = false;
             }
 
-            this.mondayFridayResult = this.mondayFriday.noUiSlider.get();
-            this.saturdayResult = this.saturday.noUiSlider.get();
+            if (value === 'schedule-4') {
+                this.mondayFriday.noUiSlider.set(
+                    ["08:30", "12:30", "13:15", "17:35"]
+                );
+                this.saturday.noUiSlider.set(
+                    ["09:30", "12:30", "13:15", "17:00"]
+                );
+                this.sunday.noUiSlider.set(
+                    ["09:30", "12:30", "13:15", "17:00"]
+                );
+
+                this.sliderShow2 = true;
+                this.sliderShow3 = true;
+            }
+
+            this.results.mondayFridayResult = this.mondayFriday.noUiSlider.get();
+            this.results.saturdayResult = this.saturday.noUiSlider.get();
+            this.results.sundayResult = this.sunday.noUiSlider.get();
         },
         minutesToHHMM(value) {
             value = Math.round(value);
@@ -80,9 +122,9 @@ export default {
                     from: this.HHMMtoMinutes
                 }
             }).on('slide', () => {
-                this.mondayFridayResult = this.mondayFriday.noUiSlider.get();
+                this.results.mondayFridayResult = this.mondayFriday.noUiSlider.get();
             });
-            this.mondayFridayResult = this.mondayFriday.noUiSlider.options.start;
+            this.results.mondayFridayResult = this.mondayFriday.noUiSlider.options.start;
         },
         saturdayInit() {
             this.saturday = document.getElementById('saturday');
@@ -98,9 +140,9 @@ export default {
                     from: this.HHMMtoMinutes
                 }
             }).on('slide', () => {
-                this.saturdayResult = this.saturday.noUiSlider.get();
+                this.results.saturdayResult = this.saturday.noUiSlider.get();
             });
-            this.saturdayResult = this.saturday.noUiSlider.options.start;
+            this.results.saturdayResult = this.saturday.noUiSlider.options.start;
         },
         sundayInit() {
             this.sunday = document.getElementById('sunday');
@@ -116,9 +158,16 @@ export default {
                     from: this.HHMMtoMinutes
                 }
             }).on('slide', () => {
-                this.sundayResult = this.sunday.noUiSlider.get();
+                this.results.sundayResult = this.sunday.noUiSlider.get();
             });
-            this.sundayResult = this.sunday.noUiSlider.options.start;
+            this.results.sundayResult = this.sunday.noUiSlider.options.start;
+        },
+        sundayShow() {
+            this.sunday.noUiSlider.set(
+                ["08:00", "12:00", "12:30", "17:00"]
+            );
+            this.results.sundayResult = this.sunday.noUiSlider.get();
+            this.sliderShow3 = true;
         }
     },
     mounted() {

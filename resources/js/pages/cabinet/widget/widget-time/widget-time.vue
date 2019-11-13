@@ -31,15 +31,98 @@
                                 {{__("widget", "Monday Friday")}}
                             </h4>
                             <div class="widget-schedule_results" v-show="sliderShow1">
-                                <div class="widget-schedule_result">
-                                    {{mondayFridayResult[0]}} - {{mondayFridayResult[3]}}
+                                <div class="widget-schedule_result timepicker"
+                                     @click.stop="timepickerToggle">
+                                    {{results.mondayFridayResult[0]}} - {{results.mondayFridayResult[3]}}
+
+                                    <div class="dropdown_double mod_hide">
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "From")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hour,'mondayFridayResult',0)"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(minute,'mondayFridayResult',3)"
+                                                        v-for="minute in 59">
+                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "To")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item" v-for="minute in 59">
+                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="widget-schedule_result">
-                                    {{mondayFridayResult[1]}} - {{mondayFridayResult[2]}}
+                                <div class="widget-schedule_result timepicker"
+                                     @click.stop="timepickerToggle">
+                                    {{results.mondayFridayResult[1]}} - {{results.mondayFridayResult[2]}}
+
+                                    <div class="dropdown_double mod_hide">
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "From")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item" v-for="minute in 59">
+                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "To")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item" v-for="minute in 59">
+                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="monday-friday" class="noSlider" v-show="sliderShow1"></div>
-                            <div class="noSlider-empty" v-show="!sliderShow1"></div>
+                            <div class="widget-schedule_empty" v-show="!sliderShow1"></div>
                         </div>
 
                         <div class="widget-schedule_slider">
@@ -48,14 +131,14 @@
                             </h4>
                             <div class="widget-schedule_results" v-show="sliderShow2">
                                 <div class="widget-schedule_result">
-                                    {{saturdayResult[0]}} - {{saturdayResult[3]}}
+                                    {{results.saturdayResult[0]}} - {{results.saturdayResult[3]}}
                                 </div>
                                 <div class="widget-schedule_result">
-                                    {{saturdayResult[1]}} - {{saturdayResult[2]}}
+                                    {{results.saturdayResult[1]}} - {{results.saturdayResult[2]}}
                                 </div>
                             </div>
                             <div id="saturday" class="noSlider" v-show="sliderShow2"></div>
-                            <div class="noSlider-empty" v-show="!sliderShow2"></div>
+                            <div class="widget-schedule_empty" v-show="!sliderShow2"></div>
                         </div>
 
                         <div class="widget-schedule_slider">
@@ -64,15 +147,19 @@
                             </h4>
                             <div class="widget-schedule_results" v-show="sliderShow3">
                                 <div class="widget-schedule_result">
-                                    {{sundayResult[0]}} - {{sundayResult[3]}}
+                                    {{results.sundayResult[0]}} - {{results.sundayResult[3]}}
                                 </div>
                                 <div class="widget-schedule_result">
-                                    {{sundayResult[1]}} - {{sundayResult[2]}}
+                                    {{results.sundayResult[1]}} - {{results.sundayResult[2]}}
                                 </div>
                             </div>
                             <div class="noSlider" id="sunday" v-show="sliderShow3">
                             </div>
-                            <div class="noSlider-empty" v-show="!sliderShow3"></div>
+                            <div class="widget-schedule_empty" v-show="!sliderShow3">
+                                <div class="widget-schedule_slider-add"
+                                     @click="sundayShow">+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="widget-button">
@@ -90,37 +177,110 @@
                 </h2>
 
                 <div class="widget-time_modes">
-                    <el-radio-group v-model="radioChecked" @change="changeSchedule">
+                    <el-radio-group v-model="radioChecked"
+                                    @change="changeSchedule">
                         <div class="widget-time_mode">
                             <el-radio label="schedule-1">
                                 <ul>
-                                    <li v-html='__("widget", "Widget time mode 1.1",
-                            {time1:"(08:30 - 17:00)",time2:"(12:30 - 13:15)"})'></li>
-                                    <li v-html='__("widget", "Widget time mode 1.2",
-                            {time1:"(09:30 - 17:00)",time2:"(12:30 - 13:15)"})'></li>
-                                    <li v-html='__("widget", "Widget time mode 1.3")'></li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Monday Friday")}} (08:30 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (12:30 - 13:15)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Saturday")}} (09:30 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (12:30 - 13:15)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Sunday")}} - {{__("widget", "Holiday")}}
+                                        </span>
+                                    </li>
                                 </ul>
                             </el-radio>
                         </div>
-
                         <div class="widget-time_mode">
                             <el-radio label="schedule-2">
                                 <ul>
-                                    <li v-html='__("widget", "Widget time mode 2.1",
-                            {time1:"(08:30 - 17:00)",time2:"(12:30 - 13:15)"})'></li>
-                                    <li v-html='__("widget", "Widget time mode 2.2")'></li>
-                                    <li v-html='__("widget", "Widget time mode 2.3")'></li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Monday Friday")}} (08:30 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (12:30 - 13:15)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Saturday")}} - {{__("widget", "Holiday")}}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Sunday")}} - {{__("widget", "Holiday")}}
+                                        </span>
+                                    </li>
                                 </ul>
                             </el-radio>
                         </div>
-
                         <div class="widget-time_mode">
                             <el-radio label="schedule-3">
                                 <ul>
-                                    <li v-html='__("widget", "Widget time mode 3.1",
-                            {time1:"(08:00 - 17:00)",time2:"(13:00 - 13:45)"})'></li>
-                                    <li v-html='__("widget", "Widget time mode 3.2")'></li>
-                                    <li v-html='__("widget", "Widget time mode 3.3")'></li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Monday Friday")}} (08:00 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (13:00 - 13:45)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Saturday")}} - {{__("widget", "Holiday")}}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Sunday")}} - {{__("widget", "Holiday")}}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </el-radio>
+                        </div>
+                        <div class="widget-time_mode">
+                            <el-radio label="schedule-4">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Monday Friday")}} (08:00 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (13:00 - 13:45)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Saturday")}} (09:30 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (12:30 - 13:15)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            {{__("widget", "Sunday")}} (09:30 - 17:00),
+                                        </span>
+                                        <span class="mod_color">
+                                            {{__("widget", "Pause")}} (12:30 - 13:15)
+                                        </span>
+                                    </li>
                                 </ul>
                             </el-radio>
                         </div>
@@ -128,8 +288,10 @@
                 </div>
 
             </div>
-        </div>
 
+            <div class="timepicker-overlay" v-if="overlayShow"
+                 @click="timepickerClose"></div>
+        </div>
     </div>
 </template>
 
