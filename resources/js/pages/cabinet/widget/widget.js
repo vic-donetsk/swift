@@ -101,5 +101,13 @@ export default {
             this.currentPageClass = this.widgetSteps[0].pageClass;
             this.currentButtonIcon = this.widgetSteps[0].icon;
         });
+
+        EventBus.$on('widget-step', (stepIndex) => {
+            this.settingsMode = stepIndex;
+
+            this.currentComponent = this.widgetSteps[stepIndex].component;
+            this.currentPageClass = this.widgetSteps[stepIndex].pageClass;
+            this.currentButtonIcon = this.widgetSteps[stepIndex].icon;
+        });
     }
 }

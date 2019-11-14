@@ -10,20 +10,26 @@ export default {
             widgetElemBottom6: false,
         }
     },
+    created() {
+        this.changeData();
+    },
     methods: {
         nextWidgetComponent() {
             EventBus.$emit('widget-to-install');
         },
         openInfo(variable) {
-            if (window.outerWidth < 1280) {
+            if (window.innerWidth < 1280) {
                 this[variable] = !this[variable];
             } else {
                 this[variable] = true;
             }
-        }
-    },
-    mounted() {
-        $(window).on('load resize', () => {
+        },
+        moveStep(indexStep) {
+            if (window.innerWidth >= 1280) {
+                EventBus.$emit('widget-step', indexStep);
+            }
+        },
+        changeData() {
             if (window.innerWidth >= 1280) {
                 this.widgetOpen = true,
                     this.widgetElemBottom1 = true,
@@ -41,6 +47,11 @@ export default {
                     this.widgetElemBottom5 = false,
                     this.widgetElemBottom6 = false
             }
+        }
+    },
+    mounted() {
+        $(window).on('resize', () => {
+            this.changeData();
         });
     }
 }

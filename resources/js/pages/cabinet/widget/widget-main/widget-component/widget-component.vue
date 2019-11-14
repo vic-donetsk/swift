@@ -28,7 +28,7 @@
                 <!--                    </div>-->
             </div>
             <div class="widget-block_list">
-                <div class="widget-block_elem-wrap">
+                <div class="widget-block_elem-wrap" @click.stop="moveStep(1)">
                     <div class="widget-block_elem left mod_color">
                         <div class="mobile-svg_wrap">
                             <svg class="widget-elem_icon">
@@ -37,7 +37,7 @@
                         </div>
 
                         <p class="widget-elem_text"
-                           @click.stop="openInfo('widgetElemBottom1')">
+                           @click="openInfo('widgetElemBottom1')">
                             {{__('widget','Widget elem text 1')}}</p>
                     </div>
 
@@ -46,7 +46,7 @@
                         <span>{{__('widget','Widget contact phone 2')}}</span>
                     </div>
                 </div>
-                <div class="widget-block_elem-wrap">
+                <div class="widget-block_elem-wrap" @click.stop="moveStep(3)">
                     <div class="widget-block_elem left">
                         <div class="mobile-svg_wrap">
                             <svg class="widget-elem_icon">
@@ -54,7 +54,7 @@
                             </svg>
                         </div>
                         <p class="widget-elem_text"
-                           @click.stop="openInfo('widgetElemBottom2')">
+                           @click="openInfo('widgetElemBottom2')">
                             {{__('widget','Widget elem text 2')}}</p>
                     </div>
                     <div class="widget-block_elem right" v-if="widgetElemBottom2">
@@ -62,14 +62,14 @@
                         <p>{{__('widget','Widget elem text 4')}}</p>
                     </div>
                 </div>
-                <div class="widget-block_elem-wrap">
+                <div class="widget-block_elem-wrap" @click.stop="moveStep(2)">
                     <div class="widget-block_elem left">
                         <div class="mobile-svg_wrap">
                             <svg class="widget-elem_icon">
                                 <use xlink:href="#cellphone-sms"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text" @click.stop="openInfo('widgetElemBottom3')">
+                        <p class="widget-elem_text" @click="openInfo('widgetElemBottom3')">
                             {{__('widget','Widget elem text 5')}}</p>
                     </div>
                     <div class="widget-block_elem right" v-if="widgetElemBottom3">
@@ -77,14 +77,14 @@
                         <span>{{__('widget','Widget contact phone 2')}}</span>
                     </div>
                 </div>
-                <div class="widget-block_elem-wrap">
+                <div class="widget-block_elem-wrap" @click.stop="moveStep(4)">
                     <div class="widget-block_elem left">
                         <div class="mobile-svg_wrap">
                             <svg class="widget-elem_icon">
                                 <use xlink:href="#chat-bubbles"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text" @click.stop="openInfo('widgetElemBottom4')">
+                        <p class="widget-elem_text" @click="openInfo('widgetElemBottom4')">
                             {{__('widget','Widget elem text 6')}}</p>
                     </div>
                     <div class="widget-block_elem right" v-if="widgetElemBottom4">
