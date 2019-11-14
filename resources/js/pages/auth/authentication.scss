@@ -48,8 +48,20 @@
     min-height: 100vh;
     background-color: $landingBackground;
     text-align: center;
-    background: url(/img/ellipse.png) 90% 90% no-repeat fixed,
-    url(/img/cloud.png) 40% 40% no-repeat fixed;
+
+    overflow: hidden;
+
+    background: url("/img/cloud.png") -1580px -130px no-repeat fixed,
+    url("/img/ellipse.png") 180px 0 no-repeat fixed,
+    repeating-linear-gradient(90deg, transparent, transparent 83px, #EFF8FF 84px);
+
+    @include media('d-only') {
+        background: url("/img/cloud.png") calc(50vw - 1876px) calc(50vh - 450px) no-repeat fixed,
+        url("/img/ellipse.png") 150% 150px no-repeat fixed,
+        repeating-linear-gradient(90deg, transparent, transparent 317px, #EFF8FF 318px);
+        background-color: #F8FDFF;
+
+    }
 
     .auth_wrapper {
         max-width: 520px;
