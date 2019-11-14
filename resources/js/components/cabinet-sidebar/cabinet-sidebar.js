@@ -8,9 +8,9 @@ export default {
     data: function () {
         return {
             menu: false,
-            personMenu:false,
-
+            personMenu: false,
             fromChat: false,
+            widgetPath: '/cabinet/widget'
         }
     },
     created() {
@@ -19,6 +19,12 @@ export default {
             this.openMenu();
             this.fromChat = true;
         });
+    },
+    mounted() {
+        if (this.$route.path === '/cabinet/widget') {
+            this.$refs.widgetPath.classList.add('router-link-active');
+            this.$refs.mobileWidgetPath.classList.add('router-link-active');
+        }
     },
     methods: {
         openMenu() {
@@ -41,10 +47,25 @@ export default {
                 EventBus.$emit('comeBackToChat');
             }
 
+        },
+        moveToWidget(e) {
+            if (this.$route.path !== '/cabinet/widget') {
+                this.$router.push('/cabinet/widget');
+            } else {
+                EventBus.$emit('widget-main');
+            }
         }
     },
     watch: {
-        '$route'() {
+        '$route'(to, from, next) {
+            if (to.name === 'cabinet-widget') {
+                this.$refs.widgetPath.classList.add('router-link-active');
+                this.$refs.mobileWidgetPath.classList.add('router-link-active');
+            } else {
+                this.$refs.widgetPath.classList.remove('router-link-active');
+                this.$refs.mobileWidgetPath.classList.remove('router-link-active');
+            }
+
             $('.cabinet-sidebar .landing-mobile_menu').slideUp(100);
             $('body').css({
                 'overflow': 'visible'

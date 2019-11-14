@@ -53,7 +53,7 @@ export default {
                     component: 'widgetDeactivate',
                     icon: 'disable',
                     pageClass: 'widget-deactivate'
-                },
+                }
             ],
         }
     },
@@ -108,6 +108,13 @@ export default {
             this.currentComponent = this.widgetSteps[stepIndex].component;
             this.currentPageClass = this.widgetSteps[stepIndex].pageClass;
             this.currentButtonIcon = this.widgetSteps[stepIndex].icon;
+        });
+
+        EventBus.$on('widget-main', () => {
+            this.settingsMode = 0;
+            this.currentComponent = 'widgetMain';
+            this.currentPageClass = 'widget-main';
+            this.currentButtonIcon = '';
         });
     }
 }

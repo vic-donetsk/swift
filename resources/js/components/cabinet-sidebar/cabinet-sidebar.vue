@@ -61,14 +61,15 @@
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 1')}}</span>
                 </router-link>
 
-                <router-link to="/cabinet/widget" class="cabinet-sidebar_item">
+                <div class="cabinet-sidebar_item" ref="widgetPath"
+                     @click="moveToWidget">
                     <div class="cabinet-sidebar_item-square top"></div>
                     <div class="cabinet-sidebar_item-square bottom"></div>
                     <svg class="sidebar-menu_icon">
                         <use xlink:href="#widget"></use>
                     </svg>
                     <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 2')}}</span>
-                </router-link>
+                </div>
 
                 <router-link to="/cabinet/chat" class="cabinet-sidebar_item">
                     <div class="cabinet-sidebar_item-square top"></div>
@@ -118,7 +119,7 @@
                         <img src="/img/person.png" class="sidebar-person_image">
 
                         <div class="sidebar-person_name" @click.stop="personMenu = !personMenu"
-                        :class="{mod_rotate:personMenu}">
+                             :class="{mod_rotate:personMenu}">
                             <span>{{__('widget','Cabinet sidebar name')}}</span>
 
                             <svg class="sidebar-person_icon"><use xlink:href="#arrow"></use></svg>
@@ -157,14 +158,15 @@
                         </svg>
                         <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 1')}}</span>
                     </router-link>
-                    <router-link to="/cabinet/widget" class="cabinet-sidebar_item">
+                    <div class="cabinet-sidebar_item"
+                         @click="moveToWidget" ref="mobileWidgetPath">
                         <div class="cabinet-sidebar_item-square top"></div>
                         <div class="cabinet-sidebar_item-square bottom"></div>
                         <svg class="sidebar-menu_icon">
                             <use xlink:href="#widget"></use>
                         </svg>
                         <span class="sidebar-menu_name">{{__('widget','Sidebar menu name 2')}}</span>
-                    </router-link>
+                    </div>
                     <router-link to="/cabinet/chat" class="cabinet-sidebar_item">
                         <div class="cabinet-sidebar_item-square top"></div>
                         <div class="cabinet-sidebar_item-square bottom"></div>
