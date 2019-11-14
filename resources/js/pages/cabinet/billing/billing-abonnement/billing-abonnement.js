@@ -2,7 +2,7 @@ export default {
     data: function () {
         return {
             initSwiper: false,
-            billingSwiper: null
+            billingSwiper: null,
         };
     },
     mounted() {

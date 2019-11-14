@@ -8,11 +8,26 @@
     }
 
     .swiper-slide {
+        position: relative;
         overflow: hidden;
         padding-bottom: 14px;
 
         @include media('d-only') {
             overflow: visible;
+        }
+
+        &.mod_active {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+
+                background: rgba(255, 255, 255, 0.9);
+            }
         }
     }
 
@@ -22,7 +37,7 @@
         top: -54px;
         font-size: 0;
 
-        @include media('d-only'){
+        @include media('d-only') {
             display: none;
         }
     }

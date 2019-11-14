@@ -16,7 +16,8 @@
             <div class="swiper-pagination mod-green"></div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide mod_active"
+                         data-subs="starter">
                         <div class="landing-plan_block left">
                             <img src="/img/illustration/Starter.svg" class="landing-plan_image">
                             <h3 class="landing-plan_name">{{__("landing", "Plan name starter")}}</h3>
@@ -42,7 +43,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"
+                         data-subs="professional">
                         <div class="landing-plan_block middle">
                             <img src="/img/illustration/Profesional.svg" class="landing-plan_image">
                             <h3 class="landing-plan_name">{{__("landing", "Plan name professional")}}</h3>
@@ -74,7 +76,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"
+                         data-subs="premium">
                         <div class="landing-plan_block right">
                             <img src="/img/illustration/Premium.svg" class="landing-plan_image">
                             <h3 class="landing-plan_name">{{__("landing", "Plan name premium")}}</h3>
