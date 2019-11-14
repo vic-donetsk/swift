@@ -19,7 +19,8 @@ export default {
                     yAxes: [{
                         display: false,
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            suggestedMax: 42
                         },
                         gridLines: {  // do not show grid
                             display: false

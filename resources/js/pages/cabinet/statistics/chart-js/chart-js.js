@@ -30,7 +30,7 @@ export default {
                 datasets: [
                     {
                         backgroundColor: gradient,
-                        borderColor: '#608ED3',  // chart line color
+                        borderColor: this.dataSet.color,  // chart line color
                         borderWidth: 2, // chart line width
                         pointRadius: 0, // disable points on chart line
                         data: this.dataSet.chartData
