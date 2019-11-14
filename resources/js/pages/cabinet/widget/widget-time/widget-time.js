@@ -29,10 +29,14 @@ export default {
                 this[resultName]
             );
         },
-        changeMinute(minute, resultName, indexResult) {
+        changeMinute(minute, resultName, indexResult, sliderName) {
             let old = this[resultName][indexResult];
             Vue.set(this[resultName], indexResult,
                 this.hmParse(old)[0] + ':' + minute.toString());
+
+            this[sliderName].noUiSlider.set(
+                this[resultName]
+            );
         },
         hmFormat(val) {
             return val < 10 ? '0' + val : val.toString();
