@@ -96,6 +96,8 @@ export default {
            }
 
         };
+
+        EventBus.$on('comeBackToChat', this.backFromMenu);
     },
 
     mounted() {
@@ -174,6 +176,13 @@ export default {
         },
         changeSite() {
             // TODO: change site at manager info block
+        },
+        gotoMenu() {
+            $('.chat').css('z-index', '0');
+            EventBus.$emit('chatExit');
+        },
+        backFromMenu() {
+            $('.chat').css('z-index', '101');
         }
 
     }

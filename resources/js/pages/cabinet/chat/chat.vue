@@ -2,11 +2,11 @@
     <div class="cabinet_page chat">
         <div class="chat_handler">
             <div v-if="isDesktop || mobileMode === 0" class="chat_handler-header">
-                <router-link to="/cabinet">
+                <div @click="gotoMenu">
                     <svg class="leftArrow">
                         <use xlink:href="#leftArrow"></use>
                     </svg>
-                </router-link>
+                </div>
                 <div class="chat_handler-header_manager">
                     <div class="manager_photo">
                         <img src="/img/person.png" alt="">
