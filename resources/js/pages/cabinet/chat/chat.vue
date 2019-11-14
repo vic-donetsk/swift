@@ -70,12 +70,12 @@
                 </svg>
             </div>
             <div v-if="isDesktop || mobileMode === 2" class="chat_info-title">
-                <div>{{__('chat', 'Client writes through')}}&nbsp;:&nbsp;
+                <div class="chat_info-title_item">{{__('chat', 'Client writes through')}}&nbsp;:&nbsp;
                     <span>{{activeElementData.source.charAt(0).toUpperCase() + activeElementData.source.slice(1)}}
                     </span>
                 </div>
-                <div>{{__('chat', 'Name')}}&nbsp;:&nbsp;<span>{{activeElementData.clientName}}</span></div>
-                <div>{{__('chat', 'Phone')}}&nbsp;:&nbsp;<span>{{activeElementData.clientPhone}}</span></div>
+                <div class="chat_info-title_item">{{__('chat', 'Name')}}&nbsp;:&nbsp;<span>{{activeElementData.clientName}}</span></div>
+                <div class="chat_info-title_item">{{__('chat', 'Phone')}}&nbsp;:&nbsp;<span>{{activeElementData.clientPhone}}</span></div>
 
             </div>
             <div v-if="isDesktop || mobileMode === 1 || mobileMode === 2" class="chat_info-content">

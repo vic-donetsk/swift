@@ -1,16 +1,11 @@
 @import '@/app';
 
-//.cabinet_page {
-//    @include media ('m-t-only') {
-//        margin-top: 0;
-//    }
-//}
 .chat {
     display: flex;
     width: calc(100% - 295px);
     max-width: 1625px;
     height: calc(100% - 64px);
-    padding: 0 2.47% 40px;
+    padding: 0 2.47%; // 40px;
 
     @include media ('m-t-only') {
         position: relative;
@@ -95,6 +90,13 @@
                     }
                 }
 
+                .manager_info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 63px;
+                }
+
                 .manager_info-name {
                     font-weight: 600;
                     color: $mainDarkBlue;
@@ -121,11 +123,11 @@
             justify-content: flex-start;
             align-items: center;
             height: 49px;
-            margin: 0 42px 38px;
+            margin: 0 42px 45px;
             border: 1px solid #E7F4FB;
             border-radius: 8px;
 
-            @include media('m') {
+            @include media('m-t-only') {
                 margin: 0 5.3% 18px;
             }
 
@@ -151,7 +153,7 @@
         }
 
         &-topics {
-            height: calc(100vh - 360px);
+            height: calc(100vh - 368px);
             overflow-y: auto;
             overflow-x: hidden;
 
@@ -328,6 +330,10 @@
             font-weight: 400;
             color: $mainDarkBlue;
 
+            &_item {
+                margin: 2px 0;
+            }
+
             span {
                 font-weight: 600;
             }
@@ -349,7 +355,7 @@
         }
 
         &-content {
-            padding: 12px 0;
+            padding: 50px 012px;
 
             @include media ('m-t-only') {
                 position: fixed;
@@ -368,13 +374,17 @@
         }
 
         &-dialog {
-            height: calc(100vh - 393px);
+            height: calc(100vh - 443px);
+            margin-bottom: 13px;
+            border-bottom: 1px solid #E7F4FB;
             padding: 0 17px;
             overflow: auto;
 
             @include media ('m-t-only') {
                 flex-grow: 1;
                 padding-top: 10px;
+                margin-bottom: 0;
+                border-bottom: none;
             }
 
 
@@ -435,14 +445,14 @@
             &.mod_manager {
                 background: $white;
                 margin-left: 20px;
-                padding: 19px 14px 18px 25px;
+                padding: 15px 14px 15px 25px;
                 text-align: left;
             }
 
             &.mod_client {
                 background: #EFF8FD;
                 margin-right: 20px;
-                padding: 19px 25px 18px 14px;
+                padding: 15px 25px 15px 14px;
                 text-align: right;
             }
 
