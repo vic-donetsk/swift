@@ -8,6 +8,8 @@ export default {
             widgetElemBottom4: false,
             widgetElemBottom5: false,
             widgetElemBottom6: false,
+            play: true,
+            installed: true
         }
     },
     created() {
