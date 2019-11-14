@@ -15,9 +15,11 @@ export default {
         });
 
     },
-    destroyed() {
+    beforeDestroy() {
         $(window).off('resize');
-        this.billingSwiper.destroy();
+        if (this.initSwiper) {
+            this.billingSwiper.destroy();
+        }
     },
     methods: {
         init() {
