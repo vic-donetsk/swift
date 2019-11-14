@@ -33,7 +33,7 @@
                             <div class="widget-schedule_results" v-show="sliderShow1">
                                 <div class="widget-schedule_result timepicker"
                                      @click.stop="timepickerToggle">
-                                    {{results.mondayFridayResult[0]}} - {{results.mondayFridayResult[3]}}
+                                    {{mondayFridayResult[0]}} - {{mondayFridayResult[3]}}
 
                                     <div class="dropdown_double mod_hide">
                                         <div class="dropdown">
@@ -43,7 +43,7 @@
                                                     <template v-for="hour in 23">
                                                         <li class="dropdown_item"
                                                             @click.stop="changeHour(hmFormat(hour),
-                                                            'mondayFridayResult',0)"
+                                                            'mondayFridayResult',0,'mondayFriday')"
                                                             v-if="hour >= 7 && hour <= 17">
                                                             {{hmFormat(hour)}}
                                                         </li>
@@ -52,7 +52,7 @@
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
                                                         @click.stop="changeMinute(hmFormat(minute),
-                                                        'mondayFridayResult',3)"
+                                                        'mondayFridayResult',0,'mondayFriday')"
                                                         v-for="minute in 59">
                                                         {{hmFormat(minute)}}
                                                     </li>
@@ -66,7 +66,7 @@
                                                     <template v-for="hour in 23">
                                                         <li class="dropdown_item"
                                                             @click.stop="changeHour(hmFormat(hour),
-                                                            'mondayFridayResult',0)"
+                                                            'mondayFridayResult',3,'mondayFriday')"
                                                             v-if="hour >= 7 && hour <= 17">
                                                             {{hmFormat(hour)}}
                                                         </li>
@@ -75,7 +75,7 @@
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
                                                         @click.stop="changeMinute(hmFormat(minute),
-                                                        'mondayFridayResult',3)"
+                                                        'mondayFridayResult',3,'mondayFriday')"
                                                         v-for="minute in 59">
                                                         {{hmFormat(minute)}}
                                                     </li>
@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="widget-schedule_result timepicker"
                                      @click.stop="timepickerToggle">
-                                    {{results.mondayFridayResult[1]}} - {{results.mondayFridayResult[2]}}
+                                    {{mondayFridayResult[1]}} - {{mondayFridayResult[2]}}
 
                                     <div class="dropdown_double mod_hide">
                                         <div class="dropdown">
@@ -95,14 +95,18 @@
                                                 <ul class="hours dropdown_list">
                                                     <template v-for="hour in 23">
                                                         <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                        'mondayFridayResult',1,'mondayFriday')"
                                                             v-if="hour >= 7 && hour <= 17">
-                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                            {{hmFormat(hour)}}
                                                         </li>
                                                     </template>
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
-                                                    <li class="dropdown_item" v-for="minute in 59">
-                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    <li class="dropdown_item" v-for="minute in 59"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'mondayFridayResult',1,'mondayFriday')">
+                                                        {{hmFormat(minute)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -113,14 +117,18 @@
                                                 <ul class="hours dropdown_list">
                                                     <template v-for="hour in 23">
                                                         <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                        'mondayFridayResult',2,'mondayFriday')"
                                                             v-if="hour >= 7 && hour <= 17">
-                                                            {{hour < 10 ? '0'+hour : hour}}
+                                                            {{hmFormat(hour)}}
                                                         </li>
                                                     </template>
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
-                                                    <li class="dropdown_item" v-for="minute in 59">
-                                                        {{minute < 10 ? '0'+minute : minute}}
+                                                    <li class="dropdown_item" v-for="minute in 59"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'mondayFridayResult',2,'mondayFriday')">
+                                                        {{hmFormat(minute)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -137,11 +145,111 @@
                                 {{__("widget", "Saturday")}}
                             </h4>
                             <div class="widget-schedule_results" v-show="sliderShow2">
-                                <div class="widget-schedule_result">
-                                    {{results.saturdayResult[0]}} - {{results.saturdayResult[3]}}
+                                <div class="widget-schedule_result timepicker"
+                                     @click.stop="timepickerToggle">
+                                    {{saturdayResult[0]}} - {{saturdayResult[3]}}
+
+                                    <div class="dropdown_double mod_hide">
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "From")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'saturdayResult',0,'saturday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'saturdayResult',0,'saturday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "To")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'saturdayResult',3,'saturday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'saturdayResult',3,'saturday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="widget-schedule_result">
-                                    {{results.saturdayResult[1]}} - {{results.saturdayResult[2]}}
+                                <div class="widget-schedule_result timepicker"
+                                     @click.stop="timepickerToggle">
+                                    {{saturdayResult[1]}} - {{saturdayResult[2]}}
+
+                                    <div class="dropdown_double mod_hide">
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "From")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'saturdayResult',1,'saturday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'saturdayResult',1,'saturday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "To")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'saturdayResult',2,'saturday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'saturdayResult',2,'saturday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="saturday" class="noSlider" v-show="sliderShow2"></div>
@@ -153,11 +261,111 @@
                                 {{__("widget", "Sunday")}}
                             </h4>
                             <div class="widget-schedule_results" v-show="sliderShow3">
-                                <div class="widget-schedule_result">
-                                    {{results.sundayResult[0]}} - {{results.sundayResult[3]}}
+                                <div class="widget-schedule_result timepicker"
+                                     @click.stop="timepickerToggle">
+                                    {{sundayResult[0]}} - {{sundayResult[3]}}
+
+                                    <div class="dropdown_double mod_hide">
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "From")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'sundayResult',0,'sunday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'sundayResult',0,'sunday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "To")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'sundayResult',3,'sunday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'sundayResult',3,'sunday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="widget-schedule_result">
-                                    {{results.sundayResult[1]}} - {{results.sundayResult[2]}}
+                                <div class="widget-schedule_result timepicker"
+                                     @click.stop="timepickerToggle">
+                                    {{sundayResult[1]}} - {{sundayResult[2]}}
+
+                                    <div class="dropdown_double mod_hide">
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "From")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'sundayResult',1,'sunday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'sundayResult',1,'sunday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="dropdown_title">{{__("widget", "To")}}</span>
+                                            <div class="dropdown_container">
+                                                <ul class="hours dropdown_list">
+                                                    <template v-for="hour in 23">
+                                                        <li class="dropdown_item"
+                                                            @click.stop="changeHour(hmFormat(hour),
+                                                            'sundayResult',2,'sunday')"
+                                                            v-if="hour >= 7 && hour <= 17">
+                                                            {{hmFormat(hour)}}
+                                                        </li>
+                                                    </template>
+                                                </ul>
+                                                <ul class="minutes dropdown_list">
+                                                    <li class="dropdown_item"
+                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        'sundayResult',2,'sunday')"
+                                                        v-for="minute in 59">
+                                                        {{hmFormat(minute)}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="noSlider" id="sunday" v-show="sliderShow3">
