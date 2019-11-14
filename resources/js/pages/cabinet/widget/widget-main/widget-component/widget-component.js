@@ -55,5 +55,8 @@ export default {
         $(window).on('resize', () => {
             this.changeData();
         });
+    },
+    destroyed() {
+        $(window).off('resize');
     }
 }
