@@ -9,7 +9,16 @@ export default {
         return {
             menu: false,
             personMenu:false,
+
+            fromChat: false,
         }
+    },
+    created() {
+        EventBus.$on('chatExit', () => {
+            $('.hamburger--slider').addClass('is-active');
+            this.openMenu();
+            this.fromChat = true;
+        });
     },
     methods: {
         openMenu() {
@@ -25,6 +34,11 @@ export default {
                 $('body').css({
                     'overflow': 'visible'
                 });
+            }
+
+            if (this.fromChat) {
+                this.fromChat = false;
+                EventBus.$emit('comeBackToChat');
             }
 
         }
