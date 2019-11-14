@@ -1,12 +1,12 @@
 @import '@/app';
 
-.widget {
+.widget-main {
     .widget_container {
         max-width: 1625px;
         padding: 60px 17px;
 
         @include media("d-only") {
-            padding: 60px 45px 0 38px;
+            padding: 60px 45px 40px 38px;
         }
     }
 
