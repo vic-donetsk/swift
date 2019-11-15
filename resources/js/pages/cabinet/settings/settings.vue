@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div v-for="(setting, index) in settingChapters" class="settings_nav-item mod_mobile mod_option"
-                 @click="changeMobileMode(index)">
+                 :class="{mod_selected: index === settingsMode}" @click="changeMobileMode(index)">
                 <svg class="nav-item_svg">
                     <use :xlink:href="'#' + setting.svg"></use>
                 </svg>

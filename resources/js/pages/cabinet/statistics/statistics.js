@@ -45,6 +45,9 @@ export default {
 
     },
     methods: {
+        showMobileInfo() {
+            $('.statistics_mobileDiagrams').toggleClass('mod_show');
+        },
         switchStats(switcher) {
             if ((this.isCalls && switcher === 0) || (!this.isCalls && switcher === 1))
                 this.isCalls = !this.isCalls;

@@ -45,6 +45,6 @@ export default {
                 }
             }
             this.mobileMenuOpened = !this.mobileMenuOpened;
-        }
+        },
     }
 }

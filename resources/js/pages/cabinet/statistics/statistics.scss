@@ -1,7 +1,7 @@
 @import '@/app';
 
 .statistics {
-
+    position: relative;
     width: calc(100% - 295px);
     overflow: visible;
 
@@ -10,15 +10,13 @@
         overflow: hidden;
     }
 
-
-
     &_container {
+        position: relative;
         max-width: 1625px;
         padding: 54px 2.47% 0;
-        //margin-bottom: 20px;
 
         @include media ('m-t-only') {
-            padding: 40px 5.3% 0;
+            padding: 40px 17px 0;
             overflow: hidden;
         }
     }
@@ -152,7 +150,7 @@
                 width: 48.8%;
                 margin-bottom: 42px;
 
-                @include media('m-only') {
+                @include media('m-t-only') {
                     width: 100%;
                     margin-bottom: 23px;
                 }
@@ -173,14 +171,14 @@
                 width: 31.8%;
                 margin-bottom: 54px;
 
-                @include media('t-only') {
-                    width: 48.8%;
-                    margin-bottom: 23px;
-                }
-                @include media('m-only') {
+                @include media('m-t-only') {
                     width: 100%;
                     margin-bottom: 23px;
                 }
+                //@include media('m-only') {
+                //    width: 100%;
+                //    margin-bottom: 23px;
+                //}
 
                 .diagram {
                     position: relative;
@@ -198,11 +196,11 @@
                 width: 23.35%;
                 margin-bottom: 54px;
 
-                @include media('t-only') {
-                    width: 48.8%;
-                    margin-bottom: 23px;
-                }
-                @include media('m-only') {
+                //@include media('t-only') {
+                //    width: 48.8%;
+                //    margin-bottom: 23px;
+                //}
+                @include media('m-t-only') {
                     width: 100%;
                     margin-bottom: 23px;
                 }
@@ -219,7 +217,113 @@
                 }
             }
         }
+    }
+
+    &_mobileInfo {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        top: 280px;
+        width: 48px;
+        height: 44px;
+        background: #EFF8FD;
+        border: 1px solid #EBF6FD;
+        border-radius: 8px 0 0 8px;
+        z-index: 101;
+        cursor: pointer;
+
+        @include media('d') {
+            display: none;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &_mobileDiagrams {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        background: #EFF8FD;
+        color: $mainDarkBlue;
+        z-index: 102;
+        transition: 0.5s ease;
+
+        &.mod_show {
+            height: 897px;
+            opacity: 1;
+        }
+
+        &-close {
+            position: absolute;
+            left: 17px;
+            top: 33px;
+            width: 20px;
+            height: 20px;
+        }
+
+        &-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 85px;
+            line-height: 0.95;
+            margin: 0 17px;
+            padding-top: 4px;
+            border-bottom: 1px solid #E0F1FA;
+
+            .header-title {
+                font-size: 25px;
+                font-weight: 700;
+            }
+            .header-subtitle {
+                font-size: 17px;
+                font-weight: 200;
+            }
+        }
+
+        &-tarif {
+            height: 160px;
+            text-align: center;
+
+            .tarif-text {
+                font-size: 16px;
+                font-weight: 300;
+
+                &.mod_upper {
+                    margin-top: 30px;
+                }
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .tarif-button {
+                @extend %blueGradient;
+                width: 99px;
+                height: 22px;
+                margin: 3px auto 21px;
+                padding-top: 3px;
+                border-radius: 4px;
+                font-size: 12px;
+                color: #fff;
+            }
+        }
+
+
+
+
 
 
     }
+
 }
