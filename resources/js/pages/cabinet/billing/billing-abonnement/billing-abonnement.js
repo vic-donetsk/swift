@@ -11,24 +11,15 @@ export default {
             this.initSwiper = true;
         }
         $(window).on('resize', () => {
-            if ($(window).width() < 1280) {
-                if (!this.initSwiper) {
-                    this.init();
-                    this.initSwiper = true;
-                } else {
-                    this.billingSwiper.update();
-                }
-            } else {
-                if (this.initSwiper) {
-                    this.billingSwiper.destroy();
-                    this.initSwiper = false;
-                }
-            }
+            this.onResize();
         });
 
     },
-    destroy() {
-        this.billingSwiper.destroy();
+    beforeDestroy() {
+        $(window).off('resize');
+        if (this.initSwiper) {
+            this.billingSwiper.destroy();
+        }
     },
     methods: {
         init() {
@@ -47,6 +38,21 @@ export default {
                     clickable: true,
                 }
             });
+        },
+        onResize() {
+            if ($(window).width() < 1280) {
+                if (!this.initSwiper) {
+                    this.init();
+                    this.initSwiper = true;
+                } else {
+                    this.billingSwiper.update();
+                }
+            } else {
+                if (this.initSwiper) {
+                    this.billingSwiper.destroy();
+                    this.initSwiper = false;
+                }
+            }
         }
     }
 }
