@@ -42,10 +42,8 @@
     "Open" : "Deschide",
     "ID" : "ID",
     "UPGRADE" : "UPGRATE",
-    "Valid until" : "Valabil până la"
-
-
-
-
-
+    "Valid until" : "Valabil până la",
+    "Total": "・Totale",
+    "Consumed": "・Consumate",
+    "Remained": "・Rămase"
 }

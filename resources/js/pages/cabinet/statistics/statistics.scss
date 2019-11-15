@@ -292,7 +292,7 @@
         }
 
         &-tarif {
-            height: 160px;
+            height: 94px;
             text-align: center;
 
             .tarif-text {
@@ -320,11 +320,57 @@
             }
         }
 
+        &_dropdown {
+            display: flex;
+            flex-direction: column;
+            height: 294px;
+            margin-top: 44px;
+            background: $diagramBlue;
+            color: $white;
 
+            &-container {
+                position: relative;
+                width: 94px;
+                height: 94px;
+                margin: 24px auto 17px;
 
+                .chart-title {
+                    position: absolute;
+                    top: 37%;
+                    left: 25%;
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 50%;
+                    text-align: center;
+                }
 
+                .circle-chat {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
+            &-information {
+                width: 80%;
+                margin: 0 auto;
+                font-size: 16px;
 
+                .dropdown-information_item {
+                    line-height: 1;
+                    padding-top: 14px;
+                    padding-left: 5.1%;
+                    font-weight: 200;
+
+                    &:not(:last-of-type) {
+                        padding-bottom: 13px;
+                        border-bottom: 1px solid #455472;
+                    }
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
-
 }

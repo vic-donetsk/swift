@@ -88,15 +88,16 @@
             </div>
 
 
-
-
         </div>
 
         <div class="statistics_mobileDiagrams">
-            <svg class="statistics_mobileDiagrams-close" @click="showMobileInfo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.873 19.708">
+            <svg class="statistics_mobileDiagrams-close" @click="showMobileInfo" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 20.873 19.708">
                 <g id="cross" transform="translate(-19.35 -35.087)">
-                    <line id="Line_149" data-name="Line 149" x2="18.045" y2="16.881" transform="translate(20.764 36.5)" fill="none" stroke="#4C638F" stroke-linecap="round" stroke-width="2"/>
-                    <line id="Line_150" data-name="Line 150" x1="18.045" y2="16.881" transform="translate(20.764 36.5)" fill="none" stroke="#4C638F" stroke-linecap="round" stroke-width="2"/>
+                    <line id="Line_149" data-name="Line 149" x2="18.045" y2="16.881" transform="translate(20.764 36.5)"
+                          fill="none" stroke="#4C638F" stroke-linecap="round" stroke-width="2"/>
+                    <line id="Line_150" data-name="Line 150" x1="18.045" y2="16.881" transform="translate(20.764 36.5)"
+                          fill="none" stroke="#4C638F" stroke-linecap="round" stroke-width="2"/>
                 </g>
             </svg>
             <div class="statistics_mobileDiagrams-header">
@@ -110,7 +111,37 @@
                 <div class="tarif-text">{{__('statistics', 'Valid until')}}&nbsp;:&nbsp;<span>09/10/19</span></div>
             </div>
 
-            <doughnut-chart id="currentMinutes" :chartData="chartData" class="diagram_chart"></doughnut-chart>
+
+            <div class="statistics_mobileDiagrams_dropdown">
+                <div class="statistics_mobileDiagrams_dropdown-container">
+                    <doughnut-chart id="currentMinutes" :chartData="chartData" class="circle-chat"></doughnut-chart>
+                    <div class="chart-title">{{abonementData.currentMinutes.percent}}%</div>
+                </div>
+                <div class="statistics_mobileDiagrams_dropdown-information">
+                    <div class="dropdown-information_item">{{__('statistics', 'Total')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.total}} minutes</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('statistics', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.consumed}} minutes</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('statistics', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.currentMinutes.total - abonementData.currentMinutes.consumed}} minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="statistics_mobileDiagrams_dropdown">
+                <div class="statistics_mobileDiagrams_dropdown-container">
+                    <doughnut-chart id="currentSMS" :chartData="chartData" class="circle-chat"></doughnut-chart>
+                    <div class="chart-title">{{abonementData.currentSMS.percent}}%</div>
+                </div>
+                <div class="statistics_mobileDiagrams_dropdown-information">
+                    <div class="dropdown-information_item">{{__('statistics', 'Total')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.total}} SMS</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('statistics', 'Consumed')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.consumed}} SMS</span>
+                    </div>
+                    <div class="dropdown-information_item">{{__('statistics', 'Remained')}}&nbsp:&nbsp<span>{{abonementData.currentSMS.total - abonementData.currentSMS.consumed}} SMS</span>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 

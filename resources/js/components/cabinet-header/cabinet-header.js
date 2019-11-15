@@ -78,9 +78,6 @@ export default {
             preparedData.push(chartData.consumed);
             preparedData.push(chartData.total - chartData.consumed);
 
-
-
-
             let data = {
                 datasets: [{
                     data: preparedData,

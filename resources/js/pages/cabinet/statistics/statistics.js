@@ -1,6 +1,7 @@
 import ChartJs from './chart-js/chart-js.vue'
 import Journal from './journal/journal.vue'
 import DoughnutChart from './DoughnutChart.js'
+import DoughnutChart2 from './DoughnutChart.js'
 
 
 // import test data arrays from test files
@@ -14,7 +15,8 @@ export default {
     components: {
         'chart-js': ChartJs,
         'statistics-journal': Journal,
-        DoughnutChart
+        'doughnut-chart2': DoughnutChart2,
+        DoughnutChart,
     },
     data: function () {
         return {
@@ -29,6 +31,16 @@ export default {
 
             layoutData: [],
 
+            chartColors: {red : '#D55050', yellow : '#FAD27A', green : '#77C55F'},
+            //if percentage of remained is less than this value, chat will be yellow
+            warningBorder: 40,
+            //if percentage of remained is less than this value, chat will be red
+            criticalBorder: 20,
+            // charts colors
+            abonementData: null,
+            showTariffMinutes: false,
+            showCurrentMinutes: false,
+            showCurrentSMS: false,
             chartData: null
 
         };
@@ -44,9 +56,38 @@ export default {
 
         this.period = this.calcDates();
         this.layoutData = this.generalCallsData;
+
+        // TODO: set real state of tariff's values instead of this
+        this.abonementData = {
+
+            currentMinutes: {
+                total: 100,
+                consumed: 85,
+                percent: 0,
+                color: ''
+            },
+            currentSMS: {
+                total: 60,
+                consumed: 10,
+                percent: 0,
+                color: ''
+            },
+        };
+        for (let element in this.abonementData) {
+            let percent = Math.ceil((this.abonementData[element].total - this.abonementData[element].consumed)/this.abonementData[element].total*100);
+            this.abonementData[element].percent = percent;
+            if (percent > this.warningBorder) {
+                this.abonementData[element].color = this.chartColors.green;
+            } else if (percent < this.criticalBorder) {
+                this.abonementData[element].color = this.chartColors.red;
+            } else {
+                this.abonementData[element].color = this.chartColors.yellow;
+            }
+        }
     },
     mounted() {
-        this.showChart('currentMinutes', [15, 85]);
+        this.showChart('currentMinutes', this.abonementData.currentMinutes);
+        this.showChart('currentSMS', this.abonementData.currentSMS);
     },
     methods: {
         showMobileInfo() {
@@ -109,12 +150,16 @@ export default {
             return dd + '/' + mm + '/' + yy;
         },
         showChart(chartElement, chartData) {
-            let diagram = this.$el.querySelector("#" + chartElement);
+
+            let preparedData = [];
+
+            preparedData.push(chartData.consumed);
+            preparedData.push(chartData.total - chartData.consumed);
 
             this.chartData = {
                 datasets: [{
-                    data: chartData,
-                    backgroundColor: ['#fff', 'blue'],
+                    data: preparedData,
+                    backgroundColor: ['#fff', chartData.color],
                     borderWidth: 0
                 }],
             };
