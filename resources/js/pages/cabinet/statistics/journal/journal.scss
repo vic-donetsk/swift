@@ -4,6 +4,19 @@
     position: relative;
     margin-bottom: 47px;
     padding: 0 2.47% 0;
+
+    @include media ('m-t-only') {
+        padding: 0 0 17px;
+        margin-bottom: 0;
+        //overflow: hidden;
+    }
+
+    &.mod_chat {
+        max-width: 1625px;
+    }
+}
+
+.journal-scroller {
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -19,18 +32,6 @@
         border-radius: 4px;
         background: $mainDarkBlue;
     }
-
-    @include media ('m-t-only') {
-        padding: 0 0 17px;
-        margin-bottom: 0;
-        overflow: hidden;
-    }
-
-    &.mod_chat {
-        max-width: 1625px;
-    }
-
-
 }
 
 .statistics_journal-title {
@@ -700,6 +701,7 @@
             width: 15px;
             height: 12px;
             fill: $mainDarkBlue;
+            margin-top: -3px;
             margin-left: 5px;
             cursor: pointer;
         }
