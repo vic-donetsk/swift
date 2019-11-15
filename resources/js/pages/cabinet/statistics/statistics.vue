@@ -129,7 +129,7 @@
 
             <div class="statistics_mobileDiagrams_dropdown">
                 <div class="statistics_mobileDiagrams_dropdown-container">
-                    <doughnut-chart id="currentSMS" :chartData="chartData" class="circle-chat"></doughnut-chart>
+                    <doughnut-chart2 id="currentSMS" :chartData="chartData2" class="circle-chat"></doughnut-chart2>
                     <div class="chart-title">{{abonementData.currentSMS.percent}}%</div>
                 </div>
                 <div class="statistics_mobileDiagrams_dropdown-information">

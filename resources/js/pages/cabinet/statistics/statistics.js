@@ -41,7 +41,8 @@ export default {
             showTariffMinutes: false,
             showCurrentMinutes: false,
             showCurrentSMS: false,
-            chartData: null
+            chartData: null,
+            chartData2: null
 
         };
     },
@@ -87,7 +88,7 @@ export default {
     },
     mounted() {
         this.showChart('currentMinutes', this.abonementData.currentMinutes);
-        this.showChart('currentSMS', this.abonementData.currentSMS);
+        this.showChart2('currentSMS', this.abonementData.currentSMS);
     },
     methods: {
         showMobileInfo() {
@@ -157,6 +158,21 @@ export default {
             preparedData.push(chartData.total - chartData.consumed);
 
             this.chartData = {
+                datasets: [{
+                    data: preparedData,
+                    backgroundColor: ['#fff', chartData.color],
+                    borderWidth: 0
+                }],
+            };
+        },
+        showChart2(chartElement, chartData) {
+
+            let preparedData = [];
+
+            preparedData.push(chartData.consumed);
+            preparedData.push(chartData.total - chartData.consumed);
+
+            this.chartData2 = {
                 datasets: [{
                     data: preparedData,
                     backgroundColor: ['#fff', chartData.color],
