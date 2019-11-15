@@ -1,5 +1,6 @@
 import ChartJs from './chart-js/chart-js.vue'
 import Journal from './journal/journal.vue'
+import DoughnutChart from './DoughnutChart.js'
 
 
 // import test data arrays from test files
@@ -12,7 +13,8 @@ import journalChatsData from './testChatsJournalData'
 export default {
     components: {
         'chart-js': ChartJs,
-        'statistics-journal': Journal
+        'statistics-journal': Journal,
+        DoughnutChart
     },
     data: function () {
         return {
@@ -26,6 +28,8 @@ export default {
             period: '',
 
             layoutData: [],
+
+            chartData: null
 
         };
     },
@@ -42,7 +46,7 @@ export default {
         this.layoutData = this.generalCallsData;
     },
     mounted() {
-
+        this.showChart('currentMinutes', [15, 85]);
     },
     methods: {
         showMobileInfo() {
@@ -103,6 +107,17 @@ export default {
             if (yy < 10) yy = '0' + yy;
 
             return dd + '/' + mm + '/' + yy;
+        },
+        showChart(chartElement, chartData) {
+            let diagram = this.$el.querySelector("#" + chartElement);
+
+            this.chartData = {
+                datasets: [{
+                    data: chartData,
+                    backgroundColor: ['#fff', 'blue'],
+                    borderWidth: 0
+                }],
+            };
         }
     },
     watch: {

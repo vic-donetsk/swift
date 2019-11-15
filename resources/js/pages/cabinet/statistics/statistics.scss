@@ -253,10 +253,11 @@
         opacity: 0;
         background: #EFF8FD;
         color: $mainDarkBlue;
-        z-index: 102;
+        z-index: -1;
         transition: 0.5s ease;
 
         &.mod_show {
+            z-index: 102;
             height: 897px;
             opacity: 1;
         }

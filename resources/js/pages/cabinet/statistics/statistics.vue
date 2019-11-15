@@ -108,8 +108,9 @@
                 <div class="tarif-text mod_upper">ABONAMENT&nbsp;:&nbsp;<span>STARTER</span></div>
                 <div class="tarif-button">{{__('statistics', 'UPGRADE')}}</div>
                 <div class="tarif-text">{{__('statistics', 'Valid until')}}&nbsp;:&nbsp;<span>09/10/19</span></div>
-
             </div>
+
+            <doughnut-chart id="currentMinutes" :chartData="chartData" class="diagram_chart"></doughnut-chart>
 
         </div>
 
