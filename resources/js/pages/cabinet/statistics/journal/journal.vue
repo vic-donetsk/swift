@@ -222,13 +222,13 @@
         <!--        chat journal-->
 
         <div v-else>
-            <table class="statistics_tableColumns mod_chat">
-                <tr>
-                    <th v-for="(oneChatsColumn) in tableChatsColumns">
-                        {{__('statistics', oneChatsColumn)}}
-                    </th>
-                    <th>
-                        <div class="statistics_tableColumns-searchId">
+            <div class="chats_tableColumns">
+                <div class="chats_tableColumns-headerRow">
+                    <div class="header-ceil" v-for="(oneChatsColumn) in tableChatsColumns" :class="oneChatsColumn.class">
+                        {{__('statistics', oneChatsColumn.name)}}
+                    </div>
+                    <div class="header-ceil mod_last">
+                        <div class="chats_tableColumns-searchId">
                             <input class="searchId_text" placeholder="Search ID" v-model="searchChatId">
                             <div class="searchId_sign">
                                 <svg @click="searchChatID(searchChatId)">
@@ -236,33 +236,33 @@
                                 </svg>
                             </div>
                         </div>
-                    </th>
-                </tr>
-                <tr v-for="(oneRecord, index) in list">
-                    <td>{{oneRecord.date}}</td>
-                    <td>{{oneRecord.time}}</td>
-                    <td>{{oneRecord.ID}}</td>
-                    <td>
+                    </div>
+                </div>
+                <div class="chats_tableColumns-tableRow" v-for="(oneRecord, index) in list">
+                    <div class="table-ceil mod_date">{{oneRecord.date}}</div>
+                    <div class="table-ceil mod_time">{{oneRecord.time}}</div>
+                    <div class="table-ceil mod_id">{{oneRecord.ID}}</div>
+                    <div class="table-ceil mod_source">
                         <svg :style="'fill:'+chatsColors[oneRecord.source]" class="chats_icon">
                             <use :xlink:href="'#'+oneRecord.source"></use>
                         </svg>
-                    </td>
-                    <td>{{oneRecord.clientName}}</td>
-                    <td>{{oneRecord.clientNumber}}</td>
-                    <td>{{oneRecord.email}}</td>
-                    <td class="chats_message">{{oneRecord.message}}</td>
-                    <td>
+                    </div>
+                    <div class="table-ceil mod_clientName">{{oneRecord.clientName}}</div>
+                    <div class="table-ceil mod_clientNumber">{{oneRecord.clientNumber}}</div>
+                    <div class="table-ceil mod_email">{{oneRecord.email}}</div>
+                    <div class="table-ceil mod_messageContent">{{oneRecord.message}}</div>
+                    <div class="table-ceil mod_lastContent">
                         <div class="chat_open" @click="chatOpen(oneRecord.ID)">
                             <svg>
                                 <use xlink:href="#chatOpen"></use>
                             </svg>
                             <div class="chat_open-text">{{__('statistics', "Open")}}</div>
                         </div>
-                    </td>
+                    </div>
 
 
-                </tr>
-            </table>
+                </div>
+            </div>
 
             <!--            mobile chat journal-->
 

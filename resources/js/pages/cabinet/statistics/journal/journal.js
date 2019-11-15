@@ -38,14 +38,14 @@ export default {
                 {text: "Region", var: "region"},
             ],
             tableChatsColumns: [
-                "Date",
-                "Time",
-                "ID",
-                "Source",
-                "Client name",
-                "Client number",
-                "Email",
-                "Message",
+                {name: "Date", class: "mod_date"},
+                {name: "Time", class: "mod_time"},
+                {name: "ID", class: "mod_id"},
+                {name: "Source", class: "mod_source"},
+                {name: "Client name", class: "mod_clientName"},
+                {name: "Client number", class: "mod_clientNumber"},
+                {name: "Email", class: "mod_email"},
+                {name: "Message", class: "mod_message"},
             ],
             // colors for chats icons
             // !!!! item name = journalChatData.source
