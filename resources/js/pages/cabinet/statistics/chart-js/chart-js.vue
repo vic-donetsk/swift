@@ -17,7 +17,7 @@
         </div>
         <div class="diagram_canvas-container">
 
-            <line-chart :id="dataSet.chartId" :chartData="chartDatas" class="diagram_chart"></line-chart>
+            <line-chart :id="dataSet.chartId" :chartData="chartDatas" :chartTitle="dataSet.chartTitle" class="diagram_chart"></line-chart>
 
         </div>
     </div>
