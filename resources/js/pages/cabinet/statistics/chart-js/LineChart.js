@@ -33,7 +33,31 @@ export default {
                         }
                     }],
                 },
-                // tooltips: {}
+                tooltips: {
+                    intersect: false,
+                    backgroundColor: '#37455F',
+                    titleFontFamily: 'Axiforma',
+                    titleFontSize: 12,
+                    titleFontStyle: '400',
+                    titleFontColor: '#BBC6D9',
+                    bodyFontFamily: 'Axiforma',
+                    bodyFontSize: 12,
+                    bodyFontStyle: '300',
+                    bodyAlign: 'right',
+                    bodyFontColor: '#fff',
+                    xPadding: 15,
+                    yPadding: 15,
+                    caretSize: 0,
+                    cornerRadius: 9,
+
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var value = data.datasets[tooltipItem.datasetIndex].value || '';
+
+                            return this.chartTitle + tooltipItem.value;
+                        }
+                    },
+                }
             },
         }
     },
@@ -42,7 +66,11 @@ export default {
         chartData: {
             type: Object,
             default: null
-        }
+        },
+        chartTitle: {
+            type: String,
+            default: ''
+        },
     },
     mounted() {
         this.renderChart(this.chartData, this.options);
