@@ -11,7 +11,8 @@
             </div>
             <div v-for="(item, index) in widgetSteps"
                  class="settings_nav-item mod_mobile mod_option"
-                 @click="changeMobileMode(item,index)">
+                 @click="changeMobileMode(item,index)"
+                 :class="{mod_selected: index === settingsMode}">
                 <svg class="nav-item_svg">
                     <use :xlink:href="'#' + item.icon"></use>
                 </svg>
