@@ -61,11 +61,14 @@
         }
 
         .billing-input_wrap {
-            width: 286px;
             margin: 0 auto;
 
             &:not(:last-of-type) {
                 margin-bottom: 26px;
+            }
+
+            @media (min-width: 415px){
+                max-width: 712px;
             }
 
             @include media('d-only') {
@@ -91,9 +94,7 @@
             }
 
             .widget-input {
-                @include media("d-only") {
-                    width: 100%;
-                }
+                width: 100%;
 
                 &::placeholder {
                     color: $widgetPlaceholder;

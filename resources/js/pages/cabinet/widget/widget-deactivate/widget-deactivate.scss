@@ -39,12 +39,16 @@
     }
 
     .widget-deactivate_site {
-        width: 320px;
         margin: 0 auto 39px;
         padding: 0 17px;
 
+        @media (min-width: 415px){
+            width: 264px;
+            padding: 0;
+        }
+
         @include media("d-only") {
-            width: 100%;
+            width: auto;
             margin: 0 0 55px 0;
             padding: 0;
         }
@@ -52,7 +56,12 @@
         .widget-site_control {
 
             .widget-input {
+                width: 100%;
                 margin-bottom: 7px;
+
+                @media (min-width: 415px){
+                    width: 264px;
+                }
 
                 @include media("d-only") {
                     margin-bottom: 0;

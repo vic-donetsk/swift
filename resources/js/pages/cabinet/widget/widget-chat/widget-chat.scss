@@ -66,16 +66,21 @@
         }
 
         .widget-soc_item {
+            width: 100%;
             margin-bottom: 38px;
 
+            @media (min-width: 415px) {
+                width: 286px;
+            }
+
             @include media('d-only') {
+                width: auto;
                 margin: 0 18px 38px;
             }
 
             .widget-soc {
                 position: relative;
                 display: flex;
-                width: 286px;
                 height: 104px;
                 border: 1px solid $widgetElemBorder;
 
@@ -681,8 +686,15 @@
 
 
         .widget-input_wrap {
+            width: 100%;
+
             &:not(:last-of-type) {
                 margin-bottom: 26px;
+            }
+
+
+            @media (min-width: 415px){
+                width: auto;
             }
 
             .widget-input_title {
@@ -711,6 +723,12 @@
             }
 
             .widget-input {
+                width: 100%;
+
+                @media (min-width: 415px){
+                    width: 286px;
+                }
+
                 @include media("d-only") {
                     width: 412px;
                 }

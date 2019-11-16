@@ -92,7 +92,7 @@
         }
 
         .widget-sms-input {
-            width: 286px;
+            width: 100%;
             height: 85px;
             background-color: rgba(239, 248, 253, 0.14);
             border: 1px solid $widgetSidebarBorder;
@@ -100,6 +100,11 @@
             margin: 0 auto;
             padding: 20px 15px;
             margin-bottom: 30px;
+
+
+            @media (min-width: 415px){
+                width: 286px;
+            }
 
             @include media('d-only') {
                 display: flex;
@@ -114,7 +119,7 @@
             }
 
             .swift-widget_flagPhone {
-                width: 255px !important;
+                width: 100% !important;
                 height: 45px;
                 margin: 0 auto;
                 border-right: none;
