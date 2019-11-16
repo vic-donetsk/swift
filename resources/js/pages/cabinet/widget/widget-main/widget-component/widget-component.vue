@@ -91,21 +91,21 @@
                         <p>{{__('widget','Widget elem text 7')}}</p>
                     </div>
                 </div>
-                <div class="widget-block_elem-wrap">
+                <div class="widget-block_elem-wrap" @click.stop="moveStep(4)">
                     <div class="widget-block_elem left">
                         <div class="mobile-svg_wrap">
                             <svg class="widget-elem_icon">
                                 <use xlink:href="#mail-envelope"></use>
                             </svg>
                         </div>
-                        <p class="widget-elem_text" @click.stop="openInfo('widgetElemBottom5')">
+                        <p class="widget-elem_text" @click="openInfo('widgetElemBottom5')">
                             {{__('widget','Widget elem text 8')}}</p>
                     </div>
                     <div class="widget-block_elem right" v-if="widgetElemBottom5"
                          v-html='__("widget", "Widget elem text 9")'>
                     </div>
                 </div>
-                <div class="widget-block_elem-wrap">
+                <div class="widget-block_elem-wrap" @click.stop="moveStep(4)">
                     <div class="widget-block_elem left">
                         <div class="mobile-svg_wrap">
                             <svg class="widget-elem_icon">
@@ -113,7 +113,7 @@
                             </svg>
                         </div>
 
-                        <p class="widget-elem_text" @click.stop="openInfo('widgetElemBottom6')">
+                        <p class="widget-elem_text" @click="openInfo('widgetElemBottom6')">
                             {{__('widget','Widget elem text 10')}}</p>
                     </div>
                     <div class="widget-block_elem right" v-if="widgetElemBottom6">
