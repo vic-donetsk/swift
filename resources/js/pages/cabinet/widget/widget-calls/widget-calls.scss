@@ -83,7 +83,7 @@
         }
 
         .widget-call_input {
-            width: 286px;
+            width: 100%;
             height: 175px;
             background-color: rgba(239, 248, 253, 0.14);
             border: 1px solid $widgetSidebarBorder;
@@ -93,6 +93,10 @@
 
             &:not(:last-of-type) {
                 margin-bottom: 18px;
+            }
+
+            @media (min-width: 415px) {
+                width: 286px;
             }
 
             @include media('d-only') {
@@ -162,13 +166,17 @@
             }
 
             .swift-widget_flagPhone {
-                width: 255px !important;
+                width: 100% !important;
                 height: 45px;
                 margin: 0 auto 7px;
                 border-right: none;
 
                 .swift-widget_flagPhone-input {
                     height: 45px;
+                }
+
+                @media (min-width: 415px){
+                    width: 255px !important;
                 }
 
                 @include media('d-only') {
@@ -183,7 +191,7 @@
             }
 
             .widget-input {
-                width: 255px;
+                width: 100%;
                 height: 45px;
                 text-align: center;
                 display: block;
@@ -192,6 +200,10 @@
 
                 &::placeholder {
                     font-weight: 600;
+                }
+
+                @media (min-width: 415px){
+                    width: 255px;
                 }
 
                 @include media('d-only') {
