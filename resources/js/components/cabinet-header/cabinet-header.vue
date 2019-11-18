@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="cabinet-header_notify" @click.stop="popupNotify = !popupNotify"
-                     :class="{mod_active:popupNotify}">
+                     :class="{mod_active:!popupNotify}">
                     <svg class="cabinet-header_icon">
                         <use xlink:href="#bell"></use>
                     </svg>
