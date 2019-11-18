@@ -51,10 +51,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'mondayFridayResult',0,'mondayFriday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -76,7 +76,7 @@
                                                     <li class="dropdown_item"
                                                         @click.stop="changeMinute(hmFormat(minute),
                                                         'mondayFridayResult',3,'mondayFriday')"
-                                                        v-for="minute in 59">
+                                                        v-for="minute in 60">
                                                         {{hmFormat(minute)}}
                                                     </li>
                                                 </ul>
@@ -103,10 +103,10 @@
                                                     </template>
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
-                                                    <li class="dropdown_item" v-for="minute in 59"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                    <li class="dropdown_item" v-for="minute in 60"
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'mondayFridayResult',1,'mondayFriday')">
-                                                        {{hmFormat(minute)}}
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -125,10 +125,10 @@
                                                     </template>
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
-                                                    <li class="dropdown_item" v-for="minute in 59"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                    <li class="dropdown_item" v-for="minute in 60"
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'mondayFridayResult',2,'mondayFriday')">
-                                                        {{hmFormat(minute)}}
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -165,10 +165,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'saturdayResult',0,'saturday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -188,10 +188,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute- 1),
                                                         'saturdayResult',3,'saturday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -218,10 +218,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'saturdayResult',1,'saturday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -241,10 +241,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'saturdayResult',2,'saturday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -281,10 +281,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'sundayResult',0,'sunday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -304,10 +304,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'sundayResult',3,'sunday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -334,10 +334,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'sundayResult',1,'sunday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
@@ -357,10 +357,10 @@
                                                 </ul>
                                                 <ul class="minutes dropdown_list">
                                                     <li class="dropdown_item"
-                                                        @click.stop="changeMinute(hmFormat(minute),
+                                                        @click.stop="changeMinute(hmFormat(minute - 1),
                                                         'sundayResult',2,'sunday')"
-                                                        v-for="minute in 59">
-                                                        {{hmFormat(minute)}}
+                                                        v-for="minute in 60">
+                                                        {{hmFormat(minute - 1)}}
                                                     </li>
                                                 </ul>
                                             </div>
