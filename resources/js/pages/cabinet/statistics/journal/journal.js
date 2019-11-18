@@ -104,33 +104,35 @@ export default {
             this.settingsMode = false;
         },
         playAudio(index) {
-            if (this.wavesurfer) this.wavesurfer.destroy();
-            this.audioFlag = true;
-            this.audioPlayerTop = index * 70.6 + 287;
-            this.wavesurfer = WaveSurfer.create({
-                container: '#wavesurfer-container',
-                waveColor: '#D8DDE6',
-                progressColor: '#00215F',
-                cursorColor: '#F8FBFD',
-                height: 70
-            });
+            if (window.innerWidth > 1279) {
+                if (this.wavesurfer) this.wavesurfer.destroy();
+                this.audioFlag = true;
+                this.audioPlayerTop = index * 70.6 + 287;
+                this.wavesurfer = WaveSurfer.create({
+                    container: '#wavesurfer-container',
+                    waveColor: '#D8DDE6',
+                    progressColor: '#00215F',
+                    cursorColor: '#F8FBFD',
+                    height: 70
+                });
 
-            // TODO: set real URL for record of conversation
-            this.wavURL = '/example.wav';
-            // TODO: set real filename for download record of conversation
-            this.wavName = 'example.wav';
+                // TODO: set real URL for record of conversation
+                this.wavURL = '/example.wav';
+                // TODO: set real filename for download record of conversation
+                this.wavName = 'example.wav';
 
-            this.wavesurfer.load(this.wavURL);
-            let self = this;
-            this.wavesurfer.on('ready', function () {
-                self.duration = self.toMinutes(self.wavesurfer.getDuration());
-                self.currentTime = '0:00';
-            });
-            this.wavesurfer.on('audioprocess', function () {
-                if (self.wavesurfer.isPlaying()) {
-                    self.currentTime = self.toMinutes(self.wavesurfer.getCurrentTime());
-                }
-            });
+                this.wavesurfer.load(this.wavURL);
+                let self = this;
+                this.wavesurfer.on('ready', function () {
+                    self.duration = self.toMinutes(self.wavesurfer.getDuration());
+                    self.currentTime = '0:00';
+                });
+                this.wavesurfer.on('audioprocess', function () {
+                    if (self.wavesurfer.isPlaying()) {
+                        self.currentTime = self.toMinutes(self.wavesurfer.getCurrentTime());
+                    }
+                });
+            }
 
 
         },
