@@ -21,6 +21,89 @@
     }
 }
 
+
+.cabinet-header_notification {
+    position: absolute;
+    width: 280px;
+    height: 350px;
+    top: 90px;
+    right: 0;
+    margin-right: 45px;
+
+    .cabinet-header_notification-head {
+        position: relative;
+        height: 56px;
+        background: $white;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        color: #747F8B;
+        border-radius: 10px 10px 0 0;
+        border: 0;
+        border-style: solid;
+        border-bottom-width: 1px;
+        border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
+        box-shadow: 0 2px 10px -2px #cedae0;
+        padding: 15px;
+
+        .triangle {
+            position: absolute;
+            top: -8px;
+            left: 134px;
+            height: 15px;
+            width: 15px;
+            border-radius: 6px 0 0 0;
+            transform: rotate(45deg);
+            background: $white;
+        }
+    }
+
+    .cabinet-header_notification-content {
+        width: 280px;
+        height: 292px;
+        background: #e9f0f3;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .cabinet-header_notification-item {
+            display: flex;
+            align-items: center;
+            height: 73px;
+            padding: 15px;
+            border: 0;
+            border-style: solid;
+            border-bottom-width: 1px;
+            border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
+
+        }
+
+        .notification-item_image {
+            height: 32px;
+            width: 32px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border-radius: 50%;
+
+            & > * {
+                width: 32px;
+            }
+        }
+
+        .notification-item_text{
+            font-size: 14px;
+            color: #747F8B;
+            cursor: pointer;
+            word-spacing: 2px;
+            line-height: 21px;
+            padding-left: 15px;
+
+            .notification-item_text-name{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
 .cabinet-page_title {
     display: flex;
     font-size: 20px;
@@ -206,7 +289,7 @@
     }
 
     &.is-checked {
-        .el-switch__core{
+        .el-switch__core {
             background: $mainDarkBlue;
 
             &:after {
