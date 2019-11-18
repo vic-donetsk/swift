@@ -16,6 +16,7 @@ export default {
             showTariffMinutes: false,
             showCurrentMinutes: false,
             showCurrentSMS: false,
+            popupNotify:false,
         }
     },
     created() {

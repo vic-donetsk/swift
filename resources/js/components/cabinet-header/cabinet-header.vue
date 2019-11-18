@@ -62,14 +62,15 @@
 
                 </div>
 
-                <div class="cabinet-header_notify mod_active">
+                <div class="cabinet-header_notify" @click.stop="popupNotify = !popupNotify"
+                     :class="{mod_active:popupNotify}">
                     <svg class="cabinet-header_icon">
                         <use xlink:href="#bell"></use>
                     </svg>
                 </div>
             </div>
 
-            <div class="cabinet-header_notification">
+            <div class="cabinet-header_notification" v-if="popupNotify">
                 <div class="cabinet-header_notification-head">
                     <div class="triangle"></div>
                     <span class="notification-heading">Notifications</span>

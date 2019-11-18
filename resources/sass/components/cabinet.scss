@@ -1,5 +1,6 @@
 .cabinet-header_notify {
     position: relative;
+    cursor: pointer;
 
     &.mod_active {
         &:before {
@@ -26,7 +27,7 @@
     position: absolute;
     width: 280px;
     height: 350px;
-    top: 90px;
+    top: 100px;
     right: 0;
     margin-right: 45px;
 
