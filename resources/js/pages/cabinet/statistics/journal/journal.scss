@@ -418,7 +418,8 @@
     align-items: center;
     position: absolute;
     left: 2.47%;
-    width: calc((100vw - 295px) * 0.9753);
+    width: calc(100vw - 295px - 6.5%);
+    max-width: 2600px;
     height: 70px;
     padding: 25px;
     background: $conversationBackground;

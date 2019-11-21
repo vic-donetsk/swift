@@ -107,7 +107,7 @@ export default {
             if (window.innerWidth > 1279) {
                 if (this.wavesurfer) this.wavesurfer.destroy();
                 this.audioFlag = true;
-                this.audioPlayerTop = index * 70.6 + 287;
+                this.audioPlayerTop = index * 70.6 + 233;
                 this.wavesurfer = WaveSurfer.create({
                     container: '#wavesurfer-container',
                     waveColor: '#D8DDE6',
