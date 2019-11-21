@@ -42,7 +42,9 @@ export default {
             showCurrentMinutes: false,
             showCurrentSMS: false,
             chartData: null,
-            chartData2: null
+            chartData2: null,
+
+            currentScroll: 0
 
         };
     },
@@ -92,7 +94,20 @@ export default {
     },
     methods: {
         showMobileInfo() {
-            $('.statistics_mobileDiagrams').toggleClass('mod_show');
+            let circleElement = $('.statistics_mobileDiagrams');
+            if (circleElement.hasClass('mod_show')) {
+                $(document).unbind('scroll');
+                document.documentElement.scrollTop = this.currentScroll;
+            } else {
+                this.currentScroll = document.documentElement.scrollTop;
+                document.documentElement.scrollTop = 0;
+                $(document).bind('scroll', () => {
+                    if (document.documentElement.scrollTop > 220) {
+                        document.documentElement.scrollTop = 220;
+                    }
+                });
+            }
+            circleElement.toggleClass('mod_show');
         },
         switchStats(switcher) {
             if ((this.isCalls && switcher === 0) || (!this.isCalls && switcher === 1))

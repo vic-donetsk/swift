@@ -220,12 +220,12 @@
     }
 
     &_mobileInfo {
-        position: absolute;
+        position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
         right: 0;
-        top: 280px;
+        top: 370px;
         width: 48px;
         height: 44px;
         background: #EFF8FD;
