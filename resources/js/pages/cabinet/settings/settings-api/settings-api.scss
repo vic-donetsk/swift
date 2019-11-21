@@ -22,7 +22,7 @@
 
         @include media('m-t-only') {
             width: 100%;
-            max-width: 500px;
+            max-width: 768px;
         }
 
         &:first-of-type {
@@ -86,6 +86,7 @@
 
             @include media('m-t-only') {
                 width: 100%;
+                max-width: 768px;
                 margin-bottom: 40px;
             }
         }

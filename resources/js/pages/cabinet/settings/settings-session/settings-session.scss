@@ -134,7 +134,7 @@
 
     &-mobileTable {
         width: 100%;
-        max-width: 500px;
+        max-width: 768px;
         color: $mainDarkBlue;
         @include media('d') {
             display: none;
