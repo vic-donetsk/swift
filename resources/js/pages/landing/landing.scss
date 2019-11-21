@@ -3,16 +3,16 @@
 .landing {
     padding-top: 195px;
 
-    background: url("/img/cloud.png") -942px 117px no-repeat fixed,
-    url("/img/ellipse.png") 150% 150px no-repeat fixed,
-    repeating-linear-gradient(90deg, transparent, transparent 83px, #EFF8FF 84px);
+    background:  url("/img/cloud.png") -942px 117px no-repeat fixed,
+                 url("/img/ellipse.png") 150% 150px no-repeat fixed,
+                 repeating-linear-gradient(90deg, transparent, transparent 83px, #EFF8FF 83.001px,  #EFF8FF 84px);
 
     @include media('d-only') {
-        background: url("/img/cloud.png") -942px 117px no-repeat fixed,
-        url("/img/ellipse.png") 150% 150px no-repeat fixed,
-        repeating-linear-gradient(90deg, transparent, transparent 317px, #EFF8FF 318px);
+        background:       url("/img/cloud.png") -942px 117px no-repeat fixed,
+                          url("/img/ellipse.png") 150% 150px no-repeat fixed,
+                          repeating-linear-gradient(90deg, transparent, transparent 317px, #EFF8FF 318px);
         background-color: #F8FDFF;
 
-        padding-top: 0;
+        padding-top:      0;
     }
 }

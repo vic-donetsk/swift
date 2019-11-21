@@ -6,10 +6,18 @@
     margin-bottom: 96px;
 
     @include media('d-only') {
-        padding: 177px 32px 0;
+
+        padding: 100px 32px 0;
         margin-bottom: 187px;
-        min-height: calc(100vh - 155px);
+
+        height: calc(100vh - 155px);
+        min-height: 600px;
     }
+
+    @include media('d-phd') {
+        padding: 177px 32px 0;
+    }
+
 
     .landing-head_content {
         text-align: center;
@@ -21,6 +29,11 @@
 
             @include media('d-only') {
                 display: block;
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+
+            @include media('d-phd') {
                 font-size: 50px;
                 margin-bottom: 37px;
             }
