@@ -320,7 +320,12 @@
     }
 
     .widget-schedule_sliders {
-        margin-bottom: 45px;
+        max-width: 768px;
+        margin: 0 auto 45px;
+
+        @include media('d-only') {
+        max-width: 100%;
+        }
     }
 
     .widget-schedule_slider-title {

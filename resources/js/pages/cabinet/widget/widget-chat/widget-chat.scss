@@ -67,11 +67,9 @@
 
         .widget-soc_item {
             width: 100%;
+            max-width: 768px;
             margin-bottom: 38px;
 
-            @media (min-width: 415px) {
-                width: 286px;
-            }
 
             @include media('d-only') {
                 width: auto;
@@ -332,7 +330,14 @@
     .widget-chat_table {
         margin: 0 -17px;
 
+        @media (min-width: 769px) {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+
         @include media('d-only') {
+            max-width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
             margin: 0;
@@ -672,12 +677,10 @@
     }
 
     .widget-chat_inputs {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
         margin-bottom: 38px;
 
         @include media("d-only") {
+            display: flex;
             align-items: flex-start;
             flex-wrap: wrap;
             margin-bottom: 0;
@@ -686,16 +689,13 @@
 
 
         .widget-input_wrap {
-            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
 
             &:not(:last-of-type) {
                 margin-bottom: 26px;
             }
 
-
-            @media (min-width: 415px){
-                width: auto;
-            }
 
             .widget-input_title {
                 display: block;
@@ -708,8 +708,7 @@
 
             @include media("d-only") {
                 padding-right: 45px;
-                margin-bottom: 32px;
-                margin-right: 45px;
+                margin: 0 45px 32px 0;
 
                 &:not(:last-of-type) {
                     border-right: 1px solid $widgetInstallBorder;
@@ -724,10 +723,6 @@
 
             .widget-input {
                 width: 100%;
-
-                @media (min-width: 415px){
-                    width: 286px;
-                }
 
                 @include media("d-only") {
                     width: 412px;

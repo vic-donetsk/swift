@@ -42,10 +42,6 @@
         margin: 0 auto 39px;
         padding: 0 17px;
 
-        @media (min-width: 415px){
-            width: 264px;
-            padding: 0;
-        }
 
         @include media("d-only") {
             width: auto;
@@ -57,11 +53,9 @@
 
             .widget-input {
                 width: 100%;
+                max-width: 768px;
                 margin-bottom: 7px;
 
-                @media (min-width: 415px){
-                    width: 264px;
-                }
 
                 @include media("d-only") {
                     margin-bottom: 0;
