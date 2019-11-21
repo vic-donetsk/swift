@@ -32,10 +32,16 @@
 
     .billing-invoice_table {
 
+        @media (min-width: 769px) {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
         @include media('d-only') {
             overflow-x: auto;
             overflow-y: hidden;
             max-width: 1215px;
+            margin: 0;
         }
 
         .billing-invoice_table-head {

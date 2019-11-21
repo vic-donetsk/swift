@@ -154,7 +154,11 @@
         }
 
         .mod_right {
-            width: 94px;
+           width: 180px;
+
+            @include media('d-only'){
+                width: 94px;
+            }
 
         }
 
