@@ -178,6 +178,8 @@ export default {
             );
             this.sundayResult = this.sunday.noUiSlider.get();
             this.sliderShow3 = true;
+
+            this.radioChecked = 'schedule-4';
         }
     },
     mounted() {
