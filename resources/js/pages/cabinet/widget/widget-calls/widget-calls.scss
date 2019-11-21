@@ -295,6 +295,7 @@
     .widget-add_button {
         margin-bottom: 18px;
 
+
         @include media('d-only') {
             width: 412px;
             height: 57px;
