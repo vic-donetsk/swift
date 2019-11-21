@@ -57,7 +57,7 @@
         padding: 0 22px;
 
         @include media('t-ipad') {
-            max-width: 733px;
+            max-width: 768px;
             margin: 0 auto;
         }
 
@@ -76,7 +76,8 @@
     .widget-block_script {
         position: relative;
 
-        max-width: 1530px;
+        max-width: 768px;
+        margin: 0 auto;
 
         display: flex;
         align-items: center;
@@ -100,6 +101,7 @@
         margin-bottom: 30px;
 
         @include media('d-only') {
+            max-width: 1530px;
             flex-direction: row;
             padding: 27px 75px 27px 30px;
             font-size: 18px;
@@ -173,7 +175,10 @@
     }
 
     .widget-button {
-        width: 264px;
         margin: 0 auto 39px;
+
+        @include media('d-only'){
+            width: 264px;
+        }
     }
 }

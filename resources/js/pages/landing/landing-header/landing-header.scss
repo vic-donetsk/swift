@@ -43,12 +43,15 @@
         padding: 23px 16px 20px 16px;
         justify-content: space-between;
         transition: all 0.1s linear;
+        background-color: $white;
+        background: repeating-linear-gradient(90deg, white, white 83px, #EFF8FF 84px);
 
         @include media('d-only') {
             padding: 0 32px;
             height: 53px;
             justify-content: flex-end;
             transition: none;
+            background: none;
         }
 
         .hamburger {
