@@ -175,10 +175,6 @@
                     width: 100%;
                     margin-bottom: 23px;
                 }
-                //@include media('m-only') {
-                //    width: 100%;
-                //    margin-bottom: 23px;
-                //}
 
                 .diagram {
                     position: relative;
@@ -196,10 +192,6 @@
                 width: 23.35%;
                 margin-bottom: 54px;
 
-                //@include media('t-only') {
-                //    width: 48.8%;
-                //    margin-bottom: 23px;
-                //}
                 @include media('m-t-only') {
                     width: 100%;
                     margin-bottom: 23px;
