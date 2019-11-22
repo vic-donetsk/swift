@@ -50,24 +50,25 @@
         }
 
         .widget-site_control {
+            max-width: 768px;
+            margin: 0 auto;
 
             .widget-input {
                 width: 100%;
-                max-width: 768px;
                 margin-bottom: 7px;
 
 
                 @include media("d-only") {
+                    width: 264px;
                     margin-bottom: 0;
                     margin-right: 12px;
                 }
             }
 
-
             @include media("d-only") {
                 display: flex;
                 align-items: center;
-                margin-bottom: 12px;
+                margin:0 0 12px 0;
             }
         }
 
@@ -100,13 +101,14 @@
     }
 
     .widget-deactivate_table {
-        max-width: 680px;
+        max-width: 768px;
 
         border: 1px solid rgba(0, 33, 95, 0.05);
         box-shadow: 0 3px 8px 0 rgba(0, 33, 95, 0.04);
         margin: 0 auto;
 
         @include media("d-only") {
+            width: 680px;
             margin: 0 0 31px 0;
         }
 
@@ -152,7 +154,11 @@
         }
 
         .mod_right {
-            width: 94px;
+           width: 180px;
+
+            @include media('d-only'){
+                width: 94px;
+            }
 
         }
 

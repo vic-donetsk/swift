@@ -503,6 +503,16 @@
     .timepicker {
         position: relative;
     }
+
+    .widget-time_modes{
+        @include media("t-ipad"){
+            text-align: center;
+        }
+
+        @include media('d-only'){
+            text-align: left;
+        }
+    }
 }
 
 
