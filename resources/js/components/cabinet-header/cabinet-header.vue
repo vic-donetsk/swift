@@ -52,9 +52,9 @@
                 </div>
 
                 <div class="cabinet-header_item">
-          <span class="cabinet-header_title">
-                {{__('widget','Cabinet header title 4')}}
-            </span>
+                  <span class="cabinet-header_title">
+                        {{__('widget','Cabinet header title 4')}}
+                    </span>
 
                     <span class="cabinet-header_value mod_margin">
                 {{__('widget','Cabinet header value 2')}}
@@ -62,60 +62,12 @@
 
                 </div>
 
-                <div class="cabinet-header_notify" @click.stop="popupNotify = !popupNotify"
-                     :class="{mod_active:!popupNotify}">
+                <div class="cabinet-header_notify"
+                     @click.stop="toggleNotify"
+                     :class="{mod_active:notify}">
                     <svg class="cabinet-header_icon">
                         <use xlink:href="#bell"></use>
                     </svg>
-                </div>
-            </div>
-
-            <div class="cabinet-header_notification" v-if="popupNotify">
-                <div class="cabinet-header_notification-head">
-                    <div class="triangle"></div>
-                    <span class="notification-heading">Notifications</span>
-                </div>
-                <div class="cabinet-header_notification-content">
-                    <div class="cabinet-header_notification-item">
-                        <div class="notification-item_image">
-                            <img src="http://www.latimes.com/includes/projects/hollywood/portraits/keanu_reeves.jpg"
-                                 alt="">
-                        </div>
-                        <div class="notification-item_text">
-                            <span class="notification-item_text-name">{{__('widget','Cabinet header notification name 1')}}</span>
-                            <span>{{__('widget','Cabinet header notification message 1')}}</span>
-                        </div>
-                    </div>
-                    <div class="cabinet-header_notification-item">
-                        <div class="notification-item_image">
-                            <img src="https://imagemoved.files.wordpress.com/2011/07/no-strings-attached-natalie-portman-19128381-850-1280.jpg"
-                                 alt="">
-                        </div>
-                        <div class="notification-item_text">
-                            <span class="notification-item_text-name">{{__('widget','Cabinet header notification name 2')}}</span>
-                            <span>{{__('widget','Cabinet header notification message 2')}}</span>
-                        </div>
-                    </div>
-                    <div class="cabinet-header_notification-item">
-                        <div class="notification-item_image">
-                            <img src="http://www.latimes.com/includes/projects/hollywood/portraits/keanu_reeves.jpg"
-                                 alt="">
-                        </div>
-                        <div class="notification-item_text">
-                            <span class="notification-item_text-name">{{__('widget','Cabinet header notification name 1')}}</span>
-                            <span>{{__('widget','Cabinet header notification message 3')}}</span>
-                        </div>
-                    </div>
-                    <div class="cabinet-header_notification-item">
-                        <div class="notification-item_image">
-                            <img src="https://imagemoved.files.wordpress.com/2011/07/no-strings-attached-natalie-portman-19128381-850-1280.jpg"
-                                 alt="">
-                        </div>
-                        <div class="notification-item_text">
-                            <span class="notification-item_text-name">{{__('widget','Cabinet header notification name 2')}}</span>
-                            <span>{{__('widget','Cabinet header notification message 4')}}</span>
-                        </div>
-                    </div>
                 </div>
             </div>
 

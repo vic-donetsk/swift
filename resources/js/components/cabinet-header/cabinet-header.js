@@ -6,7 +6,7 @@ export default {
     },
     data: function () {
         return {
-            chartColors: {red : '#D55050', yellow : '#FAD27A', green : '#77C55F'},
+            chartColors: {red: '#d55050', yellow: '#fad27a', green: '#77c55f'},
             //if percentage of remained is less than this value, chat will be yellow
             warningBorder: 40,
             //if percentage of remained is less than this value, chat will be red
@@ -16,7 +16,7 @@ export default {
             showTariffMinutes: false,
             showCurrentMinutes: false,
             showCurrentSMS: false,
-            popupNotify:false,
+            notify: true
         }
     },
     created() {
@@ -42,7 +42,7 @@ export default {
             },
         };
         for (let element in this.abonementData) {
-            let percent = Math.ceil((this.abonementData[element].total - this.abonementData[element].consumed)/this.abonementData[element].total*100);
+            let percent = Math.ceil((this.abonementData[element].total - this.abonementData[element].consumed) / this.abonementData[element].total * 100);
             this.abonementData[element].percent = percent;
             if (percent > this.warningBorder) {
                 this.abonementData[element].color = this.chartColors.green;
@@ -51,11 +51,18 @@ export default {
             } else {
                 this.abonementData[element].color = this.chartColors.yellow;
             }
-
         }
     },
-
+    mounted() {
+        EventBus.$on('notify-viewed', () => {
+            this.notify = false;
+        });
+    },
     methods: {
+        toggleNotify() {
+            EventBus.$emit('toggle-notify');
+            EventBus.$emit('notify-viewed');
+        },
         showChart(element) {
             if (!this[element]) {
                 this[element] = !this[element];
@@ -94,7 +101,7 @@ export default {
                 responsive: true,
                 maintainAspectRatio: false, // to cover window sizes
                 cutoutPercentage: 78, // not filling part in center (%)
-                tooltips : {
+                tooltips: {
                     enabled: false
                 }
             };

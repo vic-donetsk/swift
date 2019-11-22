@@ -10,7 +10,8 @@ export default {
             menu: false,
             personMenu: false,
             fromChat: false,
-            widgetPath: '/cabinet/widget'
+            widgetPath: '/cabinet/widget',
+            notify: true
         }
     },
     created() {
@@ -25,8 +26,16 @@ export default {
             this.$refs.widgetPath.classList.add('router-link-active');
             this.$refs.mobileWidgetPath.classList.add('router-link-active');
         }
+
+        EventBus.$on('notify-viewed',()=>{
+            this.notify = false;
+        });
     },
     methods: {
+        toggleNotify() {
+            EventBus.$emit('toggle-notify');
+            EventBus.$emit('notify-viewed');
+        },
         openMenu() {
             this.menu = !this.menu;
 

@@ -11,7 +11,9 @@
 
             <logo size="landing"></logo>
 
-            <div class="cabinet-header_notify mod_active">
+            <div class="cabinet-header_notify"
+                 @click.stop="toggleNotify"
+                 :class="{mod_active:notify}">
                 <svg class="cabinet-header_icon">
                     <use xlink:href="#bell"></use>
                 </svg>

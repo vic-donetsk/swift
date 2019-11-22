@@ -24,12 +24,18 @@
 
 
 .cabinet-header_notification {
-    position: absolute;
+    position: fixed;
+    top: 65px;
+    right: 14px;
+    z-index: 100;
+
     width: 280px;
     height: 350px;
-    top: 60px;
-    right: 0;
-    margin-right: 45px;
+
+    @include media('d-only') {
+        top: 60px;
+        right: 45px;
+    }
 
     .cabinet-header_notification-head {
         position: relative;
@@ -90,7 +96,7 @@
             }
         }
 
-        .notification-item_text{
+        .notification-item_text {
             font-size: 14px;
             color: #747F8B;
             cursor: pointer;
@@ -98,7 +104,7 @@
             line-height: 21px;
             padding-left: 15px;
 
-            .notification-item_text-name{
+            .notification-item_text-name {
                 font-weight: 700;
             }
         }
