@@ -96,16 +96,14 @@ export default {
         showMobileInfo() {
             let circleElement = $('.statistics_mobileDiagrams');
             if (circleElement.hasClass('mod_show')) {
-                $(document).unbind('scroll');
+                $('.statistics_container, .statistics-journal').css("display", "block");
+                $('.statistics').css('height', 'auto');
                 document.documentElement.scrollTop = this.currentScroll;
             } else {
                 this.currentScroll = document.documentElement.scrollTop;
+                $('.statistics_container, .statistics-journal').css("display", "none");
+                $('.statistics').css('height', '897px');
                 document.documentElement.scrollTop = 0;
-                $(document).bind('scroll', () => {
-                    if (document.documentElement.scrollTop > 220) {
-                        document.documentElement.scrollTop = 220;
-                    }
-                });
             }
             circleElement.toggleClass('mod_show');
         },
