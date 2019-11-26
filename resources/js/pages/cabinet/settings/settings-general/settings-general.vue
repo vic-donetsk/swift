@@ -12,7 +12,7 @@
 
             <div class="item_element">
                 <div class="item_element-title">{{__('settings', 'Name')}}</div>
-                <input type="text" class="item_element-content" placeholder="Ktototam" v-model="profile.name">
+                <input type="text" class="item_element-content" placeholder="Ionascu" v-model="profile.name">
             </div>
             <div class="item_element">
                 <div class="item_element-title">{{__('settings', 'First name')}}</div>

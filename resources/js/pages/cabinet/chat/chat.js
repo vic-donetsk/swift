@@ -34,51 +34,61 @@ export default {
         // TODO: here you must fill this.chatDatabase with real data
         this.chatDatabase = [
             {
-                clientName: 'Ivan Ivanov',
-                clientPhone: '+373 (78) 123456 ',
+                clientName: 'Jasmine Wade',
+                clientPhone: '+373 (78) 457412 ',
                 clientStatus: 'Online',
-                chatID: 123456,
-                source: 'viber',
+                chatID: 214535,
+                source: 'telegram',
                 messages: [ // all correspondence in this chat
                     {
-                        text: "Hi,I have a problem!",
-                        time: "10:00",
+                        text: "Hi,I have a question!",
+                        time: "14:21",
                         isManager: false // client message
                     },
                     {
-                        text: "Hi,how can I help you?",
-                        time: "10:01",
+                        text: "Hi Jasmine, how can I help you?",
+                        time: "14:21",
                         isManager: true // manager message
-                    }
+                    },
+                    {
+                        text: "Hi,I have a question!",
+                        time: "14:21",
+                        isManager: false // client message
+                    },
+                    {
+                        text: "Hi,I have a question!",
+                        time: "14:21",
+                        isManager: true // client message
+                    },
                 ]
             },
-            {clientName: 'Petr Petrov',clientPhone: '+373 (78) 654321 ',clientStatus: 'Offline', chatID: 123567, source: 'whatsapp',
-                messages: [{ text: "Hi,I had a nice day!", time: "10:01", isManager: false},
-                    { text: "Hi,I'm very glad for you!!",time: "10:01", isManager: true}]},
-            {clientName: 'Sergey Sergeyev',clientPhone: '+373 (78) 131313 ',clientStatus: 'Offline', chatID: 123567, source: 'VK',
-                messages: [{ text: "Hi,I love this chat!", time: "10:02", isManager: false},
-                    { text: "Hi, I'm too!!",time: "10:03", isManager: true}]},
-            {clientName: 'Danil Danilov',clientPhone: '+373 (78) 666666 ',clientStatus: 'Offline', chatID: 123567, source: 'messenger',
-                messages: [{ text: "Hi,I want whiskey!", time: "10:03", isManager: false},
-                    { text: "Hi,you can go and buy some!!",time: "10:04", isManager: true}]},
-            {clientName: 'Sidor Sidorov',clientPhone: '+373 (78) 777777 ',clientStatus: 'Offline', chatID: 123567, source: 'chat',
-                messages: [{ text: "Hi,what time is it!", time: "10:04", isManager: false},
-                    { text: "Hi, it's 10-05!!",time: "10:05", isManager: true}]},
-            {clientName: 'Andrey Andreyev',clientPhone: '+373 (78) 888888 ',clientStatus: 'Offline', chatID: 123567, source: 'telegram',
-                messages: [{ text: "Hi,what I'm doing here?", time: "10:06", isManager: false},
-                    { text: "Your need a rest. Go and sleep for a while!!",time: "10:07", isManager: true}]},
-            {clientName: 'Petr Petrov',clientPhone: '+373 (78) 654321 ',clientStatus: 'Offline', chatID: 123567, source: 'whatsapp',
-                messages: [{ text: "Hi,I had a nice day!", time: "10:01", isManager: false},
-                    { text: "Hi,I'm very glad for you!!",time: "10:01", isManager: true}]},
-            {clientName: 'Sergey Sergeyev',clientPhone: '+373 (78) 131313 ',clientStatus: 'Offline', chatID: 123567, source: 'VK',
-                messages: [{ text: "Hi,I love this chat!", time: "10:02", isManager: false},
-                    { text: "Hi, I'm too!!",time: "10:03", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 457412 ',clientStatus: 'Offline', chatID: 214535, source: 'whatsapp',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 131313 ',clientStatus: 'Offline', chatID: 123567, source: 'VK',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 666666 ',clientStatus: 'Offline', chatID: 123567, source: 'messenger',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 777777 ',clientStatus: 'Offline', chatID: 123567, source: 'chat',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 888888 ',clientStatus: 'Offline', chatID: 123567, source: 'telegram',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 654321 ',clientStatus: 'Offline', chatID: 123567, source: 'whatsapp',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
+            {clientName: 'Andrian Ionascu',clientPhone: '+373 (78) 131313 ',clientStatus: 'Offline', chatID: 123567, source: 'VK',
+                messages: [{ text: "Hi,I have a question!", time: "14:21", isManager: false},
+                    { text: "Hi Andrian, how can I help you?",time: "14:21", isManager: true}]},
 
         ];
         // TODO: enter real manager data
         this.currentManager = {
-            name: 'Adrian Ktototam',
-            email: 'test.test@gmail.com',
+            name: 'Andrian Ionascu',
+            email: 'ionascu@pi.md',
             sites: ['swiftcallback.md', 'swiftcallforward.pl', 'swiftcalldown.ru']
         };
         if (document.documentElement.clientWidth < 1280) {
